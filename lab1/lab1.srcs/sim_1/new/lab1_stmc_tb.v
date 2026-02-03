@@ -32,7 +32,7 @@ initial clk = 1'b1;
 always #(CLK_PERIOD/2) clk = ~clk;
 
 // Instantiate the circuit
-lab1_stmc 
+lab1_stmc_combined
 // Passing down the parameters to the instantiated module is good
 // practice, but won't work for gate-level simulation, so 
 // commented out.
