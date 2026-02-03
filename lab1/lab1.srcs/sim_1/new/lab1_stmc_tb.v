@@ -1,6 +1,6 @@
 `timescale 1 ns / 1 ps
 
-module lab1_tb();
+module lab1_stmc_tb();
 
 // Define timesteps that will help proceed through the simulation
 localparam CLK_PERIOD = 24; 				//ns
@@ -103,9 +103,9 @@ reg valid_stall_tested = 0;
 integer prod_i;
 initial begin
 	// store the simulation output as a Value Change Dump (VCD) file
-    $dumpfile("lab1.vcd");
+    $dumpfile("lab1_stmc.vcd");
     // store everything at the current level and below
-    $dumpvars(0, lab1_tb);
+    $dumpvars(0, lab1_stmc_tb);
 	
 	//i_valid starts low
 	i_valid = 1'b0;
