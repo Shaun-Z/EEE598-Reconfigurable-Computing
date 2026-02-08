@@ -1,6 +1,6 @@
 `timescale 1 ns / 1 ps
 
-module lab1_stmc_tb();
+module lab1_fsm_tb();
 
 // Define timesteps that will help proceed through the simulation
 localparam CLK_PERIOD = 24; 				//ns
@@ -32,7 +32,7 @@ initial clk = 1'b1;
 always #(CLK_PERIOD/2) clk = ~clk;
 
 // Instantiate the circuit
-lab1_stmc_combined
+lab1_fsm
 // Passing down the parameters to the instantiated module is good
 // practice, but won't work for gate-level simulation, so 
 // commented out.
@@ -103,9 +103,9 @@ reg valid_stall_tested = 0;
 integer prod_i;
 initial begin
 	// store the simulation output as a Value Change Dump (VCD) file
-    $dumpfile("lab1_stmc.vcd");
+    $dumpfile("lab1_fsm.vcd");
     // store everything at the current level and below
-    $dumpvars(0, lab1_stmc_tb);
+    $dumpvars(0, lab1_fsm_tb);
 	
 	//i_valid starts low
 	i_valid = 1'b0;

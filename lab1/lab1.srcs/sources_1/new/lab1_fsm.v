@@ -1,4 +1,4 @@
-module lab1_stmc #
+module lab1_fsm #
 (
 	parameter WIDTHIN = 16,		// Input format is Q2.14 (2 integer bits + 14 fractional bits = 16 bits)
 	parameter WIDTHOUT = 32,	// Intermediate/Output format is Q7.25 (7 integer bits + 25 fractional bits = 32 bits)
@@ -23,20 +23,15 @@ module lab1_stmc #
 	output [WIDTHOUT-1:0] o_y
 );
 
-// State encoding for serial Horner evaluation
+// State encoding for serial Horner evaluation (combined MUL+ADD per step)
 localparam [3:0]
-	ST_IDLE = 4'd0,
-	ST_MUL0 = 4'd1,
-	ST_ADD0 = 4'd2,
-	ST_MUL1 = 4'd3,
-	ST_ADD1 = 4'd4,
-	ST_MUL2 = 4'd5,
-	ST_ADD2 = 4'd6,
-	ST_MUL3 = 4'd7,
-	ST_ADD3 = 4'd8,
-	ST_MUL4 = 4'd9,
-	ST_ADD4 = 4'd10,
-	ST_DONE = 4'd11;
+	ST_IDLE  = 4'd0,
+	ST_STEP0 = 4'd1,
+	ST_STEP1 = 4'd2,
+	ST_STEP2 = 4'd3,
+	ST_STEP3 = 4'd4,
+	ST_STEP4 = 4'd5,
+	ST_DONE  = 4'd6;
 
 reg [3:0] state;
 reg [WIDTHIN-1:0] x_reg;
@@ -76,44 +71,34 @@ always @* begin
 	add_b = 0;
 
 	case (state)
-		ST_MUL0: begin
+		ST_STEP0: begin
 			mult_a = A5_EXT;
 			mult_b = x_reg;
-		end
-		ST_ADD0: begin
-			add_a = acc_reg;
+			add_a = mult_out;
 			add_b = A4;
 		end
-		ST_MUL1: begin
+		ST_STEP1: begin
 			mult_a = acc_reg;
 			mult_b = x_reg;
-		end
-		ST_ADD1: begin
-			add_a = acc_reg;
+			add_a = mult_out;
 			add_b = A3;
 		end
-		ST_MUL2: begin
+		ST_STEP2: begin
 			mult_a = acc_reg;
 			mult_b = x_reg;
-		end
-		ST_ADD2: begin
-			add_a = acc_reg;
+			add_a = mult_out;
 			add_b = A2;
 		end
-		ST_MUL3: begin
+		ST_STEP3: begin
 			mult_a = acc_reg;
 			mult_b = x_reg;
-		end
-		ST_ADD3: begin
-			add_a = acc_reg;
+			add_a = mult_out;
 			add_b = A1;
 		end
-		ST_MUL4: begin
+		ST_STEP4: begin
 			mult_a = acc_reg;
 			mult_b = x_reg;
-		end
-		ST_ADD4: begin
-			add_a = acc_reg;
+			add_a = mult_out;
 			add_b = A0;
 		end
 		default: begin
@@ -137,46 +122,29 @@ always @ (posedge clk or posedge reset) begin
 			ST_IDLE: begin
 				if (i_valid && o_ready) begin
 					x_reg <= i_x;
-					state <= ST_MUL0;
+					state <= ST_STEP0;
+				end
+				else begin
+					state <= ST_IDLE;
 				end
 			end
-			ST_MUL0: begin
-				acc_reg <= mult_out;
-				state <= ST_ADD0;
-			end
-			ST_ADD0: begin
+			ST_STEP0: begin
 				acc_reg <= add_out;
-				state <= ST_MUL1;
+				state <= ST_STEP1;
 			end
-			ST_MUL1: begin
-				acc_reg <= mult_out;
-				state <= ST_ADD1;
-			end
-			ST_ADD1: begin
+			ST_STEP1: begin
 				acc_reg <= add_out;
-				state <= ST_MUL2;
+				state <= ST_STEP2;
 			end
-			ST_MUL2: begin
-				acc_reg <= mult_out;
-				state <= ST_ADD2;
-			end
-			ST_ADD2: begin
+			ST_STEP2: begin
 				acc_reg <= add_out;
-				state <= ST_MUL3;
+				state <= ST_STEP3;
 			end
-			ST_MUL3: begin
-				acc_reg <= mult_out;
-				state <= ST_ADD3;
-			end
-			ST_ADD3: begin
+			ST_STEP3: begin
 				acc_reg <= add_out;
-				state <= ST_MUL4;
+				state <= ST_STEP4;
 			end
-			ST_MUL4: begin
-				acc_reg <= mult_out;
-				state <= ST_ADD4;
-			end
-			ST_ADD4: begin
+			ST_STEP4: begin
 				acc_reg <= add_out;
 				y_reg <= add_out;
 				if (i_ready) begin
@@ -229,10 +197,10 @@ endmodule
 
 /*******************************************************************************************/
 
-// Shared adder for all the 32b+16b addition operations
+// Shared adder for 32-bit + 16-bit
 module addr32p16 (
-	input [31:0] i_dataa,
-	input [15:0] i_datab,
+	input  [31:0] i_dataa,
+	input  [15:0] i_datab,
 	output [31:0] o_res
 );
 
@@ -240,5 +208,3 @@ module addr32p16 (
 assign o_res = i_dataa + {5'b00000, i_datab, 11'b00000000000};
 
 endmodule
-
-/*******************************************************************************************/
