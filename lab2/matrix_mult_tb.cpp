@@ -59,7 +59,7 @@ int main() {
   int mismatches = 0;
   for (int i = 0; i < IN_A_ROWS; ++i) {
     for (int j = 0; j < IN_B_COLS; ++j) {
-      float diff = std::fabs(dut[i][j] - golden[i][j]);
+      float diff = std::abs(dut[i][j] - golden[i][j]);
       if (diff > tol) {
         if (mismatches < 10) {
           std::cout << "Mismatch at [" << i << "][" << j << "]: "

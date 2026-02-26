@@ -1,3 +1,11 @@
+.settings/
+.reference/
+.apc/
+.cproject
+.project
+.vitis_hls_log_all.xml
+lab2/solution*/*
+!lab2/solution*/*.tcl
 
 *.dcp
 *.cache/
