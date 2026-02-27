@@ -10,12 +10,12 @@ add_files lab2/matrix_mult.cpp
 add_files lab2/matrix_mult.h
 add_files -tb lab2/matrix_mult_tb.cpp
 open_solution "solution1" -flow_target vivado
-set_part {xc7z020clg400-1}
+set_part {xc7z020-clg400-1}
 create_clock -period 10 -name default
 config_cosim -tool xsim -trace_level all -wave_debug
 config_export -flow impl -format ip_catalog -rtl verilog -vivado_clock 10
 source "./lab2/solution1/directives.tcl"
 csim_design -setup
 csynth_design
-cosim_design -wave_debug -trace_level all
-export_design -flow impl -rtl verilog -format ip_catalog
+cosim_design
+export_design -format ip_catalog

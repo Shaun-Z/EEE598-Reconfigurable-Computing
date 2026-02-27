@@ -56,7 +56,7 @@ vivado*
 # Executables
 *.exe
 *.out
-# *.app
+*.app
 
 # Build directories
 build/

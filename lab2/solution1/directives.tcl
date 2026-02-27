@@ -5,4 +5,4 @@
 ## Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ############################################################
 set_directive_top -name matrix_mult "matrix_mult"
-set_directive_array_partition -dim 1 -type complete "matrix_mult" b
+set_directive_array_partition -type complete -dim 1 "matrix_mult" b
