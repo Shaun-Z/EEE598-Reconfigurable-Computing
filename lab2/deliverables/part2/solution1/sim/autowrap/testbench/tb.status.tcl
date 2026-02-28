@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/yliu1047/RC/lab2/solution1/./sim/autowrap/testbench/matrix_mult.cpp_pre.cpp.tb.cpp
