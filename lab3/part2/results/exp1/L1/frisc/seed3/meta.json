@@ -1,0 +1,7 @@
+{
+  "arch": "L1",
+  "bench": "frisc",
+  "seed": 3,
+  "min_w": 70,
+  "low_stress_w": 92
+}
