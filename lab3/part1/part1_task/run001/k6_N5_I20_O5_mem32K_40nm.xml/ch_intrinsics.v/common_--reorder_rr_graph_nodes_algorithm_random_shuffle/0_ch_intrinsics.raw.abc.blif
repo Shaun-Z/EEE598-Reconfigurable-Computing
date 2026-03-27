@@ -1,0 +1,764 @@
+# Benchmark "memset" written by ABC on Thu Mar 26 18:03:56 2026
+.model memset
+.inputs m~30 c~2 m~29 n~18 n~28 m~2 m~22 n~17 m~17 m~28 m~1 n~16 m~21 m~16 \
+ m~20 c~20 start n~15 m~23 c~16 m~0 c~17 c~9 c~12 c~10 c~11 c~14 c~15 c~21 \
+ m~26 c~24 c~23 c~27 c~5 c~8 c~1 c~22 c~6 c~30 c~28 c~29 c~31 n~29 c~26 \
+ c~25 c~7 c~4 n~19 n~20 c~0 m~5 n~0 m~31 c~3 m~18 m~3 m~19 m~4 n~10 c~18 \
+ c~13 n~14 m~27 reset n~13 n~26 m~10 n~1 n~25 clk m~9 n~24 m~15 n~12 m~8 \
+ n~23 m~7 m~14 n~11 m~24 m~13 n~22 n~27 m~6 n~21 n~9 c~19 n~8 n~7 n~6 n~5 \
+ n~4 n~3 n~2 n~31 m~12 n~30 m~11 m~25
+.outputs memory_controller_address~11 return_val~24 \
+ memory_controller_address~31 memory_controller_address~27 \
+ memory_controller_address~26 return_val~15 memory_controller_address~10 \
+ memory_controller_address~9 memory_controller_address~8 \
+ memory_controller_in~0 return_val~2 return_val~8 return_val~14 \
+ memory_controller_out~6 memory_controller_out~9 memory_controller_out~7 \
+ memory_controller_out~8 memory_controller_address~25 return_val~22 \
+ return_val~23 return_val~25 return_val~26 memory_controller_in~1 \
+ memory_controller_in~9 return_val~28 return_val~27 \
+ memory_controller_out~12 return_val~7 memory_controller_out~11 \
+ return_val~6 memory_controller_out~10 memory_controller_out~13 \
+ return_val~1 memory_controller_out~21 memory_controller_out~20 \
+ memory_controller_address~7 memory_controller_address~15 \
+ memory_controller_out~18 memory_controller_out~19 memory_controller_in~11 \
+ memory_controller_address~14 memory_controller_out~16 \
+ memory_controller_in~12 memory_controller_out~17 memory_controller_in~10 \
+ memory_controller_in~20 memory_controller_in~13 memory_controller_out~14 \
+ memory_controller_out~15 return_val~9 return_val~31 \
+ memory_controller_address~0 return_val~19 memory_controller_in~6 \
+ return_val~20 memory_controller_in~23 memory_controller_write_enable \
+ return_val~16 memory_controller_address~13 memory_controller_in~31 \
+ memory_controller_in~28 memory_controller_in~26 memory_controller_in~29 \
+ memory_controller_out~4 memory_controller_out~3 memory_controller_out~2 \
+ memory_controller_out~5 memory_controller_out~1 memory_controller_out~0 \
+ memory_controller_in~30 memory_controller_in~27 \
+ memory_controller_address~12 memory_controller_in~19 \
+ memory_controller_in~7 return_val~18 return_val~17 return_val~3 \
+ return_val~4 return_val~21 memory_controller_address~1 \
+ memory_controller_address~2 memory_controller_in~21 \
+ memory_controller_out~22 return_val~13 memory_controller_address~18 \
+ memory_controller_address~24 memory_controller_out~23 \
+ memory_controller_in~2 memory_controller_out~24 \
+ memory_controller_address~29 memory_controller_out~25 \
+ memory_controller_address~17 memory_controller_out~26 \
+ memory_controller_address~23 memory_controller_out~27 \
+ memory_controller_in~3 memory_controller_out~28 return_val~12 \
+ memory_controller_in~22 memory_controller_out~29 memory_controller_out~30 \
+ memory_controller_out~31 memory_controller_in~14 memory_controller_in~8 \
+ return_val~5 memory_controller_in~15 return_val~10 return_val~0 \
+ memory_controller_in~16 memory_controller_address~6 finish \
+ memory_controller_in~17 memory_controller_address~5 \
+ memory_controller_address~4 return_val~30 memory_controller_address~19 \
+ memory_controller_address~3 memory_controller_address~28 \
+ memory_controller_in~18 return_val~29 memory_controller_in~24 \
+ memory_controller_in~25 memory_controller_address~22 \
+ memory_controller_in~4 memory_controller_address~30 \
+ memory_controller_address~16 memory_controller_address~21 \
+ memory_controller_in~5 return_val~11 memory_controller_address~20
+
+.latch       li00       lo00  0
+.latch       li01       lo01  0
+.latch       li02       lo02  0
+.latch       li03       lo03  0
+.latch       li04       lo04  0
+.latch       li05       lo05  0
+.latch       li06       lo06  0
+.latch       li07       lo07  0
+.latch       li08       lo08  0
+.latch       li09       lo09  0
+.latch       li10       lo10  0
+.latch       li11       lo11  0
+.latch       li12       lo12  0
+.latch       li13       lo13  0
+.latch       li14       lo14  0
+.latch       li15       lo15  0
+.latch       li16       lo16  0
+.latch       li17       lo17  0
+.latch       n570 $dff~30^Q~0  0
+.latch       n575 $dff~30^Q~1  0
+.latch       n580 $dff~30^Q~2  0
+.latch       n585 $dff~30^Q~3  0
+.latch       n590 $dff~30^Q~4  0
+.latch       n595 $dff~30^Q~5  0
+.latch       n600 $dff~30^Q~6  0
+.latch       n605 $dff~30^Q~7  0
+.latch       n610 $dff~30^Q~8  0
+.latch       n615 $dff~30^Q~9  0
+.latch       n620 $dff~30^Q~10  0
+.latch       n625 $dff~30^Q~11  0
+.latch       n630 $dff~30^Q~12  0
+.latch       n635 $dff~30^Q~13  0
+.latch       n640 $dff~30^Q~14  0
+.latch       li33       lo33  0
+.latch      n1097 $dffe~1^Q~0  0
+.latch      n1102 $dffe~6^Q~0  0
+.latch      n1107 $dffe~6^Q~1  0
+.latch      n1112 $dffe~6^Q~2  0
+.latch      n1117 $dffe~6^Q~3  0
+.latch      n1122 $dffe~6^Q~4  0
+.latch      n1127 $dffe~6^Q~5  0
+.latch      n1132 $dffe~6^Q~6  0
+.latch      n1137 $dffe~6^Q~7  0
+.latch      n1142 $dffe~6^Q~8  0
+.latch      n1147 $dffe~6^Q~9  0
+.latch      n1152 $dffe~6^Q~10  0
+.latch      n1157 $dffe~6^Q~11  0
+.latch      n1162 $dffe~6^Q~12  0
+.latch      n1167 $dffe~6^Q~13  0
+.latch      n1172 $dffe~6^Q~14  0
+.latch      n1177 $dffe~6^Q~15  0
+.latch      n1182 $dffe~6^Q~16  0
+.latch      n1187 $dffe~6^Q~17  0
+.latch      n1192 $dffe~6^Q~18  0
+.latch      n1197 $dffe~6^Q~19  0
+.latch      n1202 $dffe~6^Q~20  0
+.latch      n1207 $dffe~6^Q~21  0
+.latch      n1212 $dffe~6^Q~22  0
+.latch      n1217 $dffe~6^Q~23  0
+.latch      n1222 $dffe~6^Q~24  0
+.latch      n1227 $dffe~6^Q~25  0
+.latch      n1232 $dffe~6^Q~26  0
+.latch      n1237 $dffe~6^Q~27  0
+.latch      n1242 $dffe~6^Q~28  0
+.latch      n1247 $dffe~6^Q~29  0
+.latch      n1252 $dffe~6^Q~30  0
+.latch      n1257 $dffe~6^Q~31  0
+.latch      n1262 $dffe~5^Q~0  0
+.latch       li68       lo68  0
+.latch       li69       lo69  0
+.latch       li70       lo70  0
+.latch       li71       lo71  0
+.latch       li72       lo72  0
+.latch       li73       lo73  0
+.latch       li74       lo74  0
+.latch       li75       lo75  0
+.latch       li76       lo76  0
+.latch       li77       lo77  0
+.latch       li78       lo78  0
+.latch       li79       lo79  0
+.latch       li80       lo80  0
+.latch       li81       lo81  0
+
+
+.subckt single_port_ram clk=clk addr[0]=memory_controller_address~0 addr[1]=memory_controller_address~1 addr[2]=memory_controller_address~2 addr[3]=memory_controller_address~3 addr[4]=memory_controller_address~4 addr[5]=unconn addr[6]=unconn addr[7]=unconn addr[8]=unconn addr[9]=unconn addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=c~7 we=vcc out=single_port_ram^MEM~0-7^out~0
+.subckt single_port_ram clk=clk addr[0]=memory_controller_address~0 addr[1]=memory_controller_address~1 addr[2]=memory_controller_address~2 addr[3]=memory_controller_address~3 addr[4]=memory_controller_address~4 addr[5]=unconn addr[6]=unconn addr[7]=unconn addr[8]=unconn addr[9]=unconn addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=c~0 we=vcc out=single_port_ram^MEM~0-0^out~0
+.subckt single_port_ram clk=clk addr[0]=memory_controller_address~0 addr[1]=memory_controller_address~1 addr[2]=memory_controller_address~2 addr[3]=memory_controller_address~3 addr[4]=memory_controller_address~4 addr[5]=unconn addr[6]=unconn addr[7]=unconn addr[8]=unconn addr[9]=unconn addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=c~1 we=vcc out=single_port_ram^MEM~0-1^out~0
+.subckt single_port_ram clk=clk addr[0]=memory_controller_address~0 addr[1]=memory_controller_address~1 addr[2]=memory_controller_address~2 addr[3]=memory_controller_address~3 addr[4]=memory_controller_address~4 addr[5]=unconn addr[6]=unconn addr[7]=unconn addr[8]=unconn addr[9]=unconn addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=c~2 we=vcc out=single_port_ram^MEM~0-2^out~0
+.subckt single_port_ram clk=clk addr[0]=memory_controller_address~0 addr[1]=memory_controller_address~1 addr[2]=memory_controller_address~2 addr[3]=memory_controller_address~3 addr[4]=memory_controller_address~4 addr[5]=unconn addr[6]=unconn addr[7]=unconn addr[8]=unconn addr[9]=unconn addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=c~3 we=vcc out=single_port_ram^MEM~0-3^out~0
+.subckt single_port_ram clk=clk addr[0]=memory_controller_address~0 addr[1]=memory_controller_address~1 addr[2]=memory_controller_address~2 addr[3]=memory_controller_address~3 addr[4]=memory_controller_address~4 addr[5]=unconn addr[6]=unconn addr[7]=unconn addr[8]=unconn addr[9]=unconn addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=c~4 we=vcc out=single_port_ram^MEM~0-4^out~0
+.subckt single_port_ram clk=clk addr[0]=memory_controller_address~0 addr[1]=memory_controller_address~1 addr[2]=memory_controller_address~2 addr[3]=memory_controller_address~3 addr[4]=memory_controller_address~4 addr[5]=unconn addr[6]=unconn addr[7]=unconn addr[8]=unconn addr[9]=unconn addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=c~5 we=vcc out=single_port_ram^MEM~0-5^out~0
+.subckt single_port_ram clk=clk addr[0]=memory_controller_address~0 addr[1]=memory_controller_address~1 addr[2]=memory_controller_address~2 addr[3]=memory_controller_address~3 addr[4]=memory_controller_address~4 addr[5]=unconn addr[6]=unconn addr[7]=unconn addr[8]=unconn addr[9]=unconn addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=c~6 we=vcc out=single_port_ram^MEM~0-6^out~0
+.subckt CLOCK_GATING I=clk
+
+
+.names m~14 lo00 reset $dff~30^Q~7 li00
+-1-0 1
+-11- 1
+1-01 1
+.names m~15 lo01 reset $dff~30^Q~7 li01
+-1-0 1
+-11- 1
+1-01 1
+.names m~16 lo02 reset $dff~30^Q~7 li02
+-1-0 1
+-11- 1
+1-01 1
+.names m~17 lo03 reset $dff~30^Q~7 li03
+-1-0 1
+-11- 1
+1-01 1
+.names m~18 lo04 reset $dff~30^Q~7 li04
+-1-0 1
+-11- 1
+1-01 1
+.names m~19 lo05 reset $dff~30^Q~7 li05
+-1-0 1
+-11- 1
+1-01 1
+.names m~20 lo06 reset $dff~30^Q~7 li06
+-1-0 1
+-11- 1
+1-01 1
+.names m~21 lo07 reset $dff~30^Q~7 li07
+-1-0 1
+-11- 1
+1-01 1
+.names m~22 lo08 reset $dff~30^Q~7 li08
+-1-0 1
+-11- 1
+1-01 1
+.names m~23 lo09 reset $dff~30^Q~7 li09
+-1-0 1
+-11- 1
+1-01 1
+.names m~24 lo10 reset $dff~30^Q~7 li10
+-1-0 1
+-11- 1
+1-01 1
+.names m~25 lo11 reset $dff~30^Q~7 li11
+-1-0 1
+-11- 1
+1-01 1
+.names m~26 lo12 reset $dff~30^Q~7 li12
+-1-0 1
+-11- 1
+1-01 1
+.names m~27 lo13 reset $dff~30^Q~7 li13
+-1-0 1
+-11- 1
+1-01 1
+.names m~28 lo14 reset $dff~30^Q~7 li14
+-1-0 1
+-11- 1
+1-01 1
+.names m~29 lo15 reset $dff~30^Q~7 li15
+-1-0 1
+-11- 1
+1-01 1
+.names m~30 lo16 reset $dff~30^Q~7 li16
+-1-0 1
+-11- 1
+1-01 1
+.names m~31 lo17 reset $dff~30^Q~7 li17
+-1-0 1
+-11- 1
+1-01 1
+.names $dff~30^Q~0 start reset $dff~30^Q~7 n570
+-100 0
+0-00 0
+.names reset $dffe~5^Q~0 $dff~30^Q~14 n575
+001 1
+.names reset $dff~30^Q~12 n580
+01 1
+.names reset $dff~30^Q~13 n585
+01 1
+.names reset $dff~30^Q~8 n590
+01 1
+.names reset $dff~30^Q~9 n595
+01 1
+.names reset $dff~30^Q~10 n600
+01 1
+.names $dff~30^Q~14 $dffe~5^Q~0 $dff~30^Q~11 $dffe~1^Q~0 reset n605
+--110 1
+11--0 1
+.names reset start $dff~30^Q~0 n610
+011 1
+.names $dffe~1^Q~0 $dff~30^Q~11 $dff~30^Q~1 reset n615
+--10 1
+01-0 1
+.names reset $dff~30^Q~2 n620
+01 1
+.names reset $dff~30^Q~3 n625
+01 1
+.names reset $dff~30^Q~4 n630
+01 1
+.names reset $dff~30^Q~5 n635
+01 1
+.names reset $dff~30^Q~6 n640
+01 1
+.names $dff~30^Q~0 $dff~30^Q~7 reset lo33 li33
+--11 1
+-10- 1
+0--1 1
+.names new_n531 new_n536 new_n537 new_n533 n585 $dffe~1^Q~0 n1097
+----01 1
+1111-- 1
+.names $dffe~6^Q~8 $dffe~6^Q~9 $dffe~6^Q~10 $dffe~6^Q~11 new_n532 new_n531
+00001 1
+.names $dffe~6^Q~12 $dffe~6^Q~13 $dffe~6^Q~14 $dffe~6^Q~15 new_n532
+0000 1
+.names $dffe~6^Q~4 $dffe~6^Q~5 $dffe~6^Q~6 $dffe~6^Q~7 new_n534 new_n535 \
+ new_n533
+000011 1
+.names reset $dffe~6^Q~0 $dffe~6^Q~1 $dffe~6^Q~2 $dffe~6^Q~3 $dff~30^Q~13 \
+ new_n534
+000001 1
+.names $dffe~6^Q~16 $dffe~6^Q~17 $dffe~6^Q~18 $dffe~6^Q~19 new_n535
+0000 1
+.names $dffe~6^Q~20 $dffe~6^Q~23 $dffe~6^Q~24 $dffe~6^Q~25 $dffe~6^Q~26 \
+ $dffe~6^Q~27 new_n536
+000000 1
+.names $dffe~6^Q~21 $dffe~6^Q~22 $dffe~6^Q~28 $dffe~6^Q~29 $dffe~6^Q~30 \
+ $dffe~6^Q~31 new_n537
+000000 1
+.names n~0 $dffe~6^Q~0 reset $dff~30^Q~1 n1102
+-1-0 1
+-11- 1
+1-01 1
+.names n~1 $dffe~6^Q~1 reset $dff~30^Q~1 n1107
+-1-0 1
+-11- 1
+1-01 1
+.names n~2 $dffe~6^Q~2 reset $dff~30^Q~1 n1112
+-1-0 1
+-11- 1
+1-01 1
+.names n~3 $dffe~6^Q~3 reset $dff~30^Q~1 n1117
+-1-0 1
+-11- 1
+1-01 1
+.names n~4 $dffe~6^Q~4 reset $dff~30^Q~1 n1122
+-1-0 1
+-11- 1
+1-01 1
+.names n~5 $dffe~6^Q~5 reset $dff~30^Q~1 n1127
+-1-0 1
+-11- 1
+1-01 1
+.names n~6 $dffe~6^Q~6 reset $dff~30^Q~1 n1132
+-1-0 1
+-11- 1
+1-01 1
+.names n~7 $dffe~6^Q~7 reset $dff~30^Q~1 n1137
+-1-0 1
+-11- 1
+1-01 1
+.names n~8 $dffe~6^Q~8 reset $dff~30^Q~1 n1142
+-1-0 1
+-11- 1
+1-01 1
+.names n~9 $dffe~6^Q~9 reset $dff~30^Q~1 n1147
+-1-0 1
+-11- 1
+1-01 1
+.names n~10 $dffe~6^Q~10 reset $dff~30^Q~1 n1152
+-1-0 1
+-11- 1
+1-01 1
+.names n~11 $dffe~6^Q~11 reset $dff~30^Q~1 n1157
+-1-0 1
+-11- 1
+1-01 1
+.names n~12 $dffe~6^Q~12 reset $dff~30^Q~1 n1162
+-1-0 1
+-11- 1
+1-01 1
+.names n~13 $dffe~6^Q~13 reset $dff~30^Q~1 n1167
+-1-0 1
+-11- 1
+1-01 1
+.names n~14 $dffe~6^Q~14 reset $dff~30^Q~1 n1172
+-1-0 1
+-11- 1
+1-01 1
+.names n~15 $dffe~6^Q~15 reset $dff~30^Q~1 n1177
+-1-0 1
+-11- 1
+1-01 1
+.names n~16 $dffe~6^Q~16 reset $dff~30^Q~1 n1182
+-1-0 1
+-11- 1
+1-01 1
+.names n~17 $dffe~6^Q~17 reset $dff~30^Q~1 n1187
+-1-0 1
+-11- 1
+1-01 1
+.names n~18 $dffe~6^Q~18 reset $dff~30^Q~1 n1192
+-1-0 1
+-11- 1
+1-01 1
+.names n~19 $dffe~6^Q~19 reset $dff~30^Q~1 n1197
+-1-0 1
+-11- 1
+1-01 1
+.names n~20 $dffe~6^Q~20 reset $dff~30^Q~1 n1202
+-1-0 1
+-11- 1
+1-01 1
+.names n~21 $dffe~6^Q~21 reset $dff~30^Q~1 n1207
+-1-0 1
+-11- 1
+1-01 1
+.names n~22 $dffe~6^Q~22 reset $dff~30^Q~1 n1212
+-1-0 1
+-11- 1
+1-01 1
+.names n~23 $dffe~6^Q~23 reset $dff~30^Q~1 n1217
+-1-0 1
+-11- 1
+1-01 1
+.names n~24 $dffe~6^Q~24 reset $dff~30^Q~1 n1222
+-1-0 1
+-11- 1
+1-01 1
+.names n~25 $dffe~6^Q~25 reset $dff~30^Q~1 n1227
+-1-0 1
+-11- 1
+1-01 1
+.names n~26 $dffe~6^Q~26 reset $dff~30^Q~1 n1232
+-1-0 1
+-11- 1
+1-01 1
+.names n~27 $dffe~6^Q~27 reset $dff~30^Q~1 n1237
+-1-0 1
+-11- 1
+1-01 1
+.names n~28 $dffe~6^Q~28 reset $dff~30^Q~1 n1242
+-1-0 1
+-11- 1
+1-01 1
+.names n~29 $dffe~6^Q~29 reset $dff~30^Q~1 n1247
+-1-0 1
+-11- 1
+1-01 1
+.names n~30 $dffe~6^Q~30 reset $dff~30^Q~1 n1252
+-1-0 1
+-11- 1
+1-01 1
+.names n~31 $dffe~6^Q~31 reset $dff~30^Q~1 n1257
+-1-0 1
+-11- 1
+1-01 1
+.names new_n575_1 new_n577 new_n571_1 $dffe~5^Q~0 n640 n1262
+---00 0
+111-1 0
+.names n~8 n~7 new_n574 new_n572 new_n573 new_n571_1
+00111 1
+.names n~11 n~22 n~27 n~21 new_n572
+0000 1
+.names n~25 n~24 n~12 n~23 new_n573
+0000 1
+.names n~9 n~6 n~5 n~4 n~31 n~30 new_n574
+000000 1
+.names n~15 n~29 n~19 n~20 new_n576_1 new_n575_1
+00001 1
+.names n~10 n~14 n~13 n~26 new_n576_1
+0000 1
+.names n~18 n~28 n~17 n~16 new_n577
+0000 1
+.names m~0 lo68 reset $dff~30^Q~7 li68
+-1-0 1
+-11- 1
+1-01 1
+.names m~1 lo69 reset $dff~30^Q~7 li69
+-1-0 1
+-11- 1
+1-01 1
+.names m~2 lo70 reset $dff~30^Q~7 li70
+-1-0 1
+-11- 1
+1-01 1
+.names m~3 lo71 reset $dff~30^Q~7 li71
+-1-0 1
+-11- 1
+1-01 1
+.names m~4 lo72 reset $dff~30^Q~7 li72
+-1-0 1
+-11- 1
+1-01 1
+.names m~5 lo73 reset $dff~30^Q~7 li73
+-1-0 1
+-11- 1
+1-01 1
+.names m~6 lo74 reset $dff~30^Q~7 li74
+-1-0 1
+-11- 1
+1-01 1
+.names m~7 lo75 reset $dff~30^Q~7 li75
+-1-0 1
+-11- 1
+1-01 1
+.names m~8 lo76 reset $dff~30^Q~7 li76
+-1-0 1
+-11- 1
+1-01 1
+.names m~9 lo77 reset $dff~30^Q~7 li77
+-1-0 1
+-11- 1
+1-01 1
+.names m~10 lo78 reset $dff~30^Q~7 li78
+-1-0 1
+-11- 1
+1-01 1
+.names m~11 lo79 reset $dff~30^Q~7 li79
+-1-0 1
+-11- 1
+1-01 1
+.names m~12 lo80 reset $dff~30^Q~7 li80
+-1-0 1
+-11- 1
+1-01 1
+.names m~13 lo81 reset $dff~30^Q~7 li81
+-1-0 1
+-11- 1
+1-01 1
+.names memory_controller_address~11
+ 0
+.names memory_controller_address~31
+ 0
+.names memory_controller_address~27
+ 0
+.names memory_controller_address~26
+ 0
+.names memory_controller_address~10
+ 0
+.names memory_controller_address~9
+ 0
+.names memory_controller_address~8
+ 0
+.names memory_controller_out~9
+ 0
+.names memory_controller_out~8
+ 0
+.names memory_controller_address~25
+ 0
+.names memory_controller_out~12
+ 0
+.names memory_controller_out~11
+ 0
+.names memory_controller_out~10
+ 0
+.names memory_controller_out~13
+ 0
+.names memory_controller_out~21
+ 0
+.names memory_controller_out~20
+ 0
+.names memory_controller_address~7
+ 0
+.names memory_controller_address~15
+ 0
+.names memory_controller_out~18
+ 0
+.names memory_controller_out~19
+ 0
+.names memory_controller_address~14
+ 0
+.names memory_controller_out~16
+ 0
+.names memory_controller_out~17
+ 0
+.names memory_controller_out~14
+ 0
+.names memory_controller_out~15
+ 0
+.names memory_controller_address~0
+ 0
+.names memory_controller_write_enable
+ 1
+.names memory_controller_address~13
+ 0
+.names memory_controller_address~12
+ 0
+.names memory_controller_address~1
+ 0
+.names memory_controller_address~2
+ 0
+.names memory_controller_out~22
+ 0
+.names memory_controller_address~18
+ 0
+.names memory_controller_address~24
+ 0
+.names memory_controller_out~23
+ 0
+.names memory_controller_out~24
+ 0
+.names memory_controller_address~29
+ 0
+.names memory_controller_out~25
+ 0
+.names memory_controller_address~17
+ 0
+.names memory_controller_out~26
+ 0
+.names memory_controller_address~23
+ 0
+.names memory_controller_out~27
+ 0
+.names memory_controller_out~28
+ 0
+.names memory_controller_out~29
+ 0
+.names memory_controller_out~30
+ 0
+.names memory_controller_out~31
+ 0
+.names memory_controller_address~6
+ 0
+.names memory_controller_address~5
+ 0
+.names memory_controller_address~4
+ 0
+.names memory_controller_address~19
+ 0
+.names memory_controller_address~3
+ 0
+.names memory_controller_address~28
+ 0
+.names memory_controller_address~22
+ 0
+.names memory_controller_address~30
+ 0
+.names memory_controller_address~16
+ 0
+.names memory_controller_address~21
+ 0
+.names memory_controller_address~20
+ 0
+.names unconn
+ 0
+.names vcc
+ 1
+.names lo10 return_val~24
+1 1
+.names lo01 return_val~15
+1 1
+.names c~0 memory_controller_in~0
+1 1
+.names lo70 return_val~2
+1 1
+.names lo76 return_val~8
+1 1
+.names lo00 return_val~14
+1 1
+.names single_port_ram^MEM~0-6^out~0 memory_controller_out~6
+1 1
+.names single_port_ram^MEM~0-7^out~0 memory_controller_out~7
+1 1
+.names lo08 return_val~22
+1 1
+.names lo09 return_val~23
+1 1
+.names lo11 return_val~25
+1 1
+.names lo12 return_val~26
+1 1
+.names c~1 memory_controller_in~1
+1 1
+.names c~9 memory_controller_in~9
+1 1
+.names lo14 return_val~28
+1 1
+.names lo13 return_val~27
+1 1
+.names lo75 return_val~7
+1 1
+.names lo74 return_val~6
+1 1
+.names lo69 return_val~1
+1 1
+.names c~11 memory_controller_in~11
+1 1
+.names c~12 memory_controller_in~12
+1 1
+.names c~10 memory_controller_in~10
+1 1
+.names c~20 memory_controller_in~20
+1 1
+.names c~13 memory_controller_in~13
+1 1
+.names lo77 return_val~9
+1 1
+.names lo17 return_val~31
+1 1
+.names lo05 return_val~19
+1 1
+.names c~6 memory_controller_in~6
+1 1
+.names lo06 return_val~20
+1 1
+.names c~23 memory_controller_in~23
+1 1
+.names lo02 return_val~16
+1 1
+.names c~31 memory_controller_in~31
+1 1
+.names c~28 memory_controller_in~28
+1 1
+.names c~26 memory_controller_in~26
+1 1
+.names c~29 memory_controller_in~29
+1 1
+.names single_port_ram^MEM~0-4^out~0 memory_controller_out~4
+1 1
+.names single_port_ram^MEM~0-3^out~0 memory_controller_out~3
+1 1
+.names single_port_ram^MEM~0-2^out~0 memory_controller_out~2
+1 1
+.names single_port_ram^MEM~0-5^out~0 memory_controller_out~5
+1 1
+.names single_port_ram^MEM~0-1^out~0 memory_controller_out~1
+1 1
+.names single_port_ram^MEM~0-0^out~0 memory_controller_out~0
+1 1
+.names c~30 memory_controller_in~30
+1 1
+.names c~27 memory_controller_in~27
+1 1
+.names c~19 memory_controller_in~19
+1 1
+.names c~7 memory_controller_in~7
+1 1
+.names lo04 return_val~18
+1 1
+.names lo03 return_val~17
+1 1
+.names lo71 return_val~3
+1 1
+.names lo72 return_val~4
+1 1
+.names lo07 return_val~21
+1 1
+.names c~21 memory_controller_in~21
+1 1
+.names lo81 return_val~13
+1 1
+.names c~2 memory_controller_in~2
+1 1
+.names c~3 memory_controller_in~3
+1 1
+.names lo80 return_val~12
+1 1
+.names c~22 memory_controller_in~22
+1 1
+.names c~14 memory_controller_in~14
+1 1
+.names c~8 memory_controller_in~8
+1 1
+.names lo73 return_val~5
+1 1
+.names c~15 memory_controller_in~15
+1 1
+.names lo78 return_val~10
+1 1
+.names lo68 return_val~0
+1 1
+.names c~16 memory_controller_in~16
+1 1
+.names lo33 finish
+1 1
+.names c~17 memory_controller_in~17
+1 1
+.names lo16 return_val~30
+1 1
+.names c~18 memory_controller_in~18
+1 1
+.names lo15 return_val~29
+1 1
+.names c~24 memory_controller_in~24
+1 1
+.names c~25 memory_controller_in~25
+1 1
+.names c~4 memory_controller_in~4
+1 1
+.names c~5 memory_controller_in~5
+1 1
+.names lo79 return_val~11
+1 1
+.end
+
+
+.model single_port_ram
+.inputs clk addr[0] addr[1] addr[2] addr[3] addr[4] addr[5] addr[6] addr[7] \
+ addr[8] addr[9] addr[10] addr[11] addr[12] addr[13] addr[14] data we
+.outputs out
+.blackbox
+.end
+
+
+.model CLOCK_GATING
+.inputs I
+.outputs
+.blackbox
+.end

@@ -1,0 +1,747 @@
+# Benchmark "sv_chip3_hierarchy_no_mem" written by ABC on Fri Mar 27 10:32:50 2026 
+
+
+.model sv_chip3_hierarchy_no_mem 
+
+
+.inputs tm3_vidin_llc tm3_vidin_vs tm3_clk_v0 tm3_vidin_cref tm3_vidin_rts0 tm3_vidin_href tm3_clk_v2 tm3_vidin_vpo~15 \
+ tm3_vidin_vpo~14 tm3_vidin_vpo~13 tm3_vidin_vpo~12 tm3_vidin_vpo~11 tm3_vidin_vpo~10 tm3_vidin_vpo~9 tm3_vidin_vpo~8 \
+ tm3_vidin_vpo~7 tm3_vidin_vpo~6 tm3_vidin_vpo~5 tm3_vidin_vpo~4 tm3_vidin_vpo~3 tm3_vidin_vpo~2 tm3_vidin_vpo~1 \
+ tm3_vidin_vpo~0 
+
+
+.outputs vidin_addr_reg~18 vidin_addr_reg~17 
+
+
+
+.latch _n117 $add~0^lAND~1 re tm3_clk_v0 0 
+
+
+.latch _n122 $sdffe~12^Q~1 re tm3_clk_v0 0 
+
+
+.latch _n127 $sdffe~12^Q~2 re tm3_clk_v0 0 
+
+
+.latch _n132 $sdffe~12^Q~3 re tm3_clk_v0 0 
+
+
+.latch _n137 $sdffe~12^Q~4 re tm3_clk_v0 0 
+
+
+.latch _n142 $sdffe~12^Q~5 re tm3_clk_v0 0 
+
+
+.latch _n147 $sdffe~12^Q~6 re tm3_clk_v0 0 
+
+
+.latch _n152 $sdffe~12^Q~7 re tm3_clk_v0 0 
+
+
+.latch _n157 $dffe~11^Q~0 re tm3_clk_v0 0 
+
+
+.latch _n162 $dffe~11^Q~1 re tm3_clk_v0 0 
+
+
+.latch _n167 $dffe~11^Q~2 re tm3_clk_v0 0 
+
+
+.latch _n172 $dffe~11^Q~3 re tm3_clk_v0 0 
+
+
+.latch _n177 $dffe~11^Q~4 re tm3_clk_v0 0 
+
+
+.latch _n182 $dffe~11^Q~5 re tm3_clk_v0 0 
+
+
+.latch _n187 $dffe~11^Q~6 re tm3_clk_v0 0 
+
+
+.latch _n192 $dffe~11^Q~7 re tm3_clk_v0 0 
+
+
+.latch _n197 $dffe~11^Q~8 re tm3_clk_v0 0 
+
+
+.latch _n202 $dffe~11^Q~9 re tm3_clk_v0 0 
+
+
+.latch _n207 $dffe~11^Q~10 re tm3_clk_v0 0 
+
+
+.latch _n212 $dffe~11^Q~11 re tm3_clk_v0 0 
+
+
+.latch _n217 $dffe~11^Q~12 re tm3_clk_v0 0 
+
+
+.latch _n222 $dffe~11^Q~13 re tm3_clk_v0 0 
+
+
+.latch _n227 $dffe~11^Q~14 re tm3_clk_v0 0 
+
+
+.latch _n232 $dffe~11^Q~15 re tm3_clk_v0 0 
+
+
+.latch _n237 $dffe~11^Q~16 re tm3_clk_v0 0 
+
+
+.latch _n242 $dffe~11^Q~17 re tm3_clk_v0 0 
+
+
+.latch _n247 $dffe~11^Q~18 re tm3_clk_v0 0 
+
+
+.latch _n252 vidin_rgb_reg~0 re tm3_clk_v0 0 
+
+
+.latch _n256 vidin_rgb_reg~1 re tm3_clk_v0 0 
+
+
+.latch _n260 vidin_rgb_reg~2 re tm3_clk_v0 0 
+
+
+.latch _n264 vidin_rgb_reg~3 re tm3_clk_v0 0 
+
+
+.latch _n268 vidin_rgb_reg~4 re tm3_clk_v0 0 
+
+
+.latch _n272 vidin_rgb_reg~5 re tm3_clk_v0 0 
+
+
+.latch _n276 vidin_rgb_reg~6 re tm3_clk_v0 0 
+
+
+.latch _n280 vidin_rgb_reg~7 re tm3_clk_v0 0 
+
+
+.latch _n284 vidin_addr_reg~0 re tm3_clk_v0 0 
+
+
+.latch _n288 vidin_addr_reg~1 re tm3_clk_v0 0 
+
+
+.latch _n292 vidin_addr_reg~2 re tm3_clk_v0 0 
+
+
+.latch _n296 vidin_addr_reg~3 re tm3_clk_v0 0 
+
+
+.latch _n300 vidin_addr_reg~4 re tm3_clk_v0 0 
+
+
+.latch _n304 vidin_addr_reg~5 re tm3_clk_v0 0 
+
+
+.latch _n308 vidin_addr_reg~6 re tm3_clk_v0 0 
+
+
+.latch _n312 vidin_addr_reg~7 re tm3_clk_v0 0 
+
+
+.latch _n316 vidin_addr_reg~8 re tm3_clk_v0 0 
+
+
+.latch _n320 vidin_addr_reg~9 re tm3_clk_v0 0 
+
+
+.latch _n324 vidin_addr_reg~10 re tm3_clk_v0 0 
+
+
+.latch _n328 vidin_addr_reg~11 re tm3_clk_v0 0 
+
+
+.latch _n332 vidin_addr_reg~12 re tm3_clk_v0 0 
+
+
+.latch _n336 vidin_addr_reg~13 re tm3_clk_v0 0 
+
+
+.latch _n340 vidin_addr_reg~14 re tm3_clk_v0 0 
+
+
+.latch _n344 vidin_addr_reg~15 re tm3_clk_v0 0 
+
+
+.latch _n348 vidin_addr_reg~16 re tm3_clk_v0 0 
+
+
+.latch _n352 vidin_new_data re tm3_clk_v0 0 
+
+
+.latch _n356 $add~2^lAND~17 re tm3_clk_v0 0 
+
+
+.latch _n361 $sdffe~13^Q~1 re tm3_clk_v0 0 
+
+
+.latch _n366 $sdffe~13^Q~2 re tm3_clk_v0 0 
+
+
+.latch _n371 $sdffe~13^Q~3 re tm3_clk_v0 0 
+
+
+.latch _n376 $sdffe~13^Q~4 re tm3_clk_v0 0 
+
+
+.latch _n381 $sdffe~13^Q~5 re tm3_clk_v0 0 
+
+
+.latch _n386 $sdffe~13^Q~6 re tm3_clk_v0 0 
+
+
+.latch _n391 $sdffe~13^Q~7 re tm3_clk_v0 0 
+
+
+.latch _n396 $sdffe~13^Q~8 re tm3_clk_v0 0 
+
+
+.latch _n401 $sdffe~13^Q~9 re tm3_clk_v0 0 
+
+
+.latch _n406 $dffe~8^Q~0 re tm3_clk_v0 0 
+
+
+.latch _n411 $dffe~8^Q~1 re tm3_clk_v0 0 
+
+
+.latch _n416 $dffe~8^Q~2 re tm3_clk_v0 0 
+
+
+.latch _n421 $dffe~8^Q~3 re tm3_clk_v0 0 
+
+
+.latch _n426 $dffe~8^Q~4 re tm3_clk_v0 0 
+
+
+.latch _n431 $dffe~8^Q~5 re tm3_clk_v0 0 
+
+
+.latch _n436 $dffe~8^Q~6 re tm3_clk_v0 0 
+
+
+.latch _n441 $dffe~8^Q~7 re tm3_clk_v0 0 
+
+
+.latch _n446 $dffe~9^Q~0 re tm3_clk_v0 0 
+
+
+.latch _n451 $dffe~9^Q~1 re tm3_clk_v0 0 
+
+
+.latch _n456 $dffe~9^Q~2 re tm3_clk_v0 0 
+
+
+.latch _n461 $dffe~9^Q~3 re tm3_clk_v0 0 
+
+
+.latch _n466 $dffe~9^Q~4 re tm3_clk_v0 0 
+
+
+.latch _n471 $dffe~10^Q~0 re tm3_clk_v0 0 
+
+
+.latch _n476 $dffe~10^Q~1 re tm3_clk_v0 0 
+
+
+.latch _n481 $dffe~10^Q~2 re tm3_clk_v0 0 
+
+
+.latch _n485 $dff~107^Q~0 re tm3_clk_v0 0 
+
+
+.latch _n489 $dff~108^Q~0 re tm3_clk_v0 0 
+
+
+.latch _n493 $dff~109^Q~0 re tm3_clk_v0 0 
+
+
+
+
+.names tm3_vidin_vs new_n220 $add~0^lAND~1 _n117 
+001 1 
+010 1 
+
+
+.names new_n222 new_n221 tm3_vidin_href new_n220 
+-00 1 
+0-0 1 
+
+
+.names $sdffe~13^Q~6 $sdffe~13^Q~7 $sdffe~13^Q~8 $sdffe~13^Q~9 new_n221 
+0000 1 
+
+
+.names $add~2^lAND~17 $sdffe~13^Q~1 $sdffe~13^Q~2 $sdffe~13^Q~3 $sdffe~13^Q~4 $sdffe~13^Q~5 new_n222 
+000000 1 
+
+
+.names tm3_vidin_vs new_n224 $sdffe~12^Q~1 _n122 
+001 1 
+010 1 
+
+
+.names new_n220 $add~0^lAND~1 new_n224 
+11 1 
+
+
+.names new_n224 $sdffe~12^Q~1 tm3_vidin_vs $sdffe~12^Q~2 _n127 
+-001 1 
+0-01 1 
+1100 1 
+
+
+.names tm3_vidin_vs new_n227 $sdffe~12^Q~3 _n132 
+001 1 
+010 1 
+
+
+.names new_n222 new_n221 tm3_vidin_href $sdffe~12^Q~1 $sdffe~12^Q~2 $add~0^lAND~1 new_n227 
+-00111 1 
+0-0111 1 
+
+
+.names new_n227 $sdffe~12^Q~3 tm3_vidin_vs $sdffe~12^Q~4 _n137 
+-001 1 
+0-01 1 
+1100 1 
+
+
+.names new_n227 $sdffe~12^Q~3 $sdffe~12^Q~4 tm3_vidin_vs $sdffe~12^Q~5 _n142 
+--001 1 
+-0-01 1 
+0--01 1 
+11100 1 
+
+
+.names new_n227 $sdffe~12^Q~3 $sdffe~12^Q~4 $sdffe~12^Q~5 tm3_vidin_vs $sdffe~12^Q~6 _n147 
+---001 1 
+--0-01 1 
+-0--01 1 
+0---01 1 
+111100 1 
+
+
+.names tm3_vidin_vs new_n232 $sdffe~12^Q~7 _n152 
+001 1 
+010 1 
+
+
+.names new_n227 $sdffe~12^Q~3 $sdffe~12^Q~4 $sdffe~12^Q~5 $sdffe~12^Q~6 new_n232 
+11111 1 
+
+
+.names $add~2^lAND~17 $dffe~11^Q~0 tm3_vidin_cref _n157 
+-11 1 
+1-0 1 
+
+
+.names $sdffe~13^Q~1 $dffe~11^Q~1 tm3_vidin_cref _n162 
+-11 1 
+1-0 1 
+
+
+.names $sdffe~13^Q~2 $dffe~11^Q~2 tm3_vidin_cref _n167 
+-11 1 
+1-0 1 
+
+
+.names $sdffe~13^Q~3 $dffe~11^Q~3 tm3_vidin_cref _n172 
+-11 1 
+1-0 1 
+
+
+.names $sdffe~13^Q~4 $dffe~11^Q~4 tm3_vidin_cref _n177 
+-11 1 
+1-0 1 
+
+
+.names $sdffe~13^Q~5 $dffe~11^Q~5 tm3_vidin_cref _n182 
+-11 1 
+1-0 1 
+
+
+.names $sdffe~13^Q~6 $dffe~11^Q~6 tm3_vidin_cref _n187 
+-11 1 
+1-0 1 
+
+
+.names $sdffe~13^Q~7 $dffe~11^Q~7 tm3_vidin_cref _n192 
+-11 1 
+1-0 1 
+
+
+.names $sdffe~13^Q~8 $dffe~11^Q~8 tm3_vidin_cref _n197 
+-11 1 
+1-0 1 
+
+
+.names $sdffe~13^Q~9 $dffe~11^Q~9 tm3_vidin_cref _n202 
+-11 1 
+1-0 1 
+
+
+.names tm3_vidin_rts0 $dffe~11^Q~10 tm3_vidin_cref _n207 
+-11 1 
+1-0 1 
+
+
+.names $dffe~11^Q~11 $add~0^lAND~1 tm3_vidin_cref _n212 
+-10 1 
+1-1 1 
+
+
+.names $dffe~11^Q~12 $sdffe~12^Q~1 tm3_vidin_cref _n217 
+-10 1 
+1-1 1 
+
+
+.names $dffe~11^Q~13 $sdffe~12^Q~2 tm3_vidin_cref _n222 
+-10 1 
+1-1 1 
+
+
+.names $dffe~11^Q~14 $sdffe~12^Q~3 tm3_vidin_cref _n227 
+-10 1 
+1-1 1 
+
+
+.names $dffe~11^Q~15 $sdffe~12^Q~4 tm3_vidin_cref _n232 
+-10 1 
+1-1 1 
+
+
+.names $dffe~11^Q~16 $sdffe~12^Q~5 tm3_vidin_cref _n237 
+-10 1 
+1-1 1 
+
+
+.names $dffe~11^Q~17 $sdffe~12^Q~6 tm3_vidin_cref _n242 
+-10 1 
+1-1 1 
+
+
+.names $dffe~11^Q~18 $sdffe~12^Q~7 tm3_vidin_cref _n247 
+-10 1 
+1-1 1 
+
+
+.names vidin_rgb_reg~0 $dffe~8^Q~0 _n352 _n252 
+-11 1 
+1-0 1 
+
+
+.names $dffe~11^Q~0 $dffe~11^Q~10 $dff~108^Q~0 $dff~109^Q~0 _n352 
+0001 1 
+
+
+.names vidin_rgb_reg~1 $dffe~8^Q~1 _n352 _n256 
+-11 1 
+1-0 1 
+
+
+.names vidin_rgb_reg~2 $dffe~8^Q~2 _n352 _n260 
+-11 1 
+1-0 1 
+
+
+.names vidin_rgb_reg~3 $dffe~8^Q~3 _n352 _n264 
+-11 1 
+1-0 1 
+
+
+.names vidin_rgb_reg~4 $dffe~8^Q~4 _n352 _n268 
+-11 1 
+1-0 1 
+
+
+.names vidin_rgb_reg~5 $dffe~8^Q~5 _n352 _n272 
+-11 1 
+1-0 1 
+
+
+.names vidin_rgb_reg~6 $dffe~8^Q~6 _n352 _n276 
+-11 1 
+1-0 1 
+
+
+.names vidin_rgb_reg~7 $dffe~8^Q~7 _n352 _n280 
+-11 1 
+1-0 1 
+
+
+.names vidin_addr_reg~0 $dffe~11^Q~1 _n352 _n284 
+-11 1 
+1-0 1 
+
+
+.names vidin_addr_reg~1 $dffe~11^Q~2 _n352 _n288 
+-11 1 
+1-0 1 
+
+
+.names vidin_addr_reg~2 $dffe~11^Q~3 _n352 _n292 
+-11 1 
+1-0 1 
+
+
+.names vidin_addr_reg~3 $dffe~11^Q~4 _n352 _n296 
+-11 1 
+1-0 1 
+
+
+.names vidin_addr_reg~4 $dffe~11^Q~5 _n352 _n300 
+-11 1 
+1-0 1 
+
+
+.names vidin_addr_reg~5 $dffe~11^Q~6 _n352 _n304 
+-11 1 
+1-0 1 
+
+
+.names vidin_addr_reg~6 $dffe~11^Q~7 _n352 _n308 
+-11 1 
+1-0 1 
+
+
+.names vidin_addr_reg~7 $dffe~11^Q~8 _n352 _n312 
+-11 1 
+1-0 1 
+
+
+.names vidin_addr_reg~8 $dffe~11^Q~9 _n352 _n316 
+-11 1 
+1-0 1 
+
+
+.names vidin_addr_reg~9 $dffe~11^Q~11 _n352 _n320 
+-11 1 
+1-0 1 
+
+
+.names vidin_addr_reg~10 $dffe~11^Q~12 _n352 _n324 
+-11 1 
+1-0 1 
+
+
+.names vidin_addr_reg~11 $dffe~11^Q~13 _n352 _n328 
+-11 1 
+1-0 1 
+
+
+.names vidin_addr_reg~12 $dffe~11^Q~14 _n352 _n332 
+-11 1 
+1-0 1 
+
+
+.names vidin_addr_reg~13 $dffe~11^Q~15 _n352 _n336 
+-11 1 
+1-0 1 
+
+
+.names vidin_addr_reg~14 $dffe~11^Q~16 _n352 _n340 
+-11 1 
+1-0 1 
+
+
+.names vidin_addr_reg~15 $dffe~11^Q~17 _n352 _n344 
+-11 1 
+1-0 1 
+
+
+.names vidin_addr_reg~16 $dffe~11^Q~18 _n352 _n348 
+-11 1 
+1-0 1 
+
+
+.names $add~2^lAND~17 tm3_vidin_cref tm3_vidin_href _n356 
+001 1 
+111 1 
+
+
+.names tm3_vidin_cref $add~2^lAND~17 $sdffe~13^Q~1 tm3_vidin_href _n361 
+-011 1 
+0101 1 
+1-11 1 
+
+
+.names tm3_vidin_cref $add~2^lAND~17 $sdffe~13^Q~1 $sdffe~13^Q~2 tm3_vidin_href _n366 
+--011 1 
+-0-11 1 
+01101 1 
+1--11 1 
+
+
+.names tm3_vidin_cref $add~2^lAND~17 $sdffe~13^Q~1 $sdffe~13^Q~2 $sdffe~13^Q~3 tm3_vidin_href _n371 
+---011 1 
+--0-11 1 
+-0--11 1 
+011101 1 
+1---11 1 
+
+
+.names new_n283 $sdffe~13^Q~4 tm3_vidin_href _n376 
+011 1 
+101 1 
+
+
+.names tm3_vidin_cref $sdffe~13^Q~1 $sdffe~13^Q~2 $sdffe~13^Q~3 $add~2^lAND~17 new_n283 
+01111 1 
+
+
+.names new_n285 $sdffe~13^Q~5 tm3_vidin_href _n381 
+011 1 
+101 1 
+
+
+.names new_n283 $sdffe~13^Q~4 new_n285 
+11 1 
+
+
+.names new_n285 $sdffe~13^Q~5 $sdffe~13^Q~6 tm3_vidin_href _n386 
+-011 1 
+0-11 1 
+1101 1 
+
+
+.names new_n285 $sdffe~13^Q~5 $sdffe~13^Q~6 $sdffe~13^Q~7 tm3_vidin_href _n391 
+--011 1 
+-0-11 1 
+0--11 1 
+11101 1 
+
+
+.names new_n285 $sdffe~13^Q~5 $sdffe~13^Q~6 $sdffe~13^Q~7 $sdffe~13^Q~8 tm3_vidin_href _n396 
+---011 1 
+--0-11 1 
+-0--11 1 
+0---11 1 
+111101 1 
+
+
+.names new_n290 tm3_vidin_href _n401 
+01 1 
+
+
+.names new_n285 $sdffe~13^Q~5 $sdffe~13^Q~6 $sdffe~13^Q~7 $sdffe~13^Q~8 $sdffe~13^Q~9 new_n290 
+----00 1 
+---0-0 1 
+--0--0 1 
+-0---0 1 
+0----0 1 
+111111 1 
+
+
+.names $dffe~10^Q~0 $dffe~8^Q~0 tm3_vidin_cref _n406 
+-10 1 
+1-1 1 
+
+
+.names $dffe~10^Q~1 $dffe~8^Q~1 tm3_vidin_cref _n411 
+-10 1 
+1-1 1 
+
+
+.names $dffe~10^Q~2 $dffe~8^Q~2 tm3_vidin_cref _n416 
+-10 1 
+1-1 1 
+
+
+.names $dffe~9^Q~0 $dffe~8^Q~3 tm3_vidin_cref _n421 
+-10 1 
+1-1 1 
+
+
+.names $dffe~9^Q~1 $dffe~8^Q~4 tm3_vidin_cref _n426 
+-10 1 
+1-1 1 
+
+
+.names $dffe~9^Q~2 $dffe~8^Q~5 tm3_vidin_cref _n431 
+-10 1 
+1-1 1 
+
+
+.names $dffe~9^Q~3 $dffe~8^Q~6 tm3_vidin_cref _n436 
+-10 1 
+1-1 1 
+
+
+.names $dffe~9^Q~4 $dffe~8^Q~7 tm3_vidin_cref _n441 
+-10 1 
+1-1 1 
+
+
+.names tm3_vidin_vpo~0 $dffe~9^Q~0 tm3_vidin_cref _n446 
+-11 1 
+1-0 1 
+
+
+.names tm3_vidin_vpo~1 $dffe~9^Q~1 tm3_vidin_cref _n451 
+-11 1 
+1-0 1 
+
+
+.names tm3_vidin_vpo~2 $dffe~9^Q~2 tm3_vidin_cref _n456 
+-11 1 
+1-0 1 
+
+
+.names tm3_vidin_vpo~3 $dffe~9^Q~3 tm3_vidin_cref _n461 
+-11 1 
+1-0 1 
+
+
+.names tm3_vidin_vpo~4 $dffe~9^Q~4 tm3_vidin_cref _n466 
+-11 1 
+1-0 1 
+
+
+.names tm3_vidin_vpo~0 $dffe~10^Q~0 tm3_vidin_cref _n471 
+-10 1 
+1-1 1 
+
+
+.names tm3_vidin_vpo~1 $dffe~10^Q~1 tm3_vidin_cref _n476 
+-10 1 
+1-1 1 
+
+
+.names tm3_vidin_vpo~2 $dffe~10^Q~2 tm3_vidin_cref _n481 
+-10 1 
+1-1 1 
+
+
+.names vidin_addr_reg~18 
+0 
+
+
+.names vidin_addr_reg~17 
+0 
+
+
+.names tm3_vidin_cref _n485 
+1 1 
+
+
+.names $dff~107^Q~0 _n489 
+1 1 
+
+
+.names $dff~108^Q~0 _n493 
+1 1 
+
+
+
+.end 
+
+
+
+
+
+

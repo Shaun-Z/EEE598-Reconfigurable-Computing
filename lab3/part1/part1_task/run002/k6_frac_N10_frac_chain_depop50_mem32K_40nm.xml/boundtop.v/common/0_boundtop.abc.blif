@@ -1,0 +1,4031 @@
+# Benchmark "paj_boundtop_hierarchy_no_mem" written by ABC on Fri Mar 27 10:27:16 2026 
+
+.model paj_boundtop_hierarchy_no_mem 
+
+.inputs resultready brdatain~25 tm3_sram_data_in~1 wanttriID resultdata~2 resultdata~4 resultdata~7 pglobalreset data2in~63 \
+ data2in~62 data2in~61 tm3_sram_data_in~0 tm3_clk_v0 tm3_sram_data_in~7 tm3_sram_data_in~8 tm3_sram_data_in~9 \
+ tm3_sram_data_in~5 tm3_sram_data_in~6 tm3_sram_data_in~4 resultdata~0 resultdata~8 brdatain~26 brdatain~27 brdatain~28 \
+ brdatain~29 brdatain~30 brdatain~31 addr2_ready addr2in~0 addr2in~1 addr2in~2 addr2in~3 addr2in~4 addr2in~5 addr2in~6 \
+ addr2in~7 addr2in~8 addr2in~9 addr2in~10 addr2in~11 addr2in~12 addr2in~13 addr2in~14 addr2in~15 addr2in~16 addr2in~17 \
+ data2_ready data2in~0 data2in~1 data2in~2 data2in~3 data2in~4 data2in~5 data2in~6 data2in~7 data2in~8 data2in~9 data2in~10 \
+ data2in~11 data2in~12 data2in~13 data2in~14 data2in~15 data2in~16 data2in~17 data2in~18 data2in~19 data2in~20 data2in~21 \
+ data2in~22 data2in~23 data2in~24 data2in~25 data2in~26 data2in~27 data2in~28 data2in~29 data2in~30 data2in~31 data2in~32 \
+ data2in~33 data2in~34 data2in~35 data2in~36 data2in~37 data2in~38 data2in~39 data2in~40 data2in~41 data2in~42 data2in~43 \
+ data2in~44 data2in~45 data2in~46 data2in~47 data2in~48 data2in~49 data2in~50 data2in~51 data2in~52 data2in~53 data2in~54 \
+ tm3_sram_data_in~10 tm3_sram_data_in~11 tm3_sram_data_in~12 resultdata~9 resultdata~10 resultdata~11 tm3_sram_data_in~13 \
+ tm3_sram_data_in~14 tm3_sram_data_in~15 tm3_sram_data_in~16 tm3_sram_data_in~17 tm3_sram_data_in~18 tm3_sram_data_in~19 \
+ tm3_sram_data_in~20 tm3_sram_data_in~21 tm3_sram_data_in~22 tm3_sram_data_in~23 tm3_sram_data_in~24 tm3_sram_data_in~25 \
+ tm3_sram_data_in~26 tm3_sram_data_in~27 tm3_sram_data_in~28 tm3_sram_data_in~29 tm3_sram_data_in~30 tm3_sram_data_in~31 \
+ tm3_sram_data_in~32 tm3_sram_data_in~33 tm3_sram_data_in~34 tm3_sram_data_in~35 tm3_sram_data_in~36 tm3_sram_data_in~37 \
+ tm3_sram_data_in~38 tm3_sram_data_in~39 tm3_sram_data_in~40 tm3_sram_data_in~41 tm3_sram_data_in~42 tm3_sram_data_in~43 \
+ tm3_sram_data_in~44 tm3_sram_data_in~45 tm3_sram_data_in~46 tm3_sram_data_in~47 tm3_sram_data_in~48 tm3_sram_data_in~49 \
+ tm3_sram_data_in~50 tm3_sram_data_in~51 tm3_sram_data_in~52 tm3_sram_data_in~53 tm3_sram_data_in~54 tm3_sram_data_in~55 \
+ tm3_sram_data_in~56 tm3_sram_data_in~57 tm3_sram_data_in~58 tm3_sram_data_in~59 tm3_sram_data_in~60 tm3_sram_data_in~61 \
+ tm3_sram_data_in~62 tm3_sram_data_in~63 raygroup01~0 raygroup01~1 raygroupvalid01 raygroup10~0 raygroup10~1 raygroupvalid10 \
+ rgData~0 rgData~1 rgData~2 rgData~3 rgData~4 rgData~5 rgData~6 rgData~7 rgData~8 rgData~9 rgData~10 rgData~11 rgData~12 \
+ rgData~13 rgData~14 rgData~15 rgData~16 rgData~17 rgData~18 rgData~19 rgData~20 rgData~21 rgData~22 rgData~23 rgData~24 \
+ rgData~25 rgData~26 rgData~27 rgData~28 rgData~29 rgData~30 rgData~31 rgAddr~0 rgAddr~1 rgAddr~2 rgAddr~3 rgWE~0 rgWE~1 \
+ rgWE~2 rgAddrValid input1 brdatain~24 brdatain~23 brdatain~22 brdatain~21 brdatain~20 brdatain~19 brdatain~18 brdatain~17 \
+ brdatain~16 brdatain~15 brdatain~14 brdatain~13 brdatain~12 brdatain~11 brdatain~10 brdatain~9 brdatain~8 brdatain~7 \
+ brdatain~6 brdatain~5 brdatain~4 brdatain~3 brdatain~2 brdatain~1 brdatain~0 brdata_ready braddrin~9 braddrin~8 braddrin~7 \
+ braddrin~6 braddrin~5 braddrin~4 braddrin~3 braddrin~2 braddrin~1 braddrin~0 braddr_ready resultdata~31 resultdata~30 \
+ resultdata~29 resultdata~28 resultdata~27 resultdata~26 resultdata~25 resultdata~24 resultdata~23 resultdata~22 resultdata~21 \
+ resultdata~20 resultdata~19 resultdata~18 resultdata~17 resultdata~16 resultdata~15 resultdata~14 resultdata~13 resultdata~12 \
+ data2in~60 data2in~59 data2in~58 data2in~57 data2in~56 data2in~55 resultdata~1 resultdata~6 resultdata~5 tm3_sram_data_in~2 \
+ tm3_sram_data_in~3 resultdata~3 
+
+.outputs tm3_sram_data_out~33 tm3_sram_data_out~32 rgResultData~10 tm3_sram_addr~3 tm3_sram_data_out~26 tm3_sram_data_out~39 \
+ tm3_sram_we~0 tm3_sram_data_out~38 rgResultData~20 rgResultData~26 tm3_sram_addr~13 tm3_sram_addr~17 tm3_sram_addr~18 \
+ tm3_sram_addr~12 tm3_sram_addr~15 tm3_sram_addr~14 tm3_sram_addr~16 rgResultData~3 rgResultData~2 rgResultData~1 \
+ tm3_sram_data_out~23 busy10 busy01 tm3_sram_adsp tm3_sram_oe~1 want_data2 tm3_sram_data_out~6 tm3_sram_data_out~7 want_addr2 \
+ tm3_sram_data_out~0 tm3_sram_data_out~1 tm3_sram_data_out~2 tm3_sram_data_out~3 tm3_sram_data_out~4 tm3_sram_data_out~5 \
+ rgResultData~15 rgResultData~19 rgResultData~16 rgResultData~17 rgResultData~18 rgResultData~25 rgResultData~22 \
+ rgResultData~23 rgResultData~24 rgResultData~28 rgResultData~29 rgResultData~30 rgResultSource~0 rgResultSource~1 \
+ rgResultData~31 rgResultData~21 rgResultData~27 rgResultReady rgResultData~11 rgResultData~13 rgResultData~12 rgResultData~14 \
+ globalreset want_braddr tm3_sram_data_out~37 tm3_sram_addr~11 tm3_sram_addr~10 tm3_sram_addr~9 tm3_sram_addr~8 \
+ tm3_sram_addr~7 tm3_sram_addr~6 tm3_sram_addr~5 tm3_sram_addr~4 tm3_sram_data_out~24 rgResultData~4 tm3_sram_data_out~47 \
+ tm3_sram_data_out~48 tm3_sram_data_out~49 tm3_sram_data_out~50 tm3_sram_data_out~51 tm3_sram_data_out~52 tm3_sram_data_out~53 \
+ tm3_sram_data_out~54 tm3_sram_data_out~55 tm3_sram_data_out~56 tm3_sram_data_out~57 tm3_sram_data_out~58 tm3_sram_data_out~59 \
+ tm3_sram_data_out~60 tm3_sram_data_out~61 tm3_sram_data_out~62 tm3_sram_data_out~63 tm3_sram_addr~0 triIDvalid triID~0 \
+ triID~1 triID~2 tm3_sram_addr~1 triID~3 triID~4 triID~5 triID~6 triID~7 triID~8 tm3_sram_addr~2 tm3_sram_we~4 tm3_sram_we~3 \
+ tm3_sram_we~2 tm3_sram_we~1 tm3_sram_data_out~43 tm3_sram_data_out~35 tm3_sram_data_out~44 tm3_sram_data_out~45 \
+ tm3_sram_data_out~36 tm3_sram_data_out~34 tm3_sram_data_out~46 raydata~26 raydata~25 raydata~24 raydata~23 raydata~22 \
+ raydata~21 raydata~20 raydata~19 raydata~18 raydata~17 raydata~16 raydata~15 triID~13 triID~14 triID~15 raydata~0 raydata~1 \
+ raydata~2 raydata~3 raydata~4 raydata~5 raydata~6 raydata~7 raydata~8 raydata~9 raydata~10 raydata~11 raydata~12 raydata~13 \
+ raydata~14 tm3_sram_data_out~8 tm3_sram_data_out~9 tm3_sram_data_out~10 tm3_sram_data_out~11 tm3_sram_data_out~12 \
+ tm3_sram_data_out~13 tm3_sram_data_out~14 tm3_sram_data_out~40 tm3_sram_data_out~15 tm3_sram_data_out~16 tm3_sram_data_out~41 \
+ triID~12 tm3_sram_data_out~42 tm3_sram_data_out~25 triID~11 tm3_sram_we~6 rgResultData~0 tm3_sram_we~5 triID~10 triID~9 \
+ rgDone want_brdata raywe~2 tm3_sram_oe~0 tm3_sram_we~7 rgResultData~8 rgResultData~9 rgResultData~5 raydata~27 raydata~28 \
+ raydata~29 raydata~30 raydata~31 rayaddr~0 rgResultData~6 rayaddr~1 rayaddr~2 rayaddr~3 raywe~0 raywe~1 tm3_sram_data_out~31 \
+ tm3_sram_data_out~30 tm3_sram_data_out~22 tm3_sram_data_out~21 tm3_sram_data_out~20 tm3_sram_data_out~19 tm3_sram_data_out~18 \
+ tm3_sram_data_out~17 rgResultData~7 tm3_sram_data_out~27 tm3_sram_data_out~28 tm3_sram_data_out~29 
+
+
+.latch n1104 $sdff~241^Q~0 re tm3_clk_v0 0 
+
+.latch li001 lo001 re tm3_clk_v0 0 
+
+.latch li002 lo002 re tm3_clk_v0 0 
+
+.latch li003 lo003 re tm3_clk_v0 0 
+
+.latch li004 lo004 re tm3_clk_v0 0 
+
+.latch li005 lo005 re tm3_clk_v0 0 
+
+.latch li006 lo006 re tm3_clk_v0 0 
+
+.latch li007 lo007 re tm3_clk_v0 0 
+
+.latch li008 lo008 re tm3_clk_v0 0 
+
+.latch li009 lo009 re tm3_clk_v0 0 
+
+.latch li010 lo010 re tm3_clk_v0 0 
+
+.latch li011 lo011 re tm3_clk_v0 0 
+
+.latch li012 lo012 re tm3_clk_v0 0 
+
+.latch li013 lo013 re tm3_clk_v0 0 
+
+.latch li014 lo014 re tm3_clk_v0 0 
+
+.latch li015 lo015 re tm3_clk_v0 0 
+
+.latch li016 lo016 re tm3_clk_v0 0 
+
+.latch li017 lo017 re tm3_clk_v0 0 
+
+.latch n1196 $sdff~250^Q~0 re tm3_clk_v0 0 
+
+.latch n1201 $sdff~250^Q~1 re tm3_clk_v0 0 
+
+.latch n1206 $sdff~250^Q~2 re tm3_clk_v0 0 
+
+.latch n1211 $sdff~250^Q~3 re tm3_clk_v0 0 
+
+.latch n1216 $sdff~250^Q~4 re tm3_clk_v0 0 
+
+.latch n1221 $sdff~250^Q~5 re tm3_clk_v0 0 
+
+.latch n1226 $sdff~250^Q~6 re tm3_clk_v0 0 
+
+.latch n1231 $sdff~250^Q~7 re tm3_clk_v0 0 
+
+.latch n1236 $sdff~250^Q~8 re tm3_clk_v0 0 
+
+.latch n1241 $sdff~250^Q~9 re tm3_clk_v0 0 
+
+.latch n1246 $sdff~250^Q~10 re tm3_clk_v0 0 
+
+.latch n1251 $sdff~250^Q~11 re tm3_clk_v0 0 
+
+.latch li030 lo030 re tm3_clk_v0 0 
+
+.latch li031 lo031 re tm3_clk_v0 0 
+
+.latch li032 lo032 re tm3_clk_v0 0 
+
+.latch li033 lo033 re tm3_clk_v0 0 
+
+.latch li034 lo034 re tm3_clk_v0 0 
+
+.latch li035 lo035 re tm3_clk_v0 0 
+
+.latch li036 lo036 re tm3_clk_v0 0 
+
+.latch li037 lo037 re tm3_clk_v0 0 
+
+.latch li038 lo038 re tm3_clk_v0 0 
+
+.latch li039 lo039 re tm3_clk_v0 0 
+
+.latch li040 lo040 re tm3_clk_v0 0 
+
+.latch li041 lo041 re tm3_clk_v0 0 
+
+.latch li042 lo042 re tm3_clk_v0 0 
+
+.latch li043 lo043 re tm3_clk_v0 0 
+
+.latch li044 lo044 re tm3_clk_v0 0 
+
+.latch li045 lo045 re tm3_clk_v0 0 
+
+.latch li046 lo046 re tm3_clk_v0 0 
+
+.latch li047 lo047 re tm3_clk_v0 0 
+
+.latch li048 lo048 re tm3_clk_v0 0 
+
+.latch li049 lo049 re tm3_clk_v0 0 
+
+.latch li050 lo050 re tm3_clk_v0 0 
+
+.latch li051 lo051 re tm3_clk_v0 0 
+
+.latch li052 lo052 re tm3_clk_v0 0 
+
+.latch li053 lo053 re tm3_clk_v0 0 
+
+.latch li054 lo054 re tm3_clk_v0 0 
+
+.latch li055 lo055 re tm3_clk_v0 0 
+
+.latch li056 lo056 re tm3_clk_v0 0 
+
+.latch li057 lo057 re tm3_clk_v0 0 
+
+.latch li058 lo058 re tm3_clk_v0 0 
+
+.latch li059 lo059 re tm3_clk_v0 0 
+
+.latch li060 lo060 re tm3_clk_v0 0 
+
+.latch li061 lo061 re tm3_clk_v0 0 
+
+.latch li062 lo062 re tm3_clk_v0 0 
+
+.latch li063 lo063 re tm3_clk_v0 0 
+
+.latch li064 lo064 re tm3_clk_v0 0 
+
+.latch li065 lo065 re tm3_clk_v0 0 
+
+.latch li066 lo066 re tm3_clk_v0 0 
+
+.latch li067 lo067 re tm3_clk_v0 0 
+
+.latch li068 lo068 re tm3_clk_v0 0 
+
+.latch li069 lo069 re tm3_clk_v0 0 
+
+.latch li070 lo070 re tm3_clk_v0 0 
+
+.latch li071 lo071 re tm3_clk_v0 0 
+
+.latch li072 lo072 re tm3_clk_v0 0 
+
+.latch n1608 $sdff~61^Q~0 re tm3_clk_v0 0 
+
+.latch li074 lo074 re tm3_clk_v0 0 
+
+.latch n1617 $sdff~242^Q~0 re tm3_clk_v0 0 
+
+.latch n1942 $sdff~512^Q~0 re tm3_clk_v0 0 
+
+.latch n1947 $sdff~512^Q~1 re tm3_clk_v0 0 
+
+.latch n1952 $sdff~512^Q~2 re tm3_clk_v0 0 
+
+.latch n1957 $sdff~512^Q~3 re tm3_clk_v0 0 
+
+.latch n1962 $sdff~512^Q~4 re tm3_clk_v0 0 
+
+.latch n1967 $sdff~512^Q~5 re tm3_clk_v0 0 
+
+.latch n1972 $sdff~512^Q~6 re tm3_clk_v0 0 
+
+.latch n1977 $sdff~512^Q~7 re tm3_clk_v0 0 
+
+.latch n1982 $sdff~512^Q~8 re tm3_clk_v0 0 
+
+.latch n1987 $sdff~512^Q~9 re tm3_clk_v0 0 
+
+.latch n1992 $sdff~512^Q~10 re tm3_clk_v0 0 
+
+.latch n1997 $sdff~512^Q~11 re tm3_clk_v0 0 
+
+.latch n2002 $sdff~512^Q~12 re tm3_clk_v0 0 
+
+.latch n2007 $sdff~512^Q~13 re tm3_clk_v0 0 
+
+.latch n2012 $sdff~512^Q~14 re tm3_clk_v0 0 
+
+.latch n2017 $sdff~512^Q~15 re tm3_clk_v0 0 
+
+.latch n2022 $sdff~512^Q~16 re tm3_clk_v0 0 
+
+.latch n2027 $sdff~512^Q~17 re tm3_clk_v0 0 
+
+.latch n2032 $sdff~512^Q~18 re tm3_clk_v0 0 
+
+.latch n2037 $sdff~512^Q~19 re tm3_clk_v0 0 
+
+.latch n2042 $sdff~512^Q~20 re tm3_clk_v0 0 
+
+.latch n2047 $sdff~512^Q~21 re tm3_clk_v0 0 
+
+.latch n2052 $sdff~512^Q~22 re tm3_clk_v0 0 
+
+.latch n2057 $sdff~512^Q~23 re tm3_clk_v0 0 
+
+.latch n2062 $sdff~512^Q~24 re tm3_clk_v0 0 
+
+.latch n2067 $sdff~512^Q~25 re tm3_clk_v0 0 
+
+.latch n2072 $sdff~512^Q~26 re tm3_clk_v0 0 
+
+.latch n2077 $sdff~512^Q~27 re tm3_clk_v0 0 
+
+.latch n2082 $sdff~512^Q~28 re tm3_clk_v0 0 
+
+.latch n2087 $sdff~512^Q~29 re tm3_clk_v0 0 
+
+.latch n2092 $sdff~512^Q~30 re tm3_clk_v0 0 
+
+.latch n2097 $sdff~512^Q~31 re tm3_clk_v0 0 
+
+.latch n2102 $sdff~511^Q~0 re tm3_clk_v0 0 
+
+.latch n2107 $sdff~511^Q~1 re tm3_clk_v0 0 
+
+.latch n2112 $sdff~511^Q~2 re tm3_clk_v0 0 
+
+.latch n2117 $sdff~511^Q~3 re tm3_clk_v0 0 
+
+.latch n2122 $sdff~510^Q~0 re tm3_clk_v0 0 
+
+.latch n2127 $sdff~510^Q~1 re tm3_clk_v0 0 
+
+.latch n2132 $sdff~510^Q~2 re tm3_clk_v0 0 
+
+.latch n2137 $sdff~509^Q~0 re tm3_clk_v0 0 
+
+.latch n2142 $sdff~240^Q~0 re tm3_clk_v0 0 
+
+.latch n2147 $sdff~240^Q~1 re tm3_clk_v0 0 
+
+.latch n2162 $sdff~58^Q~0 re tm3_clk_v0 0 
+
+.latch n2167 $sdff~58^Q~1 re tm3_clk_v0 0 
+
+.latch n2172 $auto$hard_block.cc:122:cell_hard_block$7436.A[16] re tm3_clk_v0 0 
+
+.latch n2177 $auto$hard_block.cc:122:cell_hard_block$7436.A[17] re tm3_clk_v0 0 
+
+.latch n2182 $auto$hard_block.cc:122:cell_hard_block$7436.A[18] re tm3_clk_v0 0 
+
+.latch n2187 $auto$hard_block.cc:122:cell_hard_block$7436.A[19] re tm3_clk_v0 0 
+
+.latch n2192 $auto$hard_block.cc:122:cell_hard_block$7436.A[20] re tm3_clk_v0 0 
+
+.latch n2197 $auto$hard_block.cc:122:cell_hard_block$7436.A[21] re tm3_clk_v0 0 
+
+.latch n2202 $auto$hard_block.cc:122:cell_hard_block$7436.A[22] re tm3_clk_v0 0 
+
+.latch n2207 $auto$hard_block.cc:122:cell_hard_block$7436.A[23] re tm3_clk_v0 0 
+
+.latch n2212 $auto$hard_block.cc:122:cell_hard_block$7436.A[24] re tm3_clk_v0 0 
+
+.latch n2217 $auto$hard_block.cc:122:cell_hard_block$7436.A[25] re tm3_clk_v0 0 
+
+.latch n2222 $auto$hard_block.cc:122:cell_hard_block$7436.A[26] re tm3_clk_v0 0 
+
+.latch n2227 $auto$hard_block.cc:122:cell_hard_block$7436.A[27] re tm3_clk_v0 0 
+
+.latch n2232 $auto$hard_block.cc:122:cell_hard_block$7436.A[28] re tm3_clk_v0 0 
+
+.latch n2237 $auto$hard_block.cc:122:cell_hard_block$7436.A[29] re tm3_clk_v0 0 
+
+.latch n2242 $auto$hard_block.cc:122:cell_hard_block$7436.A[30] re tm3_clk_v0 0 
+
+.latch n2247 $auto$hard_block.cc:122:cell_hard_block$7436.A[31] re tm3_clk_v0 0 
+
+.latch n2267 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[0] re tm3_clk_v0 0 
+
+.latch n2272 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[1] re tm3_clk_v0 0 
+
+.latch n2277 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[2] re tm3_clk_v0 0 
+
+.latch n2282 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[3] re tm3_clk_v0 0 
+
+.latch n2287 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[4] re tm3_clk_v0 0 
+
+.latch n2292 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[5] re tm3_clk_v0 0 
+
+.latch n2297 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[6] re tm3_clk_v0 0 
+
+.latch n2302 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[7] re tm3_clk_v0 0 
+
+.latch n2307 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[8] re tm3_clk_v0 0 
+
+.latch n2312 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[9] re tm3_clk_v0 0 
+
+.latch n2317 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[10] re tm3_clk_v0 0 
+
+.latch n2322 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[11] re tm3_clk_v0 0 
+
+.latch n2327 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[12] re tm3_clk_v0 0 
+
+.latch n2332 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[13] re tm3_clk_v0 0 
+
+.latch n2337 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[14] re tm3_clk_v0 0 
+
+.latch n2667 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[17] re tm3_clk_v0 0 
+
+.latch n2672 $sdff~64^Q~0 re tm3_clk_v0 0 
+
+.latch n2677 $sdff~2^Q~0 re tm3_clk_v0 0 
+
+.latch n2682 $sdff~2^Q~1 re tm3_clk_v0 0 
+
+.latch n2687 $sdff~64^Q~3 re tm3_clk_v0 0 
+
+.latch n2692 $sdff~64^Q~4 re tm3_clk_v0 0 
+
+.latch n2697 $sdff~64^Q~5 re tm3_clk_v0 0 
+
+.latch n2702 $sdff~64^Q~6 re tm3_clk_v0 0 
+
+.latch n2707 $sdff~64^Q~7 re tm3_clk_v0 0 
+
+.latch n2712 $auto$hard_block.cc:122:cell_hard_block$7436.B[48] re tm3_clk_v0 0 
+
+.latch n2717 $auto$hard_block.cc:122:cell_hard_block$7436.B[49] re tm3_clk_v0 0 
+
+.latch n2722 $auto$hard_block.cc:122:cell_hard_block$7436.B[50] re tm3_clk_v0 0 
+
+.latch n2727 $auto$hard_block.cc:122:cell_hard_block$7436.B[51] re tm3_clk_v0 0 
+
+.latch n2732 $auto$hard_block.cc:122:cell_hard_block$7436.B[52] re tm3_clk_v0 0 
+
+.latch n2737 $auto$hard_block.cc:122:cell_hard_block$7436.B[53] re tm3_clk_v0 0 
+
+.latch n2742 $auto$hard_block.cc:122:cell_hard_block$7436.B[54] re tm3_clk_v0 0 
+
+.latch n2747 $auto$hard_block.cc:122:cell_hard_block$7436.B[55] re tm3_clk_v0 0 
+
+.latch li168 lo168 re tm3_clk_v0 0 
+
+.latch li169 lo169 re tm3_clk_v0 0 
+
+.latch li170 lo170 re tm3_clk_v0 0 
+
+.latch li171 lo171 re tm3_clk_v0 0 
+
+.latch li172 lo172 re tm3_clk_v0 0 
+
+.latch li173 lo173 re tm3_clk_v0 0 
+
+.latch li174 lo174 re tm3_clk_v0 0 
+
+.latch li175 lo175 re tm3_clk_v0 0 
+
+.latch li176 lo176 re tm3_clk_v0 0 
+
+.latch li177 lo177 re tm3_clk_v0 0 
+
+.latch li178 lo178 re tm3_clk_v0 0 
+
+.latch li179 lo179 re tm3_clk_v0 0 
+
+.latch li180 lo180 re tm3_clk_v0 0 
+
+.latch li181 lo181 re tm3_clk_v0 0 
+
+.latch li182 lo182 re tm3_clk_v0 0 
+
+.latch li183 lo183 re tm3_clk_v0 0 
+
+.latch li184 lo184 re tm3_clk_v0 0 
+
+.latch li185 lo185 re tm3_clk_v0 0 
+
+.latch li186 lo186 re tm3_clk_v0 0 
+
+.latch li187 lo187 re tm3_clk_v0 0 
+
+.latch li188 lo188 re tm3_clk_v0 0 
+
+.latch li189 lo189 re tm3_clk_v0 0 
+
+.latch li190 lo190 re tm3_clk_v0 0 
+
+.latch li191 lo191 re tm3_clk_v0 0 
+
+.latch li192 lo192 re tm3_clk_v0 0 
+
+.latch li193 lo193 re tm3_clk_v0 0 
+
+.latch li194 lo194 re tm3_clk_v0 0 
+
+.latch li195 lo195 re tm3_clk_v0 0 
+
+.latch li196 lo196 re tm3_clk_v0 0 
+
+.latch li197 lo197 re tm3_clk_v0 0 
+
+.latch li198 lo198 re tm3_clk_v0 0 
+
+.latch li199 lo199 re tm3_clk_v0 0 
+
+.latch li200 lo200 re tm3_clk_v0 0 
+
+.latch li201 lo201 re tm3_clk_v0 0 
+
+.latch n2907 $sdff~730^Q~0 re tm3_clk_v0 0 
+
+.latch li203 lo203 re tm3_clk_v0 0 
+
+.latch li204 lo204 re tm3_clk_v0 0 
+
+.latch li205 lo205 re tm3_clk_v0 0 
+
+.latch li206 lo206 re tm3_clk_v0 0 
+
+.latch li207 lo207 re tm3_clk_v0 0 
+
+.latch li208 lo208 re tm3_clk_v0 0 
+
+.latch li209 lo209 re tm3_clk_v0 0 
+
+.latch li210 lo210 re tm3_clk_v0 0 
+
+.latch li211 lo211 re tm3_clk_v0 0 
+
+.latch li212 lo212 re tm3_clk_v0 0 
+
+.latch li213 lo213 re tm3_clk_v0 0 
+
+.latch li214 lo214 re tm3_clk_v0 0 
+
+.latch n3172 $auto$simplemap.cc:240:simplemap_eqne$10167[1] re tm3_clk_v0 0 
+
+.latch n3342 $sdff~71^Q~0 re tm3_clk_v0 0 
+
+.latch n3347 $sdff~71^Q~1 re tm3_clk_v0 0 
+
+.latch n3352 $sdff~71^Q~2 re tm3_clk_v0 0 
+
+.latch n3357 $sdff~71^Q~3 re tm3_clk_v0 0 
+
+.latch n3362 $sdff~71^Q~4 re tm3_clk_v0 0 
+
+.latch n3367 $sdff~71^Q~5 re tm3_clk_v0 0 
+
+.latch n3372 $sdff~71^Q~6 re tm3_clk_v0 0 
+
+.latch n3377 $sdff~71^Q~7 re tm3_clk_v0 0 
+
+.latch n3382 $sdff~71^Q~8 re tm3_clk_v0 0 
+
+.latch n3387 $sdff~71^Q~9 re tm3_clk_v0 0 
+
+.latch n3392 $sdff~71^Q~10 re tm3_clk_v0 0 
+
+.latch n3397 $sdff~71^Q~11 re tm3_clk_v0 0 
+
+.latch li228 lo228 re tm3_clk_v0 0 
+
+.latch li229 lo229 re tm3_clk_v0 0 
+
+.latch li230 lo230 re tm3_clk_v0 0 
+
+.latch li231 lo231 re tm3_clk_v0 0 
+
+.latch li232 lo232 re tm3_clk_v0 0 
+
+.latch li233 lo233 re tm3_clk_v0 0 
+
+.latch li234 lo234 re tm3_clk_v0 0 
+
+.latch li235 lo235 re tm3_clk_v0 0 
+
+.latch li236 lo236 re tm3_clk_v0 0 
+
+.latch li237 lo237 re tm3_clk_v0 0 
+
+.latch li238 lo238 re tm3_clk_v0 0 
+
+.latch li239 lo239 re tm3_clk_v0 0 
+
+.latch n3802 $sdff~487^Q~0 re tm3_clk_v0 0 
+
+.latch n3972 $auto$hard_block.cc:122:cell_hard_block$7582.A[0] re tm3_clk_v0 0 
+
+.latch n3977 $auto$hard_block.cc:122:cell_hard_block$7582.A[1] re tm3_clk_v0 0 
+
+.latch n3982 $auto$hard_block.cc:122:cell_hard_block$7582.A[2] re tm3_clk_v0 0 
+
+.latch n3987 $auto$hard_block.cc:122:cell_hard_block$7582.A[3] re tm3_clk_v0 0 
+
+.latch n3992 $auto$hard_block.cc:122:cell_hard_block$7582.A[4] re tm3_clk_v0 0 
+
+.latch n3997 $auto$hard_block.cc:122:cell_hard_block$7582.A[5] re tm3_clk_v0 0 
+
+.latch n4002 $auto$hard_block.cc:122:cell_hard_block$7582.A[6] re tm3_clk_v0 0 
+
+.latch n4007 $auto$hard_block.cc:122:cell_hard_block$7582.A[7] re tm3_clk_v0 0 
+
+.latch n4012 $auto$hard_block.cc:122:cell_hard_block$7582.A[8] re tm3_clk_v0 0 
+
+.latch n4017 $auto$hard_block.cc:122:cell_hard_block$7582.A[9] re tm3_clk_v0 0 
+
+.latch n4022 $auto$hard_block.cc:122:cell_hard_block$7582.A[10] re tm3_clk_v0 0 
+
+.latch n4027 $auto$hard_block.cc:122:cell_hard_block$7582.A[11] re tm3_clk_v0 0 
+
+.latch n4032 $auto$hard_block.cc:122:cell_hard_block$7582.A[12] re tm3_clk_v0 0 
+
+.latch n4037 $auto$hard_block.cc:122:cell_hard_block$7582.A[13] re tm3_clk_v0 0 
+
+.latch n4042 $auto$hard_block.cc:122:cell_hard_block$7582.A[14] re tm3_clk_v0 0 
+
+.latch n4047 $auto$hard_block.cc:122:cell_hard_block$7582.A[15] re tm3_clk_v0 0 
+
+.latch n4052 $auto$hard_block.cc:122:cell_hard_block$7582.A[16] re tm3_clk_v0 0 
+
+.latch n4057 $auto$hard_block.cc:122:cell_hard_block$7582.A[17] re tm3_clk_v0 0 
+
+.latch n4062 $sdff~485^Q~18 re tm3_clk_v0 0 
+
+.latch n4067 $sdff~485^Q~19 re tm3_clk_v0 0 
+
+.latch n4072 $sdff~485^Q~20 re tm3_clk_v0 0 
+
+.latch n4077 $sdff~485^Q~21 re tm3_clk_v0 0 
+
+.latch n4082 $sdff~485^Q~22 re tm3_clk_v0 0 
+
+.latch n4087 $sdff~485^Q~23 re tm3_clk_v0 0 
+
+.latch n4092 $sdff~485^Q~24 re tm3_clk_v0 0 
+
+.latch n4097 $sdff~485^Q~25 re tm3_clk_v0 0 
+
+.latch n4102 $sdff~485^Q~26 re tm3_clk_v0 0 
+
+.latch n4107 $sdff~485^Q~27 re tm3_clk_v0 0 
+
+.latch n4112 $sdff~485^Q~28 re tm3_clk_v0 0 
+
+.latch n4117 $sdff~485^Q~29 re tm3_clk_v0 0 
+
+.latch n4122 $sdff~485^Q~30 re tm3_clk_v0 0 
+
+.latch n4127 $sdff~485^Q~31 re tm3_clk_v0 0 
+
+.latch li273 lo273 re tm3_clk_v0 0 
+
+.latch n4192 $sdff~584^Q~0 re tm3_clk_v0 0 
+
+.latch n4197 $dff~595^Q~0 re tm3_clk_v0 0 
+
+.latch n4202 $dff~595^Q~1 re tm3_clk_v0 0 
+
+.latch n4207 $dff~595^Q~2 re tm3_clk_v0 0 
+
+.latch n4212 $dff~595^Q~3 re tm3_clk_v0 0 
+
+.latch n4217 $dff~595^Q~4 re tm3_clk_v0 0 
+
+.latch n4222 $dff~595^Q~5 re tm3_clk_v0 0 
+
+.latch n4227 $dff~595^Q~6 re tm3_clk_v0 0 
+
+.latch n4232 $dff~595^Q~7 re tm3_clk_v0 0 
+
+.latch n4237 $dff~595^Q~8 re tm3_clk_v0 0 
+
+.latch n4252 $dff~556^Q~0 re tm3_clk_v0 0 
+
+.latch n4257 $dff~556^Q~1 re tm3_clk_v0 0 
+
+.latch n4262 $dff~556^Q~2 re tm3_clk_v0 0 
+
+.latch n4267 $auto$hard_block.cc:122:cell_hard_block$7436.S[3] re tm3_clk_v0 0 
+
+.latch n4272 $auto$hard_block.cc:122:cell_hard_block$7436.S[2] re tm3_clk_v0 0 
+
+.latch n4277 $dff~556^Q~5 re tm3_clk_v0 0 
+
+.latch n4282 $dff~556^Q~6 re tm3_clk_v0 0 
+
+.latch n4287 $dff~556^Q~7 re tm3_clk_v0 0 
+
+.latch n4292 $dff~556^Q~8 re tm3_clk_v0 0 
+
+.latch n4297 $sdff~60^Q~0 re tm3_clk_v0 0 
+
+.latch n4302 $sdff~59^Q~0 re tm3_clk_v0 0 
+
+.latch li295 lo295 re tm3_clk_v0 0 
+
+.latch li296 lo296 re tm3_clk_v0 0 
+
+.latch li297 lo297 re tm3_clk_v0 0 
+
+.latch li298 lo298 re tm3_clk_v0 0 
+
+.latch li299 lo299 re tm3_clk_v0 0 
+
+.latch li300 lo300 re tm3_clk_v0 0 
+
+.latch li301 lo301 re tm3_clk_v0 0 
+
+.latch li302 lo302 re tm3_clk_v0 0 
+
+.latch li303 lo303 re tm3_clk_v0 0 
+
+.latch li304 lo304 re tm3_clk_v0 0 
+
+.latch li305 lo305 re tm3_clk_v0 0 
+
+.latch li306 lo306 re tm3_clk_v0 0 
+
+.latch li307 lo307 re tm3_clk_v0 0 
+
+.latch li308 lo308 re tm3_clk_v0 0 
+
+.latch li309 lo309 re tm3_clk_v0 0 
+
+.latch li310 lo310 re tm3_clk_v0 0 
+
+.latch li311 lo311 re tm3_clk_v0 0 
+
+.latch li312 lo312 re tm3_clk_v0 0 
+
+.latch li313 lo313 re tm3_clk_v0 0 
+
+.latch li314 lo314 re tm3_clk_v0 0 
+
+.latch li315 lo315 re tm3_clk_v0 0 
+
+.latch li316 lo316 re tm3_clk_v0 0 
+
+.latch li317 lo317 re tm3_clk_v0 0 
+
+.latch li318 lo318 re tm3_clk_v0 0 
+
+.latch n4471 $dff~747^Q~0 re tm3_clk_v0 0 
+
+.latch n4476 $dff~747^Q~1 re tm3_clk_v0 0 
+
+.latch n4481 $auto$hard_block.cc:122:cell_hard_block$7603.S[1] re tm3_clk_v0 0 
+
+.latch n4486 $dff~747^Q~3 re tm3_clk_v0 0 
+
+.latch n4491 $dff~747^Q~4 re tm3_clk_v0 0 
+
+.latch n4496 $dff~747^Q~5 re tm3_clk_v0 0 
+
+.latch n4501 $auto$simplemap.cc:240:simplemap_eqne$11460[0] re tm3_clk_v0 0 
+
+.latch n4506 $auto$simplemap.cc:240:simplemap_eqne$11460[1] re tm3_clk_v0 0 
+
+.latch n4511 $auto$simplemap.cc:240:simplemap_eqne$12001[2] re tm3_clk_v0 0 
+
+.latch n4791 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[15] re tm3_clk_v0 0 
+
+.latch n4796 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[31] re tm3_clk_v0 0 
+
+.latch n4801 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[16] re tm3_clk_v0 0 
+
+.latch n4806 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[18] re tm3_clk_v0 0 
+
+.latch n4811 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[19] re tm3_clk_v0 0 
+
+.latch n4816 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[20] re tm3_clk_v0 0 
+
+.latch n4821 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[21] re tm3_clk_v0 0 
+
+.latch n4826 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[22] re tm3_clk_v0 0 
+
+.latch n4831 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[23] re tm3_clk_v0 0 
+
+.latch n4836 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[24] re tm3_clk_v0 0 
+
+.latch n4841 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[25] re tm3_clk_v0 0 
+
+.latch n4846 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[26] re tm3_clk_v0 0 
+
+.latch n4851 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[27] re tm3_clk_v0 0 
+
+.latch n4856 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[28] re tm3_clk_v0 0 
+
+.latch n4861 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[29] re tm3_clk_v0 0 
+
+.latch n4866 $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[30] re tm3_clk_v0 0 
+
+.latch li344 lo344 re tm3_clk_v0 0 
+
+.latch li345 lo345 re tm3_clk_v0 0 
+
+.latch li346 lo346 re tm3_clk_v0 0 
+
+.latch li347 lo347 re tm3_clk_v0 0 
+
+.latch li348 lo348 re tm3_clk_v0 0 
+
+.latch li349 lo349 re tm3_clk_v0 0 
+
+.latch li350 lo350 re tm3_clk_v0 0 
+
+.latch li351 lo351 re tm3_clk_v0 0 
+
+.latch li352 lo352 re tm3_clk_v0 0 
+
+.latch li353 lo353 re tm3_clk_v0 0 
+
+.latch li354 lo354 re tm3_clk_v0 0 
+
+.latch li355 lo355 re tm3_clk_v0 0 
+
+.latch li356 lo356 re tm3_clk_v0 0 
+
+.latch li357 lo357 re tm3_clk_v0 0 
+
+.latch li358 lo358 re tm3_clk_v0 0 
+
+.latch li359 lo359 re tm3_clk_v0 0 
+
+.latch li360 lo360 re tm3_clk_v0 0 
+
+.latch li361 lo361 re tm3_clk_v0 0 
+
+.latch n5091 $dff~137^Q~0 re tm3_clk_v0 0 
+
+.latch n5101 $dff~137^Q~2 re tm3_clk_v0 0 
+
+.latch n5106 $dff~137^Q~3 re tm3_clk_v0 0 
+
+.latch n5116 $dff~137^Q~5 re tm3_clk_v0 0 
+
+.latch n5131 $auto$hard_block.cc:122:cell_hard_block$7332.S[2] re tm3_clk_v0 0 
+
+.latch n5141 $auto$hard_block.cc:122:cell_hard_block$7269.S[3] re tm3_clk_v0 0 
+
+.latch n5151 $auto$hard_block.cc:122:cell_hard_block$7269.S[2] re tm3_clk_v0 0 
+
+.latch n5156 $dff~137^Q~13 re tm3_clk_v0 0 
+
+.latch n5166 $dff~137^Q~15 re tm3_clk_v0 0 
+
+.latch n5181 $dff~137^Q~18 re tm3_clk_v0 0 
+
+.latch n5201 $dff~316^Q~0 re tm3_clk_v0 0 
+
+.latch n5211 $dff~316^Q~2 re tm3_clk_v0 0 
+
+.latch n5216 $dff~316^Q~3 re tm3_clk_v0 0 
+
+.latch n5226 $dff~316^Q~5 re tm3_clk_v0 0 
+
+.latch n5241 $auto$hard_block.cc:122:cell_hard_block$7468.S[2] re tm3_clk_v0 0 
+
+.latch n5251 $auto$hard_block.cc:122:cell_hard_block$7301.S[3] re tm3_clk_v0 0 
+
+.latch n5261 $auto$hard_block.cc:122:cell_hard_block$7301.S[2] re tm3_clk_v0 0 
+
+.latch n5266 $dff~316^Q~13 re tm3_clk_v0 0 
+
+.latch n5276 $dff~316^Q~15 re tm3_clk_v0 0 
+
+.latch n5291 $dff~316^Q~18 re tm3_clk_v0 0 
+
+.latch n5301 $sdffe~539^Q~0 re tm3_clk_v0 0 
+
+
+
+.subckt adder a=$sdff~239^Q~0 b=gnd cin=$sub~393^MIN~0-0[0] cout=$sub~393^MIN~0-1[0] sumout=$sub~393^MIN~0-1[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$8461[1] b=unconn cin=$sub~393^MIN~0-1[0] cout=$sub~393^MIN~0-2[0] \
+ sumout=$sub~393^MIN~0-2[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$8461[2] b=unconn cin=$sub~393^MIN~0-2[0] cout=$sub~393^MIN~0-3[0] \
+ sumout=$sub~393^MIN~0-3[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$8461[3] b=unconn cin=$sub~393^MIN~0-3[0] cout=$sub~393^MIN~0-4[0] \
+ sumout=$sub~393^MIN~0-4[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$8461[4] b=unconn cin=$sub~393^MIN~0-4[0] cout=$sub~393^MIN~0-5[0] \
+ sumout=$sub~393^MIN~0-5[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$8461[5] b=unconn cin=$sub~393^MIN~0-5[0] cout=$sub~393^MIN~0-6[0] \
+ sumout=$sub~393^MIN~0-6[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$8461[6] b=unconn cin=$sub~393^MIN~0-6[0] cout=$sub~393^MIN~0-7[0] \
+ sumout=$sub~393^MIN~0-7[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$8461[7] b=unconn cin=$sub~393^MIN~0-7[0] cout=$sub~393^MIN~0-8[0] \
+ sumout=$sub~393^MIN~0-8[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$8461[8] b=unconn cin=$sub~393^MIN~0-8[0] cout=$sub~393^MIN~0-9[0] \
+ sumout=$sub~393^MIN~0-9[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$8461[9] b=unconn cin=$sub~393^MIN~0-9[0] cout=$sub~393^MIN~0-10[0] \
+ sumout=$sub~393^MIN~0-10[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$8461[10] b=unconn cin=$sub~393^MIN~0-10[0] cout=$sub~393^MIN~0-11[0] \
+ sumout=$sub~393^MIN~0-11[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$8461[11] b=unconn cin=$sub~393^MIN~0-11[0] cout=$sub~393^MIN~0-12[0] \
+ sumout=$sub~393^MIN~0-12[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$8461[12] b=unconn cin=$sub~393^MIN~0-12[0] cout=$sub~393^MIN~0-13[0] \
+ sumout=$sub~393^MIN~0-13[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$8461[13] b=unconn cin=$sub~393^MIN~0-13[0] \
+ cout=$sub~393^MIN~0-14~dummy_output~14~0 sumout=$sub~393^MIN~0-14[1] 
+
+.subckt adder a=$sdff~445^Q~0 b=vcc cin=$add~439^ADD~1-0[0] cout=$add~439^ADD~1-1[0] sumout=$add~439^ADD~1-1[1] 
+
+.subckt adder a=$sdff~445^Q~1 b=unconn cin=$add~439^ADD~1-1[0] cout=$add~439^ADD~1-2[0] sumout=$add~439^ADD~1-2[1] 
+
+.subckt adder a=$sdff~445^Q~2 b=unconn cin=$add~439^ADD~1-2[0] cout=$add~439^ADD~1-3[0] sumout=$add~439^ADD~1-3[1] 
+
+.subckt adder a=$sdff~446^Q~0 b=vcc cin=$add~440^ADD~2-0[0] cout=$add~440^ADD~2-1[0] sumout=$add~440^ADD~2-1[1] 
+
+.subckt adder a=$sdff~446^Q~1 b=unconn cin=$add~440^ADD~2-1[0] cout=$add~440^ADD~2-2[0] sumout=$add~440^ADD~2-2[1] 
+
+.subckt adder a=$sdff~446^Q~2 b=unconn cin=$add~440^ADD~2-2[0] cout=$add~440^ADD~2-3[0] sumout=$add~440^ADD~2-3[1] 
+
+.subckt adder a=$sdff~69^Q~0 b=vcc cin=$add~32^ADD~3-0[0] cout=$add~32^ADD~3-1[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7582.B[18] 
+
+.subckt adder a=$sdff~69^Q~1 b=unconn cin=$add~32^ADD~3-1[0] cout=$add~32^ADD~3-2[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7582.B[19] 
+
+.subckt adder a=$sdff~69^Q~2 b=unconn cin=$add~32^ADD~3-2[0] cout=$add~32^ADD~3-3[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7582.B[20] 
+
+.subckt adder a=$sdff~69^Q~3 b=unconn cin=$add~32^ADD~3-3[0] cout=$add~32^ADD~3-4[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7582.B[21] 
+
+.subckt adder a=$sdff~69^Q~4 b=unconn cin=$add~32^ADD~3-4[0] cout=$add~32^ADD~3-5[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7582.B[22] 
+
+.subckt adder a=$sdff~69^Q~5 b=unconn cin=$add~32^ADD~3-5[0] cout=$add~32^ADD~3-6[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7582.B[23] 
+
+.subckt adder a=$sdff~69^Q~6 b=unconn cin=$add~32^ADD~3-6[0] cout=$add~32^ADD~3-7[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7582.B[24] 
+
+.subckt adder a=$sdff~69^Q~7 b=unconn cin=$add~32^ADD~3-7[0] cout=$add~32^ADD~3-8[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7582.B[25] 
+
+.subckt adder a=$sdff~69^Q~8 b=unconn cin=$add~32^ADD~3-8[0] cout=$add~32^ADD~3-9[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7582.B[26] 
+
+.subckt adder a=$sdff~69^Q~9 b=unconn cin=$add~32^ADD~3-9[0] cout=$add~32^ADD~3-10[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7582.B[27] 
+
+.subckt adder a=$sdff~69^Q~10 b=unconn cin=$add~32^ADD~3-10[0] cout=$add~32^ADD~3-11[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7582.B[28] 
+
+.subckt adder a=$sdff~69^Q~11 b=unconn cin=$add~32^ADD~3-11[0] cout=$add~32^ADD~3-12[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7582.B[29] 
+
+.subckt adder a=$sdff~69^Q~12 b=unconn cin=$add~32^ADD~3-12[0] cout=$add~32^ADD~3-13[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7582.B[30] 
+
+.subckt adder a=$sdff~69^Q~13 b=unconn cin=$add~32^ADD~3-13[0] cout=$add~32^ADD~3-14[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7582.B[31] 
+
+.subckt adder a=$sdff~69^Q~14 b=unconn cin=$add~32^ADD~3-14[0] cout=$add~32^ADD~3-15[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7582.B[32] 
+
+.subckt adder a=$sdff~69^Q~15 b=unconn cin=$add~32^ADD~3-15[0] cout=$add~32^ADD~3-16[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7582.B[33] 
+
+.subckt adder a=$sdff~69^Q~16 b=unconn cin=$add~32^ADD~3-16[0] cout=$add~32^ADD~3-17[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7582.B[34] 
+
+.subckt adder a=$sdff~69^Q~17 b=unconn cin=$add~32^ADD~3-17[0] cout=$add~32^ADD~3-18[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7582.B[35] 
+
+.subckt adder a=$sdff~248^Q~0 b=vcc cin=$add~217^ADD~4-0[0] cout=$add~217^ADD~4-1[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7604.B[18] 
+
+.subckt adder a=$sdff~248^Q~1 b=unconn cin=$add~217^ADD~4-1[0] cout=$add~217^ADD~4-2[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7604.B[19] 
+
+.subckt adder a=$sdff~248^Q~2 b=unconn cin=$add~217^ADD~4-2[0] cout=$add~217^ADD~4-3[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7604.B[20] 
+
+.subckt adder a=$sdff~248^Q~3 b=unconn cin=$add~217^ADD~4-3[0] cout=$add~217^ADD~4-4[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7604.B[21] 
+
+.subckt adder a=$sdff~248^Q~4 b=unconn cin=$add~217^ADD~4-4[0] cout=$add~217^ADD~4-5[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7604.B[22] 
+
+.subckt adder a=$sdff~248^Q~5 b=unconn cin=$add~217^ADD~4-5[0] cout=$add~217^ADD~4-6[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7604.B[23] 
+
+.subckt adder a=$sdff~248^Q~6 b=unconn cin=$add~217^ADD~4-6[0] cout=$add~217^ADD~4-7[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7604.B[24] 
+
+.subckt adder a=$sdff~248^Q~7 b=unconn cin=$add~217^ADD~4-7[0] cout=$add~217^ADD~4-8[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7604.B[25] 
+
+.subckt adder a=$sdff~248^Q~8 b=unconn cin=$add~217^ADD~4-8[0] cout=$add~217^ADD~4-9[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7604.B[26] 
+
+.subckt adder a=$sdff~248^Q~9 b=unconn cin=$add~217^ADD~4-9[0] cout=$add~217^ADD~4-10[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7604.B[27] 
+
+.subckt adder a=$sdff~248^Q~10 b=unconn cin=$add~217^ADD~4-10[0] cout=$add~217^ADD~4-11[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7604.B[28] 
+
+.subckt adder a=$sdff~248^Q~11 b=unconn cin=$add~217^ADD~4-11[0] cout=$add~217^ADD~4-12[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7604.B[29] 
+
+.subckt adder a=$sdff~248^Q~12 b=unconn cin=$add~217^ADD~4-12[0] cout=$add~217^ADD~4-13[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7604.B[30] 
+
+.subckt adder a=$sdff~248^Q~13 b=unconn cin=$add~217^ADD~4-13[0] cout=$add~217^ADD~4-14[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7604.B[31] 
+
+.subckt adder a=$sdff~248^Q~14 b=unconn cin=$add~217^ADD~4-14[0] cout=$add~217^ADD~4-15[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7604.B[32] 
+
+.subckt adder a=$sdff~248^Q~15 b=unconn cin=$add~217^ADD~4-15[0] cout=$add~217^ADD~4-16[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7604.B[33] 
+
+.subckt adder a=$sdff~248^Q~16 b=unconn cin=$add~217^ADD~4-16[0] cout=$add~217^ADD~4-17[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7604.B[34] 
+
+.subckt adder a=$sdff~248^Q~17 b=unconn cin=$add~217^ADD~4-17[0] cout=$add~217^ADD~4-18[0] \
+ sumout=$auto$hard_block.cc:122:cell_hard_block$7604.B[35] 
+
+.subckt adder a=$sdff~57^Q~0 b=gnd cin=$sub~215^MIN~5-0[0] cout=$sub~215^MIN~5-1[0] sumout=$sub~215^MIN~5-1[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$11245[1] b=unconn cin=$sub~215^MIN~5-1[0] cout=$sub~215^MIN~5-2[0] \
+ sumout=$sub~215^MIN~5-2[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$11245[2] b=unconn cin=$sub~215^MIN~5-2[0] cout=$sub~215^MIN~5-3[0] \
+ sumout=$sub~215^MIN~5-3[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$11245[3] b=unconn cin=$sub~215^MIN~5-3[0] cout=$sub~215^MIN~5-4[0] \
+ sumout=$sub~215^MIN~5-4[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$11245[4] b=unconn cin=$sub~215^MIN~5-4[0] cout=$sub~215^MIN~5-5[0] \
+ sumout=$sub~215^MIN~5-5[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$11245[5] b=unconn cin=$sub~215^MIN~5-5[0] cout=$sub~215^MIN~5-6[0] \
+ sumout=$sub~215^MIN~5-6[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$11245[6] b=unconn cin=$sub~215^MIN~5-6[0] cout=$sub~215^MIN~5-7[0] \
+ sumout=$sub~215^MIN~5-7[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$11245[7] b=unconn cin=$sub~215^MIN~5-7[0] cout=$sub~215^MIN~5-8[0] \
+ sumout=$sub~215^MIN~5-8[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$11245[8] b=unconn cin=$sub~215^MIN~5-8[0] cout=$sub~215^MIN~5-9[0] \
+ sumout=$sub~215^MIN~5-9[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$11245[9] b=unconn cin=$sub~215^MIN~5-9[0] cout=$sub~215^MIN~5-10[0] \
+ sumout=$sub~215^MIN~5-10[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$11245[10] b=unconn cin=$sub~215^MIN~5-10[0] cout=$sub~215^MIN~5-11[0] \
+ sumout=$sub~215^MIN~5-11[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$11245[11] b=unconn cin=$sub~215^MIN~5-11[0] cout=$sub~215^MIN~5-12[0] \
+ sumout=$sub~215^MIN~5-12[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$11245[12] b=unconn cin=$sub~215^MIN~5-12[0] cout=$sub~215^MIN~5-13[0] \
+ sumout=$sub~215^MIN~5-13[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$11245[13] b=unconn cin=$sub~215^MIN~5-13[0] \
+ cout=$sub~215^MIN~5-14~dummy_output~14~0 sumout=$sub~215^MIN~5-14[1] 
+
+.subckt adder a=$sdff~486^Q~0 b=vcc cin=$add~482^ADD~7-0[0] cout=$add~482^ADD~7-1[0] sumout=$add~482^ADD~7-1[1] 
+
+.subckt adder a=$sdff~486^Q~1 b=unconn cin=$add~482^ADD~7-1[0] cout=$add~482^ADD~7-2[0] sumout=$add~482^ADD~7-2[1] 
+
+.subckt adder a=$sdff~486^Q~2 b=unconn cin=$add~482^ADD~7-2[0] cout=$add~482^ADD~7-3[0] sumout=$add~482^ADD~7-3[1] 
+
+.subckt adder a=$sdff~486^Q~3 b=unconn cin=$add~482^ADD~7-3[0] cout=$add~482^ADD~7-4[0] sumout=$add~482^ADD~7-4[1] 
+
+.subckt adder a=$sdff~486^Q~4 b=unconn cin=$add~482^ADD~7-4[0] cout=$add~482^ADD~7-5[0] sumout=$add~482^ADD~7-5[1] 
+
+.subckt adder a=$sdff~486^Q~5 b=unconn cin=$add~482^ADD~7-5[0] cout=$add~482^ADD~7-6[0] sumout=$add~482^ADD~7-6[1] 
+
+.subckt adder a=$sdff~486^Q~6 b=unconn cin=$add~482^ADD~7-6[0] cout=$add~482^ADD~7-7[0] sumout=$add~482^ADD~7-7[1] 
+
+.subckt adder a=$sdff~486^Q~7 b=unconn cin=$add~482^ADD~7-7[0] cout=$add~482^ADD~7-8[0] sumout=$add~482^ADD~7-8[1] 
+
+.subckt adder a=$sdff~486^Q~8 b=unconn cin=$add~482^ADD~7-8[0] cout=$add~482^ADD~7-9[0] sumout=$add~482^ADD~7-9[1] 
+
+.subckt adder a=$sdff~486^Q~9 b=unconn cin=$add~482^ADD~7-9[0] cout=$add~482^ADD~7-10[0] sumout=$add~482^ADD~7-10[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$9025[0] b=vcc cin=$add~218^ADD~8-0[0] cout=$add~218^ADD~8-1[0] \
+ sumout=$add~218^ADD~8-1[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$10932[1] b=unconn cin=$add~218^ADD~8-1[0] cout=$add~218^ADD~8-2[0] \
+ sumout=$add~218^ADD~8-2[1] 
+
+.subckt adder a=$auto$hard_block.cc:122:cell_hard_block$7603.B[18] b=vcc cin=$add~727^ADD~9-0[0] cout=$add~727^ADD~9-1[0] \
+ sumout=$add~727^ADD~9-1[1] 
+
+.subckt adder a=$auto$hard_block.cc:122:cell_hard_block$7603.B[19] b=unconn cin=$add~727^ADD~9-1[0] cout=$add~727^ADD~9-2[0] \
+ sumout=$add~727^ADD~9-2[1] 
+
+.subckt adder a=$auto$hard_block.cc:122:cell_hard_block$7603.B[20] b=unconn cin=$add~727^ADD~9-2[0] cout=$add~727^ADD~9-3[0] \
+ sumout=$add~727^ADD~9-3[1] 
+
+.subckt adder a=$auto$hard_block.cc:122:cell_hard_block$7603.B[21] b=unconn cin=$add~727^ADD~9-3[0] cout=$add~727^ADD~9-4[0] \
+ sumout=$add~727^ADD~9-4[1] 
+
+.subckt adder a=$auto$hard_block.cc:122:cell_hard_block$7603.B[22] b=unconn cin=$add~727^ADD~9-4[0] cout=$add~727^ADD~9-5[0] \
+ sumout=$add~727^ADD~9-5[1] 
+
+.subckt adder a=$auto$hard_block.cc:122:cell_hard_block$7603.B[23] b=unconn cin=$add~727^ADD~9-5[0] cout=$add~727^ADD~9-6[0] \
+ sumout=$add~727^ADD~9-6[1] 
+
+.subckt adder a=$auto$hard_block.cc:122:cell_hard_block$7603.B[24] b=unconn cin=$add~727^ADD~9-6[0] cout=$add~727^ADD~9-7[0] \
+ sumout=$add~727^ADD~9-7[1] 
+
+.subckt adder a=$auto$hard_block.cc:122:cell_hard_block$7603.B[25] b=unconn cin=$add~727^ADD~9-7[0] cout=$add~727^ADD~9-8[0] \
+ sumout=$add~727^ADD~9-8[1] 
+
+.subckt adder a=$auto$hard_block.cc:122:cell_hard_block$7603.B[26] b=unconn cin=$add~727^ADD~9-8[0] cout=$add~727^ADD~9-9[0] \
+ sumout=$add~727^ADD~9-9[1] 
+
+.subckt adder a=$auto$hard_block.cc:122:cell_hard_block$7603.B[27] b=unconn cin=$add~727^ADD~9-9[0] cout=$add~727^ADD~9-10[0] \
+ sumout=$add~727^ADD~9-10[1] 
+
+.subckt adder a=$auto$hard_block.cc:122:cell_hard_block$7603.B[28] b=unconn cin=$add~727^ADD~9-10[0] \
+ cout=$add~727^ADD~9-11[0] sumout=$add~727^ADD~9-11[1] 
+
+.subckt adder a=$auto$hard_block.cc:122:cell_hard_block$7603.B[29] b=unconn cin=$add~727^ADD~9-11[0] \
+ cout=$add~727^ADD~9-12[0] sumout=$add~727^ADD~9-12[1] 
+
+.subckt adder a=$auto$hard_block.cc:122:cell_hard_block$7603.B[30] b=unconn cin=$add~727^ADD~9-12[0] \
+ cout=$add~727^ADD~9-13[0] sumout=$add~727^ADD~9-13[1] 
+
+.subckt adder a=$auto$hard_block.cc:122:cell_hard_block$7603.B[31] b=unconn cin=$add~727^ADD~9-13[0] \
+ cout=$add~727^ADD~9-14[0] sumout=$add~727^ADD~9-14[1] 
+
+.subckt adder a=$auto$hard_block.cc:122:cell_hard_block$7603.B[32] b=unconn cin=$add~727^ADD~9-14[0] \
+ cout=$add~727^ADD~9-15[0] sumout=$add~727^ADD~9-15[1] 
+
+.subckt adder a=$auto$hard_block.cc:122:cell_hard_block$7603.B[33] b=unconn cin=$add~727^ADD~9-15[0] \
+ cout=$add~727^ADD~9-16[0] sumout=$add~727^ADD~9-16[1] 
+
+.subckt adder a=$auto$hard_block.cc:122:cell_hard_block$7603.B[34] b=unconn cin=$add~727^ADD~9-16[0] \
+ cout=$add~727^ADD~9-17[0] sumout=$add~727^ADD~9-17[1] 
+
+.subckt adder a=$auto$hard_block.cc:122:cell_hard_block$7603.B[35] b=unconn cin=$add~727^ADD~9-17[0] \
+ cout=$add~727^ADD~9-18[0] sumout=$add~727^ADD~9-18[1] 
+
+.subckt adder a=$sdff~5^Q~0 b=vcc cin=$add~219^ADD~10-0[0] cout=$add~219^ADD~10-1[0] sumout=$add~219^ADD~10-1[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$9606[1] b=unconn cin=$add~219^ADD~10-1[0] cout=$add~219^ADD~10-2[0] \
+ sumout=$add~219^ADD~10-2[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$9606[2] b=unconn cin=$add~219^ADD~10-2[0] cout=$add~219^ADD~10-3[0] \
+ sumout=$add~219^ADD~10-3[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$9606[3] b=unconn cin=$add~219^ADD~10-3[0] cout=$add~219^ADD~10-4[0] \
+ sumout=$add~219^ADD~10-4[1] 
+
+.subckt adder a=$sdff~5^Q~4 b=unconn cin=$add~219^ADD~10-4[0] cout=$add~219^ADD~10-5[0] sumout=$add~219^ADD~10-5[1] 
+
+.subckt adder a=$sdff~5^Q~5 b=unconn cin=$add~219^ADD~10-5[0] cout=$add~219^ADD~10-6[0] sumout=$add~219^ADD~10-6[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$9606[6] b=unconn cin=$add~219^ADD~10-6[0] cout=$add~219^ADD~10-7[0] \
+ sumout=$add~219^ADD~10-7[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$9606[7] b=unconn cin=$add~219^ADD~10-7[0] cout=$add~219^ADD~10-8[0] \
+ sumout=$add~219^ADD~10-8[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$9606[8] b=unconn cin=$add~219^ADD~10-8[0] cout=$add~219^ADD~10-9[0] \
+ sumout=$add~219^ADD~10-9[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$9606[9] b=unconn cin=$add~219^ADD~10-9[0] cout=$add~219^ADD~10-10[0] \
+ sumout=$add~219^ADD~10-10[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$9606[10] b=unconn cin=$add~219^ADD~10-10[0] cout=$add~219^ADD~10-11[0] \
+ sumout=$add~219^ADD~10-11[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$9606[11] b=unconn cin=$add~219^ADD~10-11[0] cout=$add~219^ADD~10-12[0] \
+ sumout=$add~219^ADD~10-12[1] 
+
+.subckt adder a=$sdff~401^Q~0 b=vcc cin=$add~395^ADD~11-0[0] cout=$add~395^ADD~11-1[0] sumout=$add~395^ADD~11-1[1] 
+
+.subckt adder a=$sdff~401^Q~1 b=unconn cin=$add~395^ADD~11-1[0] cout=$add~395^ADD~11-2[0] sumout=$add~395^ADD~11-2[1] 
+
+.subckt adder a=$sdff~401^Q~2 b=unconn cin=$add~395^ADD~11-2[0] cout=$add~395^ADD~11-3[0] sumout=$add~395^ADD~11-3[1] 
+
+.subckt adder a=$sdff~402^Q~0 b=vcc cin=$add~396^ADD~12-0[0] cout=$add~396^ADD~12-1[0] sumout=$add~396^ADD~12-1[1] 
+
+.subckt adder a=$sdff~402^Q~1 b=unconn cin=$add~396^ADD~12-1[0] cout=$add~396^ADD~12-2[0] sumout=$add~396^ADD~12-2[1] 
+
+.subckt adder a=$sdff~402^Q~2 b=unconn cin=$add~396^ADD~12-2[0] cout=$add~396^ADD~12-3[0] sumout=$add~396^ADD~12-3[1] 
+
+.subckt adder a=$sdffe~531^Q~0 b=gnd cin=$sub~535^MIN~13-0[0] cout=$sub~535^MIN~13-1[0] sumout=$sub~535^MIN~13-1[1] 
+
+.subckt adder a=$sdffe~531^Q~1 b=unconn cin=$sub~535^MIN~13-1[0] cout=$sub~535^MIN~13-2[0] sumout=$sub~535^MIN~13-2[1] 
+
+.subckt adder a=$sdffe~531^Q~2 b=unconn cin=$sub~535^MIN~13-2[0] cout=$sub~535^MIN~13-3[0] sumout=$sub~535^MIN~13-3[1] 
+
+.subckt adder a=$sdffe~531^Q~3 b=unconn cin=$sub~535^MIN~13-3[0] cout=$sub~535^MIN~13-4~dummy_output~4~0 \
+ sumout=$sub~535^MIN~13-4[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$12565[0] b=vcc cin=$add~33^ADD~14-0[0] cout=$add~33^ADD~14-1[0] \
+ sumout=$add~33^ADD~14-1[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$12018[1] b=unconn cin=$add~33^ADD~14-1[0] cout=$add~33^ADD~14-2[0] \
+ sumout=$add~33^ADD~14-2[1] 
+
+.subckt adder a=$sdff~6^Q~0 b=vcc cin=$add~34^ADD~15-0[0] cout=$add~34^ADD~15-1[0] sumout=$add~34^ADD~15-1[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$9848[1] b=unconn cin=$add~34^ADD~15-1[0] cout=$add~34^ADD~15-2[0] \
+ sumout=$add~34^ADD~15-2[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$9848[2] b=unconn cin=$add~34^ADD~15-2[0] cout=$add~34^ADD~15-3[0] \
+ sumout=$add~34^ADD~15-3[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$9848[3] b=unconn cin=$add~34^ADD~15-3[0] cout=$add~34^ADD~15-4[0] \
+ sumout=$add~34^ADD~15-4[1] 
+
+.subckt adder a=$sdff~6^Q~4 b=unconn cin=$add~34^ADD~15-4[0] cout=$add~34^ADD~15-5[0] sumout=$add~34^ADD~15-5[1] 
+
+.subckt adder a=$sdff~6^Q~5 b=unconn cin=$add~34^ADD~15-5[0] cout=$add~34^ADD~15-6[0] sumout=$add~34^ADD~15-6[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$9848[6] b=unconn cin=$add~34^ADD~15-6[0] cout=$add~34^ADD~15-7[0] \
+ sumout=$add~34^ADD~15-7[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$9848[7] b=unconn cin=$add~34^ADD~15-7[0] cout=$add~34^ADD~15-8[0] \
+ sumout=$add~34^ADD~15-8[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$9848[8] b=unconn cin=$add~34^ADD~15-8[0] cout=$add~34^ADD~15-9[0] \
+ sumout=$add~34^ADD~15-9[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$9848[9] b=unconn cin=$add~34^ADD~15-9[0] cout=$add~34^ADD~15-10[0] \
+ sumout=$add~34^ADD~15-10[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$9848[10] b=unconn cin=$add~34^ADD~15-10[0] cout=$add~34^ADD~15-11[0] \
+ sumout=$add~34^ADD~15-11[1] 
+
+.subckt adder a=$auto$simplemap.cc:240:simplemap_eqne$9848[11] b=unconn cin=$add~34^ADD~15-11[0] cout=$add~34^ADD~15-12[0] \
+ sumout=$add~34^ADD~15-12[1] 
+
+.subckt adder a=vcc b=gnd cin=gnd cout=$add~439^ADD~1-0[0] sumout=$add~439^ADD~1-0~dummy_output~0~1 
+
+.subckt adder a=vcc b=gnd cin=gnd cout=$add~440^ADD~2-0[0] sumout=$add~440^ADD~2-0~dummy_output~0~1 
+
+.subckt adder a=vcc b=gnd cin=gnd cout=$add~32^ADD~3-0[0] sumout=$add~32^ADD~3-0~dummy_output~0~1 
+
+.subckt adder a=vcc b=gnd cin=gnd cout=$add~217^ADD~4-0[0] sumout=$add~217^ADD~4-0~dummy_output~0~1 
+
+.subckt adder a=vcc b=gnd cin=gnd cout=$add~482^ADD~7-0[0] sumout=$add~482^ADD~7-0~dummy_output~0~1 
+
+.subckt adder a=vcc b=gnd cin=gnd cout=$add~218^ADD~8-0[0] sumout=$add~218^ADD~8-0~dummy_output~0~1 
+
+.subckt adder a=vcc b=gnd cin=gnd cout=$add~727^ADD~9-0[0] sumout=$add~727^ADD~9-0~dummy_output~0~1 
+
+.subckt adder a=vcc b=gnd cin=gnd cout=$add~219^ADD~10-0[0] sumout=$add~219^ADD~10-0~dummy_output~0~1 
+
+.subckt adder a=vcc b=gnd cin=gnd cout=$add~395^ADD~11-0[0] sumout=$add~395^ADD~11-0~dummy_output~0~1 
+
+.subckt adder a=vcc b=gnd cin=gnd cout=$add~396^ADD~12-0[0] sumout=$add~396^ADD~12-0~dummy_output~0~1 
+
+.subckt adder a=vcc b=gnd cin=gnd cout=$add~33^ADD~14-0[0] sumout=$add~33^ADD~14-0~dummy_output~0~1 
+
+.subckt adder a=vcc b=gnd cin=gnd cout=$add~34^ADD~15-0[0] sumout=$add~34^ADD~15-0~dummy_output~0~1 
+
+.subckt adder a=gnd b=vcc cin=unconn cout=$sub~535^MIN~13-0[0] sumout=$sub~535^MIN~13-0~dummy_output~0~1 
+
+.subckt adder a=gnd b=vcc cin=unconn cout=$sub~215^MIN~5-0[0] sumout=$sub~215^MIN~5-0~dummy_output~0~1 
+
+.subckt adder a=gnd b=vcc cin=unconn cout=$sub~393^MIN~0-0[0] sumout=$sub~393^MIN~0-0~dummy_output~0~1 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~31 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-31^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~0 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-0^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~1 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-1^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~2 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-2^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~3 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-3^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~4 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-4^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~5 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-5^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~6 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-6^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~7 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-7^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~8 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-8^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~9 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-9^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~10 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-10^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~11 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-11^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~12 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-12^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~13 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-13^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~14 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-14^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~15 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-15^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~16 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-16^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~17 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-17^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~18 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-18^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~19 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-19^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~20 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-20^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~21 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-21^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~22 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-22^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~23 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-23^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~24 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-24^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~25 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-25^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~26 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-26^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~27 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-27^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~28 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-28^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~29 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-29^out~0 
+
+.subckt single_port_ram addr[0]=$mux~507^Y~0 addr[1]=$mux~507^Y~1 addr[2]=$mux~507^Y~2 addr[3]=$mux~507^Y~3 \
+ addr[4]=$mux~507^Y~4 addr[5]=$mux~507^Y~5 addr[6]=$mux~507^Y~6 addr[7]=$mux~507^Y~7 addr[8]=$mux~507^Y~8 addr[9]=$mux~507^Y~9 \
+ addr[10]=unconn addr[11]=unconn addr[12]=unconn addr[13]=unconn addr[14]=unconn data=brdatain~30 we=$not~506^Y~0 \
+ clk=tm3_clk_v0 out=single_port_ram^MEM~6-30^out~0 
+
+
+
+.names tm3_sram_we~0 data2in~33 tm3_sram_data_out~33 
+01 1 
+
+.names tm3_sram_adsp $dff~747^Q~0 tm3_sram_we~0 
+00 0 
+
+.names $dff~747^Q~1 $dff~747^Q~3 $dff~747^Q~4 $dff~747^Q~5 tm3_sram_adsp 
+0000 0 
+
+.names tm3_sram_we~0 data2in~32 tm3_sram_data_out~32 
+01 1 
+
+.names tm3_sram_adsp lo303 lo347 $auto$hard_block.cc:122:cell_hard_block$7603.S[1] tm3_sram_addr~3 
+01-0 1 
+--11 1 
+
+.names tm3_sram_we~0 data2in~26 tm3_sram_data_out~26 
+01 1 
+
+.names tm3_sram_we~0 data2in~39 tm3_sram_data_out~39 
+01 1 
+
+.names tm3_sram_we~0 data2in~38 tm3_sram_data_out~38 
+01 1 
+
+.names tm3_sram_adsp lo313 lo357 $auto$hard_block.cc:122:cell_hard_block$7603.S[1] tm3_sram_addr~13 
+01-0 1 
+--11 1 
+
+.names tm3_sram_adsp lo317 lo361 $auto$hard_block.cc:122:cell_hard_block$7603.S[1] tm3_sram_addr~17 
+01-0 1 
+--11 1 
+
+.names tm3_sram_adsp lo312 lo356 $auto$hard_block.cc:122:cell_hard_block$7603.S[1] tm3_sram_addr~12 
+01-0 1 
+--11 1 
+
+.names tm3_sram_adsp lo315 lo359 $auto$hard_block.cc:122:cell_hard_block$7603.S[1] tm3_sram_addr~15 
+01-0 1 
+--11 1 
+
+.names tm3_sram_adsp lo314 lo358 $auto$hard_block.cc:122:cell_hard_block$7603.S[1] tm3_sram_addr~14 
+01-0 1 
+--11 1 
+
+.names tm3_sram_adsp lo316 lo360 $auto$hard_block.cc:122:cell_hard_block$7603.S[1] tm3_sram_addr~16 
+01-0 1 
+--11 1 
+
+.names tm3_sram_we~0 data2in~23 tm3_sram_data_out~23 
+01 1 
+
+.names tm3_sram_adsp $auto$hard_block.cc:122:cell_hard_block$7603.S[1] tm3_sram_oe~1 
+00 0 
+
+.names $dff~747^Q~0 $dff~747^Q~1 $dff~747^Q~4 $dff~747^Q~5 want_data2 
+0000 1 
+
+.names tm3_sram_we~0 data2in~6 tm3_sram_data_out~6 
+01 1 
+
+.names tm3_sram_we~0 data2in~7 tm3_sram_data_out~7 
+01 1 
+
+.names $dff~747^Q~0 $auto$hard_block.cc:122:cell_hard_block$7603.S[1] $dff~747^Q~4 $dff~747^Q~5 want_addr2 
+0000 0 
+
+.names tm3_sram_we~0 data2in~0 tm3_sram_data_out~0 
+01 1 
+
+.names tm3_sram_we~0 data2in~1 tm3_sram_data_out~1 
+01 1 
+
+.names tm3_sram_we~0 data2in~2 tm3_sram_data_out~2 
+01 1 
+
+.names tm3_sram_we~0 data2in~3 tm3_sram_data_out~3 
+01 1 
+
+.names tm3_sram_we~0 data2in~4 tm3_sram_data_out~4 
+01 1 
+
+.names tm3_sram_we~0 data2in~5 tm3_sram_data_out~5 
+01 1 
+
+.names $auto$simplemap.cc:240:simplemap_eqne$11460[1] $auto$simplemap.cc:240:simplemap_eqne$11460[0] \
+ $auto$simplemap.cc:240:simplemap_eqne$12001[2] want_braddr 
+010 0 
+001 0 
+
+.names tm3_sram_we~0 data2in~37 tm3_sram_data_out~37 
+01 1 
+
+.names tm3_sram_adsp lo311 lo355 $auto$hard_block.cc:122:cell_hard_block$7603.S[1] tm3_sram_addr~11 
+01-0 1 
+--11 1 
+
+.names tm3_sram_adsp lo310 lo354 $auto$hard_block.cc:122:cell_hard_block$7603.S[1] tm3_sram_addr~10 
+01-0 1 
+--11 1 
+
+.names tm3_sram_adsp lo309 lo353 $auto$hard_block.cc:122:cell_hard_block$7603.S[1] tm3_sram_addr~9 
+01-0 1 
+--11 1 
+
+.names tm3_sram_adsp lo308 lo352 $auto$hard_block.cc:122:cell_hard_block$7603.S[1] tm3_sram_addr~8 
+01-0 1 
+--11 1 
+
+.names tm3_sram_adsp lo307 lo351 $auto$hard_block.cc:122:cell_hard_block$7603.S[1] tm3_sram_addr~7 
+01-0 1 
+--11 1 
+
+.names tm3_sram_adsp lo306 lo350 $auto$hard_block.cc:122:cell_hard_block$7603.S[1] tm3_sram_addr~6 
+01-0 1 
+--11 1 
+
+.names tm3_sram_adsp lo305 lo349 $auto$hard_block.cc:122:cell_hard_block$7603.S[1] tm3_sram_addr~5 
+01-0 1 
+--11 1 
+
+.names tm3_sram_adsp lo304 lo348 $auto$hard_block.cc:122:cell_hard_block$7603.S[1] tm3_sram_addr~4 
+01-0 1 
+--11 1 
+
+.names tm3_sram_we~0 data2in~24 tm3_sram_data_out~24 
+01 1 
+
+.names tm3_sram_we~0 data2in~47 tm3_sram_data_out~47 
+01 1 
+
+.names tm3_sram_we~0 data2in~48 tm3_sram_data_out~48 
+01 1 
+
+.names tm3_sram_we~0 data2in~49 tm3_sram_data_out~49 
+01 1 
+
+.names tm3_sram_we~0 data2in~50 tm3_sram_data_out~50 
+01 1 
+
+.names tm3_sram_we~0 data2in~51 tm3_sram_data_out~51 
+01 1 
+
+.names tm3_sram_we~0 data2in~52 tm3_sram_data_out~52 
+01 1 
+
+.names tm3_sram_we~0 data2in~53 tm3_sram_data_out~53 
+01 1 
+
+.names tm3_sram_we~0 data2in~54 tm3_sram_data_out~54 
+01 1 
+
+.names tm3_sram_we~0 data2in~55 tm3_sram_data_out~55 
+01 1 
+
+.names tm3_sram_we~0 data2in~56 tm3_sram_data_out~56 
+01 1 
+
+.names tm3_sram_we~0 data2in~57 tm3_sram_data_out~57 
+01 1 
+
+.names tm3_sram_we~0 data2in~58 tm3_sram_data_out~58 
+01 1 
+
+.names tm3_sram_we~0 data2in~59 tm3_sram_data_out~59 
+01 1 
+
+.names tm3_sram_we~0 data2in~60 tm3_sram_data_out~60 
+01 1 
+
+.names tm3_sram_we~0 data2in~61 tm3_sram_data_out~61 
+01 1 
+
+.names tm3_sram_we~0 data2in~62 tm3_sram_data_out~62 
+01 1 
+
+.names tm3_sram_we~0 data2in~63 tm3_sram_data_out~63 
+01 1 
+
+.names tm3_sram_adsp lo300 lo344 $auto$hard_block.cc:122:cell_hard_block$7603.S[1] tm3_sram_addr~0 
+01-0 1 
+--11 1 
+
+.names $sdff~250^Q~0 $sdff~71^Q~0 triID~0 
+00 0 
+
+.names $sdff~250^Q~1 $sdff~71^Q~1 triID~1 
+00 0 
+
+.names $sdff~250^Q~2 $sdff~71^Q~2 triID~2 
+00 0 
+
+.names tm3_sram_adsp lo301 lo345 $auto$hard_block.cc:122:cell_hard_block$7603.S[1] tm3_sram_addr~1 
+01-0 1 
+--11 1 
+
+.names $sdff~250^Q~3 $sdff~71^Q~3 triID~3 
+00 0 
+
+.names $sdff~250^Q~4 $sdff~71^Q~4 triID~4 
+00 0 
+
+.names $sdff~250^Q~5 $sdff~71^Q~5 triID~5 
+00 0 
+
+.names $sdff~250^Q~6 $sdff~71^Q~6 triID~6 
+00 0 
+
+.names $sdff~250^Q~7 $sdff~71^Q~7 triID~7 
+00 0 
+
+.names $sdff~250^Q~8 $sdff~71^Q~8 triID~8 
+00 0 
+
+.names tm3_sram_adsp lo302 lo346 $auto$hard_block.cc:122:cell_hard_block$7603.S[1] tm3_sram_addr~2 
+01-0 1 
+--11 1 
+
+.names tm3_sram_we~0 data2in~43 tm3_sram_data_out~43 
+01 1 
+
+.names tm3_sram_we~0 data2in~35 tm3_sram_data_out~35 
+01 1 
+
+.names tm3_sram_we~0 data2in~44 tm3_sram_data_out~44 
+01 1 
+
+.names tm3_sram_we~0 data2in~45 tm3_sram_data_out~45 
+01 1 
+
+.names tm3_sram_we~0 data2in~36 tm3_sram_data_out~36 
+01 1 
+
+.names tm3_sram_we~0 data2in~34 tm3_sram_data_out~34 
+01 1 
+
+.names tm3_sram_we~0 data2in~46 tm3_sram_data_out~46 
+01 1 
+
+.names tm3_sram_we~0 data2in~8 tm3_sram_data_out~8 
+01 1 
+
+.names tm3_sram_we~0 data2in~9 tm3_sram_data_out~9 
+01 1 
+
+.names tm3_sram_we~0 data2in~10 tm3_sram_data_out~10 
+01 1 
+
+.names tm3_sram_we~0 data2in~11 tm3_sram_data_out~11 
+01 1 
+
+.names tm3_sram_we~0 data2in~12 tm3_sram_data_out~12 
+01 1 
+
+.names tm3_sram_we~0 data2in~13 tm3_sram_data_out~13 
+01 1 
+
+.names tm3_sram_we~0 data2in~14 tm3_sram_data_out~14 
+01 1 
+
+.names tm3_sram_we~0 data2in~40 tm3_sram_data_out~40 
+01 1 
+
+.names tm3_sram_we~0 data2in~15 tm3_sram_data_out~15 
+01 1 
+
+.names tm3_sram_we~0 data2in~16 tm3_sram_data_out~16 
+01 1 
+
+.names tm3_sram_we~0 data2in~41 tm3_sram_data_out~41 
+01 1 
+
+.names tm3_sram_we~0 data2in~42 tm3_sram_data_out~42 
+01 1 
+
+.names tm3_sram_we~0 data2in~25 tm3_sram_data_out~25 
+01 1 
+
+.names $sdff~250^Q~11 $sdff~71^Q~11 triID~11 
+00 0 
+
+.names $sdff~250^Q~10 $sdff~71^Q~10 triID~10 
+00 0 
+
+.names $sdff~250^Q~9 $sdff~71^Q~9 triID~9 
+00 0 
+
+.names $auto$simplemap.cc:240:simplemap_eqne$12001[2] $auto$simplemap.cc:240:simplemap_eqne$11460[1] \
+ $auto$simplemap.cc:240:simplemap_eqne$11460[0] want_brdata 
+-10 1 
+001 1 
+
+.names tm3_sram_we~0 data2in~31 tm3_sram_data_out~31 
+01 1 
+
+.names tm3_sram_we~0 data2in~30 tm3_sram_data_out~30 
+01 1 
+
+.names tm3_sram_we~0 data2in~22 tm3_sram_data_out~22 
+01 1 
+
+.names tm3_sram_we~0 data2in~21 tm3_sram_data_out~21 
+01 1 
+
+.names tm3_sram_we~0 data2in~20 tm3_sram_data_out~20 
+01 1 
+
+.names tm3_sram_we~0 data2in~19 tm3_sram_data_out~19 
+01 1 
+
+.names tm3_sram_we~0 data2in~18 tm3_sram_data_out~18 
+01 1 
+
+.names tm3_sram_we~0 data2in~17 tm3_sram_data_out~17 
+01 1 
+
+.names tm3_sram_we~0 data2in~27 tm3_sram_data_out~27 
+01 1 
+
+.names tm3_sram_we~0 data2in~28 tm3_sram_data_out~28 
+01 1 
+
+.names tm3_sram_we~0 data2in~29 tm3_sram_data_out~29 
+01 1 
+
+.names $auto$simplemap.cc:240:simplemap_eqne$11460[0] new_n2374 lo063 $mux~507^Y~0 
+--0 0 
+01- 0 
+
+.names $auto$simplemap.cc:240:simplemap_eqne$11460[1] $auto$simplemap.cc:240:simplemap_eqne$12001[2] new_n2374 
+00 1 
+
+.names $auto$simplemap.cc:240:simplemap_eqne$11460[0] new_n2374 lo064 $mux~507^Y~1 
+--0 0 
+01- 0 
+
+.names $auto$simplemap.cc:240:simplemap_eqne$11460[0] new_n2374 lo065 $mux~507^Y~2 
+--0 0 
+01- 0 
+
+.names $sdff~61^Q~0 lo066 $auto$simplemap.cc:240:simplemap_eqne$11460[0] new_n2374 $mux~507^Y~3 
+-1-0 1 
+1-01 1 
+-11- 1 
+
+.names $sdff~61^Q~0 lo067 $auto$simplemap.cc:240:simplemap_eqne$11460[0] new_n2374 $mux~507^Y~4 
+-1-0 1 
+1-01 1 
+-11- 1 
+
+.names $sdff~61^Q~0 lo068 $auto$simplemap.cc:240:simplemap_eqne$11460[0] new_n2374 $mux~507^Y~5 
+-1-0 1 
+1-01 1 
+-11- 1 
+
+.names $auto$simplemap.cc:240:simplemap_eqne$11460[0] new_n2374 lo069 $mux~507^Y~6 
+--0 0 
+01- 0 
+
+.names $sdff~61^Q~0 lo070 $auto$simplemap.cc:240:simplemap_eqne$11460[0] new_n2374 $mux~507^Y~7 
+-1-0 1 
+1-01 1 
+-11- 1 
+
+.names $sdff~61^Q~0 lo071 $auto$simplemap.cc:240:simplemap_eqne$11460[0] new_n2374 $mux~507^Y~8 
+-1-0 1 
+1-01 1 
+-11- 1 
+
+.names $sdff~61^Q~0 lo072 $auto$simplemap.cc:240:simplemap_eqne$11460[0] new_n2374 $mux~507^Y~9 
+-1-0 1 
+1-01 1 
+-11- 1 
+
+.names $auto$simplemap.cc:240:simplemap_eqne$11460[0] $auto$simplemap.cc:240:simplemap_eqne$11460[1] $not~506^Y~0 
+01 1 
+
+.names $sdff~60^Q~0 raygroupvalid10 $sdff~241^Q~0 $auto$hard_block.cc:122:cell_hard_block$7468.S[2] pglobalreset n1104 
+--010 1 
+0--10 1 
+-10-0 1 
+
+.names new_n2394 new_n2392 new_n2387 new_n2396 pglobalreset new_n2397 li001 
+---0-1 0 
+111--1 0 
+----1- 0 
+
+.names new_n2388 new_n2389 new_n2390 new_n2391 new_n2387 
+1111 1 
+
+.names $sdff~64^Q~4 $sdff~64^Q~5 $sdff~64^Q~6 $sdff~64^Q~7 new_n2388 
+0000 1 
+
+.names $sdff~64^Q~0 $sdff~2^Q~0 $sdff~2^Q~1 $sdff~64^Q~3 new_n2389 
+0000 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7436.B[52] $auto$hard_block.cc:122:cell_hard_block$7436.B[53] \
+ $auto$hard_block.cc:122:cell_hard_block$7436.B[54] $auto$hard_block.cc:122:cell_hard_block$7436.B[55] new_n2390 
+0000 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7436.B[48] $auto$hard_block.cc:122:cell_hard_block$7436.B[49] \
+ $auto$hard_block.cc:122:cell_hard_block$7436.B[50] $auto$hard_block.cc:122:cell_hard_block$7436.B[51] new_n2391 
+0000 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7436.A[28] $auto$hard_block.cc:122:cell_hard_block$7436.A[29] \
+ $auto$hard_block.cc:122:cell_hard_block$7436.A[30] $auto$hard_block.cc:122:cell_hard_block$7436.A[31] new_n2393 new_n2392 
+00001 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7436.A[24] $auto$hard_block.cc:122:cell_hard_block$7436.A[25] \
+ $auto$hard_block.cc:122:cell_hard_block$7436.A[26] $auto$hard_block.cc:122:cell_hard_block$7436.A[27] new_n2393 
+0000 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7436.A[16] $auto$hard_block.cc:122:cell_hard_block$7436.A[17] \
+ $auto$hard_block.cc:122:cell_hard_block$7436.A[18] $auto$hard_block.cc:122:cell_hard_block$7436.A[19] new_n2395 new_n2394 
+00001 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7436.A[20] $auto$hard_block.cc:122:cell_hard_block$7436.A[21] \
+ $auto$hard_block.cc:122:cell_hard_block$7436.A[22] $auto$hard_block.cc:122:cell_hard_block$7436.A[23] new_n2395 
+0000 1 
+
+.names $dff~556^Q~1 $dff~556^Q~2 $auto$hard_block.cc:122:cell_hard_block$7436.S[3] \
+ $auto$hard_block.cc:122:cell_hard_block$7436.S[2] $dff~556^Q~7 $dff~556^Q~8 new_n2396 
+000000 1 
+
+.names $dff~556^Q~5 $dff~556^Q~6 new_n2397 
+00 1 
+
+.names pglobalreset $dff~556^Q~1 $auto$hard_block.cc:122:cell_hard_block$7436.S[2] $dff~556^Q~6 $dff~556^Q~8 li002 
+00000 1 
+
+.names $dff~556^Q~1 $auto$hard_block.cc:122:cell_hard_block$7436.S[2] $dff~556^Q~6 $dff~556^Q~8 pglobalreset li003 
+----1 0 
+0000- 0 
+
+.names pglobalreset $sdff~485^Q~18 li004 
+01 1 
+
+.names pglobalreset $sdff~485^Q~19 li005 
+01 1 
+
+.names pglobalreset $sdff~485^Q~20 li006 
+01 1 
+
+.names pglobalreset $sdff~485^Q~21 li007 
+01 1 
+
+.names pglobalreset $sdff~485^Q~22 li008 
+01 1 
+
+.names pglobalreset $sdff~485^Q~23 li009 
+01 1 
+
+.names pglobalreset $sdff~485^Q~24 li010 
+01 1 
+
+.names pglobalreset $sdff~485^Q~25 li011 
+01 1 
+
+.names pglobalreset $sdff~485^Q~26 li012 
+01 1 
+
+.names pglobalreset $sdff~485^Q~27 li013 
+01 1 
+
+.names pglobalreset $sdff~485^Q~28 li014 
+01 1 
+
+.names pglobalreset $sdff~485^Q~29 li015 
+01 1 
+
+.names pglobalreset $sdff~485^Q~30 li016 
+01 1 
+
+.names pglobalreset $sdff~485^Q~31 li017 
+01 1 
+
+.names pglobalreset lo203 n1196 
+01 1 
+
+.names pglobalreset lo204 n1201 
+01 1 
+
+.names pglobalreset lo205 n1206 
+01 1 
+
+.names pglobalreset lo206 n1211 
+01 1 
+
+.names pglobalreset lo207 n1216 
+01 1 
+
+.names pglobalreset lo208 n1221 
+01 1 
+
+.names pglobalreset lo209 n1226 
+01 1 
+
+.names pglobalreset lo210 n1231 
+01 1 
+
+.names pglobalreset lo211 n1236 
+01 1 
+
+.names pglobalreset lo212 n1241 
+01 1 
+
+.names pglobalreset lo213 n1246 
+01 1 
+
+.names pglobalreset lo214 n1251 
+01 1 
+
+.names lo030 $sdff~512^Q~0 new_n2428 $dff~137^Q~15 $dff~316^Q~15 new_n2427 li030 
+0--000 0 
+-0-001 0 
+--1--- 0 
+
+.names lo295 $sdff~509^Q~0 new_n2427 
+01 1 
+
+.names $dff~316^Q~15 $dff~137^Q~15 pglobalreset $dff~316^Q~0 $dff~137^Q~0 new_n2428 
+-1-11 1 
+1--11 1 
+--1-- 1 
+
+.names n4287 n4292 $auto$hard_block.cc:122:cell_hard_block$7436.A[16] li047 li031 
+--00 0 
+00-0 0 
+
+.names new_n2396 $auto$hard_block.cc:122:cell_hard_block$7436.A[16] new_n2431 pglobalreset li047 
+--00 1 
+11-0 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7436.A[24] $auto$hard_block.cc:122:cell_hard_block$7436.B[48] $dff~556^Q~7 \
+ $dff~556^Q~8 $dff~556^Q~1 $dff~556^Q~2 new_n2431 
+1----1 0 
+1---1- 0 
+-1-1-- 0 
+-11--- 0 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7436.S[3] n4287 
+01 1 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7436.S[2] n4292 
+01 1 
+
+.names n4287 n4292 $auto$hard_block.cc:122:cell_hard_block$7436.A[17] li048 li032 
+--00 0 
+00-0 0 
+
+.names new_n2396 $auto$hard_block.cc:122:cell_hard_block$7436.A[17] new_n2436 pglobalreset li048 
+--00 1 
+11-0 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7436.A[25] $auto$hard_block.cc:122:cell_hard_block$7436.B[49] $dff~556^Q~7 \
+ $dff~556^Q~8 $dff~556^Q~1 $dff~556^Q~2 new_n2436 
+1----1 0 
+1---1- 0 
+-1-1-- 0 
+-11--- 0 
+
+.names n4287 n4292 $auto$hard_block.cc:122:cell_hard_block$7436.A[18] li049 li033 
+--00 0 
+00-0 0 
+
+.names new_n2396 $auto$hard_block.cc:122:cell_hard_block$7436.A[18] new_n2439 pglobalreset li049 
+--00 1 
+11-0 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7436.A[26] $auto$hard_block.cc:122:cell_hard_block$7436.B[50] $dff~556^Q~7 \
+ $dff~556^Q~8 $dff~556^Q~1 $dff~556^Q~2 new_n2439 
+1----1 0 
+1---1- 0 
+-1-1-- 0 
+-11--- 0 
+
+.names n4287 n4292 $auto$hard_block.cc:122:cell_hard_block$7436.A[19] li050 li034 
+--00 0 
+00-0 0 
+
+.names new_n2396 $auto$hard_block.cc:122:cell_hard_block$7436.A[19] new_n2442 pglobalreset li050 
+--00 1 
+11-0 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7436.A[27] $auto$hard_block.cc:122:cell_hard_block$7436.B[51] $dff~556^Q~7 \
+ $dff~556^Q~8 $dff~556^Q~1 $dff~556^Q~2 new_n2442 
+1----1 0 
+1---1- 0 
+-1-1-- 0 
+-11--- 0 
+
+.names n4287 n4292 $auto$hard_block.cc:122:cell_hard_block$7436.A[20] li051 li035 
+--00 0 
+00-0 0 
+
+.names new_n2396 $auto$hard_block.cc:122:cell_hard_block$7436.A[20] new_n2445 pglobalreset li051 
+--00 1 
+11-0 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7436.A[28] $auto$hard_block.cc:122:cell_hard_block$7436.B[52] $dff~556^Q~7 \
+ $dff~556^Q~8 $dff~556^Q~1 $dff~556^Q~2 new_n2445 
+1----1 0 
+1---1- 0 
+-1-1-- 0 
+-11--- 0 
+
+.names n4287 n4292 $auto$hard_block.cc:122:cell_hard_block$7436.A[21] li052 li036 
+--00 0 
+00-0 0 
+
+.names new_n2396 $auto$hard_block.cc:122:cell_hard_block$7436.A[21] new_n2448 pglobalreset li052 
+--00 1 
+11-0 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7436.A[29] $auto$hard_block.cc:122:cell_hard_block$7436.B[53] $dff~556^Q~7 \
+ $dff~556^Q~8 $dff~556^Q~1 $dff~556^Q~2 new_n2448 
+1----1 0 
+1---1- 0 
+-1-1-- 0 
+-11--- 0 
+
+.names n4287 n4292 $auto$hard_block.cc:122:cell_hard_block$7436.A[22] li053 li037 
+--00 0 
+00-0 0 
+
+.names new_n2396 $auto$hard_block.cc:122:cell_hard_block$7436.A[22] new_n2451 pglobalreset li053 
+--00 1 
+11-0 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7436.A[30] $auto$hard_block.cc:122:cell_hard_block$7436.B[54] $dff~556^Q~7 \
+ $dff~556^Q~8 $dff~556^Q~1 $dff~556^Q~2 new_n2451 
+1----1 0 
+1---1- 0 
+-1-1-- 0 
+-11--- 0 
+
+.names n4287 n4292 $auto$hard_block.cc:122:cell_hard_block$7436.A[23] li054 li038 
+--00 0 
+00-0 0 
+
+.names new_n2396 $auto$hard_block.cc:122:cell_hard_block$7436.A[23] new_n2454 pglobalreset li054 
+--00 1 
+11-0 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7436.A[31] $auto$hard_block.cc:122:cell_hard_block$7436.B[55] $dff~556^Q~7 \
+ $dff~556^Q~8 $dff~556^Q~1 $dff~556^Q~2 new_n2454 
+1----1 0 
+1---1- 0 
+-1-1-- 0 
+-11--- 0 
+
+.names $dff~556^Q~8 $dff~556^Q~7 $auto$hard_block.cc:122:cell_hard_block$7436.A[24] new_n2456 \
+ $auto$hard_block.cc:122:cell_hard_block$7436.B[48] pglobalreset li039 
+-1--10 1 
+1---10 1 
+--10-0 1 
+
+.names $dff~556^Q~8 $dff~556^Q~7 $auto$hard_block.cc:122:cell_hard_block$7436.S[3] \
+ $auto$hard_block.cc:122:cell_hard_block$7436.S[2] $dff~556^Q~1 $dff~556^Q~2 new_n2456 
+-10000 1 
+1-0000 1 
+
+.names $dff~556^Q~8 $dff~556^Q~7 $auto$hard_block.cc:122:cell_hard_block$7436.A[25] new_n2456 \
+ $auto$hard_block.cc:122:cell_hard_block$7436.B[49] pglobalreset li040 
+-1--10 1 
+1---10 1 
+--10-0 1 
+
+.names $dff~556^Q~8 $dff~556^Q~7 $auto$hard_block.cc:122:cell_hard_block$7436.A[26] new_n2456 \
+ $auto$hard_block.cc:122:cell_hard_block$7436.B[50] pglobalreset li041 
+-1--10 1 
+1---10 1 
+--10-0 1 
+
+.names $dff~556^Q~8 $dff~556^Q~7 $auto$hard_block.cc:122:cell_hard_block$7436.A[27] new_n2456 \
+ $auto$hard_block.cc:122:cell_hard_block$7436.B[51] pglobalreset li042 
+-1--10 1 
+1---10 1 
+--10-0 1 
+
+.names $dff~556^Q~8 $dff~556^Q~7 $auto$hard_block.cc:122:cell_hard_block$7436.A[28] new_n2456 \
+ $auto$hard_block.cc:122:cell_hard_block$7436.B[52] pglobalreset li043 
+-1--10 1 
+1---10 1 
+--10-0 1 
+
+.names $dff~556^Q~8 $dff~556^Q~7 $auto$hard_block.cc:122:cell_hard_block$7436.A[29] new_n2456 \
+ $auto$hard_block.cc:122:cell_hard_block$7436.B[53] pglobalreset li044 
+-1--10 1 
+1---10 1 
+--10-0 1 
+
+.names $dff~556^Q~8 $dff~556^Q~7 $auto$hard_block.cc:122:cell_hard_block$7436.A[30] new_n2456 \
+ $auto$hard_block.cc:122:cell_hard_block$7436.B[54] pglobalreset li045 
+-1--10 1 
+1---10 1 
+--10-0 1 
+
+.names $dff~556^Q~8 $dff~556^Q~7 $auto$hard_block.cc:122:cell_hard_block$7436.A[31] new_n2456 \
+ $auto$hard_block.cc:122:cell_hard_block$7436.B[55] pglobalreset li046 
+-1--10 1 
+1---10 1 
+--10-0 1 
+
+.names pglobalreset new_n2396 $auto$hard_block.cc:122:cell_hard_block$7436.A[24] li055 
+011 1 
+
+.names pglobalreset new_n2396 $auto$hard_block.cc:122:cell_hard_block$7436.A[25] li056 
+011 1 
+
+.names pglobalreset new_n2396 $auto$hard_block.cc:122:cell_hard_block$7436.A[26] li057 
+011 1 
+
+.names pglobalreset new_n2396 $auto$hard_block.cc:122:cell_hard_block$7436.A[27] li058 
+011 1 
+
+.names pglobalreset new_n2396 $auto$hard_block.cc:122:cell_hard_block$7436.A[28] li059 
+011 1 
+
+.names pglobalreset new_n2396 $auto$hard_block.cc:122:cell_hard_block$7436.A[29] li060 
+011 1 
+
+.names pglobalreset new_n2396 $auto$hard_block.cc:122:cell_hard_block$7436.A[30] li061 
+011 1 
+
+.names pglobalreset new_n2396 $auto$hard_block.cc:122:cell_hard_block$7436.A[31] li062 
+011 1 
+
+.names braddrin~0 $add~482^ADD~7-1[1] pglobalreset $not~506^Y~0 li063 
+1-00 1 
+-101 1 
+
+.names braddrin~1 $add~482^ADD~7-2[1] pglobalreset $not~506^Y~0 li064 
+1-00 1 
+-101 1 
+
+.names braddrin~2 $add~482^ADD~7-3[1] pglobalreset $not~506^Y~0 li065 
+1-00 1 
+-101 1 
+
+.names braddrin~3 $add~482^ADD~7-4[1] pglobalreset $not~506^Y~0 li066 
+1-00 1 
+-101 1 
+
+.names braddrin~4 $add~482^ADD~7-5[1] pglobalreset $not~506^Y~0 li067 
+1-00 1 
+-101 1 
+
+.names braddrin~5 $add~482^ADD~7-6[1] pglobalreset $not~506^Y~0 li068 
+1-00 1 
+-101 1 
+
+.names braddrin~6 $add~482^ADD~7-7[1] pglobalreset $not~506^Y~0 li069 
+1-00 1 
+-101 1 
+
+.names braddrin~7 $add~482^ADD~7-8[1] pglobalreset $not~506^Y~0 li070 
+1-00 1 
+-101 1 
+
+.names braddrin~8 $add~482^ADD~7-9[1] pglobalreset $not~506^Y~0 li071 
+1-00 1 
+-101 1 
+
+.names braddrin~9 $add~482^ADD~7-10[1] pglobalreset $not~506^Y~0 li072 
+1-00 1 
+-101 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7301.S[3] raygroupvalid10 $sdff~241^Q~0 new_n2483 pglobalreset li074 
+---00 1 
+011-0 1 
+
+.names $dff~316^Q~3 $dff~316^Q~5 new_n2484 new_n2485 new_n2483 
+0011 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7468.S[2] $auto$hard_block.cc:122:cell_hard_block$7301.S[2] $dff~316^Q~13 \
+ $dff~316^Q~15 new_n2484 
+0000 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7301.S[3] $sdff~60^Q~0 $sdff~241^Q~0 $dff~316^Q~2 $dff~316^Q~18 new_n2485 
+----1 0 
+---1- 0 
+111-- 0 
+
+.names pglobalreset $dff~316^Q~2 $auto$hard_block.cc:122:cell_hard_block$7301.S[3] $dff~316^Q~18 n1617 
+0000 1 
+
+.names pglobalreset rgData~0 n1942 
+01 1 
+
+.names pglobalreset rgData~1 n1947 
+01 1 
+
+.names pglobalreset rgData~2 n1952 
+01 1 
+
+.names pglobalreset rgData~3 n1957 
+01 1 
+
+.names pglobalreset rgData~4 n1962 
+01 1 
+
+.names pglobalreset rgData~5 n1967 
+01 1 
+
+.names pglobalreset rgData~6 n1972 
+01 1 
+
+.names pglobalreset rgData~7 n1977 
+01 1 
+
+.names pglobalreset rgData~8 n1982 
+01 1 
+
+.names pglobalreset rgData~9 n1987 
+01 1 
+
+.names pglobalreset rgData~10 n1992 
+01 1 
+
+.names pglobalreset rgData~11 n1997 
+01 1 
+
+.names pglobalreset rgData~12 n2002 
+01 1 
+
+.names pglobalreset rgData~13 n2007 
+01 1 
+
+.names pglobalreset rgData~14 n2012 
+01 1 
+
+.names pglobalreset rgData~15 n2017 
+01 1 
+
+.names pglobalreset rgData~16 n2022 
+01 1 
+
+.names pglobalreset rgData~17 n2027 
+01 1 
+
+.names pglobalreset rgData~18 n2032 
+01 1 
+
+.names pglobalreset rgData~19 n2037 
+01 1 
+
+.names pglobalreset rgData~20 n2042 
+01 1 
+
+.names pglobalreset rgData~21 n2047 
+01 1 
+
+.names pglobalreset rgData~22 n2052 
+01 1 
+
+.names pglobalreset rgData~23 n2057 
+01 1 
+
+.names pglobalreset rgData~24 n2062 
+01 1 
+
+.names pglobalreset rgData~25 n2067 
+01 1 
+
+.names pglobalreset rgData~26 n2072 
+01 1 
+
+.names pglobalreset rgData~27 n2077 
+01 1 
+
+.names pglobalreset rgData~28 n2082 
+01 1 
+
+.names pglobalreset rgData~29 n2087 
+01 1 
+
+.names pglobalreset rgData~30 n2092 
+01 1 
+
+.names pglobalreset rgData~31 n2097 
+01 1 
+
+.names pglobalreset rgAddr~0 n2102 
+01 1 
+
+.names pglobalreset rgAddr~1 n2107 
+01 1 
+
+.names pglobalreset rgAddr~2 n2112 
+01 1 
+
+.names pglobalreset rgAddr~3 n2117 
+01 1 
+
+.names pglobalreset rgWE~0 n2122 
+01 1 
+
+.names pglobalreset rgWE~1 n2127 
+01 1 
+
+.names pglobalreset rgWE~2 n2132 
+01 1 
+
+.names pglobalreset rgAddrValid n2137 
+01 1 
+
+.names pglobalreset raygroup10~0 n2142 
+01 1 
+
+.names pglobalreset raygroup10~1 n2147 
+01 1 
+
+.names pglobalreset raygroup01~0 n2162 
+01 1 
+
+.names pglobalreset raygroup01~1 n2167 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[0] n2172 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[1] n2177 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[2] n2182 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[3] n2187 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[4] n2192 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[5] n2197 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[6] n2202 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[7] n2207 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[8] n2212 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[9] n2217 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[10] n2222 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[11] n2227 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[12] n2232 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[13] n2237 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[14] n2242 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[15] n2247 
+01 1 
+
+.names pglobalreset resultdata~0 n2267 
+01 1 
+
+.names pglobalreset resultdata~1 n2272 
+01 1 
+
+.names pglobalreset resultdata~2 n2277 
+01 1 
+
+.names pglobalreset resultdata~3 n2282 
+01 1 
+
+.names pglobalreset resultdata~4 n2287 
+01 1 
+
+.names pglobalreset resultdata~5 n2292 
+01 1 
+
+.names pglobalreset resultdata~6 n2297 
+01 1 
+
+.names pglobalreset resultdata~7 n2302 
+01 1 
+
+.names pglobalreset resultdata~8 n2307 
+01 1 
+
+.names pglobalreset resultdata~9 n2312 
+01 1 
+
+.names pglobalreset resultdata~10 n2317 
+01 1 
+
+.names pglobalreset resultdata~11 n2322 
+01 1 
+
+.names pglobalreset resultdata~12 n2327 
+01 1 
+
+.names pglobalreset resultdata~13 n2332 
+01 1 
+
+.names pglobalreset resultdata~14 n2337 
+01 1 
+
+.names pglobalreset resultdata~17 n2667 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[16] n2672 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[17] n2677 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[18] n2682 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[19] n2687 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[20] n2692 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[21] n2697 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[22] n2702 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[23] n2707 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[24] n2712 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[25] n2717 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[26] n2722 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[27] n2727 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[28] n2732 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[29] n2737 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[30] n2742 
+01 1 
+
+.names pglobalreset $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[31] n2747 
+01 1 
+
+.names $sdff~510^Q~0 new_n2427 $dff~316^Q~15 $dff~137^Q~15 pglobalreset li168 
+---10 1 
+--1-0 1 
+11--0 1 
+
+.names $sdff~510^Q~1 new_n2427 $dff~316^Q~15 $dff~137^Q~15 pglobalreset li169 
+---10 1 
+--1-0 1 
+11--0 1 
+
+.names $sdff~510^Q~2 new_n2427 $dff~316^Q~15 $dff~137^Q~15 pglobalreset li170 
+---10 1 
+--1-0 1 
+11--0 1 
+
+.names lo171 $sdff~512^Q~1 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li171 
+1-0000 1 
+-10001 1 
+
+.names lo172 $sdff~512^Q~2 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li172 
+1-0000 1 
+-10001 1 
+
+.names lo173 $sdff~512^Q~3 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li173 
+1-0000 1 
+-10001 1 
+
+.names lo174 $sdff~512^Q~4 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li174 
+1-0000 1 
+-10001 1 
+
+.names lo175 $sdff~512^Q~5 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li175 
+1-0000 1 
+-10001 1 
+
+.names lo176 $sdff~512^Q~6 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li176 
+1-0000 1 
+-10001 1 
+
+.names lo177 $sdff~512^Q~7 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li177 
+1-0000 1 
+-10001 1 
+
+.names lo178 $sdff~512^Q~8 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li178 
+1-0000 1 
+-10001 1 
+
+.names lo179 $sdff~512^Q~9 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li179 
+1-0000 1 
+-10001 1 
+
+.names lo180 $sdff~512^Q~10 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li180 
+1-0000 1 
+-10001 1 
+
+.names lo181 $sdff~512^Q~11 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li181 
+1-0000 1 
+-10001 1 
+
+.names lo182 $sdff~512^Q~12 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li182 
+1-0000 1 
+-10001 1 
+
+.names lo183 $sdff~512^Q~13 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li183 
+1-0000 1 
+-10001 1 
+
+.names lo184 $sdff~512^Q~14 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li184 
+1-0000 1 
+-10001 1 
+
+.names lo185 $sdff~512^Q~15 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li185 
+1-0000 1 
+-10001 1 
+
+.names lo186 $sdff~512^Q~16 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li186 
+1-0000 1 
+-10001 1 
+
+.names lo187 $sdff~512^Q~17 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li187 
+1-0000 1 
+-10001 1 
+
+.names lo188 $sdff~512^Q~18 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li188 
+1-0000 1 
+-10001 1 
+
+.names lo189 $sdff~512^Q~19 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li189 
+1-0000 1 
+-10001 1 
+
+.names lo190 $sdff~512^Q~20 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li190 
+1-0000 1 
+-10001 1 
+
+.names lo191 $sdff~512^Q~21 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li191 
+1-0000 1 
+-10001 1 
+
+.names lo192 $sdff~512^Q~22 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li192 
+1-0000 1 
+-10001 1 
+
+.names lo193 $sdff~512^Q~23 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li193 
+1-0000 1 
+-10001 1 
+
+.names lo194 $sdff~512^Q~24 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li194 
+1-0000 1 
+-10001 1 
+
+.names lo195 $sdff~512^Q~25 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li195 
+1-0000 1 
+-10001 1 
+
+.names lo196 $sdff~512^Q~26 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li196 
+1-0000 1 
+-10001 1 
+
+.names lo197 $sdff~512^Q~27 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li197 
+1-0000 1 
+-10001 1 
+
+.names lo198 $sdff~512^Q~28 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li198 
+1-0000 1 
+-10001 1 
+
+.names lo199 $sdff~512^Q~29 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li199 
+1-0000 1 
+-10001 1 
+
+.names lo200 $sdff~512^Q~30 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li200 
+1-0000 1 
+-10001 1 
+
+.names lo201 $sdff~512^Q~31 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li201 
+1-0000 1 
+-10001 1 
+
+.names pglobalreset $dff~747^Q~4 n2907 
+01 1 
+
+.names pglobalreset $add~219^ADD~10-1[1] $dff~316^Q~13 li203 
+011 1 
+
+.names pglobalreset $add~219^ADD~10-2[1] $dff~316^Q~13 li204 
+011 1 
+
+.names pglobalreset $add~219^ADD~10-3[1] $dff~316^Q~13 li205 
+011 1 
+
+.names pglobalreset $add~219^ADD~10-4[1] $dff~316^Q~13 li206 
+011 1 
+
+.names pglobalreset $add~219^ADD~10-5[1] $dff~316^Q~13 li207 
+011 1 
+
+.names pglobalreset $add~219^ADD~10-6[1] $dff~316^Q~13 li208 
+011 1 
+
+.names pglobalreset $add~219^ADD~10-7[1] $dff~316^Q~13 li209 
+011 1 
+
+.names pglobalreset $add~219^ADD~10-8[1] $dff~316^Q~13 li210 
+011 1 
+
+.names pglobalreset $add~219^ADD~10-9[1] $dff~316^Q~13 li211 
+011 1 
+
+.names pglobalreset $add~219^ADD~10-10[1] $dff~316^Q~13 li212 
+011 1 
+
+.names pglobalreset $add~219^ADD~10-11[1] $dff~316^Q~13 li213 
+011 1 
+
+.names pglobalreset $add~219^ADD~10-12[1] $dff~316^Q~13 li214 
+011 1 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7269.S[2] n3172 
+01 1 
+
+.names pglobalreset lo228 n3342 
+01 1 
+
+.names pglobalreset lo229 n3347 
+01 1 
+
+.names pglobalreset lo230 n3352 
+01 1 
+
+.names pglobalreset lo231 n3357 
+01 1 
+
+.names pglobalreset lo232 n3362 
+01 1 
+
+.names pglobalreset lo233 n3367 
+01 1 
+
+.names pglobalreset lo234 n3372 
+01 1 
+
+.names pglobalreset lo235 n3377 
+01 1 
+
+.names pglobalreset lo236 n3382 
+01 1 
+
+.names pglobalreset lo237 n3387 
+01 1 
+
+.names pglobalreset lo238 n3392 
+01 1 
+
+.names pglobalreset lo239 n3397 
+01 1 
+
+.names pglobalreset $add~34^ADD~15-1[1] $dff~137^Q~13 li228 
+011 1 
+
+.names pglobalreset $add~34^ADD~15-2[1] $dff~137^Q~13 li229 
+011 1 
+
+.names pglobalreset $add~34^ADD~15-3[1] $dff~137^Q~13 li230 
+011 1 
+
+.names pglobalreset $add~34^ADD~15-4[1] $dff~137^Q~13 li231 
+011 1 
+
+.names pglobalreset $add~34^ADD~15-5[1] $dff~137^Q~13 li232 
+011 1 
+
+.names pglobalreset $add~34^ADD~15-6[1] $dff~137^Q~13 li233 
+011 1 
+
+.names pglobalreset $add~34^ADD~15-7[1] $dff~137^Q~13 li234 
+011 1 
+
+.names pglobalreset $add~34^ADD~15-8[1] $dff~137^Q~13 li235 
+011 1 
+
+.names pglobalreset $add~34^ADD~15-9[1] $dff~137^Q~13 li236 
+011 1 
+
+.names pglobalreset $add~34^ADD~15-10[1] $dff~137^Q~13 li237 
+011 1 
+
+.names pglobalreset $add~34^ADD~15-11[1] $dff~137^Q~13 li238 
+011 1 
+
+.names pglobalreset $add~34^ADD~15-12[1] $dff~137^Q~13 li239 
+011 1 
+
+.names pglobalreset $auto$simplemap.cc:240:simplemap_eqne$11460[1] $auto$simplemap.cc:240:simplemap_eqne$11460[0] \
+ $auto$simplemap.cc:240:simplemap_eqne$12001[2] n3802 
+0011 1 
+
+.names pglobalreset single_port_ram^MEM~6-0^out~0 n3972 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-1^out~0 n3977 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-2^out~0 n3982 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-3^out~0 n3987 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-4^out~0 n3992 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-5^out~0 n3997 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-6^out~0 n4002 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-7^out~0 n4007 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-8^out~0 n4012 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-9^out~0 n4017 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-10^out~0 n4022 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-11^out~0 n4027 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-12^out~0 n4032 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-13^out~0 n4037 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-14^out~0 n4042 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-15^out~0 n4047 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-16^out~0 n4052 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-17^out~0 n4057 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-18^out~0 n4062 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-19^out~0 n4067 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-20^out~0 n4072 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-21^out~0 n4077 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-22^out~0 n4082 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-23^out~0 n4087 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-24^out~0 n4092 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-25^out~0 n4097 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-26^out~0 n4102 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-27^out~0 n4107 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-28^out~0 n4112 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-29^out~0 n4117 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-30^out~0 n4122 
+01 1 
+
+.names pglobalreset single_port_ram^MEM~6-31^out~0 n4127 
+01 1 
+
+.names $sdff~61^Q~0 new_n2685 li273 
+01 0 
+
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[18] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$7998.$auto$alumacc.cc:485:replace_alu$8887.A[17] lo273 $sub~535^MIN~13-4[1] \
+ $sdff~584^Q~0 pglobalreset new_n2685 
+-1-010 1 
+1--010 1 
+--0--0 1 
+
+.names pglobalreset $dff~595^Q~1 n4192 
+01 1 
+
+.names $dff~595^Q~0 resultready pglobalreset $dff~595^Q~1 n4197 
+-100 0 
+0-00 0 
+
+.names pglobalreset $dff~595^Q~8 n4202 
+01 1 
+
+.names pglobalreset $dff~595^Q~7 n4207 
+01 1 
+
+.names pglobalreset $dff~595^Q~5 n4212 
+01 1 
+
+.names pglobalreset $dff~595^Q~6 n4217 
+01 1 
+
+.names pglobalreset resultready $dff~595^Q~0 n4222 
+011 1 
+
+.names pglobalreset $dff~595^Q~2 n4227 
+01 1 
+
+.names pglobalreset $dff~595^Q~3 n4232 
+01 1 
+
+.names pglobalreset $dff~595^Q~4 n4237 
+01 1 
+
+.names $sdffe~539^Q~0 $dff~556^Q~0 $auto$simplemap.cc:240:simplemap_eqne$10167[1] $dff~556^Q~1 $dff~556^Q~2 pglobalreset \
+ n4252 
+--1000 0 
+-0-000 0 
+1--000 0 
+
+.names pglobalreset $dff~556^Q~8 n4257 
+01 1 
+
+.names pglobalreset $dff~556^Q~7 n4262 
+01 1 
+
+.names pglobalreset $dff~556^Q~5 n4267 
+01 1 
+
+.names pglobalreset $dff~556^Q~6 n4272 
+01 1 
+
+.names pglobalreset $auto$simplemap.cc:240:simplemap_eqne$10167[1] $dff~556^Q~0 n4277 
+011 1 
+
+.names pglobalreset $auto$simplemap.cc:240:simplemap_eqne$10167[1] $dff~556^Q~0 $sdffe~539^Q~0 n4282 
+0011 1 
+
+.names pglobalreset $dff~137^Q~2 $auto$hard_block.cc:122:cell_hard_block$7269.S[3] $dff~137^Q~18 n4297 
+0000 1 
+
+.names $sdff~242^Q~0 raygroupvalid01 $sdff~59^Q~0 $auto$hard_block.cc:122:cell_hard_block$7332.S[2] pglobalreset n4302 
+--010 1 
+0--10 1 
+-10-0 1 
+
+.names $sdff~509^Q~0 $dff~137^Q~15 $dff~316^Q~15 lo295 pglobalreset li295 
+-0010 1 
+1--10 1 
+100-0 1 
+
+.names $dff~137^Q~15 $dff~316^Q~15 $sdff~240^Q~0 new_n2707_1 new_n2709 new_n2712_1 li296 
+----11 1 
+--11-1 1 
+00---1 1 
+
+.names new_n2708_1 new_n2484 $sdff~241^Q~0 new_n2707_1 
+--0 0 
+11- 0 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7301.S[3] $dff~316^Q~2 $dff~316^Q~3 $dff~316^Q~5 $dff~316^Q~0 $dff~316^Q~18 \
+ new_n2708_1 
+-00000 1 
+0-0000 1 
+
+.names $dff~137^Q~2 $auto$hard_block.cc:122:cell_hard_block$7269.S[3] new_n2711 new_n2710 $sdff~58^Q~0 $sdff~59^Q~0 new_n2709 
+---011 1 
+--0-11 1 
+11--11 1 
+
+.names $dff~137^Q~5 $auto$hard_block.cc:122:cell_hard_block$7332.S[2] $dff~137^Q~13 $dff~137^Q~15 new_n2710 
+0000 1 
+
+.names $dff~137^Q~0 $dff~137^Q~3 $auto$hard_block.cc:122:cell_hard_block$7269.S[2] $dff~137^Q~18 new_n2711 
+0000 1 
+
+.names lo296 $sdff~511^Q~0 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 new_n2712_1 
+0--000 0 
+-0-001 0 
+--1--- 0 
+
+.names $dff~137^Q~15 $dff~316^Q~15 $sdff~240^Q~1 new_n2707_1 new_n2714 new_n2715 li297 
+----11 1 
+--11-1 1 
+00---1 1 
+
+.names $dff~137^Q~2 $auto$hard_block.cc:122:cell_hard_block$7269.S[3] new_n2711 new_n2710 $sdff~58^Q~1 $sdff~59^Q~0 new_n2714 
+---011 1 
+--0-11 1 
+11--11 1 
+
+.names lo297 $sdff~511^Q~1 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 new_n2715 
+0--000 0 
+-0-001 0 
+--1--- 0 
+
+.names lo298 $sdff~511^Q~2 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li298 
+1-0000 1 
+-10001 1 
+
+.names lo299 $sdff~511^Q~3 pglobalreset $dff~137^Q~15 $dff~316^Q~15 new_n2427 li299 
+1-0000 1 
+-10001 1 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7582.A[0] li300 
+01 1 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7582.A[1] li301 
+01 1 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7582.A[2] li302 
+01 1 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7582.A[3] li303 
+01 1 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7582.A[4] li304 
+01 1 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7582.A[5] li305 
+01 1 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7582.A[6] li306 
+01 1 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7582.A[7] li307 
+01 1 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7582.A[8] li308 
+01 1 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7582.A[9] li309 
+01 1 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7582.A[10] li310 
+01 1 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7582.A[11] li311 
+01 1 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7582.A[12] li312 
+01 1 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7582.A[13] li313 
+01 1 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7582.A[14] li314 
+01 1 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7582.A[15] li315 
+01 1 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7582.A[16] li316 
+01 1 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7582.A[17] li317 
+01 1 
+
+.names $sdff~242^Q~0 raygroupvalid01 new_n2737_1 $auto$hard_block.cc:122:cell_hard_block$7269.S[3] $sdff~59^Q~0 pglobalreset \
+ li318 
+-1-010 1 
+1--110 1 
+--0--0 1 
+
+.names $dff~137^Q~2 $dff~137^Q~3 $auto$hard_block.cc:122:cell_hard_block$7269.S[2] $dff~137^Q~18 new_n2710 new_n2737_1 
+00001 1 
+
+.names $dff~747^Q~0 new_n2739 addr2_ready $dff~747^Q~1 pglobalreset $dff~747^Q~4 n4471 
+-1-000 0 
+0--000 0 
+--1-00 0 
+
+.names $sdff~730^Q~0 $sdff~61^Q~0 new_n2739 
+01 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7603.S[1] $dff~747^Q~1 pglobalreset addr2_ready n4476 
+-101 1 
+1-01 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7603.S[1] $dff~747^Q~5 $dff~747^Q~3 addr2_ready data2_ready pglobalreset n4481 
+1--000 1 
+-1--00 1 
+--10-0 1 
+
+.names $dff~747^Q~3 $dff~747^Q~0 pglobalreset addr2_ready n4486 
+-101 1 
+1-01 1 
+
+.names pglobalreset addr2_ready new_n2739 $dff~747^Q~0 n4491 
+0011 1 
+
+.names addr2_ready $auto$hard_block.cc:122:cell_hard_block$7603.S[1] $dff~747^Q~5 pglobalreset data2_ready n4496 
+--101 1 
+01-01 1 
+
+.names brdata_ready new_n2746 $auto$simplemap.cc:240:simplemap_eqne$12001[2] pglobalreset \
+ $auto$simplemap.cc:240:simplemap_eqne$11460[1] $auto$simplemap.cc:240:simplemap_eqne$11460[0] n4501 
+1--011 1 
+-0000- 1 
+11-01- 1 
+
+.names $sdff~487^Q~0 $auto$simplemap.cc:240:simplemap_eqne$11460[0] new_n2374 $sdff~61^Q~0 braddr_ready new_n2746 
+----1 0 
+0011- 0 
+
+.names $auto$simplemap.cc:240:simplemap_eqne$12001[2] $auto$simplemap.cc:240:simplemap_eqne$11460[1] braddr_ready \
+ $auto$simplemap.cc:240:simplemap_eqne$11460[0] pglobalreset n4506 
+0-010 1 
+-1-10 1 
+-10-0 1 
+
+.names new_n2374 $auto$simplemap.cc:240:simplemap_eqne$11460[0] braddr_ready new_n2746 pglobalreset n4511 
+--000 1 
+00-00 1 
+
+.names pglobalreset resultdata~15 n4791 
+01 1 
+
+.names pglobalreset resultdata~31 n4796 
+01 1 
+
+.names pglobalreset resultdata~16 n4801 
+01 1 
+
+.names pglobalreset resultdata~18 n4806 
+01 1 
+
+.names pglobalreset resultdata~19 n4811 
+01 1 
+
+.names pglobalreset resultdata~20 n4816 
+01 1 
+
+.names pglobalreset resultdata~21 n4821 
+01 1 
+
+.names pglobalreset resultdata~22 n4826 
+01 1 
+
+.names pglobalreset resultdata~23 n4831 
+01 1 
+
+.names pglobalreset resultdata~24 n4836 
+01 1 
+
+.names pglobalreset resultdata~25 n4841 
+01 1 
+
+.names pglobalreset resultdata~26 n4846 
+01 1 
+
+.names pglobalreset resultdata~27 n4851 
+01 1 
+
+.names pglobalreset resultdata~28 n4856 
+01 1 
+
+.names pglobalreset resultdata~29 n4861 
+01 1 
+
+.names pglobalreset resultdata~30 n4866 
+01 1 
+
+.names addr2in~0 $add~727^ADD~9-1[1] pglobalreset $auto$hard_block.cc:122:cell_hard_block$7603.S[1] li344 
+1-00 1 
+-101 1 
+
+.names addr2in~1 $add~727^ADD~9-2[1] pglobalreset $auto$hard_block.cc:122:cell_hard_block$7603.S[1] li345 
+1-00 1 
+-101 1 
+
+.names addr2in~2 $add~727^ADD~9-3[1] pglobalreset $auto$hard_block.cc:122:cell_hard_block$7603.S[1] li346 
+1-00 1 
+-101 1 
+
+.names addr2in~3 $add~727^ADD~9-4[1] pglobalreset $auto$hard_block.cc:122:cell_hard_block$7603.S[1] li347 
+1-00 1 
+-101 1 
+
+.names addr2in~4 $add~727^ADD~9-5[1] pglobalreset $auto$hard_block.cc:122:cell_hard_block$7603.S[1] li348 
+1-00 1 
+-101 1 
+
+.names addr2in~5 $add~727^ADD~9-6[1] pglobalreset $auto$hard_block.cc:122:cell_hard_block$7603.S[1] li349 
+1-00 1 
+-101 1 
+
+.names addr2in~6 $add~727^ADD~9-7[1] pglobalreset $auto$hard_block.cc:122:cell_hard_block$7603.S[1] li350 
+1-00 1 
+-101 1 
+
+.names addr2in~7 $add~727^ADD~9-8[1] pglobalreset $auto$hard_block.cc:122:cell_hard_block$7603.S[1] li351 
+1-00 1 
+-101 1 
+
+.names addr2in~8 $add~727^ADD~9-9[1] pglobalreset $auto$hard_block.cc:122:cell_hard_block$7603.S[1] li352 
+1-00 1 
+-101 1 
+
+.names addr2in~9 $add~727^ADD~9-10[1] pglobalreset $auto$hard_block.cc:122:cell_hard_block$7603.S[1] li353 
+1-00 1 
+-101 1 
+
+.names addr2in~10 $add~727^ADD~9-11[1] pglobalreset $auto$hard_block.cc:122:cell_hard_block$7603.S[1] li354 
+1-00 1 
+-101 1 
+
+.names addr2in~11 $add~727^ADD~9-12[1] pglobalreset $auto$hard_block.cc:122:cell_hard_block$7603.S[1] li355 
+1-00 1 
+-101 1 
+
+.names addr2in~12 $add~727^ADD~9-13[1] pglobalreset $auto$hard_block.cc:122:cell_hard_block$7603.S[1] li356 
+1-00 1 
+-101 1 
+
+.names addr2in~13 $add~727^ADD~9-14[1] pglobalreset $auto$hard_block.cc:122:cell_hard_block$7603.S[1] li357 
+1-00 1 
+-101 1 
+
+.names addr2in~14 $add~727^ADD~9-15[1] pglobalreset $auto$hard_block.cc:122:cell_hard_block$7603.S[1] li358 
+1-00 1 
+-101 1 
+
+.names addr2in~15 $add~727^ADD~9-16[1] pglobalreset $auto$hard_block.cc:122:cell_hard_block$7603.S[1] li359 
+1-00 1 
+-101 1 
+
+.names addr2in~16 $add~727^ADD~9-17[1] pglobalreset $auto$hard_block.cc:122:cell_hard_block$7603.S[1] li360 
+1-00 1 
+-101 1 
+
+.names addr2in~17 $add~727^ADD~9-18[1] pglobalreset $auto$hard_block.cc:122:cell_hard_block$7603.S[1] li361 
+1-00 1 
+-101 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7269.S[3] pglobalreset raygroupvalid01 $dff~137^Q~0 $sdff~242^Q~0 $sdff~59^Q~0 \
+ n5091 
+1---00 1 
+--01-0 1 
+--010- 1 
+-1---- 1 
+
+.names $sdff~59^Q~0 $auto$hard_block.cc:122:cell_hard_block$7332.S[2] $sdff~242^Q~0 $dff~137^Q~2 pglobalreset n5101 
+--010 1 
+01--0 1 
+
+.names pglobalreset $dff~137^Q~15 n5106 
+01 1 
+
+.names wanttriID pglobalreset $dff~137^Q~5 new_n2788 n5116 
+---0 1 
+001- 1 
+
+.names $sdff~242^Q~0 $auto$hard_block.cc:122:cell_hard_block$7269.S[3] raygroupvalid01 $dff~137^Q~0 pglobalreset $sdff~59^Q~0 \
+ new_n2788 
+--1101 0 
+11--01 0 
+
+.names $sdff~242^Q~0 $dff~137^Q~18 new_n2790 $dff~137^Q~3 pglobalreset n5131 
+--110 1 
+01--0 1 
+
+.names lo229 lo230 lo231 new_n2791 new_n2792 lo228 new_n2790 
+000111 1 
+
+.names lo236 lo237 lo238 lo239 new_n2791 
+0000 1 
+
+.names lo234 lo235 lo232 lo233 new_n2792 
+0011 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7269.S[3] raygroupvalid01 $dff~137^Q~0 $sdff~242^Q~0 pglobalreset $sdff~59^Q~0 \
+ n5141 
+1--100 1 
+-11-00 1 
+1--001 1 
+-01101 1 
+
+.names $sdff~59^Q~0 $auto$hard_block.cc:122:cell_hard_block$7332.S[2] $dff~137^Q~2 \
+ $auto$hard_block.cc:122:cell_hard_block$7269.S[2] $sdff~242^Q~0 pglobalreset n5151 
+11--00 1 
+--1-10 1 
+---1-0 1 
+
+.names new_n2790 pglobalreset $dff~137^Q~3 n5156 
+001 1 
+
+.names $dff~137^Q~5 wanttriID $dff~137^Q~13 pglobalreset n5166 
+--10 1 
+11-0 1 
+
+.names $sdff~59^Q~0 $auto$hard_block.cc:122:cell_hard_block$7332.S[2] $dff~137^Q~18 pglobalreset $sdff~242^Q~0 n5181 
+--101 1 
+11-01 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7301.S[3] pglobalreset raygroupvalid10 $dff~316^Q~0 $sdff~241^Q~0 $sdff~60^Q~0 \
+ n5201 
+1---00 1 
+--01-0 1 
+--010- 1 
+-1---- 1 
+
+.names $sdff~60^Q~0 $dff~316^Q~2 $sdff~241^Q~0 $auto$hard_block.cc:122:cell_hard_block$7468.S[2] pglobalreset n5211 
+--010 1 
+01--0 1 
+
+.names pglobalreset $dff~316^Q~15 n5216 
+01 1 
+
+.names wanttriID $dff~316^Q~5 new_n2802 pglobalreset n5226 
+--00 1 
+01-0 1 
+
+.names $sdff~60^Q~0 $auto$hard_block.cc:122:cell_hard_block$7301.S[3] raygroupvalid10 $dff~316^Q~0 $sdff~241^Q~0 new_n2802 
+--111 0 
+11--1 0 
+
+.names $sdff~60^Q~0 $dff~316^Q~18 new_n2804 $dff~316^Q~3 pglobalreset n5241 
+--110 1 
+01--0 1 
+
+.names new_n2805 new_n2806 new_n2804 
+11 1 
+
+.names lo204 lo205 lo211 lo212 lo213 lo214 new_n2805 
+000000 1 
+
+.names lo206 lo209 lo210 lo208 lo203 lo207 new_n2806 
+000111 1 
+
+.names $auto$hard_block.cc:122:cell_hard_block$7301.S[3] raygroupvalid10 $dff~316^Q~0 $sdff~60^Q~0 pglobalreset $sdff~241^Q~0 \
+ n5251 
+1--100 1 
+-11-00 1 
+1--001 1 
+-01101 1 
+
+.names $sdff~241^Q~0 $auto$hard_block.cc:122:cell_hard_block$7468.S[2] $dff~316^Q~2 \
+ $auto$hard_block.cc:122:cell_hard_block$7301.S[2] $sdff~60^Q~0 pglobalreset n5261 
+11--00 1 
+--1-10 1 
+---1-0 1 
+
+.names new_n2804 pglobalreset $dff~316^Q~3 n5266 
+001 1 
+
+.names $dff~316^Q~5 wanttriID $dff~316^Q~13 pglobalreset n5276 
+--10 1 
+11-0 1 
+
+.names $sdff~241^Q~0 $auto$hard_block.cc:122:cell_hard_block$7468.S[2] $dff~316^Q~18 pglobalreset $sdff~60^Q~0 n5291 
+--101 1 
+11-01 1 
+
+.names pglobalreset $auto$hard_block.cc:122:cell_hard_block$7301.S[2] n5301 
+01 1 
+
+.names tm3_sram_addr~18 
+0 
+
+.names triID~13 
+0 
+
+.names triID~14 
+0 
+
+.names triID~15 
+0 
+
+.names triID~12 
+0 
+
+.names tm3_sram_oe~0 
+1 
+
+.names gnd 
+0 
+
+.names unconn 
+0 
+
+.names $sdff~445^Q~0 
+0 
+
+.names vcc 
+1 
+
+.names $sdff~445^Q~1 
+0 
+
+.names $sdff~445^Q~2 
+0 
+
+.names $sdff~446^Q~0 
+0 
+
+.names $sdff~446^Q~1 
+0 
+
+.names $sdff~446^Q~2 
+0 
+
+.names $auto$simplemap.cc:240:simplemap_eqne$9025[0] 
+0 
+
+.names $auto$simplemap.cc:240:simplemap_eqne$10932[1] 
+0 
+
+.names $sdff~401^Q~0 
+0 
+
+.names $sdff~401^Q~1 
+0 
+
+.names $sdff~401^Q~2 
+0 
+
+.names $sdff~402^Q~0 
+0 
+
+.names $sdff~402^Q~1 
+0 
+
+.names $sdff~402^Q~2 
+0 
+
+.names $sdffe~531^Q~0 
+0 
+
+.names $sdffe~531^Q~1 
+0 
+
+.names $sdffe~531^Q~2 
+0 
+
+.names $auto$simplemap.cc:240:simplemap_eqne$12565[0] 
+0 
+
+.names $auto$simplemap.cc:240:simplemap_eqne$12018[1] 
+0 
+
+.names pglobalreset n1608 
+0 1 
+
+.names lo041 rgResultData~10 
+1 1 
+
+.names lo051 rgResultData~20 
+1 1 
+
+.names lo057 rgResultData~26 
+1 1 
+
+.names lo034 rgResultData~3 
+1 1 
+
+.names lo033 rgResultData~2 
+1 1 
+
+.names lo032 rgResultData~1 
+1 1 
+
+.names lo074 busy10 
+1 1 
+
+.names lo318 busy01 
+1 1 
+
+.names lo046 rgResultData~15 
+1 1 
+
+.names lo050 rgResultData~19 
+1 1 
+
+.names lo047 rgResultData~16 
+1 1 
+
+.names lo048 rgResultData~17 
+1 1 
+
+.names lo049 rgResultData~18 
+1 1 
+
+.names lo056 rgResultData~25 
+1 1 
+
+.names lo053 rgResultData~22 
+1 1 
+
+.names lo054 rgResultData~23 
+1 1 
+
+.names lo055 rgResultData~24 
+1 1 
+
+.names lo059 rgResultData~28 
+1 1 
+
+.names lo060 rgResultData~29 
+1 1 
+
+.names lo061 rgResultData~30 
+1 1 
+
+.names lo002 rgResultSource~0 
+1 1 
+
+.names lo003 rgResultSource~1 
+1 1 
+
+.names lo062 rgResultData~31 
+1 1 
+
+.names lo052 rgResultData~21 
+1 1 
+
+.names lo058 rgResultData~27 
+1 1 
+
+.names lo001 rgResultReady 
+1 1 
+
+.names lo042 rgResultData~11 
+1 1 
+
+.names lo044 rgResultData~13 
+1 1 
+
+.names lo043 rgResultData~12 
+1 1 
+
+.names lo045 rgResultData~14 
+1 1 
+
+.names pglobalreset globalreset 
+1 1 
+
+.names lo035 rgResultData~4 
+1 1 
+
+.names $sdff~61^Q~0 triIDvalid 
+1 1 
+
+.names tm3_sram_we~0 tm3_sram_we~4 
+1 1 
+
+.names tm3_sram_we~0 tm3_sram_we~3 
+1 1 
+
+.names tm3_sram_we~0 tm3_sram_we~2 
+1 1 
+
+.names tm3_sram_we~0 tm3_sram_we~1 
+1 1 
+
+.names lo196 raydata~26 
+1 1 
+
+.names lo195 raydata~25 
+1 1 
+
+.names lo194 raydata~24 
+1 1 
+
+.names lo193 raydata~23 
+1 1 
+
+.names lo192 raydata~22 
+1 1 
+
+.names lo191 raydata~21 
+1 1 
+
+.names lo190 raydata~20 
+1 1 
+
+.names lo189 raydata~19 
+1 1 
+
+.names lo188 raydata~18 
+1 1 
+
+.names lo187 raydata~17 
+1 1 
+
+.names lo186 raydata~16 
+1 1 
+
+.names lo185 raydata~15 
+1 1 
+
+.names lo030 raydata~0 
+1 1 
+
+.names lo171 raydata~1 
+1 1 
+
+.names lo172 raydata~2 
+1 1 
+
+.names lo173 raydata~3 
+1 1 
+
+.names lo174 raydata~4 
+1 1 
+
+.names lo175 raydata~5 
+1 1 
+
+.names lo176 raydata~6 
+1 1 
+
+.names lo177 raydata~7 
+1 1 
+
+.names lo178 raydata~8 
+1 1 
+
+.names lo179 raydata~9 
+1 1 
+
+.names lo180 raydata~10 
+1 1 
+
+.names lo181 raydata~11 
+1 1 
+
+.names lo182 raydata~12 
+1 1 
+
+.names lo183 raydata~13 
+1 1 
+
+.names lo184 raydata~14 
+1 1 
+
+.names tm3_sram_we~0 tm3_sram_we~6 
+1 1 
+
+.names lo031 rgResultData~0 
+1 1 
+
+.names tm3_sram_we~0 tm3_sram_we~5 
+1 1 
+
+.names lo295 rgDone 
+1 1 
+
+.names lo170 raywe~2 
+1 1 
+
+.names tm3_sram_we~0 tm3_sram_we~7 
+1 1 
+
+.names lo039 rgResultData~8 
+1 1 
+
+.names lo040 rgResultData~9 
+1 1 
+
+.names lo036 rgResultData~5 
+1 1 
+
+.names lo197 raydata~27 
+1 1 
+
+.names lo198 raydata~28 
+1 1 
+
+.names lo199 raydata~29 
+1 1 
+
+.names lo200 raydata~30 
+1 1 
+
+.names lo201 raydata~31 
+1 1 
+
+.names lo296 rayaddr~0 
+1 1 
+
+.names lo037 rgResultData~6 
+1 1 
+
+.names lo297 rayaddr~1 
+1 1 
+
+.names lo298 rayaddr~2 
+1 1 
+
+.names lo299 rayaddr~3 
+1 1 
+
+.names lo168 raywe~0 
+1 1 
+
+.names lo169 raywe~1 
+1 1 
+
+.names lo038 rgResultData~7 
+1 1 
+
+.names lo004 $sdff~239^Q~0 
+1 1 
+
+.names lo005 $auto$simplemap.cc:240:simplemap_eqne$8461[1] 
+1 1 
+
+.names lo006 $auto$simplemap.cc:240:simplemap_eqne$8461[2] 
+1 1 
+
+.names lo007 $auto$simplemap.cc:240:simplemap_eqne$8461[3] 
+1 1 
+
+.names lo008 $auto$simplemap.cc:240:simplemap_eqne$8461[4] 
+1 1 
+
+.names lo009 $auto$simplemap.cc:240:simplemap_eqne$8461[5] 
+1 1 
+
+.names lo010 $auto$simplemap.cc:240:simplemap_eqne$8461[6] 
+1 1 
+
+.names lo011 $auto$simplemap.cc:240:simplemap_eqne$8461[7] 
+1 1 
+
+.names lo012 $auto$simplemap.cc:240:simplemap_eqne$8461[8] 
+1 1 
+
+.names lo013 $auto$simplemap.cc:240:simplemap_eqne$8461[9] 
+1 1 
+
+.names lo014 $auto$simplemap.cc:240:simplemap_eqne$8461[10] 
+1 1 
+
+.names lo015 $auto$simplemap.cc:240:simplemap_eqne$8461[11] 
+1 1 
+
+.names lo016 $auto$simplemap.cc:240:simplemap_eqne$8461[12] 
+1 1 
+
+.names lo017 $auto$simplemap.cc:240:simplemap_eqne$8461[13] 
+1 1 
+
+.names lo300 $sdff~69^Q~0 
+1 1 
+
+.names lo301 $sdff~69^Q~1 
+1 1 
+
+.names lo302 $sdff~69^Q~2 
+1 1 
+
+.names lo303 $sdff~69^Q~3 
+1 1 
+
+.names lo304 $sdff~69^Q~4 
+1 1 
+
+.names lo305 $sdff~69^Q~5 
+1 1 
+
+.names lo306 $sdff~69^Q~6 
+1 1 
+
+.names lo307 $sdff~69^Q~7 
+1 1 
+
+.names lo308 $sdff~69^Q~8 
+1 1 
+
+.names lo309 $sdff~69^Q~9 
+1 1 
+
+.names lo310 $sdff~69^Q~10 
+1 1 
+
+.names lo311 $sdff~69^Q~11 
+1 1 
+
+.names lo312 $sdff~69^Q~12 
+1 1 
+
+.names lo313 $sdff~69^Q~13 
+1 1 
+
+.names lo314 $sdff~69^Q~14 
+1 1 
+
+.names lo315 $sdff~69^Q~15 
+1 1 
+
+.names lo316 $sdff~69^Q~16 
+1 1 
+
+.names lo317 $sdff~69^Q~17 
+1 1 
+
+.names lo300 $sdff~248^Q~0 
+1 1 
+
+.names lo301 $sdff~248^Q~1 
+1 1 
+
+.names lo302 $sdff~248^Q~2 
+1 1 
+
+.names lo303 $sdff~248^Q~3 
+1 1 
+
+.names lo304 $sdff~248^Q~4 
+1 1 
+
+.names lo305 $sdff~248^Q~5 
+1 1 
+
+.names lo306 $sdff~248^Q~6 
+1 1 
+
+.names lo307 $sdff~248^Q~7 
+1 1 
+
+.names lo308 $sdff~248^Q~8 
+1 1 
+
+.names lo309 $sdff~248^Q~9 
+1 1 
+
+.names lo310 $sdff~248^Q~10 
+1 1 
+
+.names lo311 $sdff~248^Q~11 
+1 1 
+
+.names lo312 $sdff~248^Q~12 
+1 1 
+
+.names lo313 $sdff~248^Q~13 
+1 1 
+
+.names lo314 $sdff~248^Q~14 
+1 1 
+
+.names lo315 $sdff~248^Q~15 
+1 1 
+
+.names lo316 $sdff~248^Q~16 
+1 1 
+
+.names lo317 $sdff~248^Q~17 
+1 1 
+
+.names lo004 $sdff~57^Q~0 
+1 1 
+
+.names lo005 $auto$simplemap.cc:240:simplemap_eqne$11245[1] 
+1 1 
+
+.names lo006 $auto$simplemap.cc:240:simplemap_eqne$11245[2] 
+1 1 
+
+.names lo007 $auto$simplemap.cc:240:simplemap_eqne$11245[3] 
+1 1 
+
+.names lo008 $auto$simplemap.cc:240:simplemap_eqne$11245[4] 
+1 1 
+
+.names lo009 $auto$simplemap.cc:240:simplemap_eqne$11245[5] 
+1 1 
+
+.names lo010 $auto$simplemap.cc:240:simplemap_eqne$11245[6] 
+1 1 
+
+.names lo011 $auto$simplemap.cc:240:simplemap_eqne$11245[7] 
+1 1 
+
+.names lo012 $auto$simplemap.cc:240:simplemap_eqne$11245[8] 
+1 1 
+
+.names lo013 $auto$simplemap.cc:240:simplemap_eqne$11245[9] 
+1 1 
+
+.names lo014 $auto$simplemap.cc:240:simplemap_eqne$11245[10] 
+1 1 
+
+.names lo015 $auto$simplemap.cc:240:simplemap_eqne$11245[11] 
+1 1 
+
+.names lo016 $auto$simplemap.cc:240:simplemap_eqne$11245[12] 
+1 1 
+
+.names lo017 $auto$simplemap.cc:240:simplemap_eqne$11245[13] 
+1 1 
+
+.names lo063 $sdff~486^Q~0 
+1 1 
+
+.names lo064 $sdff~486^Q~1 
+1 1 
+
+.names lo065 $sdff~486^Q~2 
+1 1 
+
+.names lo066 $sdff~486^Q~3 
+1 1 
+
+.names lo067 $sdff~486^Q~4 
+1 1 
+
+.names lo068 $sdff~486^Q~5 
+1 1 
+
+.names lo069 $sdff~486^Q~6 
+1 1 
+
+.names lo070 $sdff~486^Q~7 
+1 1 
+
+.names lo071 $sdff~486^Q~8 
+1 1 
+
+.names lo072 $sdff~486^Q~9 
+1 1 
+
+.names lo344 $auto$hard_block.cc:122:cell_hard_block$7603.B[18] 
+1 1 
+
+.names lo345 $auto$hard_block.cc:122:cell_hard_block$7603.B[19] 
+1 1 
+
+.names lo346 $auto$hard_block.cc:122:cell_hard_block$7603.B[20] 
+1 1 
+
+.names lo347 $auto$hard_block.cc:122:cell_hard_block$7603.B[21] 
+1 1 
+
+.names lo348 $auto$hard_block.cc:122:cell_hard_block$7603.B[22] 
+1 1 
+
+.names lo349 $auto$hard_block.cc:122:cell_hard_block$7603.B[23] 
+1 1 
+
+.names lo350 $auto$hard_block.cc:122:cell_hard_block$7603.B[24] 
+1 1 
+
+.names lo351 $auto$hard_block.cc:122:cell_hard_block$7603.B[25] 
+1 1 
+
+.names lo352 $auto$hard_block.cc:122:cell_hard_block$7603.B[26] 
+1 1 
+
+.names lo353 $auto$hard_block.cc:122:cell_hard_block$7603.B[27] 
+1 1 
+
+.names lo354 $auto$hard_block.cc:122:cell_hard_block$7603.B[28] 
+1 1 
+
+.names lo355 $auto$hard_block.cc:122:cell_hard_block$7603.B[29] 
+1 1 
+
+.names lo356 $auto$hard_block.cc:122:cell_hard_block$7603.B[30] 
+1 1 
+
+.names lo357 $auto$hard_block.cc:122:cell_hard_block$7603.B[31] 
+1 1 
+
+.names lo358 $auto$hard_block.cc:122:cell_hard_block$7603.B[32] 
+1 1 
+
+.names lo359 $auto$hard_block.cc:122:cell_hard_block$7603.B[33] 
+1 1 
+
+.names lo360 $auto$hard_block.cc:122:cell_hard_block$7603.B[34] 
+1 1 
+
+.names lo361 $auto$hard_block.cc:122:cell_hard_block$7603.B[35] 
+1 1 
+
+.names lo203 $sdff~5^Q~0 
+1 1 
+
+.names lo204 $auto$simplemap.cc:240:simplemap_eqne$9606[1] 
+1 1 
+
+.names lo205 $auto$simplemap.cc:240:simplemap_eqne$9606[2] 
+1 1 
+
+.names lo206 $auto$simplemap.cc:240:simplemap_eqne$9606[3] 
+1 1 
+
+.names lo207 $sdff~5^Q~4 
+1 1 
+
+.names lo208 $sdff~5^Q~5 
+1 1 
+
+.names lo209 $auto$simplemap.cc:240:simplemap_eqne$9606[6] 
+1 1 
+
+.names lo210 $auto$simplemap.cc:240:simplemap_eqne$9606[7] 
+1 1 
+
+.names lo211 $auto$simplemap.cc:240:simplemap_eqne$9606[8] 
+1 1 
+
+.names lo212 $auto$simplemap.cc:240:simplemap_eqne$9606[9] 
+1 1 
+
+.names lo213 $auto$simplemap.cc:240:simplemap_eqne$9606[10] 
+1 1 
+
+.names lo214 $auto$simplemap.cc:240:simplemap_eqne$9606[11] 
+1 1 
+
+.names lo273 $sdffe~531^Q~3 
+1 1 
+
+.names lo228 $sdff~6^Q~0 
+1 1 
+
+.names lo229 $auto$simplemap.cc:240:simplemap_eqne$9848[1] 
+1 1 
+
+.names lo230 $auto$simplemap.cc:240:simplemap_eqne$9848[2] 
+1 1 
+
+.names lo231 $auto$simplemap.cc:240:simplemap_eqne$9848[3] 
+1 1 
+
+.names lo232 $sdff~6^Q~4 
+1 1 
+
+.names lo233 $sdff~6^Q~5 
+1 1 
+
+.names lo234 $auto$simplemap.cc:240:simplemap_eqne$9848[6] 
+1 1 
+
+.names lo235 $auto$simplemap.cc:240:simplemap_eqne$9848[7] 
+1 1 
+
+.names lo236 $auto$simplemap.cc:240:simplemap_eqne$9848[8] 
+1 1 
+
+.names lo237 $auto$simplemap.cc:240:simplemap_eqne$9848[9] 
+1 1 
+
+.names lo238 $auto$simplemap.cc:240:simplemap_eqne$9848[10] 
+1 1 
+
+.names lo239 $auto$simplemap.cc:240:simplemap_eqne$9848[11] 
+1 1 
+
+
+.end 
+
+
+
+.model adder 
+
+.inputs a b cin 
+
+.outputs cout sumout 
+
+.blackbox 
+
+
+.end 
+
+
+
+.model single_port_ram 
+
+.inputs addr[0] addr[1] addr[2] addr[3] addr[4] addr[5] addr[6] addr[7] addr[8] addr[9] addr[10] addr[11] addr[12] addr[13] \
+ addr[14] data we clk 
+
+.outputs out 
+
+.blackbox 
+
+
+.end 
+
+
+
+.model CLOCK_GATING
+.inputs I
+.blackbox
+.end
+

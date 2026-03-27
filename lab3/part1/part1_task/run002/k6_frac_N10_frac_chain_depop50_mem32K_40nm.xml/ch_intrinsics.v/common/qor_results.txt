@@ -1,0 +1,2 @@
+ arch	  circuit	  script_params	  vpr_status	  total_wirelength	  total_runtime	  num_clb	  min_chan_width	  crit_path_delay	 
+ k6_frac_N10_frac_chain_depop50_mem32K_40nm.xml	  ch_intrinsics.v	  common	  success	  893	  1.52	  65	  -1	  -1	 

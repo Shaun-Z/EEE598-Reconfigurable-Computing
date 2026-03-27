@@ -1,0 +1,1512 @@
+# Benchmark "diffeq_f_systemC" written by ABC on Fri Mar 27 10:26:44 2026 
+
+.model diffeq_f_systemC 
+
+.inputs aport~30 dxport~6 aport~27 dxport~4 dxport~5 dxport~3 aport~6 dxport~2 dxport~1 aport~28 dxport~0 dxport~17 dxport~12 \
+ dxport~11 dxport~10 aport~15 dxport~16 aport~16 dxport~15 aport~17 dxport~14 dxport~13 aport~31 dxport~27 dxport~24 dxport~23 \
+ dxport~22 dxport~21 dxport~20 dxport~26 dxport~19 dxport~25 dxport~18 dxport~30 dxport~29 dxport~28 reset clk dxport~31 \
+ aport~26 aport~8 aport~5 aport~7 aport~11 aport~12 aport~10 aport~9 aport~19 dxport~9 aport~29 dxport~7 dxport~8 aport~18 \
+ aport~13 aport~14 aport~20 aport~21 aport~0 aport~24 aport~3 aport~22 aport~1 aport~23 aport~2 aport~25 aport~4 
+
+.outputs xport~12 xport~10 xport~9 xport~8 xport~15 xport~7 xport~6 xport~5 xport~14 xport~13 xport~16 xport~4 xport~3 \
+ xport~2 xport~1 xport~0 xport~11 yport~17 yport~14 yport~13 yport~12 yport~11 yport~10 yport~9 yport~8 yport~7 yport~6 \
+ yport~5 yport~4 yport~3 yport~2 yport~1 yport~19 yport~0 xport~31 xport~30 xport~29 xport~28 xport~27 xport~26 yport~16 \
+ xport~25 yport~18 xport~24 xport~23 xport~22 xport~21 xport~20 xport~19 xport~18 yport~15 xport~17 yport~20 yport~21 yport~22 \
+ yport~23 yport~24 yport~25 yport~26 yport~27 yport~28 yport~29 yport~30 yport~31 uport~0 uport~1 uport~2 uport~3 uport~4 \
+ uport~5 uport~6 uport~7 uport~8 uport~9 uport~10 uport~11 uport~12 uport~13 uport~14 uport~15 uport~16 uport~17 uport~18 \
+ uport~19 uport~20 uport~21 uport~22 uport~23 uport~24 uport~25 uport~26 uport~27 uport~28 uport~29 uport~30 uport~31 
+
+
+.latch n854 uport~0 re clk 0 
+
+.latch n858 uport~1 re clk 0 
+
+.latch n862 uport~2 re clk 0 
+
+.latch n866 uport~3 re clk 0 
+
+.latch n870 uport~4 re clk 0 
+
+.latch n874 uport~5 re clk 0 
+
+.latch n878 uport~6 re clk 0 
+
+.latch n882 uport~7 re clk 0 
+
+.latch n886 uport~8 re clk 0 
+
+.latch n890 uport~9 re clk 0 
+
+.latch n894 uport~10 re clk 0 
+
+.latch n898 uport~11 re clk 0 
+
+.latch n902 uport~12 re clk 0 
+
+.latch n906 uport~13 re clk 0 
+
+.latch n910 uport~14 re clk 0 
+
+.latch n914 uport~15 re clk 0 
+
+.latch n918 uport~16 re clk 0 
+
+.latch n922 uport~17 re clk 0 
+
+.latch n926 uport~18 re clk 0 
+
+.latch n930 uport~19 re clk 0 
+
+.latch n934 uport~20 re clk 0 
+
+.latch n938 uport~21 re clk 0 
+
+.latch n942 uport~22 re clk 0 
+
+.latch n946 uport~23 re clk 0 
+
+.latch n950 uport~24 re clk 0 
+
+.latch n954 uport~25 re clk 0 
+
+.latch n958 uport~26 re clk 0 
+
+.latch n962 uport~27 re clk 0 
+
+.latch n966 uport~28 re clk 0 
+
+.latch n970 uport~29 re clk 0 
+
+.latch n974 uport~30 re clk 0 
+
+.latch n978 uport~31 re clk 0 
+
+.latch n982 yport~0 re clk 0 
+
+.latch n986 yport~1 re clk 0 
+
+.latch n990 yport~2 re clk 0 
+
+.latch n994 yport~3 re clk 0 
+
+.latch n998 yport~4 re clk 0 
+
+.latch n1002 yport~5 re clk 0 
+
+.latch n1006 yport~6 re clk 0 
+
+.latch n1010 yport~7 re clk 0 
+
+.latch n1014 yport~8 re clk 0 
+
+.latch n1018 yport~9 re clk 0 
+
+.latch n1022 yport~10 re clk 0 
+
+.latch n1026 yport~11 re clk 0 
+
+.latch n1030 yport~12 re clk 0 
+
+.latch n1034 yport~13 re clk 0 
+
+.latch n1038 yport~14 re clk 0 
+
+.latch n1042 yport~15 re clk 0 
+
+.latch n1046 yport~16 re clk 0 
+
+.latch n1050 yport~17 re clk 0 
+
+.latch n1054 yport~18 re clk 0 
+
+.latch n1058 yport~19 re clk 0 
+
+.latch n1062 yport~20 re clk 0 
+
+.latch n1066 yport~21 re clk 0 
+
+.latch n1070 yport~22 re clk 0 
+
+.latch n1074 yport~23 re clk 0 
+
+.latch n1078 yport~24 re clk 0 
+
+.latch n1082 yport~25 re clk 0 
+
+.latch n1086 yport~26 re clk 0 
+
+.latch n1090 yport~27 re clk 0 
+
+.latch n1094 yport~28 re clk 0 
+
+.latch n1098 yport~29 re clk 0 
+
+.latch n1102 yport~30 re clk 0 
+
+.latch n1106 yport~31 re clk 0 
+
+.latch n1110 xport~0 re clk 0 
+
+.latch n1114 xport~1 re clk 0 
+
+.latch n1118 xport~2 re clk 0 
+
+.latch n1122 xport~3 re clk 0 
+
+.latch n1126 xport~4 re clk 0 
+
+.latch n1130 xport~5 re clk 0 
+
+.latch n1134 xport~6 re clk 0 
+
+.latch n1138 xport~7 re clk 0 
+
+.latch n1142 xport~8 re clk 0 
+
+.latch n1146 xport~9 re clk 0 
+
+.latch n1150 xport~10 re clk 0 
+
+.latch n1154 xport~11 re clk 0 
+
+.latch n1158 xport~12 re clk 0 
+
+.latch n1162 xport~13 re clk 0 
+
+.latch n1166 xport~14 re clk 0 
+
+.latch n1170 xport~15 re clk 0 
+
+.latch n1174 xport~16 re clk 0 
+
+.latch n1178 xport~17 re clk 0 
+
+.latch n1182 xport~18 re clk 0 
+
+.latch n1186 xport~19 re clk 0 
+
+.latch n1190 xport~20 re clk 0 
+
+.latch n1194 xport~21 re clk 0 
+
+.latch n1198 xport~22 re clk 0 
+
+.latch n1202 xport~23 re clk 0 
+
+.latch n1206 xport~24 re clk 0 
+
+.latch n1210 xport~25 re clk 0 
+
+.latch n1214 xport~26 re clk 0 
+
+.latch n1218 xport~27 re clk 0 
+
+.latch n1222 xport~28 re clk 0 
+
+.latch n1226 xport~29 re clk 0 
+
+.latch n1230 xport~30 re clk 0 
+
+.latch n1234 xport~31 re clk 0 
+
+
+
+.subckt adder a=uport~9 b=lNOT~13 cin=$sub~11^MIN~2-9[0] cout=$sub~11^MIN~2-10[0] sumout=$sub~11^MIN~2-10[1] 
+
+.subckt adder a=uport~10 b=lNOT~14 cin=$sub~11^MIN~2-10[0] cout=$sub~11^MIN~2-11[0] sumout=$sub~11^MIN~2-11[1] 
+
+.subckt adder a=uport~11 b=lNOT~15 cin=$sub~11^MIN~2-11[0] cout=$sub~11^MIN~2-12[0] sumout=$sub~11^MIN~2-12[1] 
+
+.subckt adder a=uport~12 b=lNOT~16 cin=$sub~11^MIN~2-12[0] cout=$sub~11^MIN~2-13[0] sumout=$sub~11^MIN~2-13[1] 
+
+.subckt adder a=uport~13 b=lNOT~17 cin=$sub~11^MIN~2-13[0] cout=$sub~11^MIN~2-14[0] sumout=$sub~11^MIN~2-14[1] 
+
+.subckt adder a=uport~14 b=lNOT~18 cin=$sub~11^MIN~2-14[0] cout=$sub~11^MIN~2-15[0] sumout=$sub~11^MIN~2-15[1] 
+
+.subckt adder a=uport~15 b=lNOT~19 cin=$sub~11^MIN~2-15[0] cout=$sub~11^MIN~2-16[0] sumout=$sub~11^MIN~2-16[1] 
+
+.subckt adder a=uport~16 b=lNOT~20 cin=$sub~11^MIN~2-16[0] cout=$sub~11^MIN~2-17[0] sumout=$sub~11^MIN~2-17[1] 
+
+.subckt adder a=uport~17 b=lNOT~21 cin=$sub~11^MIN~2-17[0] cout=$sub~11^MIN~2-18[0] sumout=$sub~11^MIN~2-18[1] 
+
+.subckt adder a=uport~18 b=lNOT~22 cin=$sub~11^MIN~2-18[0] cout=$sub~11^MIN~2-19[0] sumout=$sub~11^MIN~2-19[1] 
+
+.subckt adder a=uport~19 b=lNOT~23 cin=$sub~11^MIN~2-19[0] cout=$sub~11^MIN~2-20[0] sumout=$sub~11^MIN~2-20[1] 
+
+.subckt adder a=uport~20 b=lNOT~24 cin=$sub~11^MIN~2-20[0] cout=$sub~11^MIN~2-21[0] sumout=$sub~11^MIN~2-21[1] 
+
+.subckt adder a=uport~21 b=lNOT~25 cin=$sub~11^MIN~2-21[0] cout=$sub~11^MIN~2-22[0] sumout=$sub~11^MIN~2-22[1] 
+
+.subckt adder a=uport~22 b=lNOT~26 cin=$sub~11^MIN~2-22[0] cout=$sub~11^MIN~2-23[0] sumout=$sub~11^MIN~2-23[1] 
+
+.subckt adder a=uport~23 b=lNOT~27 cin=$sub~11^MIN~2-23[0] cout=$sub~11^MIN~2-24[0] sumout=$sub~11^MIN~2-24[1] 
+
+.subckt adder a=uport~24 b=lNOT~28 cin=$sub~11^MIN~2-24[0] cout=$sub~11^MIN~2-25[0] sumout=$sub~11^MIN~2-25[1] 
+
+.subckt adder a=uport~25 b=lNOT~29 cin=$sub~11^MIN~2-25[0] cout=$sub~11^MIN~2-26[0] sumout=$sub~11^MIN~2-26[1] 
+
+.subckt adder a=uport~26 b=lNOT~30 cin=$sub~11^MIN~2-26[0] cout=$sub~11^MIN~2-27[0] sumout=$sub~11^MIN~2-27[1] 
+
+.subckt adder a=uport~27 b=lNOT~31 cin=$sub~11^MIN~2-27[0] cout=$sub~11^MIN~2-28[0] sumout=$sub~11^MIN~2-28[1] 
+
+.subckt adder a=uport~28 b=lNOT~32 cin=$sub~11^MIN~2-28[0] cout=$sub~11^MIN~2-29[0] sumout=$sub~11^MIN~2-29[1] 
+
+.subckt adder a=uport~29 b=lNOT~33 cin=$sub~11^MIN~2-29[0] cout=$sub~11^MIN~2-30[0] sumout=$sub~11^MIN~2-30[1] 
+
+.subckt adder a=uport~30 b=lNOT~34 cin=$sub~11^MIN~2-30[0] cout=$sub~11^MIN~2-31[0] sumout=$sub~11^MIN~2-31[1] 
+
+.subckt adder a=uport~31 b=lNOT~35 cin=$sub~11^MIN~2-31[0] cout=$sub~11^MIN~2-32~dummy_output~32~0 sumout=$sub~11^MIN~2-32[1] 
+
+.subckt adder a=$sub~11^MIN~2-32[1] b=lNOT~67 cin=$sub~12^MIN~0-31[0] cout=$sub~12^MIN~0-32~dummy_output~32~0 \
+ sumout=$sub~12^MIN~0-32[1] 
+
+.subckt adder a=yport~0 b=$mul~6[0] cin=$add~1^ADD~1-0[0] cout=$add~1^ADD~1-1[0] sumout=$add~1^ADD~1-1[1] 
+
+.subckt adder a=yport~1 b=$mul~6[1] cin=$add~1^ADD~1-1[0] cout=$add~1^ADD~1-2[0] sumout=$add~1^ADD~1-2[1] 
+
+.subckt adder a=yport~2 b=$mul~6[2] cin=$add~1^ADD~1-2[0] cout=$add~1^ADD~1-3[0] sumout=$add~1^ADD~1-3[1] 
+
+.subckt adder a=yport~3 b=$mul~6[3] cin=$add~1^ADD~1-3[0] cout=$add~1^ADD~1-4[0] sumout=$add~1^ADD~1-4[1] 
+
+.subckt adder a=yport~4 b=$mul~6[4] cin=$add~1^ADD~1-4[0] cout=$add~1^ADD~1-5[0] sumout=$add~1^ADD~1-5[1] 
+
+.subckt adder a=yport~5 b=$mul~6[5] cin=$add~1^ADD~1-5[0] cout=$add~1^ADD~1-6[0] sumout=$add~1^ADD~1-6[1] 
+
+.subckt adder a=yport~6 b=$mul~6[6] cin=$add~1^ADD~1-6[0] cout=$add~1^ADD~1-7[0] sumout=$add~1^ADD~1-7[1] 
+
+.subckt adder a=yport~7 b=$mul~6[7] cin=$add~1^ADD~1-7[0] cout=$add~1^ADD~1-8[0] sumout=$add~1^ADD~1-8[1] 
+
+.subckt adder a=yport~8 b=$mul~6[8] cin=$add~1^ADD~1-8[0] cout=$add~1^ADD~1-9[0] sumout=$add~1^ADD~1-9[1] 
+
+.subckt adder a=yport~9 b=$mul~6[9] cin=$add~1^ADD~1-9[0] cout=$add~1^ADD~1-10[0] sumout=$add~1^ADD~1-10[1] 
+
+.subckt adder a=yport~10 b=$mul~6[10] cin=$add~1^ADD~1-10[0] cout=$add~1^ADD~1-11[0] sumout=$add~1^ADD~1-11[1] 
+
+.subckt adder a=yport~11 b=$mul~6[11] cin=$add~1^ADD~1-11[0] cout=$add~1^ADD~1-12[0] sumout=$add~1^ADD~1-12[1] 
+
+.subckt adder a=yport~12 b=$mul~6[12] cin=$add~1^ADD~1-12[0] cout=$add~1^ADD~1-13[0] sumout=$add~1^ADD~1-13[1] 
+
+.subckt adder a=yport~13 b=$mul~6[13] cin=$add~1^ADD~1-13[0] cout=$add~1^ADD~1-14[0] sumout=$add~1^ADD~1-14[1] 
+
+.subckt adder a=yport~14 b=$mul~6[14] cin=$add~1^ADD~1-14[0] cout=$add~1^ADD~1-15[0] sumout=$add~1^ADD~1-15[1] 
+
+.subckt adder a=yport~15 b=$mul~6[15] cin=$add~1^ADD~1-15[0] cout=$add~1^ADD~1-16[0] sumout=$add~1^ADD~1-16[1] 
+
+.subckt adder a=yport~16 b=$mul~6[16] cin=$add~1^ADD~1-16[0] cout=$add~1^ADD~1-17[0] sumout=$add~1^ADD~1-17[1] 
+
+.subckt adder a=yport~17 b=$mul~6[17] cin=$add~1^ADD~1-17[0] cout=$add~1^ADD~1-18[0] sumout=$add~1^ADD~1-18[1] 
+
+.subckt adder a=yport~18 b=$mul~6[18] cin=$add~1^ADD~1-18[0] cout=$add~1^ADD~1-19[0] sumout=$add~1^ADD~1-19[1] 
+
+.subckt adder a=yport~19 b=$mul~6[19] cin=$add~1^ADD~1-19[0] cout=$add~1^ADD~1-20[0] sumout=$add~1^ADD~1-20[1] 
+
+.subckt adder a=yport~20 b=$mul~6[20] cin=$add~1^ADD~1-20[0] cout=$add~1^ADD~1-21[0] sumout=$add~1^ADD~1-21[1] 
+
+.subckt adder a=yport~21 b=$mul~6[21] cin=$add~1^ADD~1-21[0] cout=$add~1^ADD~1-22[0] sumout=$add~1^ADD~1-22[1] 
+
+.subckt adder a=yport~22 b=$mul~6[22] cin=$add~1^ADD~1-22[0] cout=$add~1^ADD~1-23[0] sumout=$add~1^ADD~1-23[1] 
+
+.subckt adder a=yport~23 b=$mul~6[23] cin=$add~1^ADD~1-23[0] cout=$add~1^ADD~1-24[0] sumout=$add~1^ADD~1-24[1] 
+
+.subckt adder a=yport~24 b=$mul~6[24] cin=$add~1^ADD~1-24[0] cout=$add~1^ADD~1-25[0] sumout=$add~1^ADD~1-25[1] 
+
+.subckt adder a=yport~25 b=$mul~6[25] cin=$add~1^ADD~1-25[0] cout=$add~1^ADD~1-26[0] sumout=$add~1^ADD~1-26[1] 
+
+.subckt adder a=yport~26 b=$mul~6[26] cin=$add~1^ADD~1-26[0] cout=$add~1^ADD~1-27[0] sumout=$add~1^ADD~1-27[1] 
+
+.subckt adder a=yport~27 b=$mul~6[27] cin=$add~1^ADD~1-27[0] cout=$add~1^ADD~1-28[0] sumout=$add~1^ADD~1-28[1] 
+
+.subckt adder a=yport~28 b=$mul~6[28] cin=$add~1^ADD~1-28[0] cout=$add~1^ADD~1-29[0] sumout=$add~1^ADD~1-29[1] 
+
+.subckt adder a=yport~29 b=$mul~6[29] cin=$add~1^ADD~1-29[0] cout=$add~1^ADD~1-30[0] sumout=$add~1^ADD~1-30[1] 
+
+.subckt adder a=yport~30 b=$mul~6[30] cin=$add~1^ADD~1-30[0] cout=$add~1^ADD~1-31[0] sumout=$add~1^ADD~1-31[1] 
+
+.subckt adder a=yport~31 b=$mul~6[31] cin=$add~1^ADD~1-31[0] cout=$add~1^ADD~1-32[0] sumout=$add~1^ADD~1-32[1] 
+
+.subckt adder a=$sub~11^MIN~2-1[1] b=lNOT~36 cin=$sub~12^MIN~0-0[0] cout=$sub~12^MIN~0-1[0] sumout=$sub~12^MIN~0-1[1] 
+
+.subckt adder a=$sub~11^MIN~2-2[1] b=lNOT~37 cin=$sub~12^MIN~0-1[0] cout=$sub~12^MIN~0-2[0] sumout=$sub~12^MIN~0-2[1] 
+
+.subckt adder a=$sub~11^MIN~2-3[1] b=lNOT~38 cin=$sub~12^MIN~0-2[0] cout=$sub~12^MIN~0-3[0] sumout=$sub~12^MIN~0-3[1] 
+
+.subckt adder a=$sub~11^MIN~2-4[1] b=lNOT~39 cin=$sub~12^MIN~0-3[0] cout=$sub~12^MIN~0-4[0] sumout=$sub~12^MIN~0-4[1] 
+
+.subckt adder a=$sub~11^MIN~2-5[1] b=lNOT~40 cin=$sub~12^MIN~0-4[0] cout=$sub~12^MIN~0-5[0] sumout=$sub~12^MIN~0-5[1] 
+
+.subckt adder a=$sub~11^MIN~2-6[1] b=lNOT~41 cin=$sub~12^MIN~0-5[0] cout=$sub~12^MIN~0-6[0] sumout=$sub~12^MIN~0-6[1] 
+
+.subckt adder a=$sub~11^MIN~2-7[1] b=lNOT~42 cin=$sub~12^MIN~0-6[0] cout=$sub~12^MIN~0-7[0] sumout=$sub~12^MIN~0-7[1] 
+
+.subckt adder a=$sub~11^MIN~2-8[1] b=lNOT~43 cin=$sub~12^MIN~0-7[0] cout=$sub~12^MIN~0-8[0] sumout=$sub~12^MIN~0-8[1] 
+
+.subckt adder a=$sub~11^MIN~2-9[1] b=lNOT~44 cin=$sub~12^MIN~0-8[0] cout=$sub~12^MIN~0-9[0] sumout=$sub~12^MIN~0-9[1] 
+
+.subckt adder a=$sub~11^MIN~2-10[1] b=lNOT~45 cin=$sub~12^MIN~0-9[0] cout=$sub~12^MIN~0-10[0] sumout=$sub~12^MIN~0-10[1] 
+
+.subckt adder a=$sub~11^MIN~2-11[1] b=lNOT~46 cin=$sub~12^MIN~0-10[0] cout=$sub~12^MIN~0-11[0] sumout=$sub~12^MIN~0-11[1] 
+
+.subckt adder a=$sub~11^MIN~2-12[1] b=lNOT~47 cin=$sub~12^MIN~0-11[0] cout=$sub~12^MIN~0-12[0] sumout=$sub~12^MIN~0-12[1] 
+
+.subckt adder a=$sub~11^MIN~2-13[1] b=lNOT~48 cin=$sub~12^MIN~0-12[0] cout=$sub~12^MIN~0-13[0] sumout=$sub~12^MIN~0-13[1] 
+
+.subckt adder a=$sub~11^MIN~2-14[1] b=lNOT~49 cin=$sub~12^MIN~0-13[0] cout=$sub~12^MIN~0-14[0] sumout=$sub~12^MIN~0-14[1] 
+
+.subckt adder a=$sub~11^MIN~2-15[1] b=lNOT~50 cin=$sub~12^MIN~0-14[0] cout=$sub~12^MIN~0-15[0] sumout=$sub~12^MIN~0-15[1] 
+
+.subckt adder a=$sub~11^MIN~2-16[1] b=lNOT~51 cin=$sub~12^MIN~0-15[0] cout=$sub~12^MIN~0-16[0] sumout=$sub~12^MIN~0-16[1] 
+
+.subckt adder a=$sub~11^MIN~2-17[1] b=lNOT~52 cin=$sub~12^MIN~0-16[0] cout=$sub~12^MIN~0-17[0] sumout=$sub~12^MIN~0-17[1] 
+
+.subckt adder a=$sub~11^MIN~2-18[1] b=lNOT~53 cin=$sub~12^MIN~0-17[0] cout=$sub~12^MIN~0-18[0] sumout=$sub~12^MIN~0-18[1] 
+
+.subckt adder a=$sub~11^MIN~2-19[1] b=lNOT~54 cin=$sub~12^MIN~0-18[0] cout=$sub~12^MIN~0-19[0] sumout=$sub~12^MIN~0-19[1] 
+
+.subckt adder a=$sub~11^MIN~2-20[1] b=lNOT~55 cin=$sub~12^MIN~0-19[0] cout=$sub~12^MIN~0-20[0] sumout=$sub~12^MIN~0-20[1] 
+
+.subckt adder a=$sub~11^MIN~2-21[1] b=lNOT~56 cin=$sub~12^MIN~0-20[0] cout=$sub~12^MIN~0-21[0] sumout=$sub~12^MIN~0-21[1] 
+
+.subckt adder a=$sub~11^MIN~2-22[1] b=lNOT~57 cin=$sub~12^MIN~0-21[0] cout=$sub~12^MIN~0-22[0] sumout=$sub~12^MIN~0-22[1] 
+
+.subckt adder a=$sub~11^MIN~2-23[1] b=lNOT~58 cin=$sub~12^MIN~0-22[0] cout=$sub~12^MIN~0-23[0] sumout=$sub~12^MIN~0-23[1] 
+
+.subckt adder a=$sub~11^MIN~2-24[1] b=lNOT~59 cin=$sub~12^MIN~0-23[0] cout=$sub~12^MIN~0-24[0] sumout=$sub~12^MIN~0-24[1] 
+
+.subckt adder a=$sub~11^MIN~2-25[1] b=lNOT~60 cin=$sub~12^MIN~0-24[0] cout=$sub~12^MIN~0-25[0] sumout=$sub~12^MIN~0-25[1] 
+
+.subckt adder a=$sub~11^MIN~2-26[1] b=lNOT~61 cin=$sub~12^MIN~0-25[0] cout=$sub~12^MIN~0-26[0] sumout=$sub~12^MIN~0-26[1] 
+
+.subckt adder a=$sub~11^MIN~2-27[1] b=lNOT~62 cin=$sub~12^MIN~0-26[0] cout=$sub~12^MIN~0-27[0] sumout=$sub~12^MIN~0-27[1] 
+
+.subckt adder a=$sub~11^MIN~2-28[1] b=lNOT~63 cin=$sub~12^MIN~0-27[0] cout=$sub~12^MIN~0-28[0] sumout=$sub~12^MIN~0-28[1] 
+
+.subckt adder a=$sub~11^MIN~2-29[1] b=lNOT~64 cin=$sub~12^MIN~0-28[0] cout=$sub~12^MIN~0-29[0] sumout=$sub~12^MIN~0-29[1] 
+
+.subckt adder a=$sub~11^MIN~2-30[1] b=lNOT~65 cin=$sub~12^MIN~0-29[0] cout=$sub~12^MIN~0-30[0] sumout=$sub~12^MIN~0-30[1] 
+
+.subckt adder a=$sub~11^MIN~2-31[1] b=lNOT~66 cin=$sub~12^MIN~0-30[0] cout=$sub~12^MIN~0-31[0] sumout=$sub~12^MIN~0-31[1] 
+
+.subckt adder a=vcc b=gnd cin=gnd cout=$add~1^ADD~1-0[0] sumout=$add~1^ADD~1-0~dummy_output~0~1 
+
+.subckt adder a=vcc b=gnd cin=gnd cout=$add~0^ADD~3-0[0] sumout=$add~0^ADD~3-0~dummy_output~0~1 
+
+.subckt adder a=xport~0 b=dxport~0 cin=$add~0^ADD~3-0[0] cout=$add~0^ADD~3-1[0] sumout=$add~0^ADD~3-1[1] 
+
+.subckt adder a=xport~1 b=dxport~1 cin=$add~0^ADD~3-1[0] cout=$add~0^ADD~3-2[0] sumout=$add~0^ADD~3-2[1] 
+
+.subckt adder a=xport~2 b=dxport~2 cin=$add~0^ADD~3-2[0] cout=$add~0^ADD~3-3[0] sumout=$add~0^ADD~3-3[1] 
+
+.subckt adder a=xport~3 b=dxport~3 cin=$add~0^ADD~3-3[0] cout=$add~0^ADD~3-4[0] sumout=$add~0^ADD~3-4[1] 
+
+.subckt adder a=xport~4 b=dxport~4 cin=$add~0^ADD~3-4[0] cout=$add~0^ADD~3-5[0] sumout=$add~0^ADD~3-5[1] 
+
+.subckt adder a=xport~5 b=dxport~5 cin=$add~0^ADD~3-5[0] cout=$add~0^ADD~3-6[0] sumout=$add~0^ADD~3-6[1] 
+
+.subckt adder a=xport~6 b=dxport~6 cin=$add~0^ADD~3-6[0] cout=$add~0^ADD~3-7[0] sumout=$add~0^ADD~3-7[1] 
+
+.subckt adder a=xport~7 b=dxport~7 cin=$add~0^ADD~3-7[0] cout=$add~0^ADD~3-8[0] sumout=$add~0^ADD~3-8[1] 
+
+.subckt adder a=xport~8 b=dxport~8 cin=$add~0^ADD~3-8[0] cout=$add~0^ADD~3-9[0] sumout=$add~0^ADD~3-9[1] 
+
+.subckt adder a=xport~9 b=dxport~9 cin=$add~0^ADD~3-9[0] cout=$add~0^ADD~3-10[0] sumout=$add~0^ADD~3-10[1] 
+
+.subckt adder a=xport~10 b=dxport~10 cin=$add~0^ADD~3-10[0] cout=$add~0^ADD~3-11[0] sumout=$add~0^ADD~3-11[1] 
+
+.subckt adder a=xport~11 b=dxport~11 cin=$add~0^ADD~3-11[0] cout=$add~0^ADD~3-12[0] sumout=$add~0^ADD~3-12[1] 
+
+.subckt adder a=xport~12 b=dxport~12 cin=$add~0^ADD~3-12[0] cout=$add~0^ADD~3-13[0] sumout=$add~0^ADD~3-13[1] 
+
+.subckt adder a=xport~13 b=dxport~13 cin=$add~0^ADD~3-13[0] cout=$add~0^ADD~3-14[0] sumout=$add~0^ADD~3-14[1] 
+
+.subckt adder a=xport~14 b=dxport~14 cin=$add~0^ADD~3-14[0] cout=$add~0^ADD~3-15[0] sumout=$add~0^ADD~3-15[1] 
+
+.subckt adder a=xport~15 b=dxport~15 cin=$add~0^ADD~3-15[0] cout=$add~0^ADD~3-16[0] sumout=$add~0^ADD~3-16[1] 
+
+.subckt adder a=xport~16 b=dxport~16 cin=$add~0^ADD~3-16[0] cout=$add~0^ADD~3-17[0] sumout=$add~0^ADD~3-17[1] 
+
+.subckt adder a=xport~17 b=dxport~17 cin=$add~0^ADD~3-17[0] cout=$add~0^ADD~3-18[0] sumout=$add~0^ADD~3-18[1] 
+
+.subckt adder a=xport~18 b=dxport~18 cin=$add~0^ADD~3-18[0] cout=$add~0^ADD~3-19[0] sumout=$add~0^ADD~3-19[1] 
+
+.subckt adder a=xport~19 b=dxport~19 cin=$add~0^ADD~3-19[0] cout=$add~0^ADD~3-20[0] sumout=$add~0^ADD~3-20[1] 
+
+.subckt adder a=xport~20 b=dxport~20 cin=$add~0^ADD~3-20[0] cout=$add~0^ADD~3-21[0] sumout=$add~0^ADD~3-21[1] 
+
+.subckt adder a=xport~21 b=dxport~21 cin=$add~0^ADD~3-21[0] cout=$add~0^ADD~3-22[0] sumout=$add~0^ADD~3-22[1] 
+
+.subckt adder a=xport~22 b=dxport~22 cin=$add~0^ADD~3-22[0] cout=$add~0^ADD~3-23[0] sumout=$add~0^ADD~3-23[1] 
+
+.subckt adder a=xport~23 b=dxport~23 cin=$add~0^ADD~3-23[0] cout=$add~0^ADD~3-24[0] sumout=$add~0^ADD~3-24[1] 
+
+.subckt adder a=xport~24 b=dxport~24 cin=$add~0^ADD~3-24[0] cout=$add~0^ADD~3-25[0] sumout=$add~0^ADD~3-25[1] 
+
+.subckt adder a=xport~25 b=dxport~25 cin=$add~0^ADD~3-25[0] cout=$add~0^ADD~3-26[0] sumout=$add~0^ADD~3-26[1] 
+
+.subckt adder a=xport~26 b=dxport~26 cin=$add~0^ADD~3-26[0] cout=$add~0^ADD~3-27[0] sumout=$add~0^ADD~3-27[1] 
+
+.subckt adder a=xport~27 b=dxport~27 cin=$add~0^ADD~3-27[0] cout=$add~0^ADD~3-28[0] sumout=$add~0^ADD~3-28[1] 
+
+.subckt adder a=xport~28 b=dxport~28 cin=$add~0^ADD~3-28[0] cout=$add~0^ADD~3-29[0] sumout=$add~0^ADD~3-29[1] 
+
+.subckt adder a=xport~29 b=dxport~29 cin=$add~0^ADD~3-29[0] cout=$add~0^ADD~3-30[0] sumout=$add~0^ADD~3-30[1] 
+
+.subckt adder a=xport~30 b=dxport~30 cin=$add~0^ADD~3-30[0] cout=$add~0^ADD~3-31[0] sumout=$add~0^ADD~3-31[1] 
+
+.subckt adder a=xport~31 b=dxport~31 cin=$add~0^ADD~3-31[0] cout=$add~0^ADD~3-32[0] sumout=$add~0^ADD~3-32[1] 
+
+.subckt adder a=gnd b=vcc cin=unconn cout=$sub~11^MIN~2-0[0] sumout=$sub~11^MIN~2-0~dummy_output~0~1 
+
+.subckt adder a=gnd b=vcc cin=unconn cout=$sub~12^MIN~0-0[0] sumout=$sub~12^MIN~0-0~dummy_output~0~1 
+
+.subckt adder a=uport~0 b=lNOT~4 cin=$sub~11^MIN~2-0[0] cout=$sub~11^MIN~2-1[0] sumout=$sub~11^MIN~2-1[1] 
+
+.subckt adder a=uport~1 b=lNOT~5 cin=$sub~11^MIN~2-1[0] cout=$sub~11^MIN~2-2[0] sumout=$sub~11^MIN~2-2[1] 
+
+.subckt adder a=uport~2 b=lNOT~6 cin=$sub~11^MIN~2-2[0] cout=$sub~11^MIN~2-3[0] sumout=$sub~11^MIN~2-3[1] 
+
+.subckt adder a=uport~3 b=lNOT~7 cin=$sub~11^MIN~2-3[0] cout=$sub~11^MIN~2-4[0] sumout=$sub~11^MIN~2-4[1] 
+
+.subckt adder a=uport~4 b=lNOT~8 cin=$sub~11^MIN~2-4[0] cout=$sub~11^MIN~2-5[0] sumout=$sub~11^MIN~2-5[1] 
+
+.subckt adder a=uport~5 b=lNOT~9 cin=$sub~11^MIN~2-5[0] cout=$sub~11^MIN~2-6[0] sumout=$sub~11^MIN~2-6[1] 
+
+.subckt adder a=uport~6 b=lNOT~10 cin=$sub~11^MIN~2-6[0] cout=$sub~11^MIN~2-7[0] sumout=$sub~11^MIN~2-7[1] 
+
+.subckt adder a=uport~7 b=lNOT~11 cin=$sub~11^MIN~2-7[0] cout=$sub~11^MIN~2-8[0] sumout=$sub~11^MIN~2-8[1] 
+
+.subckt adder a=uport~8 b=lNOT~12 cin=$sub~11^MIN~2-8[0] cout=$sub~11^MIN~2-9[0] sumout=$sub~11^MIN~2-9[1] 
+
+.subckt multiply a[0]=uport~0 a[1]=uport~1 a[2]=uport~2 a[3]=uport~3 a[4]=uport~4 a[5]=uport~5 a[6]=uport~6 a[7]=uport~7 \
+ a[8]=uport~8 a[9]=uport~9 a[10]=uport~10 a[11]=uport~11 a[12]=uport~12 a[13]=uport~13 a[14]=uport~14 a[15]=uport~15 \
+ a[16]=uport~16 a[17]=uport~17 a[18]=uport~18 a[19]=uport~19 a[20]=uport~20 a[21]=uport~21 a[22]=uport~22 a[23]=uport~23 \
+ a[24]=uport~24 a[25]=uport~25 a[26]=uport~26 a[27]=uport~27 a[28]=uport~28 a[29]=uport~29 a[30]=uport~30 a[31]=uport~31 \
+ a[32]=unconn a[33]=unconn a[34]=unconn a[35]=unconn b[0]=dxport~0 b[1]=dxport~1 b[2]=dxport~2 b[3]=dxport~3 b[4]=dxport~4 \
+ b[5]=dxport~5 b[6]=dxport~6 b[7]=dxport~7 b[8]=dxport~8 b[9]=dxport~9 b[10]=dxport~10 b[11]=dxport~11 b[12]=dxport~12 \
+ b[13]=dxport~13 b[14]=dxport~14 b[15]=dxport~15 b[16]=dxport~16 b[17]=dxport~17 b[18]=dxport~18 b[19]=dxport~19 \
+ b[20]=dxport~20 b[21]=dxport~21 b[22]=dxport~22 b[23]=dxport~23 b[24]=dxport~24 b[25]=dxport~25 b[26]=dxport~26 \
+ b[27]=dxport~27 b[28]=dxport~28 b[29]=dxport~29 b[30]=dxport~30 b[31]=dxport~31 b[32]=unconn b[33]=unconn b[34]=unconn \
+ b[35]=unconn out[0]=$mul~6[0] out[1]=$mul~6[1] out[2]=$mul~6[2] out[3]=$mul~6[3] out[4]=$mul~6[4] out[5]=$mul~6[5] \
+ out[6]=$mul~6[6] out[7]=$mul~6[7] out[8]=$mul~6[8] out[9]=$mul~6[9] out[10]=$mul~6[10] out[11]=$mul~6[11] out[12]=$mul~6[12] \
+ out[13]=$mul~6[13] out[14]=$mul~6[14] out[15]=$mul~6[15] out[16]=$mul~6[16] out[17]=$mul~6[17] out[18]=$mul~6[18] \
+ out[19]=$mul~6[19] out[20]=$mul~6[20] out[21]=$mul~6[21] out[22]=$mul~6[22] out[23]=$mul~6[23] out[24]=$mul~6[24] \
+ out[25]=$mul~6[25] out[26]=$mul~6[26] out[27]=$mul~6[27] out[28]=$mul~6[28] out[29]=$mul~6[29] out[30]=$mul~6[30] \
+ out[31]=$mul~6[31] out[32]=$mul~6[32] out[33]=$mul~6[33] out[34]=$mul~6[34] out[35]=$mul~6[35] out[36]=$mul~6[36] \
+ out[37]=$mul~6[37] out[38]=$mul~6[38] out[39]=$mul~6[39] out[40]=$mul~6[40] out[41]=$mul~6[41] out[42]=$mul~6[42] \
+ out[43]=$mul~6[43] out[44]=$mul~6[44] out[45]=$mul~6[45] out[46]=$mul~6[46] out[47]=$mul~6[47] out[48]=$mul~6[48] \
+ out[49]=$mul~6[49] out[50]=$mul~6[50] out[51]=$mul~6[51] out[52]=$mul~6[52] out[53]=$mul~6[53] out[54]=$mul~6[54] \
+ out[55]=$mul~6[55] out[56]=$mul~6[56] out[57]=$mul~6[57] out[58]=$mul~6[58] out[59]=$mul~6[59] out[60]=$mul~6[60] \
+ out[61]=$mul~6[61] out[62]=$mul~6[62] out[63]=$mul~6[63] out[64]=$mul~6[64] out[65]=$mul~6[65] out[66]=$mul~6[66] \
+ out[67]=$mul~6[67] out[68]=$mul~6[68] out[69]=$mul~6[69] out[70]=$mul~6[70] out[71]=$mul~6[71] 
+
+.subckt multiply a[0]=vcc a[1]=vcc a[2]=unconn a[3]=unconn a[4]=unconn a[5]=unconn a[6]=unconn a[7]=unconn a[8]=unconn \
+ a[9]=unconn a[10]=unconn a[11]=unconn a[12]=unconn a[13]=unconn a[14]=unconn a[15]=unconn a[16]=unconn a[17]=unconn \
+ a[18]=unconn a[19]=unconn a[20]=unconn a[21]=unconn a[22]=unconn a[23]=unconn a[24]=unconn a[25]=unconn a[26]=unconn \
+ a[27]=unconn a[28]=unconn a[29]=unconn a[30]=unconn a[31]=unconn a[32]=unconn a[33]=unconn a[34]=unconn a[35]=unconn \
+ b[0]=yport~0 b[1]=yport~1 b[2]=yport~2 b[3]=yport~3 b[4]=yport~4 b[5]=yport~5 b[6]=yport~6 b[7]=yport~7 b[8]=yport~8 \
+ b[9]=yport~9 b[10]=yport~10 b[11]=yport~11 b[12]=yport~12 b[13]=yport~13 b[14]=yport~14 b[15]=yport~15 b[16]=yport~16 \
+ b[17]=yport~17 b[18]=yport~18 b[19]=yport~19 b[20]=yport~20 b[21]=yport~21 b[22]=yport~22 b[23]=yport~23 b[24]=yport~24 \
+ b[25]=yport~25 b[26]=yport~26 b[27]=yport~27 b[28]=yport~28 b[29]=yport~29 b[30]=yport~30 b[31]=yport~31 b[32]=unconn \
+ b[33]=unconn b[34]=unconn b[35]=unconn out[0]=$mul~9[0] out[1]=$mul~9[1] out[2]=$mul~9[2] out[3]=$mul~9[3] out[4]=$mul~9[4] \
+ out[5]=$mul~9[5] out[6]=$mul~9[6] out[7]=$mul~9[7] out[8]=$mul~9[8] out[9]=$mul~9[9] out[10]=$mul~9[10] out[11]=$mul~9[11] \
+ out[12]=$mul~9[12] out[13]=$mul~9[13] out[14]=$mul~9[14] out[15]=$mul~9[15] out[16]=$mul~9[16] out[17]=$mul~9[17] \
+ out[18]=$mul~9[18] out[19]=$mul~9[19] out[20]=$mul~9[20] out[21]=$mul~9[21] out[22]=$mul~9[22] out[23]=$mul~9[23] \
+ out[24]=$mul~9[24] out[25]=$mul~9[25] out[26]=$mul~9[26] out[27]=$mul~9[27] out[28]=$mul~9[28] out[29]=$mul~9[29] \
+ out[30]=$mul~9[30] out[31]=$mul~9[31] out[32]=$mul~9[32] out[33]=$mul~9[33] out[34]=$mul~9[34] out[35]=$mul~9[35] \
+ out[36]=$mul~9[36] out[37]=$mul~9[37] out[38]=$mul~9[38] out[39]=$mul~9[39] out[40]=$mul~9[40] out[41]=$mul~9[41] \
+ out[42]=$mul~9[42] out[43]=$mul~9[43] out[44]=$mul~9[44] out[45]=$mul~9[45] out[46]=$mul~9[46] out[47]=$mul~9[47] \
+ out[48]=$mul~9[48] out[49]=$mul~9[49] out[50]=$mul~9[50] out[51]=$mul~9[51] out[52]=$mul~9[52] out[53]=$mul~9[53] \
+ out[54]=$mul~9[54] out[55]=$mul~9[55] out[56]=$mul~9[56] out[57]=$mul~9[57] out[58]=$mul~9[58] out[59]=$mul~9[59] \
+ out[60]=$mul~9[60] out[61]=$mul~9[61] out[62]=$mul~9[62] out[63]=$mul~9[63] out[64]=$mul~9[64] out[65]=$mul~9[65] \
+ out[66]=$mul~9[66] out[67]=$mul~9[67] out[68]=$mul~9[68] out[69]=$mul~9[69] out[70]=$mul~9[70] out[71]=$mul~9[71] 
+
+.subckt multiply a[0]=dxport~0 a[1]=dxport~1 a[2]=dxport~2 a[3]=dxport~3 a[4]=dxport~4 a[5]=dxport~5 a[6]=dxport~6 \
+ a[7]=dxport~7 a[8]=dxport~8 a[9]=dxport~9 a[10]=dxport~10 a[11]=dxport~11 a[12]=dxport~12 a[13]=dxport~13 a[14]=dxport~14 \
+ a[15]=dxport~15 a[16]=dxport~16 a[17]=dxport~17 a[18]=dxport~18 a[19]=dxport~19 a[20]=dxport~20 a[21]=dxport~21 \
+ a[22]=dxport~22 a[23]=dxport~23 a[24]=dxport~24 a[25]=dxport~25 a[26]=dxport~26 a[27]=dxport~27 a[28]=dxport~28 \
+ a[29]=dxport~29 a[30]=dxport~30 a[31]=dxport~31 a[32]=unconn a[33]=unconn a[34]=unconn a[35]=unconn b[0]=$mul~9[0] \
+ b[1]=$mul~9[1] b[2]=$mul~9[2] b[3]=$mul~9[3] b[4]=$mul~9[4] b[5]=$mul~9[5] b[6]=$mul~9[6] b[7]=$mul~9[7] b[8]=$mul~9[8] \
+ b[9]=$mul~9[9] b[10]=$mul~9[10] b[11]=$mul~9[11] b[12]=$mul~9[12] b[13]=$mul~9[13] b[14]=$mul~9[14] b[15]=$mul~9[15] \
+ b[16]=$mul~9[16] b[17]=$mul~9[17] b[18]=$mul~9[18] b[19]=$mul~9[19] b[20]=$mul~9[20] b[21]=$mul~9[21] b[22]=$mul~9[22] \
+ b[23]=$mul~9[23] b[24]=$mul~9[24] b[25]=$mul~9[25] b[26]=$mul~9[26] b[27]=$mul~9[27] b[28]=$mul~9[28] b[29]=$mul~9[29] \
+ b[30]=$mul~9[30] b[31]=$mul~9[31] b[32]=unconn b[33]=unconn b[34]=unconn b[35]=unconn out[0]=$mul~10[0] out[1]=$mul~10[1] \
+ out[2]=$mul~10[2] out[3]=$mul~10[3] out[4]=$mul~10[4] out[5]=$mul~10[5] out[6]=$mul~10[6] out[7]=$mul~10[7] out[8]=$mul~10[8] \
+ out[9]=$mul~10[9] out[10]=$mul~10[10] out[11]=$mul~10[11] out[12]=$mul~10[12] out[13]=$mul~10[13] out[14]=$mul~10[14] \
+ out[15]=$mul~10[15] out[16]=$mul~10[16] out[17]=$mul~10[17] out[18]=$mul~10[18] out[19]=$mul~10[19] out[20]=$mul~10[20] \
+ out[21]=$mul~10[21] out[22]=$mul~10[22] out[23]=$mul~10[23] out[24]=$mul~10[24] out[25]=$mul~10[25] out[26]=$mul~10[26] \
+ out[27]=$mul~10[27] out[28]=$mul~10[28] out[29]=$mul~10[29] out[30]=$mul~10[30] out[31]=$mul~10[31] out[32]=$mul~10[32] \
+ out[33]=$mul~10[33] out[34]=$mul~10[34] out[35]=$mul~10[35] out[36]=$mul~10[36] out[37]=$mul~10[37] out[38]=$mul~10[38] \
+ out[39]=$mul~10[39] out[40]=$mul~10[40] out[41]=$mul~10[41] out[42]=$mul~10[42] out[43]=$mul~10[43] out[44]=$mul~10[44] \
+ out[45]=$mul~10[45] out[46]=$mul~10[46] out[47]=$mul~10[47] out[48]=$mul~10[48] out[49]=$mul~10[49] out[50]=$mul~10[50] \
+ out[51]=$mul~10[51] out[52]=$mul~10[52] out[53]=$mul~10[53] out[54]=$mul~10[54] out[55]=$mul~10[55] out[56]=$mul~10[56] \
+ out[57]=$mul~10[57] out[58]=$mul~10[58] out[59]=$mul~10[59] out[60]=$mul~10[60] out[61]=$mul~10[61] out[62]=$mul~10[62] \
+ out[63]=$mul~10[63] out[64]=$mul~10[64] out[65]=$mul~10[65] out[66]=$mul~10[66] out[67]=$mul~10[67] out[68]=$mul~10[68] \
+ out[69]=$mul~10[69] out[70]=$mul~10[70] out[71]=$mul~10[71] 
+
+.subckt multiply a[0]=vcc a[1]=gnd a[2]=vcc a[3]=unconn a[4]=unconn a[5]=unconn a[6]=unconn a[7]=unconn a[8]=unconn \
+ a[9]=unconn a[10]=unconn a[11]=unconn a[12]=unconn a[13]=unconn a[14]=unconn a[15]=unconn a[16]=unconn a[17]=unconn \
+ a[18]=unconn a[19]=unconn a[20]=unconn a[21]=unconn a[22]=unconn a[23]=unconn a[24]=unconn a[25]=unconn a[26]=unconn \
+ a[27]=unconn a[28]=unconn a[29]=unconn a[30]=unconn a[31]=unconn a[32]=unconn a[33]=unconn a[34]=unconn a[35]=unconn \
+ b[0]=xport~0 b[1]=xport~1 b[2]=xport~2 b[3]=xport~3 b[4]=xport~4 b[5]=xport~5 b[6]=xport~6 b[7]=xport~7 b[8]=xport~8 \
+ b[9]=xport~9 b[10]=xport~10 b[11]=xport~11 b[12]=xport~12 b[13]=xport~13 b[14]=xport~14 b[15]=xport~15 b[16]=xport~16 \
+ b[17]=xport~17 b[18]=xport~18 b[19]=xport~19 b[20]=xport~20 b[21]=xport~21 b[22]=xport~22 b[23]=xport~23 b[24]=xport~24 \
+ b[25]=xport~25 b[26]=xport~26 b[27]=xport~27 b[28]=xport~28 b[29]=xport~29 b[30]=xport~30 b[31]=xport~31 b[32]=unconn \
+ b[33]=unconn b[34]=unconn b[35]=unconn out[0]=$mul~7[0] out[1]=$mul~7[1] out[2]=$mul~7[2] out[3]=$mul~7[3] out[4]=$mul~7[4] \
+ out[5]=$mul~7[5] out[6]=$mul~7[6] out[7]=$mul~7[7] out[8]=$mul~7[8] out[9]=$mul~7[9] out[10]=$mul~7[10] out[11]=$mul~7[11] \
+ out[12]=$mul~7[12] out[13]=$mul~7[13] out[14]=$mul~7[14] out[15]=$mul~7[15] out[16]=$mul~7[16] out[17]=$mul~7[17] \
+ out[18]=$mul~7[18] out[19]=$mul~7[19] out[20]=$mul~7[20] out[21]=$mul~7[21] out[22]=$mul~7[22] out[23]=$mul~7[23] \
+ out[24]=$mul~7[24] out[25]=$mul~7[25] out[26]=$mul~7[26] out[27]=$mul~7[27] out[28]=$mul~7[28] out[29]=$mul~7[29] \
+ out[30]=$mul~7[30] out[31]=$mul~7[31] out[32]=$mul~7[32] out[33]=$mul~7[33] out[34]=$mul~7[34] out[35]=$mul~7[35] \
+ out[36]=$mul~7[36] out[37]=$mul~7[37] out[38]=$mul~7[38] out[39]=$mul~7[39] out[40]=$mul~7[40] out[41]=$mul~7[41] \
+ out[42]=$mul~7[42] out[43]=$mul~7[43] out[44]=$mul~7[44] out[45]=$mul~7[45] out[46]=$mul~7[46] out[47]=$mul~7[47] \
+ out[48]=$mul~7[48] out[49]=$mul~7[49] out[50]=$mul~7[50] out[51]=$mul~7[51] out[52]=$mul~7[52] out[53]=$mul~7[53] \
+ out[54]=$mul~7[54] out[55]=$mul~7[55] out[56]=$mul~7[56] out[57]=$mul~7[57] out[58]=$mul~7[58] out[59]=$mul~7[59] \
+ out[60]=$mul~7[60] out[61]=$mul~7[61] out[62]=$mul~7[62] out[63]=$mul~7[63] out[64]=$mul~7[64] out[65]=$mul~7[65] \
+ out[66]=$mul~7[66] out[67]=$mul~7[67] out[68]=$mul~7[68] out[69]=$mul~7[69] out[70]=$mul~7[70] out[71]=$mul~7[71] 
+
+.subckt multiply a[0]=$mul~6[0] a[1]=$mul~6[1] a[2]=$mul~6[2] a[3]=$mul~6[3] a[4]=$mul~6[4] a[5]=$mul~6[5] a[6]=$mul~6[6] \
+ a[7]=$mul~6[7] a[8]=$mul~6[8] a[9]=$mul~6[9] a[10]=$mul~6[10] a[11]=$mul~6[11] a[12]=$mul~6[12] a[13]=$mul~6[13] \
+ a[14]=$mul~6[14] a[15]=$mul~6[15] a[16]=$mul~6[16] a[17]=$mul~6[17] a[18]=$mul~6[18] a[19]=$mul~6[19] a[20]=$mul~6[20] \
+ a[21]=$mul~6[21] a[22]=$mul~6[22] a[23]=$mul~6[23] a[24]=$mul~6[24] a[25]=$mul~6[25] a[26]=$mul~6[26] a[27]=$mul~6[27] \
+ a[28]=$mul~6[28] a[29]=$mul~6[29] a[30]=$mul~6[30] a[31]=$mul~6[31] a[32]=unconn a[33]=unconn a[34]=unconn a[35]=unconn \
+ b[0]=$mul~7[0] b[1]=$mul~7[1] b[2]=$mul~7[2] b[3]=$mul~7[3] b[4]=$mul~7[4] b[5]=$mul~7[5] b[6]=$mul~7[6] b[7]=$mul~7[7] \
+ b[8]=$mul~7[8] b[9]=$mul~7[9] b[10]=$mul~7[10] b[11]=$mul~7[11] b[12]=$mul~7[12] b[13]=$mul~7[13] b[14]=$mul~7[14] \
+ b[15]=$mul~7[15] b[16]=$mul~7[16] b[17]=$mul~7[17] b[18]=$mul~7[18] b[19]=$mul~7[19] b[20]=$mul~7[20] b[21]=$mul~7[21] \
+ b[22]=$mul~7[22] b[23]=$mul~7[23] b[24]=$mul~7[24] b[25]=$mul~7[25] b[26]=$mul~7[26] b[27]=$mul~7[27] b[28]=$mul~7[28] \
+ b[29]=$mul~7[29] b[30]=$mul~7[30] b[31]=$mul~7[31] b[32]=unconn b[33]=unconn b[34]=unconn b[35]=unconn out[0]=$mul~8[0] \
+ out[1]=$mul~8[1] out[2]=$mul~8[2] out[3]=$mul~8[3] out[4]=$mul~8[4] out[5]=$mul~8[5] out[6]=$mul~8[6] out[7]=$mul~8[7] \
+ out[8]=$mul~8[8] out[9]=$mul~8[9] out[10]=$mul~8[10] out[11]=$mul~8[11] out[12]=$mul~8[12] out[13]=$mul~8[13] \
+ out[14]=$mul~8[14] out[15]=$mul~8[15] out[16]=$mul~8[16] out[17]=$mul~8[17] out[18]=$mul~8[18] out[19]=$mul~8[19] \
+ out[20]=$mul~8[20] out[21]=$mul~8[21] out[22]=$mul~8[22] out[23]=$mul~8[23] out[24]=$mul~8[24] out[25]=$mul~8[25] \
+ out[26]=$mul~8[26] out[27]=$mul~8[27] out[28]=$mul~8[28] out[29]=$mul~8[29] out[30]=$mul~8[30] out[31]=$mul~8[31] \
+ out[32]=$mul~8[32] out[33]=$mul~8[33] out[34]=$mul~8[34] out[35]=$mul~8[35] out[36]=$mul~8[36] out[37]=$mul~8[37] \
+ out[38]=$mul~8[38] out[39]=$mul~8[39] out[40]=$mul~8[40] out[41]=$mul~8[41] out[42]=$mul~8[42] out[43]=$mul~8[43] \
+ out[44]=$mul~8[44] out[45]=$mul~8[45] out[46]=$mul~8[46] out[47]=$mul~8[47] out[48]=$mul~8[48] out[49]=$mul~8[49] \
+ out[50]=$mul~8[50] out[51]=$mul~8[51] out[52]=$mul~8[52] out[53]=$mul~8[53] out[54]=$mul~8[54] out[55]=$mul~8[55] \
+ out[56]=$mul~8[56] out[57]=$mul~8[57] out[58]=$mul~8[58] out[59]=$mul~8[59] out[60]=$mul~8[60] out[61]=$mul~8[61] \
+ out[62]=$mul~8[62] out[63]=$mul~8[63] out[64]=$mul~8[64] out[65]=$mul~8[65] out[66]=$mul~8[66] out[67]=$mul~8[67] \
+ out[68]=$mul~8[68] out[69]=$mul~8[69] out[70]=$mul~8[70] out[71]=$mul~8[71] 
+
+
+
+.names $sub~12^MIN~0-1[1] uport~0 new_n1433 new_n1468 reset n854 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names new_n1434 new_n1464 new_n1467 new_n1465 new_n1460 new_n1451 new_n1433 
+---0-1 0 
+000--1 0 
+----0- 0 
+
+.names new_n1435 new_n1449 new_n1450 new_n1442 new_n1447 new_n1444 new_n1434 
+---0-1 0 
+000--1 0 
+----0- 0 
+
+.names new_n1438 new_n1439 new_n1440 new_n1437 new_n1441 new_n1436 new_n1435 
+--0-10 1 
+01--10 1 
+---1-0 1 
+
+.names xport~6 aport~6 new_n1436 
+01 1 
+
+.names aport~5 xport~5 new_n1437 
+01 1 
+
+.names xport~1 aport~1 xport~0 aport~0 new_n1438 
+-101 1 
+0-01 1 
+
+.names xport~1 aport~1 xport~3 aport~3 aport~2 xport~2 new_n1439 
+----10 0 
+----01 0 
+--01-- 0 
+01---- 0 
+
+.names aport~4 xport~4 aport~3 aport~2 xport~3 xport~2 new_n1440 
+---011 0 
+--00-1 0 
+--0-1- 0 
+01---- 0 
+
+.names xport~4 aport~4 xport~5 aport~5 new_n1441 
+--01 0 
+01-- 0 
+
+.names aport~8 xport~8 aport~9 xport~9 new_n1443 new_n1442 
+00001 1 
+11001 1 
+00111 1 
+11111 1 
+
+.names xport~7 aport~7 aport~11 xport~11 aport~10 xport~10 new_n1443 
+----10 0 
+----01 0 
+--10-- 0 
+--01-- 0 
+01---- 0 
+
+.names aport~11 aport~10 new_n1445 new_n1446 xport~10 xport~11 new_n1444 
+--0011 0 
+-0--11 0 
+-000-1 0 
+0----1 0 
+0-001- 0 
+00--1- 0 
+0000-- 0 
+
+.names xport~9 aport~9 new_n1445 
+01 1 
+
+.names aport~9 xport~9 aport~8 xport~8 new_n1446 
+--01 0 
+01-- 0 
+
+.names xport~12 aport~12 new_n1448 new_n1447 
+001 1 
+111 1 
+
+.names xport~13 aport~13 aport~15 xport~15 aport~14 xport~14 new_n1448 
+----10 0 
+----01 0 
+--10-- 0 
+--01-- 0 
+01---- 0 
+
+.names aport~7 xport~7 new_n1449 
+01 1 
+
+.names aport~6 xport~6 new_n1450 
+01 1 
+
+.names new_n1458 new_n1455 new_n1453 new_n1454 new_n1452 new_n1459 new_n1451 
+-1-100 1 
+0--100 1 
+--0-00 1 
+
+.names new_n1455 new_n1453 new_n1456 new_n1457 new_n1452 
+0111 1 
+
+.names xport~21 aport~21 aport~22 xport~22 aport~23 xport~23 new_n1453 
+----10 0 
+----01 0 
+--10-- 0 
+--01-- 0 
+01---- 0 
+
+.names aport~21 xport~21 aport~20 xport~20 new_n1454 
+--01 0 
+01-- 0 
+
+.names xport~20 aport~20 new_n1455 
+01 1 
+
+.names aport~19 xport~19 xport~18 aport~18 new_n1456 
+--10 0 
+--01 0 
+10-- 0 
+01-- 0 
+
+.names aport~17 aport~16 xport~17 xport~16 new_n1457 
+-011 1 
+00-1 1 
+0-1- 1 
+
+.names aport~19 aport~18 xport~19 xport~18 new_n1458 
+-011 1 
+00-1 1 
+0-1- 1 
+
+.names aport~23 aport~22 xport~23 xport~22 new_n1459 
+-011 1 
+00-1 1 
+0-1- 1 
+
+.names aport~24 xport~24 aport~25 xport~25 new_n1463 new_n1461 new_n1460 
+000011 1 
+110011 1 
+001111 1 
+111111 1 
+
+.names aport~29 xport~29 xport~28 aport~28 new_n1462 new_n1461 
+----0 0 
+--10- 0 
+--01- 0 
+01--- 0 
+
+.names xport~29 aport~29 aport~30 xport~30 aport~31 xport~31 new_n1462 
+----10 0 
+----01 0 
+--10-- 0 
+--01-- 0 
+01---- 0 
+
+.names aport~27 xport~27 xport~26 aport~26 new_n1463 
+--10 0 
+--01 0 
+10-- 0 
+01-- 0 
+
+.names aport~13 xport~13 aport~12 xport~12 new_n1448 new_n1464 
+--011 1 
+01--1 1 
+
+.names new_n1455 new_n1453 new_n1456 new_n1466 new_n1465 
+0111 1 
+
+.names aport~16 xport~16 aport~17 xport~17 new_n1466 
+--10 0 
+--01 0 
+10-- 0 
+01-- 0 
+
+.names aport~15 aport~14 xport~15 xport~14 new_n1467 
+-011 1 
+00-1 1 
+0-1- 1 
+
+.names new_n1471 new_n1463 new_n1461 new_n1472 new_n1469 new_n1468 
+----0 0 
+--11- 0 
+111-- 0 
+
+.names new_n1470 aport~31 aport~30 xport~31 xport~30 new_n1469 
+--011 0 
+-00-1 0 
+-0-1- 0 
+1---- 0 
+
+.names aport~29 xport~29 aport~28 xport~28 new_n1462 new_n1470 
+--011 1 
+01--1 1 
+
+.names aport~25 aport~24 xport~25 xport~24 new_n1471 
+-011 1 
+00-1 1 
+0-1- 1 
+
+.names aport~27 aport~26 xport~27 xport~26 new_n1472 
+-011 1 
+00-1 1 
+0-1- 1 
+
+.names $sub~12^MIN~0-2[1] uport~1 new_n1433 new_n1468 reset n858 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-3[1] uport~2 new_n1433 new_n1468 reset n862 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-4[1] uport~3 new_n1433 new_n1468 reset n866 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-5[1] uport~4 new_n1433 new_n1468 reset n870 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-6[1] uport~5 new_n1433 new_n1468 reset n874 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-7[1] uport~6 new_n1433 new_n1468 reset n878 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-8[1] uport~7 new_n1433 new_n1468 reset n882 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-9[1] uport~8 new_n1433 new_n1468 reset n886 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-10[1] uport~9 new_n1433 new_n1468 reset n890 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-11[1] uport~10 new_n1433 new_n1468 reset n894 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-12[1] uport~11 new_n1433 new_n1468 reset n898 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-13[1] uport~12 new_n1433 new_n1468 reset n902 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-14[1] uport~13 new_n1433 new_n1468 reset n906 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-15[1] uport~14 new_n1433 new_n1468 reset n910 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-16[1] uport~15 new_n1433 new_n1468 reset n914 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-17[1] uport~16 new_n1433 new_n1468 reset n918 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-18[1] uport~17 new_n1433 new_n1468 reset n922 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-19[1] uport~18 new_n1433 new_n1468 reset n926 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-20[1] uport~19 new_n1433 new_n1468 reset n930 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-21[1] uport~20 new_n1433 new_n1468 reset n934 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-22[1] uport~21 new_n1433 new_n1468 reset n938 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-23[1] uport~22 new_n1433 new_n1468 reset n942 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-24[1] uport~23 new_n1433 new_n1468 reset n946 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-25[1] uport~24 new_n1433 new_n1468 reset n950 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-26[1] uport~25 new_n1433 new_n1468 reset n954 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-27[1] uport~26 new_n1433 new_n1468 reset n958 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-28[1] uport~27 new_n1433 new_n1468 reset n962 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-29[1] uport~28 new_n1433 new_n1468 reset n966 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-30[1] uport~29 new_n1433 new_n1468 reset n970 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-31[1] uport~30 new_n1433 new_n1468 reset n974 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $sub~12^MIN~0-32[1] uport~31 new_n1433 new_n1468 reset n978 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-1[1] yport~0 new_n1433 new_n1468 reset n982 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-2[1] yport~1 new_n1433 new_n1468 reset n986 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-3[1] yport~2 new_n1433 new_n1468 reset n990 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-4[1] yport~3 new_n1433 new_n1468 reset n994 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-5[1] yport~4 new_n1433 new_n1468 reset n998 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-6[1] yport~5 new_n1433 new_n1468 reset n1002 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-7[1] yport~6 new_n1433 new_n1468 reset n1006 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-8[1] yport~7 new_n1433 new_n1468 reset n1010 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-9[1] yport~8 new_n1433 new_n1468 reset n1014 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-10[1] yport~9 new_n1433 new_n1468 reset n1018 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-11[1] yport~10 new_n1433 new_n1468 reset n1022 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-12[1] yport~11 new_n1433 new_n1468 reset n1026 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-13[1] yport~12 new_n1433 new_n1468 reset n1030 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-14[1] yport~13 new_n1433 new_n1468 reset n1034 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-15[1] yport~14 new_n1433 new_n1468 reset n1038 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-16[1] yport~15 new_n1433 new_n1468 reset n1042 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-17[1] yport~16 new_n1433 new_n1468 reset n1046 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-18[1] yport~17 new_n1433 new_n1468 reset n1050 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-19[1] yport~18 new_n1433 new_n1468 reset n1054 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-20[1] yport~19 new_n1433 new_n1468 reset n1058 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-21[1] yport~20 new_n1433 new_n1468 reset n1062 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-22[1] yport~21 new_n1433 new_n1468 reset n1066 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-23[1] yport~22 new_n1433 new_n1468 reset n1070 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-24[1] yport~23 new_n1433 new_n1468 reset n1074 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-25[1] yport~24 new_n1433 new_n1468 reset n1078 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-26[1] yport~25 new_n1433 new_n1468 reset n1082 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-27[1] yport~26 new_n1433 new_n1468 reset n1086 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-28[1] yport~27 new_n1433 new_n1468 reset n1090 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-29[1] yport~28 new_n1433 new_n1468 reset n1094 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-30[1] yport~29 new_n1433 new_n1468 reset n1098 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-31[1] yport~30 new_n1433 new_n1468 reset n1102 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~1^ADD~1-32[1] yport~31 new_n1433 new_n1468 reset n1106 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-1[1] xport~0 new_n1433 new_n1468 reset n1110 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-2[1] xport~1 new_n1433 new_n1468 reset n1114 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-3[1] xport~2 new_n1433 new_n1468 reset n1118 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-4[1] xport~3 new_n1433 new_n1468 reset n1122 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-5[1] xport~4 new_n1433 new_n1468 reset n1126 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-6[1] xport~5 new_n1433 new_n1468 reset n1130 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-7[1] xport~6 new_n1433 new_n1468 reset n1134 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-8[1] xport~7 new_n1433 new_n1468 reset n1138 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-9[1] xport~8 new_n1433 new_n1468 reset n1142 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-10[1] xport~9 new_n1433 new_n1468 reset n1146 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-11[1] xport~10 new_n1433 new_n1468 reset n1150 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-12[1] xport~11 new_n1433 new_n1468 reset n1154 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-13[1] xport~12 new_n1433 new_n1468 reset n1158 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-14[1] xport~13 new_n1433 new_n1468 reset n1162 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-15[1] xport~14 new_n1433 new_n1468 reset n1166 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-16[1] xport~15 new_n1433 new_n1468 reset n1170 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-17[1] xport~16 new_n1433 new_n1468 reset n1174 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-18[1] xport~17 new_n1433 new_n1468 reset n1178 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-19[1] xport~18 new_n1433 new_n1468 reset n1182 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-20[1] xport~19 new_n1433 new_n1468 reset n1186 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-21[1] xport~20 new_n1433 new_n1468 reset n1190 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-22[1] xport~21 new_n1433 new_n1468 reset n1194 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-23[1] xport~22 new_n1433 new_n1468 reset n1198 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-24[1] xport~23 new_n1433 new_n1468 reset n1202 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-25[1] xport~24 new_n1433 new_n1468 reset n1206 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-26[1] xport~25 new_n1433 new_n1468 reset n1210 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-27[1] xport~26 new_n1433 new_n1468 reset n1214 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-28[1] xport~27 new_n1433 new_n1468 reset n1218 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-29[1] xport~28 new_n1433 new_n1468 reset n1222 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-30[1] xport~29 new_n1433 new_n1468 reset n1226 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-31[1] xport~30 new_n1433 new_n1468 reset n1230 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names $add~0^ADD~3-32[1] xport~31 new_n1433 new_n1468 reset n1234 
+-1-00 1 
+1-010 1 
+-11-0 1 
+
+.names vcc 
+1 
+
+.names gnd 
+0 
+
+.names unconn 
+0 
+
+.names $mul~8[9] lNOT~13 
+0 1 
+
+.names $mul~8[10] lNOT~14 
+0 1 
+
+.names $mul~8[11] lNOT~15 
+0 1 
+
+.names $mul~8[12] lNOT~16 
+0 1 
+
+.names $mul~8[13] lNOT~17 
+0 1 
+
+.names $mul~8[14] lNOT~18 
+0 1 
+
+.names $mul~8[15] lNOT~19 
+0 1 
+
+.names $mul~8[16] lNOT~20 
+0 1 
+
+.names $mul~8[17] lNOT~21 
+0 1 
+
+.names $mul~8[18] lNOT~22 
+0 1 
+
+.names $mul~8[19] lNOT~23 
+0 1 
+
+.names $mul~8[20] lNOT~24 
+0 1 
+
+.names $mul~8[21] lNOT~25 
+0 1 
+
+.names $mul~8[22] lNOT~26 
+0 1 
+
+.names $mul~8[23] lNOT~27 
+0 1 
+
+.names $mul~8[24] lNOT~28 
+0 1 
+
+.names $mul~8[25] lNOT~29 
+0 1 
+
+.names $mul~8[26] lNOT~30 
+0 1 
+
+.names $mul~8[27] lNOT~31 
+0 1 
+
+.names $mul~8[28] lNOT~32 
+0 1 
+
+.names $mul~8[29] lNOT~33 
+0 1 
+
+.names $mul~8[30] lNOT~34 
+0 1 
+
+.names $mul~8[31] lNOT~35 
+0 1 
+
+.names $mul~10[31] lNOT~67 
+0 1 
+
+.names $mul~10[0] lNOT~36 
+0 1 
+
+.names $mul~10[1] lNOT~37 
+0 1 
+
+.names $mul~10[2] lNOT~38 
+0 1 
+
+.names $mul~10[3] lNOT~39 
+0 1 
+
+.names $mul~10[4] lNOT~40 
+0 1 
+
+.names $mul~10[5] lNOT~41 
+0 1 
+
+.names $mul~10[6] lNOT~42 
+0 1 
+
+.names $mul~10[7] lNOT~43 
+0 1 
+
+.names $mul~10[8] lNOT~44 
+0 1 
+
+.names $mul~10[9] lNOT~45 
+0 1 
+
+.names $mul~10[10] lNOT~46 
+0 1 
+
+.names $mul~10[11] lNOT~47 
+0 1 
+
+.names $mul~10[12] lNOT~48 
+0 1 
+
+.names $mul~10[13] lNOT~49 
+0 1 
+
+.names $mul~10[14] lNOT~50 
+0 1 
+
+.names $mul~10[15] lNOT~51 
+0 1 
+
+.names $mul~10[16] lNOT~52 
+0 1 
+
+.names $mul~10[17] lNOT~53 
+0 1 
+
+.names $mul~10[18] lNOT~54 
+0 1 
+
+.names $mul~10[19] lNOT~55 
+0 1 
+
+.names $mul~10[20] lNOT~56 
+0 1 
+
+.names $mul~10[21] lNOT~57 
+0 1 
+
+.names $mul~10[22] lNOT~58 
+0 1 
+
+.names $mul~10[23] lNOT~59 
+0 1 
+
+.names $mul~10[24] lNOT~60 
+0 1 
+
+.names $mul~10[25] lNOT~61 
+0 1 
+
+.names $mul~10[26] lNOT~62 
+0 1 
+
+.names $mul~10[27] lNOT~63 
+0 1 
+
+.names $mul~10[28] lNOT~64 
+0 1 
+
+.names $mul~10[29] lNOT~65 
+0 1 
+
+.names $mul~10[30] lNOT~66 
+0 1 
+
+.names $mul~8[0] lNOT~4 
+0 1 
+
+.names $mul~8[1] lNOT~5 
+0 1 
+
+.names $mul~8[2] lNOT~6 
+0 1 
+
+.names $mul~8[3] lNOT~7 
+0 1 
+
+.names $mul~8[4] lNOT~8 
+0 1 
+
+.names $mul~8[5] lNOT~9 
+0 1 
+
+.names $mul~8[6] lNOT~10 
+0 1 
+
+.names $mul~8[7] lNOT~11 
+0 1 
+
+.names $mul~8[8] lNOT~12 
+0 1 
+
+
+.end 
+
+
+
+.model adder 
+
+.inputs a b cin 
+
+.outputs cout sumout 
+
+.blackbox 
+
+
+.end 
+
+
+
+.model multiply 
+
+.inputs a[0] a[1] a[2] a[3] a[4] a[5] a[6] a[7] a[8] a[9] a[10] a[11] a[12] a[13] a[14] a[15] a[16] a[17] a[18] a[19] a[20] \
+ a[21] a[22] a[23] a[24] a[25] a[26] a[27] a[28] a[29] a[30] a[31] a[32] a[33] a[34] a[35] b[0] b[1] b[2] b[3] b[4] b[5] b[6] \
+ b[7] b[8] b[9] b[10] b[11] b[12] b[13] b[14] b[15] b[16] b[17] b[18] b[19] b[20] b[21] b[22] b[23] b[24] b[25] b[26] b[27] \
+ b[28] b[29] b[30] b[31] b[32] b[33] b[34] b[35] 
+
+.outputs out[0] out[1] out[2] out[3] out[4] out[5] out[6] out[7] out[8] out[9] out[10] out[11] out[12] out[13] out[14] \
+ out[15] out[16] out[17] out[18] out[19] out[20] out[21] out[22] out[23] out[24] out[25] out[26] out[27] out[28] out[29] \
+ out[30] out[31] out[32] out[33] out[34] out[35] out[36] out[37] out[38] out[39] out[40] out[41] out[42] out[43] out[44] \
+ out[45] out[46] out[47] out[48] out[49] out[50] out[51] out[52] out[53] out[54] out[55] out[56] out[57] out[58] out[59] \
+ out[60] out[61] out[62] out[63] out[64] out[65] out[66] out[67] out[68] out[69] out[70] out[71] 
+
+.blackbox 
+
+
+.end 
+
+
+
+.model CLOCK_GATING
+.inputs I
+.blackbox
+.end
+

@@ -1,0 +1,1748 @@
+# Benchmark "diffeq_paj_convert" written by ABC on Fri Mar 27 10:26:53 2026
+.model diffeq_paj_convert
+.inputs Yinport~15 Aport~2 Aport~1 Xinport~7 Yinport~25 Xinport~21 \
+ Xinport~8 Yinport~29 Uinport~31 Yinport~30 Uinport~0 Yinport~16 Xinport~9 \
+ Yinport~24 Yinport~17 Xinport~10 Yinport~31 Uinport~2 Uinport~30 Uinport~1 \
+ Yinport~27 Uinport~29 Yinport~22 Yinport~28 Uinport~28 Uinport~27 \
+ Yinport~8 Uinport~3 Yinport~18 Xinport~11 Uinport~16 Yinport~26 Uinport~26 \
+ Uinport~17 Xinport~1 Yinport~5 Uinport~14 Uinport~25 Uinport~5 Yinport~23 \
+ Uinport~24 Uinport~23 Uinport~15 Xinport~30 Uinport~13 Uinport~4 \
+ Uinport~22 Uinport~18 Yinport~6 Uinport~21 Xinport~0 Uinport~20 Yinport~7 \
+ DXport~0 Aport~29 Aport~28 Aport~27 Aport~26 Aport~25 Aport~24 Aport~23 \
+ Aport~22 Aport~21 Aport~20 Aport~19 Aport~18 Aport~17 Aport~16 DXport~2 \
+ Aport~15 Aport~14 Aport~13 Aport~12 Aport~11 Aport~10 Aport~9 Aport~31 \
+ Aport~8 DXport~1 Yinport~2 Xinport~31 Yinport~0 Yinport~1 Yinport~3 \
+ Yinport~4 Aport~0 Aport~30 Uinport~19 Yinport~21 Xinport~17 Xinport~19 \
+ Xinport~15 Xinport~13 Xinport~14 Xinport~23 Xinport~18 Xinport~20 \
+ Xinport~16 Xinport~26 Xinport~27 Xinport~25 Xinport~24 Xinport~22 \
+ Yinport~10 Aport~6 Aport~7 Uinport~7 Uinport~8 Uinport~6 Uinport~11 \
+ Uinport~12 Uinport~10 Uinport~9 Aport~3 Aport~4 Aport~5 Yinport~9 \
+ Xinport~2 Yinport~11 Xinport~3 Yinport~12 Xinport~4 Yinport~19 Xinport~12 \
+ Yinport~13 Xinport~5 Yinport~14 Xinport~6 Yinport~20 Xinport~28 Xinport~29 \
+ DXport~3 DXport~4 DXport~5 DXport~6 DXport~7 DXport~8 DXport~9 DXport~10 \
+ DXport~11 DXport~12 DXport~13 DXport~14 DXport~15 DXport~16 DXport~17 \
+ DXport~18 DXport~19 DXport~20 DXport~21 DXport~22 DXport~23 DXport~24 \
+ DXport~25 DXport~26 DXport~27 DXport~28 DXport~29 DXport~30 DXport~31 clk \
+ reset
+.outputs Xoutport~0 Xoutport~1 Xoutport~2 Xoutport~3 Xoutport~4 Xoutport~5 \
+ Xoutport~6 Xoutport~7 Xoutport~8 Xoutport~9 Xoutport~10 Xoutport~11 \
+ Xoutport~12 Xoutport~13 Xoutport~14 Xoutport~15 Xoutport~16 Xoutport~17 \
+ Xoutport~18 Xoutport~19 Xoutport~20 Xoutport~21 Xoutport~22 Xoutport~23 \
+ Xoutport~24 Xoutport~25 Xoutport~26 Xoutport~27 Xoutport~28 Xoutport~29 \
+ Xoutport~30 Xoutport~31 Youtport~0 Youtport~1 Youtport~2 Youtport~3 \
+ Youtport~4 Youtport~5 Youtport~6 Youtport~7 Youtport~8 Youtport~9 \
+ Youtport~10 Youtport~11 Youtport~12 Youtport~13 Youtport~14 Youtport~15 \
+ Youtport~16 Youtport~17 Youtport~18 Youtport~19 Youtport~20 Youtport~21 \
+ Youtport~22 Youtport~23 Youtport~24 Youtport~25 Youtport~26 Youtport~27 \
+ Youtport~28 Youtport~29 Youtport~30 Youtport~31 Uoutport~0 Uoutport~1 \
+ Uoutport~2 Uoutport~3 Uoutport~4 Uoutport~5 Uoutport~6 Uoutport~7 \
+ Uoutport~8 Uoutport~9 Uoutport~10 Uoutport~11 Uoutport~12 Uoutport~13 \
+ Uoutport~14 Uoutport~15 Uoutport~16 Uoutport~17 Uoutport~18 Uoutport~19 \
+ Uoutport~20 Uoutport~21 Uoutport~22 Uoutport~23 Uoutport~24 Uoutport~25 \
+ Uoutport~26 Uoutport~27 Uoutport~28 Uoutport~29 Uoutport~30 Uoutport~31
+
+.latch      n1046 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[0]  0
+.latch      n1051 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[1]  0
+.latch      n1056 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[2]  0
+.latch      n1061 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[3]  0
+.latch      n1066 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[4]  0
+.latch      n1071 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[5]  0
+.latch      n1076 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[6]  0
+.latch      n1081 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[7]  0
+.latch      n1086 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[8]  0
+.latch      n1091 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[9]  0
+.latch      n1096 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[10]  0
+.latch      n1101 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[11]  0
+.latch      n1106 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[12]  0
+.latch      n1111 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[13]  0
+.latch      n1116 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[14]  0
+.latch      n1121 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[15]  0
+.latch      n1126 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[16]  0
+.latch      n1131 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[17]  0
+.latch      n1136 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[18]  0
+.latch      n1141 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[19]  0
+.latch      n1146 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[20]  0
+.latch      n1151 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[21]  0
+.latch      n1156 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[22]  0
+.latch      n1161 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[23]  0
+.latch      n1166 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[24]  0
+.latch      n1171 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[25]  0
+.latch      n1176 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[26]  0
+.latch      n1181 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[27]  0
+.latch      n1186 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[28]  0
+.latch      n1191 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[29]  0
+.latch      n1196 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[30]  0
+.latch      n1201 $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[31]  0
+.latch      n1206 Xoutport~0  0
+.latch      n1210 Xoutport~1  0
+.latch      n1214 Xoutport~2  0
+.latch      n1218 Xoutport~3  0
+.latch      n1222 Xoutport~4  0
+.latch      n1226 Xoutport~5  0
+.latch      n1230 Xoutport~6  0
+.latch      n1234 Xoutport~7  0
+.latch      n1238 Xoutport~8  0
+.latch      n1242 Xoutport~9  0
+.latch      n1246 Xoutport~10  0
+.latch      n1250 Xoutport~11  0
+.latch      n1254 Xoutport~12  0
+.latch      n1258 Xoutport~13  0
+.latch      n1262 Xoutport~14  0
+.latch      n1266 Xoutport~15  0
+.latch      n1270 Xoutport~16  0
+.latch      n1274 Xoutport~17  0
+.latch      n1278 Xoutport~18  0
+.latch      n1282 Xoutport~19  0
+.latch      n1286 Xoutport~20  0
+.latch      n1290 Xoutport~21  0
+.latch      n1294 Xoutport~22  0
+.latch      n1298 Xoutport~23  0
+.latch      n1302 Xoutport~24  0
+.latch      n1306 Xoutport~25  0
+.latch      n1310 Xoutport~26  0
+.latch      n1314 Xoutport~27  0
+.latch      n1318 Xoutport~28  0
+.latch      n1322 Xoutport~29  0
+.latch      n1326 Xoutport~30  0
+.latch      n1330 Xoutport~31  0
+.latch      n1334 $sdffe~3^Q~0  0
+.latch      n1339 $sdffe~3^Q~1  0
+.latch      n1344 $sdffe~3^Q~2  0
+.latch      n1349 $sdffe~3^Q~3  0
+.latch      n1354 $sdffe~3^Q~4  0
+.latch      n1359 $sdffe~3^Q~5  0
+.latch      n1364 $sdffe~3^Q~6  0
+.latch      n1369 $sdffe~3^Q~7  0
+.latch      n1374 $sdffe~3^Q~8  0
+.latch      n1379 $sdffe~3^Q~9  0
+.latch      n1384 $sdffe~3^Q~10  0
+.latch      n1389 $sdffe~3^Q~11  0
+.latch      n1394 $sdffe~3^Q~12  0
+.latch      n1399 $sdffe~3^Q~13  0
+.latch      n1404 $sdffe~3^Q~14  0
+.latch      n1409 $sdffe~3^Q~15  0
+.latch      n1414 $sdffe~3^Q~16  0
+.latch      n1419 $sdffe~3^Q~17  0
+.latch      n1424 $sdffe~3^Q~18  0
+.latch      n1429 $sdffe~3^Q~19  0
+.latch      n1434 $sdffe~3^Q~20  0
+.latch      n1439 $sdffe~3^Q~21  0
+.latch      n1444 $sdffe~3^Q~22  0
+.latch      n1449 $sdffe~3^Q~23  0
+.latch      n1454 $sdffe~3^Q~24  0
+.latch      n1459 $sdffe~3^Q~25  0
+.latch      n1464 $sdffe~3^Q~26  0
+.latch      n1469 $sdffe~3^Q~27  0
+.latch      n1474 $sdffe~3^Q~28  0
+.latch      n1479 $sdffe~3^Q~29  0
+.latch      n1484 $sdffe~3^Q~30  0
+.latch      n1489 $sdffe~3^Q~31  0
+.latch      n1494 Uoutport~0  0
+.latch      n1498 Uoutport~1  0
+.latch      n1502 Uoutport~2  0
+.latch      n1506 Uoutport~3  0
+.latch      n1510 Uoutport~4  0
+.latch      n1514 Uoutport~5  0
+.latch      n1518 Uoutport~6  0
+.latch      n1522 Uoutport~7  0
+.latch      n1526 Uoutport~8  0
+.latch      n1530 Uoutport~9  0
+.latch      n1534 Uoutport~10  0
+.latch      n1538 Uoutport~11  0
+.latch      n1542 Uoutport~12  0
+.latch      n1546 Uoutport~13  0
+.latch      n1550 Uoutport~14  0
+.latch      n1554 Uoutport~15  0
+.latch      n1558 Uoutport~16  0
+.latch      n1562 Uoutport~17  0
+.latch      n1566 Uoutport~18  0
+.latch      n1570 Uoutport~19  0
+.latch      n1574 Uoutport~20  0
+.latch      n1578 Uoutport~21  0
+.latch      n1582 Uoutport~22  0
+.latch      n1586 Uoutport~23  0
+.latch      n1590 Uoutport~24  0
+.latch      n1594 Uoutport~25  0
+.latch      n1598 Uoutport~26  0
+.latch      n1602 Uoutport~27  0
+.latch      n1606 Uoutport~28  0
+.latch      n1610 Uoutport~29  0
+.latch      n1614 Uoutport~30  0
+.latch      n1618 Uoutport~31  0
+.latch      n1622 $sdffe~4^Q~0  0
+.latch      n1627 $sdffe~4^Q~1  0
+.latch      n1632 $sdffe~4^Q~2  0
+.latch      n1637 $sdffe~4^Q~3  0
+.latch      n1642 $sdffe~4^Q~4  0
+.latch      n1647 $sdffe~4^Q~5  0
+.latch      n1652 $sdffe~4^Q~6  0
+.latch      n1657 $sdffe~4^Q~7  0
+.latch      n1662 $sdffe~4^Q~8  0
+.latch      n1667 $sdffe~4^Q~9  0
+.latch      n1672 $sdffe~4^Q~10  0
+.latch      n1677 $sdffe~4^Q~11  0
+.latch      n1682 $sdffe~4^Q~12  0
+.latch      n1687 $sdffe~4^Q~13  0
+.latch      n1692 $sdffe~4^Q~14  0
+.latch      n1697 $sdffe~4^Q~15  0
+.latch      n1702 $sdffe~4^Q~16  0
+.latch      n1707 $sdffe~4^Q~17  0
+.latch      n1712 $sdffe~4^Q~18  0
+.latch      n1717 $sdffe~4^Q~19  0
+.latch      n1722 $sdffe~4^Q~20  0
+.latch      n1727 $sdffe~4^Q~21  0
+.latch      n1732 $sdffe~4^Q~22  0
+.latch      n1737 $sdffe~4^Q~23  0
+.latch      n1742 $sdffe~4^Q~24  0
+.latch      n1747 $sdffe~4^Q~25  0
+.latch      n1752 $sdffe~4^Q~26  0
+.latch      n1757 $sdffe~4^Q~27  0
+.latch      n1762 $sdffe~4^Q~28  0
+.latch      n1767 $sdffe~4^Q~29  0
+.latch      n1772 $sdffe~4^Q~30  0
+.latch      n1777 $sdffe~4^Q~31  0
+.latch      n1782 Youtport~0  0
+.latch      n1786 Youtport~1  0
+.latch      n1790 Youtport~2  0
+.latch      n1794 Youtport~3  0
+.latch      n1798 Youtport~4  0
+.latch      n1802 Youtport~5  0
+.latch      n1806 Youtport~6  0
+.latch      n1810 Youtport~7  0
+.latch      n1814 Youtport~8  0
+.latch      n1818 Youtport~9  0
+.latch      n1822 Youtport~10  0
+.latch      n1826 Youtport~11  0
+.latch      n1830 Youtport~12  0
+.latch      n1834 Youtport~13  0
+.latch      n1838 Youtport~14  0
+.latch      n1842 Youtport~15  0
+.latch      n1846 Youtport~16  0
+.latch      n1850 Youtport~17  0
+.latch      n1854 Youtport~18  0
+.latch      n1858 Youtport~19  0
+.latch      n1862 Youtport~20  0
+.latch      n1866 Youtport~21  0
+.latch      n1870 Youtport~22  0
+.latch      n1874 Youtport~23  0
+.latch      n1878 Youtport~24  0
+.latch      n1882 Youtport~25  0
+.latch      n1886 Youtport~26  0
+.latch      n1890 Youtport~27  0
+.latch      n1894 Youtport~28  0
+.latch      n1898 Youtport~29  0
+.latch      n1902 Youtport~30  0
+.latch      n1906 Youtport~31  0
+.latch      n1910 $sdff~2^Q~0  0
+
+
+.subckt adder a=vcc b=gnd cin=gnd cout=$add~1^ADD~0-0[0] sumout=$add~1^ADD~0-0~dummy_output~0~1
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[0] b=DXport~0 cin=$add~1^ADD~0-0[0] cout=$add~1^ADD~0-1[0] sumout=$add~1^ADD~0-1[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[1] b=DXport~1 cin=$add~1^ADD~0-1[0] cout=$add~1^ADD~0-2[0] sumout=$add~1^ADD~0-2[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[2] b=DXport~2 cin=$add~1^ADD~0-2[0] cout=$add~1^ADD~0-3[0] sumout=$add~1^ADD~0-3[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[3] b=DXport~3 cin=$add~1^ADD~0-3[0] cout=$add~1^ADD~0-4[0] sumout=$add~1^ADD~0-4[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[4] b=DXport~4 cin=$add~1^ADD~0-4[0] cout=$add~1^ADD~0-5[0] sumout=$add~1^ADD~0-5[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[5] b=DXport~5 cin=$add~1^ADD~0-5[0] cout=$add~1^ADD~0-6[0] sumout=$add~1^ADD~0-6[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[6] b=DXport~6 cin=$add~1^ADD~0-6[0] cout=$add~1^ADD~0-7[0] sumout=$add~1^ADD~0-7[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[7] b=DXport~7 cin=$add~1^ADD~0-7[0] cout=$add~1^ADD~0-8[0] sumout=$add~1^ADD~0-8[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[8] b=DXport~8 cin=$add~1^ADD~0-8[0] cout=$add~1^ADD~0-9[0] sumout=$add~1^ADD~0-9[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[9] b=DXport~9 cin=$add~1^ADD~0-9[0] cout=$add~1^ADD~0-10[0] sumout=$add~1^ADD~0-10[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[10] b=DXport~10 cin=$add~1^ADD~0-10[0] cout=$add~1^ADD~0-11[0] sumout=$add~1^ADD~0-11[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[11] b=DXport~11 cin=$add~1^ADD~0-11[0] cout=$add~1^ADD~0-12[0] sumout=$add~1^ADD~0-12[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[12] b=DXport~12 cin=$add~1^ADD~0-12[0] cout=$add~1^ADD~0-13[0] sumout=$add~1^ADD~0-13[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[13] b=DXport~13 cin=$add~1^ADD~0-13[0] cout=$add~1^ADD~0-14[0] sumout=$add~1^ADD~0-14[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[14] b=DXport~14 cin=$add~1^ADD~0-14[0] cout=$add~1^ADD~0-15[0] sumout=$add~1^ADD~0-15[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[15] b=DXport~15 cin=$add~1^ADD~0-15[0] cout=$add~1^ADD~0-16[0] sumout=$add~1^ADD~0-16[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[16] b=DXport~16 cin=$add~1^ADD~0-16[0] cout=$add~1^ADD~0-17[0] sumout=$add~1^ADD~0-17[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[17] b=DXport~17 cin=$add~1^ADD~0-17[0] cout=$add~1^ADD~0-18[0] sumout=$add~1^ADD~0-18[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[18] b=DXport~18 cin=$add~1^ADD~0-18[0] cout=$add~1^ADD~0-19[0] sumout=$add~1^ADD~0-19[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[19] b=DXport~19 cin=$add~1^ADD~0-19[0] cout=$add~1^ADD~0-20[0] sumout=$add~1^ADD~0-20[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[20] b=DXport~20 cin=$add~1^ADD~0-20[0] cout=$add~1^ADD~0-21[0] sumout=$add~1^ADD~0-21[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[21] b=DXport~21 cin=$add~1^ADD~0-21[0] cout=$add~1^ADD~0-22[0] sumout=$add~1^ADD~0-22[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[22] b=DXport~22 cin=$add~1^ADD~0-22[0] cout=$add~1^ADD~0-23[0] sumout=$add~1^ADD~0-23[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[23] b=DXport~23 cin=$add~1^ADD~0-23[0] cout=$add~1^ADD~0-24[0] sumout=$add~1^ADD~0-24[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[24] b=DXport~24 cin=$add~1^ADD~0-24[0] cout=$add~1^ADD~0-25[0] sumout=$add~1^ADD~0-25[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[25] b=DXport~25 cin=$add~1^ADD~0-25[0] cout=$add~1^ADD~0-26[0] sumout=$add~1^ADD~0-26[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[26] b=DXport~26 cin=$add~1^ADD~0-26[0] cout=$add~1^ADD~0-27[0] sumout=$add~1^ADD~0-27[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[27] b=DXport~27 cin=$add~1^ADD~0-27[0] cout=$add~1^ADD~0-28[0] sumout=$add~1^ADD~0-28[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[28] b=DXport~28 cin=$add~1^ADD~0-28[0] cout=$add~1^ADD~0-29[0] sumout=$add~1^ADD~0-29[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[29] b=DXport~29 cin=$add~1^ADD~0-29[0] cout=$add~1^ADD~0-30[0] sumout=$add~1^ADD~0-30[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[30] b=DXport~30 cin=$add~1^ADD~0-30[0] cout=$add~1^ADD~0-31[0] sumout=$add~1^ADD~0-31[1]
+.subckt adder a=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[31] b=DXport~31 cin=$add~1^ADD~0-31[0] cout=$add~1^ADD~0-32[0] sumout=$add~1^ADD~0-32[1]
+.subckt adder a=$sdffe~4^Q~0 b=$mul~14[0] cin=$add~0^ADD~2-0[0] cout=$add~0^ADD~2-1[0] sumout=$add~0^ADD~2-1[1]
+.subckt adder a=$sdffe~4^Q~1 b=$mul~14[1] cin=$add~0^ADD~2-1[0] cout=$add~0^ADD~2-2[0] sumout=$add~0^ADD~2-2[1]
+.subckt adder a=$sdffe~4^Q~2 b=$mul~14[2] cin=$add~0^ADD~2-2[0] cout=$add~0^ADD~2-3[0] sumout=$add~0^ADD~2-3[1]
+.subckt adder a=$sdffe~4^Q~3 b=$mul~14[3] cin=$add~0^ADD~2-3[0] cout=$add~0^ADD~2-4[0] sumout=$add~0^ADD~2-4[1]
+.subckt adder a=$sdffe~4^Q~4 b=$mul~14[4] cin=$add~0^ADD~2-4[0] cout=$add~0^ADD~2-5[0] sumout=$add~0^ADD~2-5[1]
+.subckt adder a=$sdffe~4^Q~5 b=$mul~14[5] cin=$add~0^ADD~2-5[0] cout=$add~0^ADD~2-6[0] sumout=$add~0^ADD~2-6[1]
+.subckt adder a=$sdffe~4^Q~6 b=$mul~14[6] cin=$add~0^ADD~2-6[0] cout=$add~0^ADD~2-7[0] sumout=$add~0^ADD~2-7[1]
+.subckt adder a=$sdffe~4^Q~7 b=$mul~14[7] cin=$add~0^ADD~2-7[0] cout=$add~0^ADD~2-8[0] sumout=$add~0^ADD~2-8[1]
+.subckt adder a=$sdffe~4^Q~8 b=$mul~14[8] cin=$add~0^ADD~2-8[0] cout=$add~0^ADD~2-9[0] sumout=$add~0^ADD~2-9[1]
+.subckt adder a=$sdffe~4^Q~9 b=$mul~14[9] cin=$add~0^ADD~2-9[0] cout=$add~0^ADD~2-10[0] sumout=$add~0^ADD~2-10[1]
+.subckt adder a=$sdffe~4^Q~10 b=$mul~14[10] cin=$add~0^ADD~2-10[0] cout=$add~0^ADD~2-11[0] sumout=$add~0^ADD~2-11[1]
+.subckt adder a=$sdffe~4^Q~11 b=$mul~14[11] cin=$add~0^ADD~2-11[0] cout=$add~0^ADD~2-12[0] sumout=$add~0^ADD~2-12[1]
+.subckt adder a=$sdffe~4^Q~12 b=$mul~14[12] cin=$add~0^ADD~2-12[0] cout=$add~0^ADD~2-13[0] sumout=$add~0^ADD~2-13[1]
+.subckt adder a=$sdffe~4^Q~13 b=$mul~14[13] cin=$add~0^ADD~2-13[0] cout=$add~0^ADD~2-14[0] sumout=$add~0^ADD~2-14[1]
+.subckt adder a=$sdffe~4^Q~14 b=$mul~14[14] cin=$add~0^ADD~2-14[0] cout=$add~0^ADD~2-15[0] sumout=$add~0^ADD~2-15[1]
+.subckt adder a=$sdffe~4^Q~15 b=$mul~14[15] cin=$add~0^ADD~2-15[0] cout=$add~0^ADD~2-16[0] sumout=$add~0^ADD~2-16[1]
+.subckt adder a=$sdffe~4^Q~16 b=$mul~14[16] cin=$add~0^ADD~2-16[0] cout=$add~0^ADD~2-17[0] sumout=$add~0^ADD~2-17[1]
+.subckt adder a=$sdffe~4^Q~17 b=$mul~14[17] cin=$add~0^ADD~2-17[0] cout=$add~0^ADD~2-18[0] sumout=$add~0^ADD~2-18[1]
+.subckt adder a=$sdffe~4^Q~18 b=$mul~14[18] cin=$add~0^ADD~2-18[0] cout=$add~0^ADD~2-19[0] sumout=$add~0^ADD~2-19[1]
+.subckt adder a=$sdffe~4^Q~19 b=$mul~14[19] cin=$add~0^ADD~2-19[0] cout=$add~0^ADD~2-20[0] sumout=$add~0^ADD~2-20[1]
+.subckt adder a=$sdffe~4^Q~20 b=$mul~14[20] cin=$add~0^ADD~2-20[0] cout=$add~0^ADD~2-21[0] sumout=$add~0^ADD~2-21[1]
+.subckt adder a=$sdffe~4^Q~21 b=$mul~14[21] cin=$add~0^ADD~2-21[0] cout=$add~0^ADD~2-22[0] sumout=$add~0^ADD~2-22[1]
+.subckt adder a=$sdffe~4^Q~22 b=$mul~14[22] cin=$add~0^ADD~2-22[0] cout=$add~0^ADD~2-23[0] sumout=$add~0^ADD~2-23[1]
+.subckt adder a=$sdffe~4^Q~23 b=$mul~14[23] cin=$add~0^ADD~2-23[0] cout=$add~0^ADD~2-24[0] sumout=$add~0^ADD~2-24[1]
+.subckt adder a=$sdffe~4^Q~24 b=$mul~14[24] cin=$add~0^ADD~2-24[0] cout=$add~0^ADD~2-25[0] sumout=$add~0^ADD~2-25[1]
+.subckt adder a=$sdffe~4^Q~25 b=$mul~14[25] cin=$add~0^ADD~2-25[0] cout=$add~0^ADD~2-26[0] sumout=$add~0^ADD~2-26[1]
+.subckt adder a=$sdffe~4^Q~26 b=$mul~14[26] cin=$add~0^ADD~2-26[0] cout=$add~0^ADD~2-27[0] sumout=$add~0^ADD~2-27[1]
+.subckt adder a=$sdffe~4^Q~27 b=$mul~14[27] cin=$add~0^ADD~2-27[0] cout=$add~0^ADD~2-28[0] sumout=$add~0^ADD~2-28[1]
+.subckt adder a=$sdffe~4^Q~28 b=$mul~14[28] cin=$add~0^ADD~2-28[0] cout=$add~0^ADD~2-29[0] sumout=$add~0^ADD~2-29[1]
+.subckt adder a=$sdffe~4^Q~29 b=$mul~14[29] cin=$add~0^ADD~2-29[0] cout=$add~0^ADD~2-30[0] sumout=$add~0^ADD~2-30[1]
+.subckt adder a=$sdffe~4^Q~30 b=$mul~14[30] cin=$add~0^ADD~2-30[0] cout=$add~0^ADD~2-31[0] sumout=$add~0^ADD~2-31[1]
+.subckt adder a=$sdffe~4^Q~31 b=$mul~14[31] cin=$add~0^ADD~2-31[0] cout=$add~0^ADD~2-32[0] sumout=$add~0^ADD~2-32[1]
+.subckt adder a=$sub~23^MIN~3-1[1] b=lNOT~36 cin=$sub~24^MIN~1-0[0] cout=$sub~24^MIN~1-1[0] sumout=$sub~24^MIN~1-1[1]
+.subckt adder a=$sub~23^MIN~3-2[1] b=lNOT~37 cin=$sub~24^MIN~1-1[0] cout=$sub~24^MIN~1-2[0] sumout=$sub~24^MIN~1-2[1]
+.subckt adder a=$sub~23^MIN~3-3[1] b=lNOT~38 cin=$sub~24^MIN~1-2[0] cout=$sub~24^MIN~1-3[0] sumout=$sub~24^MIN~1-3[1]
+.subckt adder a=$sub~23^MIN~3-4[1] b=lNOT~39 cin=$sub~24^MIN~1-3[0] cout=$sub~24^MIN~1-4[0] sumout=$sub~24^MIN~1-4[1]
+.subckt adder a=$sub~23^MIN~3-5[1] b=lNOT~40 cin=$sub~24^MIN~1-4[0] cout=$sub~24^MIN~1-5[0] sumout=$sub~24^MIN~1-5[1]
+.subckt adder a=$sub~23^MIN~3-6[1] b=lNOT~41 cin=$sub~24^MIN~1-5[0] cout=$sub~24^MIN~1-6[0] sumout=$sub~24^MIN~1-6[1]
+.subckt adder a=$sub~23^MIN~3-7[1] b=lNOT~42 cin=$sub~24^MIN~1-6[0] cout=$sub~24^MIN~1-7[0] sumout=$sub~24^MIN~1-7[1]
+.subckt adder a=$sub~23^MIN~3-8[1] b=lNOT~43 cin=$sub~24^MIN~1-7[0] cout=$sub~24^MIN~1-8[0] sumout=$sub~24^MIN~1-8[1]
+.subckt adder a=$sub~23^MIN~3-9[1] b=lNOT~44 cin=$sub~24^MIN~1-8[0] cout=$sub~24^MIN~1-9[0] sumout=$sub~24^MIN~1-9[1]
+.subckt adder a=$sub~23^MIN~3-10[1] b=lNOT~45 cin=$sub~24^MIN~1-9[0] cout=$sub~24^MIN~1-10[0] sumout=$sub~24^MIN~1-10[1]
+.subckt adder a=$sub~23^MIN~3-11[1] b=lNOT~46 cin=$sub~24^MIN~1-10[0] cout=$sub~24^MIN~1-11[0] sumout=$sub~24^MIN~1-11[1]
+.subckt adder a=$sub~23^MIN~3-12[1] b=lNOT~47 cin=$sub~24^MIN~1-11[0] cout=$sub~24^MIN~1-12[0] sumout=$sub~24^MIN~1-12[1]
+.subckt adder a=$sub~23^MIN~3-13[1] b=lNOT~48 cin=$sub~24^MIN~1-12[0] cout=$sub~24^MIN~1-13[0] sumout=$sub~24^MIN~1-13[1]
+.subckt adder a=$sub~23^MIN~3-14[1] b=lNOT~49 cin=$sub~24^MIN~1-13[0] cout=$sub~24^MIN~1-14[0] sumout=$sub~24^MIN~1-14[1]
+.subckt adder a=$sub~23^MIN~3-15[1] b=lNOT~50 cin=$sub~24^MIN~1-14[0] cout=$sub~24^MIN~1-15[0] sumout=$sub~24^MIN~1-15[1]
+.subckt adder a=$sub~23^MIN~3-16[1] b=lNOT~51 cin=$sub~24^MIN~1-15[0] cout=$sub~24^MIN~1-16[0] sumout=$sub~24^MIN~1-16[1]
+.subckt adder a=$sub~23^MIN~3-17[1] b=lNOT~52 cin=$sub~24^MIN~1-16[0] cout=$sub~24^MIN~1-17[0] sumout=$sub~24^MIN~1-17[1]
+.subckt adder a=$sub~23^MIN~3-18[1] b=lNOT~53 cin=$sub~24^MIN~1-17[0] cout=$sub~24^MIN~1-18[0] sumout=$sub~24^MIN~1-18[1]
+.subckt adder a=$sub~23^MIN~3-19[1] b=lNOT~54 cin=$sub~24^MIN~1-18[0] cout=$sub~24^MIN~1-19[0] sumout=$sub~24^MIN~1-19[1]
+.subckt adder a=$sub~23^MIN~3-20[1] b=lNOT~55 cin=$sub~24^MIN~1-19[0] cout=$sub~24^MIN~1-20[0] sumout=$sub~24^MIN~1-20[1]
+.subckt adder a=$sub~23^MIN~3-21[1] b=lNOT~56 cin=$sub~24^MIN~1-20[0] cout=$sub~24^MIN~1-21[0] sumout=$sub~24^MIN~1-21[1]
+.subckt adder a=$sub~23^MIN~3-22[1] b=lNOT~57 cin=$sub~24^MIN~1-21[0] cout=$sub~24^MIN~1-22[0] sumout=$sub~24^MIN~1-22[1]
+.subckt adder a=$sub~23^MIN~3-23[1] b=lNOT~58 cin=$sub~24^MIN~1-22[0] cout=$sub~24^MIN~1-23[0] sumout=$sub~24^MIN~1-23[1]
+.subckt adder a=$sub~23^MIN~3-24[1] b=lNOT~59 cin=$sub~24^MIN~1-23[0] cout=$sub~24^MIN~1-24[0] sumout=$sub~24^MIN~1-24[1]
+.subckt adder a=$sub~23^MIN~3-25[1] b=lNOT~60 cin=$sub~24^MIN~1-24[0] cout=$sub~24^MIN~1-25[0] sumout=$sub~24^MIN~1-25[1]
+.subckt adder a=$sub~23^MIN~3-26[1] b=lNOT~61 cin=$sub~24^MIN~1-25[0] cout=$sub~24^MIN~1-26[0] sumout=$sub~24^MIN~1-26[1]
+.subckt adder a=$sub~23^MIN~3-27[1] b=lNOT~62 cin=$sub~24^MIN~1-26[0] cout=$sub~24^MIN~1-27[0] sumout=$sub~24^MIN~1-27[1]
+.subckt adder a=$sub~23^MIN~3-28[1] b=lNOT~63 cin=$sub~24^MIN~1-27[0] cout=$sub~24^MIN~1-28[0] sumout=$sub~24^MIN~1-28[1]
+.subckt adder a=$sub~23^MIN~3-29[1] b=lNOT~64 cin=$sub~24^MIN~1-28[0] cout=$sub~24^MIN~1-29[0] sumout=$sub~24^MIN~1-29[1]
+.subckt adder a=$sub~23^MIN~3-30[1] b=lNOT~65 cin=$sub~24^MIN~1-29[0] cout=$sub~24^MIN~1-30[0] sumout=$sub~24^MIN~1-30[1]
+.subckt adder a=$sub~23^MIN~3-31[1] b=lNOT~66 cin=$sub~24^MIN~1-30[0] cout=$sub~24^MIN~1-31[0] sumout=$sub~24^MIN~1-31[1]
+.subckt adder a=$sub~23^MIN~3-32[1] b=lNOT~67 cin=$sub~24^MIN~1-31[0] cout=$sub~24^MIN~1-32~dummy_output~32~0 sumout=$sub~24^MIN~1-32[1]
+.subckt adder a=$sdffe~3^Q~0 b=lNOT~4 cin=$sub~23^MIN~3-0[0] cout=$sub~23^MIN~3-1[0] sumout=$sub~23^MIN~3-1[1]
+.subckt adder a=$sdffe~3^Q~1 b=lNOT~5 cin=$sub~23^MIN~3-1[0] cout=$sub~23^MIN~3-2[0] sumout=$sub~23^MIN~3-2[1]
+.subckt adder a=$sdffe~3^Q~2 b=lNOT~6 cin=$sub~23^MIN~3-2[0] cout=$sub~23^MIN~3-3[0] sumout=$sub~23^MIN~3-3[1]
+.subckt adder a=$sdffe~3^Q~3 b=lNOT~7 cin=$sub~23^MIN~3-3[0] cout=$sub~23^MIN~3-4[0] sumout=$sub~23^MIN~3-4[1]
+.subckt adder a=$sdffe~3^Q~4 b=lNOT~8 cin=$sub~23^MIN~3-4[0] cout=$sub~23^MIN~3-5[0] sumout=$sub~23^MIN~3-5[1]
+.subckt adder a=$sdffe~3^Q~5 b=lNOT~9 cin=$sub~23^MIN~3-5[0] cout=$sub~23^MIN~3-6[0] sumout=$sub~23^MIN~3-6[1]
+.subckt adder a=$sdffe~3^Q~6 b=lNOT~10 cin=$sub~23^MIN~3-6[0] cout=$sub~23^MIN~3-7[0] sumout=$sub~23^MIN~3-7[1]
+.subckt adder a=$sdffe~3^Q~7 b=lNOT~11 cin=$sub~23^MIN~3-7[0] cout=$sub~23^MIN~3-8[0] sumout=$sub~23^MIN~3-8[1]
+.subckt adder a=$sdffe~3^Q~8 b=lNOT~12 cin=$sub~23^MIN~3-8[0] cout=$sub~23^MIN~3-9[0] sumout=$sub~23^MIN~3-9[1]
+.subckt adder a=$sdffe~3^Q~9 b=lNOT~13 cin=$sub~23^MIN~3-9[0] cout=$sub~23^MIN~3-10[0] sumout=$sub~23^MIN~3-10[1]
+.subckt adder a=$sdffe~3^Q~10 b=lNOT~14 cin=$sub~23^MIN~3-10[0] cout=$sub~23^MIN~3-11[0] sumout=$sub~23^MIN~3-11[1]
+.subckt adder a=$sdffe~3^Q~11 b=lNOT~15 cin=$sub~23^MIN~3-11[0] cout=$sub~23^MIN~3-12[0] sumout=$sub~23^MIN~3-12[1]
+.subckt adder a=$sdffe~3^Q~12 b=lNOT~16 cin=$sub~23^MIN~3-12[0] cout=$sub~23^MIN~3-13[0] sumout=$sub~23^MIN~3-13[1]
+.subckt adder a=$sdffe~3^Q~13 b=lNOT~17 cin=$sub~23^MIN~3-13[0] cout=$sub~23^MIN~3-14[0] sumout=$sub~23^MIN~3-14[1]
+.subckt adder a=$sdffe~3^Q~14 b=lNOT~18 cin=$sub~23^MIN~3-14[0] cout=$sub~23^MIN~3-15[0] sumout=$sub~23^MIN~3-15[1]
+.subckt adder a=$sdffe~3^Q~15 b=lNOT~19 cin=$sub~23^MIN~3-15[0] cout=$sub~23^MIN~3-16[0] sumout=$sub~23^MIN~3-16[1]
+.subckt adder a=$sdffe~3^Q~16 b=lNOT~20 cin=$sub~23^MIN~3-16[0] cout=$sub~23^MIN~3-17[0] sumout=$sub~23^MIN~3-17[1]
+.subckt adder a=$sdffe~3^Q~17 b=lNOT~21 cin=$sub~23^MIN~3-17[0] cout=$sub~23^MIN~3-18[0] sumout=$sub~23^MIN~3-18[1]
+.subckt adder a=$sdffe~3^Q~18 b=lNOT~22 cin=$sub~23^MIN~3-18[0] cout=$sub~23^MIN~3-19[0] sumout=$sub~23^MIN~3-19[1]
+.subckt adder a=$sdffe~3^Q~19 b=lNOT~23 cin=$sub~23^MIN~3-19[0] cout=$sub~23^MIN~3-20[0] sumout=$sub~23^MIN~3-20[1]
+.subckt adder a=$sdffe~3^Q~20 b=lNOT~24 cin=$sub~23^MIN~3-20[0] cout=$sub~23^MIN~3-21[0] sumout=$sub~23^MIN~3-21[1]
+.subckt adder a=$sdffe~3^Q~21 b=lNOT~25 cin=$sub~23^MIN~3-21[0] cout=$sub~23^MIN~3-22[0] sumout=$sub~23^MIN~3-22[1]
+.subckt adder a=$sdffe~3^Q~22 b=lNOT~26 cin=$sub~23^MIN~3-22[0] cout=$sub~23^MIN~3-23[0] sumout=$sub~23^MIN~3-23[1]
+.subckt adder a=$sdffe~3^Q~23 b=lNOT~27 cin=$sub~23^MIN~3-23[0] cout=$sub~23^MIN~3-24[0] sumout=$sub~23^MIN~3-24[1]
+.subckt adder a=$sdffe~3^Q~24 b=lNOT~28 cin=$sub~23^MIN~3-24[0] cout=$sub~23^MIN~3-25[0] sumout=$sub~23^MIN~3-25[1]
+.subckt adder a=$sdffe~3^Q~25 b=lNOT~29 cin=$sub~23^MIN~3-25[0] cout=$sub~23^MIN~3-26[0] sumout=$sub~23^MIN~3-26[1]
+.subckt adder a=$sdffe~3^Q~26 b=lNOT~30 cin=$sub~23^MIN~3-26[0] cout=$sub~23^MIN~3-27[0] sumout=$sub~23^MIN~3-27[1]
+.subckt adder a=$sdffe~3^Q~27 b=lNOT~31 cin=$sub~23^MIN~3-27[0] cout=$sub~23^MIN~3-28[0] sumout=$sub~23^MIN~3-28[1]
+.subckt adder a=$sdffe~3^Q~28 b=lNOT~32 cin=$sub~23^MIN~3-28[0] cout=$sub~23^MIN~3-29[0] sumout=$sub~23^MIN~3-29[1]
+.subckt adder a=$sdffe~3^Q~29 b=lNOT~33 cin=$sub~23^MIN~3-29[0] cout=$sub~23^MIN~3-30[0] sumout=$sub~23^MIN~3-30[1]
+.subckt adder a=$sdffe~3^Q~30 b=lNOT~34 cin=$sub~23^MIN~3-30[0] cout=$sub~23^MIN~3-31[0] sumout=$sub~23^MIN~3-31[1]
+.subckt adder a=$sdffe~3^Q~31 b=lNOT~35 cin=$sub~23^MIN~3-31[0] cout=$sub~23^MIN~3-32~dummy_output~32~0 sumout=$sub~23^MIN~3-32[1]
+.subckt adder a=vcc b=gnd cin=gnd cout=$add~0^ADD~2-0[0] sumout=$add~0^ADD~2-0~dummy_output~0~1
+.subckt adder a=gnd b=vcc cin=unconn cout=$sub~23^MIN~3-0[0] sumout=$sub~23^MIN~3-0~dummy_output~0~1
+.subckt adder a=gnd b=vcc cin=unconn cout=$sub~24^MIN~1-0[0] sumout=$sub~24^MIN~1-0~dummy_output~0~1
+.subckt multiply a[0]=$sdffe~3^Q~0 a[1]=$sdffe~3^Q~1 a[2]=$sdffe~3^Q~2 a[3]=$sdffe~3^Q~3 a[4]=$sdffe~3^Q~4 a[5]=$sdffe~3^Q~5 a[6]=$sdffe~3^Q~6 a[7]=$sdffe~3^Q~7 a[8]=$sdffe~3^Q~8 a[9]=$sdffe~3^Q~9 a[10]=$sdffe~3^Q~10 a[11]=$sdffe~3^Q~11 a[12]=$sdffe~3^Q~12 a[13]=$sdffe~3^Q~13 a[14]=$sdffe~3^Q~14 a[15]=$sdffe~3^Q~15 a[16]=$sdffe~3^Q~16 a[17]=$sdffe~3^Q~17 a[18]=$sdffe~3^Q~18 a[19]=$sdffe~3^Q~19 a[20]=$sdffe~3^Q~20 a[21]=$sdffe~3^Q~21 a[22]=$sdffe~3^Q~22 a[23]=$sdffe~3^Q~23 a[24]=$sdffe~3^Q~24 a[25]=$sdffe~3^Q~25 a[26]=$sdffe~3^Q~26 a[27]=$sdffe~3^Q~27 a[28]=$sdffe~3^Q~28 a[29]=$sdffe~3^Q~29 a[30]=$sdffe~3^Q~30 a[31]=$sdffe~3^Q~31 a[32]=unconn a[33]=unconn a[34]=unconn a[35]=unconn b[0]=DXport~0 b[1]=DXport~1 b[2]=DXport~2 b[3]=DXport~3 b[4]=DXport~4 b[5]=DXport~5 b[6]=DXport~6 b[7]=DXport~7 b[8]=DXport~8 b[9]=DXport~9 b[10]=DXport~10 b[11]=DXport~11 b[12]=DXport~12 b[13]=DXport~13 b[14]=DXport~14 b[15]=DXport~15 b[16]=DXport~16 b[17]=DXport~17 b[18]=DXport~18 b[19]=DXport~19 b[20]=DXport~20 b[21]=DXport~21 b[22]=DXport~22 b[23]=DXport~23 b[24]=DXport~24 b[25]=DXport~25 b[26]=DXport~26 b[27]=DXport~27 b[28]=DXport~28 b[29]=DXport~29 b[30]=DXport~30 b[31]=DXport~31 b[32]=unconn b[33]=unconn b[34]=unconn b[35]=unconn out[0]=$mul~14[0] out[1]=$mul~14[1] out[2]=$mul~14[2] out[3]=$mul~14[3] out[4]=$mul~14[4] out[5]=$mul~14[5] out[6]=$mul~14[6] out[7]=$mul~14[7] out[8]=$mul~14[8] out[9]=$mul~14[9] out[10]=$mul~14[10] out[11]=$mul~14[11] out[12]=$mul~14[12] out[13]=$mul~14[13] out[14]=$mul~14[14] out[15]=$mul~14[15] out[16]=$mul~14[16] out[17]=$mul~14[17] out[18]=$mul~14[18] out[19]=$mul~14[19] out[20]=$mul~14[20] out[21]=$mul~14[21] out[22]=$mul~14[22] out[23]=$mul~14[23] out[24]=$mul~14[24] out[25]=$mul~14[25] out[26]=$mul~14[26] out[27]=$mul~14[27] out[28]=$mul~14[28] out[29]=$mul~14[29] out[30]=$mul~14[30] out[31]=$mul~14[31] out[32]=$mul~14[32] out[33]=$mul~14[33] out[34]=$mul~14[34] out[35]=$mul~14[35] out[36]=$mul~14[36] out[37]=$mul~14[37] out[38]=$mul~14[38] out[39]=$mul~14[39] out[40]=$mul~14[40] out[41]=$mul~14[41] out[42]=$mul~14[42] out[43]=$mul~14[43] out[44]=$mul~14[44] out[45]=$mul~14[45] out[46]=$mul~14[46] out[47]=$mul~14[47] out[48]=$mul~14[48] out[49]=$mul~14[49] out[50]=$mul~14[50] out[51]=$mul~14[51] out[52]=$mul~14[52] out[53]=$mul~14[53] out[54]=$mul~14[54] out[55]=$mul~14[55] out[56]=$mul~14[56] out[57]=$mul~14[57] out[58]=$mul~14[58] out[59]=$mul~14[59] out[60]=$mul~14[60] out[61]=$mul~14[61] out[62]=$mul~14[62] out[63]=$mul~14[63] out[64]=$mul~14[64] out[65]=$mul~14[65] out[66]=$mul~14[66] out[67]=$mul~14[67] out[68]=$mul~14[68] out[69]=$mul~14[69] out[70]=$mul~14[70] out[71]=$mul~14[71]
+.subckt multiply a[0]=$mul~17[0] a[1]=$mul~17[1] a[2]=$mul~17[2] a[3]=$mul~17[3] a[4]=$mul~17[4] a[5]=$mul~17[5] a[6]=$mul~17[6] a[7]=$mul~17[7] a[8]=$mul~17[8] a[9]=$mul~17[9] a[10]=$mul~17[10] a[11]=$mul~17[11] a[12]=$mul~17[12] a[13]=$mul~17[13] a[14]=$mul~17[14] a[15]=$mul~17[15] a[16]=$mul~17[16] a[17]=$mul~17[17] a[18]=$mul~17[18] a[19]=$mul~17[19] a[20]=$mul~17[20] a[21]=$mul~17[21] a[22]=$mul~17[22] a[23]=$mul~17[23] a[24]=$mul~17[24] a[25]=$mul~17[25] a[26]=$mul~17[26] a[27]=$mul~17[27] a[28]=$mul~17[28] a[29]=$mul~17[29] a[30]=$mul~17[30] a[31]=$mul~17[31] a[32]=unconn a[33]=unconn a[34]=unconn a[35]=unconn b[0]=$sdffe~4^Q~0 b[1]=$sdffe~4^Q~1 b[2]=$sdffe~4^Q~2 b[3]=$sdffe~4^Q~3 b[4]=$sdffe~4^Q~4 b[5]=$sdffe~4^Q~5 b[6]=$sdffe~4^Q~6 b[7]=$sdffe~4^Q~7 b[8]=$sdffe~4^Q~8 b[9]=$sdffe~4^Q~9 b[10]=$sdffe~4^Q~10 b[11]=$sdffe~4^Q~11 b[12]=$sdffe~4^Q~12 b[13]=$sdffe~4^Q~13 b[14]=$sdffe~4^Q~14 b[15]=$sdffe~4^Q~15 b[16]=$sdffe~4^Q~16 b[17]=$sdffe~4^Q~17 b[18]=$sdffe~4^Q~18 b[19]=$sdffe~4^Q~19 b[20]=$sdffe~4^Q~20 b[21]=$sdffe~4^Q~21 b[22]=$sdffe~4^Q~22 b[23]=$sdffe~4^Q~23 b[24]=$sdffe~4^Q~24 b[25]=$sdffe~4^Q~25 b[26]=$sdffe~4^Q~26 b[27]=$sdffe~4^Q~27 b[28]=$sdffe~4^Q~28 b[29]=$sdffe~4^Q~29 b[30]=$sdffe~4^Q~30 b[31]=$sdffe~4^Q~31 b[32]=unconn b[33]=unconn b[34]=unconn b[35]=unconn out[0]=$mul~18[0] out[1]=$mul~18[1] out[2]=$mul~18[2] out[3]=$mul~18[3] out[4]=$mul~18[4] out[5]=$mul~18[5] out[6]=$mul~18[6] out[7]=$mul~18[7] out[8]=$mul~18[8] out[9]=$mul~18[9] out[10]=$mul~18[10] out[11]=$mul~18[11] out[12]=$mul~18[12] out[13]=$mul~18[13] out[14]=$mul~18[14] out[15]=$mul~18[15] out[16]=$mul~18[16] out[17]=$mul~18[17] out[18]=$mul~18[18] out[19]=$mul~18[19] out[20]=$mul~18[20] out[21]=$mul~18[21] out[22]=$mul~18[22] out[23]=$mul~18[23] out[24]=$mul~18[24] out[25]=$mul~18[25] out[26]=$mul~18[26] out[27]=$mul~18[27] out[28]=$mul~18[28] out[29]=$mul~18[29] out[30]=$mul~18[30] out[31]=$mul~18[31] out[32]=$mul~18[32] out[33]=$mul~18[33] out[34]=$mul~18[34] out[35]=$mul~18[35] out[36]=$mul~18[36] out[37]=$mul~18[37] out[38]=$mul~18[38] out[39]=$mul~18[39] out[40]=$mul~18[40] out[41]=$mul~18[41] out[42]=$mul~18[42] out[43]=$mul~18[43] out[44]=$mul~18[44] out[45]=$mul~18[45] out[46]=$mul~18[46] out[47]=$mul~18[47] out[48]=$mul~18[48] out[49]=$mul~18[49] out[50]=$mul~18[50] out[51]=$mul~18[51] out[52]=$mul~18[52] out[53]=$mul~18[53] out[54]=$mul~18[54] out[55]=$mul~18[55] out[56]=$mul~18[56] out[57]=$mul~18[57] out[58]=$mul~18[58] out[59]=$mul~18[59] out[60]=$mul~18[60] out[61]=$mul~18[61] out[62]=$mul~18[62] out[63]=$mul~18[63] out[64]=$mul~18[64] out[65]=$mul~18[65] out[66]=$mul~18[66] out[67]=$mul~18[67] out[68]=$mul~18[68] out[69]=$mul~18[69] out[70]=$mul~18[70] out[71]=$mul~18[71]
+.subckt multiply a[0]=$mul~14[0] a[1]=$mul~14[1] a[2]=$mul~14[2] a[3]=$mul~14[3] a[4]=$mul~14[4] a[5]=$mul~14[5] a[6]=$mul~14[6] a[7]=$mul~14[7] a[8]=$mul~14[8] a[9]=$mul~14[9] a[10]=$mul~14[10] a[11]=$mul~14[11] a[12]=$mul~14[12] a[13]=$mul~14[13] a[14]=$mul~14[14] a[15]=$mul~14[15] a[16]=$mul~14[16] a[17]=$mul~14[17] a[18]=$mul~14[18] a[19]=$mul~14[19] a[20]=$mul~14[20] a[21]=$mul~14[21] a[22]=$mul~14[22] a[23]=$mul~14[23] a[24]=$mul~14[24] a[25]=$mul~14[25] a[26]=$mul~14[26] a[27]=$mul~14[27] a[28]=$mul~14[28] a[29]=$mul~14[29] a[30]=$mul~14[30] a[31]=$mul~14[31] a[32]=unconn a[33]=unconn a[34]=unconn a[35]=unconn b[0]=vcc b[1]=vcc b[2]=unconn b[3]=unconn b[4]=unconn b[5]=unconn b[6]=unconn b[7]=unconn b[8]=unconn b[9]=unconn b[10]=unconn b[11]=unconn b[12]=unconn b[13]=unconn b[14]=unconn b[15]=unconn b[16]=unconn b[17]=unconn b[18]=unconn b[19]=unconn b[20]=unconn b[21]=unconn b[22]=unconn b[23]=unconn b[24]=unconn b[25]=unconn b[26]=unconn b[27]=unconn b[28]=unconn b[29]=unconn b[30]=unconn b[31]=unconn b[32]=unconn b[33]=unconn b[34]=unconn b[35]=unconn out[0]=$mul~15[0] out[1]=$mul~15[1] out[2]=$mul~15[2] out[3]=$mul~15[3] out[4]=$mul~15[4] out[5]=$mul~15[5] out[6]=$mul~15[6] out[7]=$mul~15[7] out[8]=$mul~15[8] out[9]=$mul~15[9] out[10]=$mul~15[10] out[11]=$mul~15[11] out[12]=$mul~15[12] out[13]=$mul~15[13] out[14]=$mul~15[14] out[15]=$mul~15[15] out[16]=$mul~15[16] out[17]=$mul~15[17] out[18]=$mul~15[18] out[19]=$mul~15[19] out[20]=$mul~15[20] out[21]=$mul~15[21] out[22]=$mul~15[22] out[23]=$mul~15[23] out[24]=$mul~15[24] out[25]=$mul~15[25] out[26]=$mul~15[26] out[27]=$mul~15[27] out[28]=$mul~15[28] out[29]=$mul~15[29] out[30]=$mul~15[30] out[31]=$mul~15[31] out[32]=$mul~15[32] out[33]=$mul~15[33] out[34]=$mul~15[34] out[35]=$mul~15[35] out[36]=$mul~15[36] out[37]=$mul~15[37] out[38]=$mul~15[38] out[39]=$mul~15[39] out[40]=$mul~15[40] out[41]=$mul~15[41] out[42]=$mul~15[42] out[43]=$mul~15[43] out[44]=$mul~15[44] out[45]=$mul~15[45] out[46]=$mul~15[46] out[47]=$mul~15[47] out[48]=$mul~15[48] out[49]=$mul~15[49] out[50]=$mul~15[50] out[51]=$mul~15[51] out[52]=$mul~15[52] out[53]=$mul~15[53] out[54]=$mul~15[54] out[55]=$mul~15[55] out[56]=$mul~15[56] out[57]=$mul~15[57] out[58]=$mul~15[58] out[59]=$mul~15[59] out[60]=$mul~15[60] out[61]=$mul~15[61] out[62]=$mul~15[62] out[63]=$mul~15[63] out[64]=$mul~15[64] out[65]=$mul~15[65] out[66]=$mul~15[66] out[67]=$mul~15[67] out[68]=$mul~15[68] out[69]=$mul~15[69] out[70]=$mul~15[70] out[71]=$mul~15[71]
+.subckt multiply a[0]=$mul~15[0] a[1]=$mul~15[1] a[2]=$mul~15[2] a[3]=$mul~15[3] a[4]=$mul~15[4] a[5]=$mul~15[5] a[6]=$mul~15[6] a[7]=$mul~15[7] a[8]=$mul~15[8] a[9]=$mul~15[9] a[10]=$mul~15[10] a[11]=$mul~15[11] a[12]=$mul~15[12] a[13]=$mul~15[13] a[14]=$mul~15[14] a[15]=$mul~15[15] a[16]=$mul~15[16] a[17]=$mul~15[17] a[18]=$mul~15[18] a[19]=$mul~15[19] a[20]=$mul~15[20] a[21]=$mul~15[21] a[22]=$mul~15[22] a[23]=$mul~15[23] a[24]=$mul~15[24] a[25]=$mul~15[25] a[26]=$mul~15[26] a[27]=$mul~15[27] a[28]=$mul~15[28] a[29]=$mul~15[29] a[30]=$mul~15[30] a[31]=$mul~15[31] a[32]=unconn a[33]=unconn a[34]=unconn a[35]=unconn b[0]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[0] b[1]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[1] b[2]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[2] b[3]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[3] b[4]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[4] b[5]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[5] b[6]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[6] b[7]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[7] b[8]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[8] b[9]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[9] b[10]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[10] b[11]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[11] b[12]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[12] b[13]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[13] b[14]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[14] b[15]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[15] b[16]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[16] b[17]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[17] b[18]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[18] b[19]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[19] b[20]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[20] b[21]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[21] b[22]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[22] b[23]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[23] b[24]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[24] b[25]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[25] b[26]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[26] b[27]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[27] b[28]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[28] b[29]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[29] b[30]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[30] b[31]=$techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[31] b[32]=unconn b[33]=unconn b[34]=unconn b[35]=unconn out[0]=$mul~16[0] out[1]=$mul~16[1] out[2]=$mul~16[2] out[3]=$mul~16[3] out[4]=$mul~16[4] out[5]=$mul~16[5] out[6]=$mul~16[6] out[7]=$mul~16[7] out[8]=$mul~16[8] out[9]=$mul~16[9] out[10]=$mul~16[10] out[11]=$mul~16[11] out[12]=$mul~16[12] out[13]=$mul~16[13] out[14]=$mul~16[14] out[15]=$mul~16[15] out[16]=$mul~16[16] out[17]=$mul~16[17] out[18]=$mul~16[18] out[19]=$mul~16[19] out[20]=$mul~16[20] out[21]=$mul~16[21] out[22]=$mul~16[22] out[23]=$mul~16[23] out[24]=$mul~16[24] out[25]=$mul~16[25] out[26]=$mul~16[26] out[27]=$mul~16[27] out[28]=$mul~16[28] out[29]=$mul~16[29] out[30]=$mul~16[30] out[31]=$mul~16[31] out[32]=$mul~16[32] out[33]=$mul~16[33] out[34]=$mul~16[34] out[35]=$mul~16[35] out[36]=$mul~16[36] out[37]=$mul~16[37] out[38]=$mul~16[38] out[39]=$mul~16[39] out[40]=$mul~16[40] out[41]=$mul~16[41] out[42]=$mul~16[42] out[43]=$mul~16[43] out[44]=$mul~16[44] out[45]=$mul~16[45] out[46]=$mul~16[46] out[47]=$mul~16[47] out[48]=$mul~16[48] out[49]=$mul~16[49] out[50]=$mul~16[50] out[51]=$mul~16[51] out[52]=$mul~16[52] out[53]=$mul~16[53] out[54]=$mul~16[54] out[55]=$mul~16[55] out[56]=$mul~16[56] out[57]=$mul~16[57] out[58]=$mul~16[58] out[59]=$mul~16[59] out[60]=$mul~16[60] out[61]=$mul~16[61] out[62]=$mul~16[62] out[63]=$mul~16[63] out[64]=$mul~16[64] out[65]=$mul~16[65] out[66]=$mul~16[66] out[67]=$mul~16[67] out[68]=$mul~16[68] out[69]=$mul~16[69] out[70]=$mul~16[70] out[71]=$mul~16[71]
+.subckt multiply a[0]=DXport~0 a[1]=DXport~1 a[2]=DXport~2 a[3]=DXport~3 a[4]=DXport~4 a[5]=DXport~5 a[6]=DXport~6 a[7]=DXport~7 a[8]=DXport~8 a[9]=DXport~9 a[10]=DXport~10 a[11]=DXport~11 a[12]=DXport~12 a[13]=DXport~13 a[14]=DXport~14 a[15]=DXport~15 a[16]=DXport~16 a[17]=DXport~17 a[18]=DXport~18 a[19]=DXport~19 a[20]=DXport~20 a[21]=DXport~21 a[22]=DXport~22 a[23]=DXport~23 a[24]=DXport~24 a[25]=DXport~25 a[26]=DXport~26 a[27]=DXport~27 a[28]=DXport~28 a[29]=DXport~29 a[30]=DXport~30 a[31]=DXport~31 a[32]=unconn a[33]=unconn a[34]=unconn a[35]=unconn b[0]=vcc b[1]=vcc b[2]=unconn b[3]=unconn b[4]=unconn b[5]=unconn b[6]=unconn b[7]=unconn b[8]=unconn b[9]=unconn b[10]=unconn b[11]=unconn b[12]=unconn b[13]=unconn b[14]=unconn b[15]=unconn b[16]=unconn b[17]=unconn b[18]=unconn b[19]=unconn b[20]=unconn b[21]=unconn b[22]=unconn b[23]=unconn b[24]=unconn b[25]=unconn b[26]=unconn b[27]=unconn b[28]=unconn b[29]=unconn b[30]=unconn b[31]=unconn b[32]=unconn b[33]=unconn b[34]=unconn b[35]=unconn out[0]=$mul~17[0] out[1]=$mul~17[1] out[2]=$mul~17[2] out[3]=$mul~17[3] out[4]=$mul~17[4] out[5]=$mul~17[5] out[6]=$mul~17[6] out[7]=$mul~17[7] out[8]=$mul~17[8] out[9]=$mul~17[9] out[10]=$mul~17[10] out[11]=$mul~17[11] out[12]=$mul~17[12] out[13]=$mul~17[13] out[14]=$mul~17[14] out[15]=$mul~17[15] out[16]=$mul~17[16] out[17]=$mul~17[17] out[18]=$mul~17[18] out[19]=$mul~17[19] out[20]=$mul~17[20] out[21]=$mul~17[21] out[22]=$mul~17[22] out[23]=$mul~17[23] out[24]=$mul~17[24] out[25]=$mul~17[25] out[26]=$mul~17[26] out[27]=$mul~17[27] out[28]=$mul~17[28] out[29]=$mul~17[29] out[30]=$mul~17[30] out[31]=$mul~17[31] out[32]=$mul~17[32] out[33]=$mul~17[33] out[34]=$mul~17[34] out[35]=$mul~17[35] out[36]=$mul~17[36] out[37]=$mul~17[37] out[38]=$mul~17[38] out[39]=$mul~17[39] out[40]=$mul~17[40] out[41]=$mul~17[41] out[42]=$mul~17[42] out[43]=$mul~17[43] out[44]=$mul~17[44] out[45]=$mul~17[45] out[46]=$mul~17[46] out[47]=$mul~17[47] out[48]=$mul~17[48] out[49]=$mul~17[49] out[50]=$mul~17[50] out[51]=$mul~17[51] out[52]=$mul~17[52] out[53]=$mul~17[53] out[54]=$mul~17[54] out[55]=$mul~17[55] out[56]=$mul~17[56] out[57]=$mul~17[57] out[58]=$mul~17[58] out[59]=$mul~17[59] out[60]=$mul~17[60] out[61]=$mul~17[61] out[62]=$mul~17[62] out[63]=$mul~17[63] out[64]=$mul~17[64] out[65]=$mul~17[65] out[66]=$mul~17[66] out[67]=$mul~17[67] out[68]=$mul~17[68] out[69]=$mul~17[69] out[70]=$mul~17[70] out[71]=$mul~17[71]
+.subckt CLOCK_GATING I=clk
+
+
+.names Xinport~0 $add~1^ADD~0-1[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[0] \
+ $sdff~2^Q~0 reset new_n1916 n1046
+1--000 1
+-1-100 1
+--1-01 1
+.names new_n1917 new_n1935 new_n1942 new_n1950 new_n1946 $sdff~2^Q~0 \
+ new_n1916
+--0-11 1
+01--11 1
+---0-1 1
+.names new_n1918 new_n1934 new_n1925 new_n1930 new_n1927 new_n1932 \
+ new_n1917
+--0-11 1
+01--11 1
+---0-1 1
+.names new_n1921 new_n1922 new_n1923 new_n1920 new_n1924 new_n1919 \
+ new_n1918
+--0-10 1
+01--10 1
+---1-0 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[6] \
+ Aport~6 new_n1919
+01 1
+.names Aport~5 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[5] \
+ new_n1920
+01 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[1] \
+ Aport~1 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[0] \
+ Aport~0 new_n1921
+-101 1
+0-01 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[3] \
+ Aport~3 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[1] \
+ Aport~1 Aport~2 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[2] \
+ new_n1922
+----10 0
+----01 0
+--01-- 0
+01---- 0
+.names Aport~4 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[4] \
+ Aport~3 Aport~2 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[3] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[2] \
+ new_n1923
+---011 0
+--00-1 0
+--0-1- 0
+01---- 0
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[5] \
+ Aport~5 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[4] \
+ Aport~4 new_n1924
+--01 0
+01-- 0
+.names Aport~11 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[11] \
+ Aport~10 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[10] \
+ new_n1926 new_n1925
+00001 1
+11001 1
+00111 1
+11111 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[7] \
+ Aport~7 Aport~9 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[9] \
+ Aport~8 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[8] \
+ new_n1926
+----10 0
+----01 0
+--10-- 0
+--01-- 0
+01---- 0
+.names Aport~11 Aport~10 new_n1928 new_n1929 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[10] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[11] \
+ new_n1927
+--0011 0
+-0--11 0
+-000-1 0
+0----1 0
+0-001- 0
+00--1- 0
+0000-- 0
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[9] \
+ Aport~9 new_n1928
+01 1
+.names Aport~8 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[8] \
+ Aport~9 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[9] \
+ new_n1929
+--01 0
+01-- 0
+.names Aport~13 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[13] \
+ Aport~12 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[12] \
+ new_n1931 new_n1930
+00001 1
+11001 1
+00111 1
+11111 1
+.names Aport~15 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[15] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[14] \
+ Aport~14 new_n1931
+--10 0
+--01 0
+10-- 0
+01-- 0
+.names new_n1933 Aport~15 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[15] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[14] \
+ Aport~14 new_n1932
+--001 1
+-1-01 1
+0-0-1 1
+01--1 1
+0-00- 1
+01-0- 1
+-10-- 1
+.names Aport~13 Aport~12 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[13] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[12] \
+ new_n1933
+-011 1
+00-1 1
+0-1- 1
+.names Aport~7 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[7] \
+ Aport~6 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[6] \
+ new_n1934
+--01 0
+01-- 0
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[16] \
+ Aport~16 new_n1936 new_n1935
+--0 0
+01- 0
+.names new_n1939 new_n1937 new_n1940 new_n1936
+011 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[21] \
+ Aport~21 Aport~23 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[23] \
+ Aport~22 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[22] \
+ new_n1937
+----10 0
+----01 0
+--10-- 0
+--01-- 0
+01---- 0
+.names Aport~20 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[20] \
+ Aport~21 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[21] \
+ new_n1938
+--01 0
+01-- 0
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[20] \
+ Aport~20 new_n1939
+01 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[17] \
+ Aport~17 Aport~19 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[19] \
+ Aport~18 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[18] \
+ new_n1940
+----10 0
+----01 0
+--10-- 0
+--01-- 0
+01---- 0
+.names Aport~16 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[16] \
+ Aport~17 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[17] \
+ new_n1941
+--01 0
+01-- 0
+.names new_n1944 new_n1939 new_n1937 new_n1938 new_n1943 new_n1945 \
+ new_n1942
+-1-100 1
+0--100 1
+--0-00 1
+.names new_n1939 new_n1941 new_n1937 new_n1940 new_n1943
+0011 1
+.names Aport~19 Aport~18 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[19] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[18] \
+ new_n1944
+-011 1
+00-1 1
+0-1- 1
+.names Aport~23 Aport~22 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[23] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[22] \
+ new_n1945
+-011 1
+00-1 1
+0-1- 1
+.names Aport~25 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[25] \
+ Aport~24 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[24] \
+ new_n1947 new_n1946
+00001 1
+11001 1
+00111 1
+11111 1
+.names Aport~28 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[28] \
+ new_n1948 new_n1949 new_n1947
+0011 1
+1111 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[29] \
+ Aport~29 Aport~31 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[31] \
+ Aport~30 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[30] \
+ new_n1948
+----10 0
+----01 0
+--10-- 0
+--01-- 0
+01---- 0
+.names Aport~27 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[27] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[26] \
+ Aport~26 new_n1949
+--10 0
+--01 0
+10-- 0
+01-- 0
+.names new_n1955 new_n1947 new_n1951 new_n1953 new_n1950
+-001 1
+0-01 1
+.names Aport~28 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[28] \
+ new_n1948 new_n1952 new_n1951
+0011 1
+1111 1
+.names Aport~27 Aport~26 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[27] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[26] \
+ new_n1952
+-011 1
+00-1 1
+0-1- 1
+.names Aport~28 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[28] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[29] \
+ Aport~29 new_n1954 new_n1948 new_n1953
+--10-1 0
+01---1 0
+----0- 0
+.names Aport~31 Aport~30 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[31] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[30] \
+ new_n1954
+-011 0
+00-1 0
+0-1- 0
+.names Aport~25 Aport~24 \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[25] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[24] \
+ new_n1955
+-011 1
+00-1 1
+0-1- 1
+.names Xinport~1 $add~1^ADD~0-2[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[1] \
+ $sdff~2^Q~0 reset new_n1916 n1051
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~2 $add~1^ADD~0-3[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[2] \
+ $sdff~2^Q~0 reset new_n1916 n1056
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~3 $add~1^ADD~0-4[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[3] \
+ $sdff~2^Q~0 reset new_n1916 n1061
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~4 $add~1^ADD~0-5[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[4] \
+ $sdff~2^Q~0 reset new_n1916 n1066
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~5 $add~1^ADD~0-6[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[5] \
+ $sdff~2^Q~0 reset new_n1916 n1071
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~6 $add~1^ADD~0-7[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[6] \
+ $sdff~2^Q~0 reset new_n1916 n1076
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~7 $add~1^ADD~0-8[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[7] \
+ $sdff~2^Q~0 reset new_n1916 n1081
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~8 $add~1^ADD~0-9[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[8] \
+ $sdff~2^Q~0 reset new_n1916 n1086
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~9 $add~1^ADD~0-10[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[9] \
+ $sdff~2^Q~0 reset new_n1916 n1091
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~10 $add~1^ADD~0-11[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[10] \
+ $sdff~2^Q~0 reset new_n1916 n1096
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~11 $add~1^ADD~0-12[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[11] \
+ $sdff~2^Q~0 reset new_n1916 n1101
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~12 $add~1^ADD~0-13[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[12] \
+ $sdff~2^Q~0 reset new_n1916 n1106
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~13 $add~1^ADD~0-14[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[13] \
+ $sdff~2^Q~0 reset new_n1916 n1111
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~14 $add~1^ADD~0-15[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[14] \
+ $sdff~2^Q~0 reset new_n1916 n1116
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~15 $add~1^ADD~0-16[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[15] \
+ $sdff~2^Q~0 reset new_n1916 n1121
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~16 $add~1^ADD~0-17[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[16] \
+ $sdff~2^Q~0 reset new_n1916 n1126
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~17 $add~1^ADD~0-18[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[17] \
+ $sdff~2^Q~0 reset new_n1916 n1131
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~18 $add~1^ADD~0-19[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[18] \
+ $sdff~2^Q~0 reset new_n1916 n1136
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~19 $add~1^ADD~0-20[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[19] \
+ $sdff~2^Q~0 reset new_n1916 n1141
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~20 $add~1^ADD~0-21[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[20] \
+ $sdff~2^Q~0 reset new_n1916 n1146
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~21 $add~1^ADD~0-22[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[21] \
+ $sdff~2^Q~0 reset new_n1916 n1151
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~22 $add~1^ADD~0-23[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[22] \
+ $sdff~2^Q~0 reset new_n1916 n1156
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~23 $add~1^ADD~0-24[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[23] \
+ $sdff~2^Q~0 reset new_n1916 n1161
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~24 $add~1^ADD~0-25[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[24] \
+ $sdff~2^Q~0 reset new_n1916 n1166
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~25 $add~1^ADD~0-26[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[25] \
+ $sdff~2^Q~0 reset new_n1916 n1171
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~26 $add~1^ADD~0-27[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[26] \
+ $sdff~2^Q~0 reset new_n1916 n1176
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~27 $add~1^ADD~0-28[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[27] \
+ $sdff~2^Q~0 reset new_n1916 n1181
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~28 $add~1^ADD~0-29[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[28] \
+ $sdff~2^Q~0 reset new_n1916 n1186
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~29 $add~1^ADD~0-30[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[29] \
+ $sdff~2^Q~0 reset new_n1916 n1191
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~30 $add~1^ADD~0-31[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[30] \
+ $sdff~2^Q~0 reset new_n1916 n1196
+1--000 1
+-1-100 1
+--1-01 1
+.names Xinport~31 $add~1^ADD~0-32[1] \
+ $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[31] \
+ $sdff~2^Q~0 reset new_n1916 n1201
+1--000 1
+-1-100 1
+--1-01 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[0] \
+ Xoutport~0 reset new_n1916 n1206
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[1] \
+ Xoutport~1 reset new_n1916 n1210
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[2] \
+ Xoutport~2 reset new_n1916 n1214
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[3] \
+ Xoutport~3 reset new_n1916 n1218
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[4] \
+ Xoutport~4 reset new_n1916 n1222
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[5] \
+ Xoutport~5 reset new_n1916 n1226
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[6] \
+ Xoutport~6 reset new_n1916 n1230
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[7] \
+ Xoutport~7 reset new_n1916 n1234
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[8] \
+ Xoutport~8 reset new_n1916 n1238
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[9] \
+ Xoutport~9 reset new_n1916 n1242
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[10] \
+ Xoutport~10 reset new_n1916 n1246
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[11] \
+ Xoutport~11 reset new_n1916 n1250
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[12] \
+ Xoutport~12 reset new_n1916 n1254
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[13] \
+ Xoutport~13 reset new_n1916 n1258
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[14] \
+ Xoutport~14 reset new_n1916 n1262
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[15] \
+ Xoutport~15 reset new_n1916 n1266
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[16] \
+ Xoutport~16 reset new_n1916 n1270
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[17] \
+ Xoutport~17 reset new_n1916 n1274
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[18] \
+ Xoutport~18 reset new_n1916 n1278
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[19] \
+ Xoutport~19 reset new_n1916 n1282
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[20] \
+ Xoutport~20 reset new_n1916 n1286
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[21] \
+ Xoutport~21 reset new_n1916 n1290
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[22] \
+ Xoutport~22 reset new_n1916 n1294
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[23] \
+ Xoutport~23 reset new_n1916 n1298
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[24] \
+ Xoutport~24 reset new_n1916 n1302
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[25] \
+ Xoutport~25 reset new_n1916 n1306
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[26] \
+ Xoutport~26 reset new_n1916 n1310
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[27] \
+ Xoutport~27 reset new_n1916 n1314
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[28] \
+ Xoutport~28 reset new_n1916 n1318
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[29] \
+ Xoutport~29 reset new_n1916 n1322
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[30] \
+ Xoutport~30 reset new_n1916 n1326
+-1-0 1
+1-01 1
+-11- 1
+.names $techmap$auto$hard_block.cc:122:cell_hard_block$205.$auto$alumacc.cc:485:replace_alu$560.A[31] \
+ Xoutport~31 reset new_n1916 n1330
+-1-0 1
+1-01 1
+-11- 1
+.names Uinport~0 $sub~24^MIN~1-1[1] $sdffe~3^Q~0 $sdff~2^Q~0 reset \
+ new_n1916 n1334
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~1 $sub~24^MIN~1-2[1] $sdffe~3^Q~1 $sdff~2^Q~0 reset \
+ new_n1916 n1339
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~2 $sub~24^MIN~1-3[1] $sdffe~3^Q~2 $sdff~2^Q~0 reset \
+ new_n1916 n1344
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~3 $sub~24^MIN~1-4[1] $sdffe~3^Q~3 $sdff~2^Q~0 reset \
+ new_n1916 n1349
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~4 $sub~24^MIN~1-5[1] $sdffe~3^Q~4 $sdff~2^Q~0 reset \
+ new_n1916 n1354
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~5 $sub~24^MIN~1-6[1] $sdffe~3^Q~5 $sdff~2^Q~0 reset \
+ new_n1916 n1359
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~6 $sub~24^MIN~1-7[1] $sdffe~3^Q~6 $sdff~2^Q~0 reset \
+ new_n1916 n1364
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~7 $sub~24^MIN~1-8[1] $sdffe~3^Q~7 $sdff~2^Q~0 reset \
+ new_n1916 n1369
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~8 $sub~24^MIN~1-9[1] $sdffe~3^Q~8 $sdff~2^Q~0 reset \
+ new_n1916 n1374
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~9 $sub~24^MIN~1-10[1] $sdffe~3^Q~9 $sdff~2^Q~0 reset \
+ new_n1916 n1379
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~10 $sub~24^MIN~1-11[1] $sdffe~3^Q~10 $sdff~2^Q~0 reset \
+ new_n1916 n1384
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~11 $sub~24^MIN~1-12[1] $sdffe~3^Q~11 $sdff~2^Q~0 reset \
+ new_n1916 n1389
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~12 $sub~24^MIN~1-13[1] $sdffe~3^Q~12 $sdff~2^Q~0 reset \
+ new_n1916 n1394
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~13 $sub~24^MIN~1-14[1] $sdffe~3^Q~13 $sdff~2^Q~0 reset \
+ new_n1916 n1399
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~14 $sub~24^MIN~1-15[1] $sdffe~3^Q~14 $sdff~2^Q~0 reset \
+ new_n1916 n1404
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~15 $sub~24^MIN~1-16[1] $sdffe~3^Q~15 $sdff~2^Q~0 reset \
+ new_n1916 n1409
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~16 $sub~24^MIN~1-17[1] $sdffe~3^Q~16 $sdff~2^Q~0 reset \
+ new_n1916 n1414
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~17 $sub~24^MIN~1-18[1] $sdffe~3^Q~17 $sdff~2^Q~0 reset \
+ new_n1916 n1419
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~18 $sub~24^MIN~1-19[1] $sdffe~3^Q~18 $sdff~2^Q~0 reset \
+ new_n1916 n1424
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~19 $sub~24^MIN~1-20[1] $sdffe~3^Q~19 $sdff~2^Q~0 reset \
+ new_n1916 n1429
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~20 $sub~24^MIN~1-21[1] $sdffe~3^Q~20 $sdff~2^Q~0 reset \
+ new_n1916 n1434
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~21 $sub~24^MIN~1-22[1] $sdffe~3^Q~21 $sdff~2^Q~0 reset \
+ new_n1916 n1439
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~22 $sub~24^MIN~1-23[1] $sdffe~3^Q~22 $sdff~2^Q~0 reset \
+ new_n1916 n1444
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~23 $sub~24^MIN~1-24[1] $sdffe~3^Q~23 $sdff~2^Q~0 reset \
+ new_n1916 n1449
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~24 $sub~24^MIN~1-25[1] $sdffe~3^Q~24 $sdff~2^Q~0 reset \
+ new_n1916 n1454
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~25 $sub~24^MIN~1-26[1] $sdffe~3^Q~25 $sdff~2^Q~0 reset \
+ new_n1916 n1459
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~26 $sub~24^MIN~1-27[1] $sdffe~3^Q~26 $sdff~2^Q~0 reset \
+ new_n1916 n1464
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~27 $sub~24^MIN~1-28[1] $sdffe~3^Q~27 $sdff~2^Q~0 reset \
+ new_n1916 n1469
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~28 $sub~24^MIN~1-29[1] $sdffe~3^Q~28 $sdff~2^Q~0 reset \
+ new_n1916 n1474
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~29 $sub~24^MIN~1-30[1] $sdffe~3^Q~29 $sdff~2^Q~0 reset \
+ new_n1916 n1479
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~30 $sub~24^MIN~1-31[1] $sdffe~3^Q~30 $sdff~2^Q~0 reset \
+ new_n1916 n1484
+1--000 1
+-1-100 1
+--1-01 1
+.names Uinport~31 $sub~24^MIN~1-32[1] $sdffe~3^Q~31 $sdff~2^Q~0 reset \
+ new_n1916 n1489
+1--000 1
+-1-100 1
+--1-01 1
+.names $sdffe~3^Q~0 Uoutport~0 reset new_n1916 n1494
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~1 Uoutport~1 reset new_n1916 n1498
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~2 Uoutport~2 reset new_n1916 n1502
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~3 Uoutport~3 reset new_n1916 n1506
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~4 Uoutport~4 reset new_n1916 n1510
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~5 Uoutport~5 reset new_n1916 n1514
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~6 Uoutport~6 reset new_n1916 n1518
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~7 Uoutport~7 reset new_n1916 n1522
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~8 Uoutport~8 reset new_n1916 n1526
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~9 Uoutport~9 reset new_n1916 n1530
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~10 Uoutport~10 reset new_n1916 n1534
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~11 Uoutport~11 reset new_n1916 n1538
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~12 Uoutport~12 reset new_n1916 n1542
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~13 Uoutport~13 reset new_n1916 n1546
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~14 Uoutport~14 reset new_n1916 n1550
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~15 Uoutport~15 reset new_n1916 n1554
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~16 Uoutport~16 reset new_n1916 n1558
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~17 Uoutport~17 reset new_n1916 n1562
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~18 Uoutport~18 reset new_n1916 n1566
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~19 Uoutport~19 reset new_n1916 n1570
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~20 Uoutport~20 reset new_n1916 n1574
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~21 Uoutport~21 reset new_n1916 n1578
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~22 Uoutport~22 reset new_n1916 n1582
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~23 Uoutport~23 reset new_n1916 n1586
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~24 Uoutport~24 reset new_n1916 n1590
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~25 Uoutport~25 reset new_n1916 n1594
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~26 Uoutport~26 reset new_n1916 n1598
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~27 Uoutport~27 reset new_n1916 n1602
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~28 Uoutport~28 reset new_n1916 n1606
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~29 Uoutport~29 reset new_n1916 n1610
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~30 Uoutport~30 reset new_n1916 n1614
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~3^Q~31 Uoutport~31 reset new_n1916 n1618
+-1-0 1
+1-01 1
+-11- 1
+.names Yinport~0 $add~0^ADD~2-1[1] $sdffe~4^Q~0 $sdff~2^Q~0 reset new_n1916 \
+ n1622
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~1 $add~0^ADD~2-2[1] $sdffe~4^Q~1 $sdff~2^Q~0 reset new_n1916 \
+ n1627
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~2 $add~0^ADD~2-3[1] $sdffe~4^Q~2 $sdff~2^Q~0 reset new_n1916 \
+ n1632
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~3 $add~0^ADD~2-4[1] $sdffe~4^Q~3 $sdff~2^Q~0 reset new_n1916 \
+ n1637
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~4 $add~0^ADD~2-5[1] $sdffe~4^Q~4 $sdff~2^Q~0 reset new_n1916 \
+ n1642
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~5 $add~0^ADD~2-6[1] $sdffe~4^Q~5 $sdff~2^Q~0 reset new_n1916 \
+ n1647
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~6 $add~0^ADD~2-7[1] $sdffe~4^Q~6 $sdff~2^Q~0 reset new_n1916 \
+ n1652
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~7 $add~0^ADD~2-8[1] $sdffe~4^Q~7 $sdff~2^Q~0 reset new_n1916 \
+ n1657
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~8 $add~0^ADD~2-9[1] $sdffe~4^Q~8 $sdff~2^Q~0 reset new_n1916 \
+ n1662
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~9 $add~0^ADD~2-10[1] $sdffe~4^Q~9 $sdff~2^Q~0 reset \
+ new_n1916 n1667
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~10 $add~0^ADD~2-11[1] $sdffe~4^Q~10 $sdff~2^Q~0 reset \
+ new_n1916 n1672
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~11 $add~0^ADD~2-12[1] $sdffe~4^Q~11 $sdff~2^Q~0 reset \
+ new_n1916 n1677
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~12 $add~0^ADD~2-13[1] $sdffe~4^Q~12 $sdff~2^Q~0 reset \
+ new_n1916 n1682
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~13 $add~0^ADD~2-14[1] $sdffe~4^Q~13 $sdff~2^Q~0 reset \
+ new_n1916 n1687
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~14 $add~0^ADD~2-15[1] $sdffe~4^Q~14 $sdff~2^Q~0 reset \
+ new_n1916 n1692
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~15 $add~0^ADD~2-16[1] $sdffe~4^Q~15 $sdff~2^Q~0 reset \
+ new_n1916 n1697
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~16 $add~0^ADD~2-17[1] $sdffe~4^Q~16 $sdff~2^Q~0 reset \
+ new_n1916 n1702
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~17 $add~0^ADD~2-18[1] $sdffe~4^Q~17 $sdff~2^Q~0 reset \
+ new_n1916 n1707
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~18 $add~0^ADD~2-19[1] $sdffe~4^Q~18 $sdff~2^Q~0 reset \
+ new_n1916 n1712
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~19 $add~0^ADD~2-20[1] $sdffe~4^Q~19 $sdff~2^Q~0 reset \
+ new_n1916 n1717
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~20 $add~0^ADD~2-21[1] $sdffe~4^Q~20 $sdff~2^Q~0 reset \
+ new_n1916 n1722
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~21 $add~0^ADD~2-22[1] $sdffe~4^Q~21 $sdff~2^Q~0 reset \
+ new_n1916 n1727
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~22 $add~0^ADD~2-23[1] $sdffe~4^Q~22 $sdff~2^Q~0 reset \
+ new_n1916 n1732
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~23 $add~0^ADD~2-24[1] $sdffe~4^Q~23 $sdff~2^Q~0 reset \
+ new_n1916 n1737
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~24 $add~0^ADD~2-25[1] $sdffe~4^Q~24 $sdff~2^Q~0 reset \
+ new_n1916 n1742
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~25 $add~0^ADD~2-26[1] $sdffe~4^Q~25 $sdff~2^Q~0 reset \
+ new_n1916 n1747
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~26 $add~0^ADD~2-27[1] $sdffe~4^Q~26 $sdff~2^Q~0 reset \
+ new_n1916 n1752
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~27 $add~0^ADD~2-28[1] $sdffe~4^Q~27 $sdff~2^Q~0 reset \
+ new_n1916 n1757
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~28 $add~0^ADD~2-29[1] $sdffe~4^Q~28 $sdff~2^Q~0 reset \
+ new_n1916 n1762
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~29 $add~0^ADD~2-30[1] $sdffe~4^Q~29 $sdff~2^Q~0 reset \
+ new_n1916 n1767
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~30 $add~0^ADD~2-31[1] $sdffe~4^Q~30 $sdff~2^Q~0 reset \
+ new_n1916 n1772
+1--000 1
+-1-100 1
+--1-01 1
+.names Yinport~31 $add~0^ADD~2-32[1] $sdffe~4^Q~31 $sdff~2^Q~0 reset \
+ new_n1916 n1777
+1--000 1
+-1-100 1
+--1-01 1
+.names $sdffe~4^Q~0 Youtport~0 reset new_n1916 n1782
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~1 Youtport~1 reset new_n1916 n1786
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~2 Youtport~2 reset new_n1916 n1790
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~3 Youtport~3 reset new_n1916 n1794
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~4 Youtport~4 reset new_n1916 n1798
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~5 Youtport~5 reset new_n1916 n1802
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~6 Youtport~6 reset new_n1916 n1806
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~7 Youtport~7 reset new_n1916 n1810
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~8 Youtport~8 reset new_n1916 n1814
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~9 Youtport~9 reset new_n1916 n1818
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~10 Youtport~10 reset new_n1916 n1822
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~11 Youtport~11 reset new_n1916 n1826
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~12 Youtport~12 reset new_n1916 n1830
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~13 Youtport~13 reset new_n1916 n1834
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~14 Youtport~14 reset new_n1916 n1838
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~15 Youtport~15 reset new_n1916 n1842
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~16 Youtport~16 reset new_n1916 n1846
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~17 Youtport~17 reset new_n1916 n1850
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~18 Youtport~18 reset new_n1916 n1854
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~19 Youtport~19 reset new_n1916 n1858
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~20 Youtport~20 reset new_n1916 n1862
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~21 Youtport~21 reset new_n1916 n1866
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~22 Youtport~22 reset new_n1916 n1870
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~23 Youtport~23 reset new_n1916 n1874
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~24 Youtport~24 reset new_n1916 n1878
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~25 Youtport~25 reset new_n1916 n1882
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~26 Youtport~26 reset new_n1916 n1886
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~27 Youtport~27 reset new_n1916 n1890
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~28 Youtport~28 reset new_n1916 n1894
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~29 Youtport~29 reset new_n1916 n1898
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~30 Youtport~30 reset new_n1916 n1902
+-1-0 1
+1-01 1
+-11- 1
+.names $sdffe~4^Q~31 Youtport~31 reset new_n1916 n1906
+-1-0 1
+1-01 1
+-11- 1
+.names new_n1916 reset n1910
+00 1
+.names vcc
+ 1
+.names gnd
+ 0
+.names unconn
+ 0
+.names $mul~18[0] lNOT~36
+0 1
+.names $mul~18[1] lNOT~37
+0 1
+.names $mul~18[2] lNOT~38
+0 1
+.names $mul~18[3] lNOT~39
+0 1
+.names $mul~18[4] lNOT~40
+0 1
+.names $mul~18[5] lNOT~41
+0 1
+.names $mul~18[6] lNOT~42
+0 1
+.names $mul~18[7] lNOT~43
+0 1
+.names $mul~18[8] lNOT~44
+0 1
+.names $mul~18[9] lNOT~45
+0 1
+.names $mul~18[10] lNOT~46
+0 1
+.names $mul~18[11] lNOT~47
+0 1
+.names $mul~18[12] lNOT~48
+0 1
+.names $mul~18[13] lNOT~49
+0 1
+.names $mul~18[14] lNOT~50
+0 1
+.names $mul~18[15] lNOT~51
+0 1
+.names $mul~18[16] lNOT~52
+0 1
+.names $mul~18[17] lNOT~53
+0 1
+.names $mul~18[18] lNOT~54
+0 1
+.names $mul~18[19] lNOT~55
+0 1
+.names $mul~18[20] lNOT~56
+0 1
+.names $mul~18[21] lNOT~57
+0 1
+.names $mul~18[22] lNOT~58
+0 1
+.names $mul~18[23] lNOT~59
+0 1
+.names $mul~18[24] lNOT~60
+0 1
+.names $mul~18[25] lNOT~61
+0 1
+.names $mul~18[26] lNOT~62
+0 1
+.names $mul~18[27] lNOT~63
+0 1
+.names $mul~18[28] lNOT~64
+0 1
+.names $mul~18[29] lNOT~65
+0 1
+.names $mul~18[30] lNOT~66
+0 1
+.names $mul~18[31] lNOT~67
+0 1
+.names $mul~16[0] lNOT~4
+0 1
+.names $mul~16[1] lNOT~5
+0 1
+.names $mul~16[2] lNOT~6
+0 1
+.names $mul~16[3] lNOT~7
+0 1
+.names $mul~16[4] lNOT~8
+0 1
+.names $mul~16[5] lNOT~9
+0 1
+.names $mul~16[6] lNOT~10
+0 1
+.names $mul~16[7] lNOT~11
+0 1
+.names $mul~16[8] lNOT~12
+0 1
+.names $mul~16[9] lNOT~13
+0 1
+.names $mul~16[10] lNOT~14
+0 1
+.names $mul~16[11] lNOT~15
+0 1
+.names $mul~16[12] lNOT~16
+0 1
+.names $mul~16[13] lNOT~17
+0 1
+.names $mul~16[14] lNOT~18
+0 1
+.names $mul~16[15] lNOT~19
+0 1
+.names $mul~16[16] lNOT~20
+0 1
+.names $mul~16[17] lNOT~21
+0 1
+.names $mul~16[18] lNOT~22
+0 1
+.names $mul~16[19] lNOT~23
+0 1
+.names $mul~16[20] lNOT~24
+0 1
+.names $mul~16[21] lNOT~25
+0 1
+.names $mul~16[22] lNOT~26
+0 1
+.names $mul~16[23] lNOT~27
+0 1
+.names $mul~16[24] lNOT~28
+0 1
+.names $mul~16[25] lNOT~29
+0 1
+.names $mul~16[26] lNOT~30
+0 1
+.names $mul~16[27] lNOT~31
+0 1
+.names $mul~16[28] lNOT~32
+0 1
+.names $mul~16[29] lNOT~33
+0 1
+.names $mul~16[30] lNOT~34
+0 1
+.names $mul~16[31] lNOT~35
+0 1
+.end
+
+
+.model adder
+.inputs a b cin
+.outputs cout sumout
+.blackbox
+.end
+
+
+.model multiply
+.inputs a[0] a[1] a[2] a[3] a[4] a[5] a[6] a[7] a[8] a[9] a[10] a[11] a[12] \
+ a[13] a[14] a[15] a[16] a[17] a[18] a[19] a[20] a[21] a[22] a[23] a[24] \
+ a[25] a[26] a[27] a[28] a[29] a[30] a[31] a[32] a[33] a[34] a[35] b[0] \
+ b[1] b[2] b[3] b[4] b[5] b[6] b[7] b[8] b[9] b[10] b[11] b[12] b[13] b[14] \
+ b[15] b[16] b[17] b[18] b[19] b[20] b[21] b[22] b[23] b[24] b[25] b[26] \
+ b[27] b[28] b[29] b[30] b[31] b[32] b[33] b[34] b[35]
+.outputs out[0] out[1] out[2] out[3] out[4] out[5] out[6] out[7] out[8] \
+ out[9] out[10] out[11] out[12] out[13] out[14] out[15] out[16] out[17] \
+ out[18] out[19] out[20] out[21] out[22] out[23] out[24] out[25] out[26] \
+ out[27] out[28] out[29] out[30] out[31] out[32] out[33] out[34] out[35] \
+ out[36] out[37] out[38] out[39] out[40] out[41] out[42] out[43] out[44] \
+ out[45] out[46] out[47] out[48] out[49] out[50] out[51] out[52] out[53] \
+ out[54] out[55] out[56] out[57] out[58] out[59] out[60] out[61] out[62] \
+ out[63] out[64] out[65] out[66] out[67] out[68] out[69] out[70] out[71]
+.blackbox
+.end
+
+
+.model CLOCK_GATING
+.inputs I
+.outputs
+.blackbox
+.end

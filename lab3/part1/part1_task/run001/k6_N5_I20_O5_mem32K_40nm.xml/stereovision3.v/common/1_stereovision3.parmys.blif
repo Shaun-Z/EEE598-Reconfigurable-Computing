@@ -1,0 +1,1551 @@
+# Benchmark "sv_chip3_hierarchy_no_mem" written by ABC on Thu Mar 26 18:03:54 2026 
+
+
+.model sv_chip3_hierarchy_no_mem 
+
+
+.inputs tm3_vidin_llc tm3_vidin_vs tm3_clk_v0 tm3_vidin_cref tm3_vidin_rts0 tm3_vidin_href tm3_clk_v2 tm3_vidin_vpo~15 \
+ tm3_vidin_vpo~14 tm3_vidin_vpo~13 tm3_vidin_vpo~12 tm3_vidin_vpo~11 tm3_vidin_vpo~10 tm3_vidin_vpo~9 tm3_vidin_vpo~8 \
+ tm3_vidin_vpo~7 tm3_vidin_vpo~6 tm3_vidin_vpo~5 tm3_vidin_vpo~4 tm3_vidin_vpo~3 tm3_vidin_vpo~2 tm3_vidin_vpo~1 \
+ tm3_vidin_vpo~0 
+
+
+.outputs vidin_rgb_reg~1 vidin_addr_reg~18 vidin_rgb_reg~5 vidin_rgb_reg~4 vidin_rgb_reg~3 vidin_rgb_reg~2 vidin_rgb_reg~0 \
+ vidin_addr_reg~17 vidin_new_data vidin_addr_reg~16 vidin_addr_reg~15 vidin_addr_reg~14 vidin_addr_reg~13 vidin_addr_reg~12 \
+ vidin_addr_reg~11 vidin_addr_reg~10 vidin_addr_reg~9 vidin_addr_reg~8 vidin_addr_reg~7 vidin_addr_reg~6 vidin_addr_reg~5 \
+ vidin_addr_reg~4 vidin_addr_reg~3 vidin_addr_reg~2 vidin_addr_reg~1 vidin_addr_reg~0 vidin_rgb_reg~7 vidin_rgb_reg~6 
+
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n117 C=tm3_clk_v0 O=$add~0^lAND~1 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n122 C=tm3_clk_v0 O=$sdffe~12^Q~1 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n127 C=tm3_clk_v0 O=$sdffe~12^Q~2 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n132 C=tm3_clk_v0 O=$sdffe~12^Q~3 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n137 C=tm3_clk_v0 O=$sdffe~12^Q~4 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n142 C=tm3_clk_v0 O=$sdffe~12^Q~5 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n147 C=tm3_clk_v0 O=$sdffe~12^Q~6 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n152 C=tm3_clk_v0 O=$sdffe~12^Q~7 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n157 C=tm3_clk_v0 O=$dffe~11^Q~0 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n162 C=tm3_clk_v0 O=$dffe~11^Q~1 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n167 C=tm3_clk_v0 O=$dffe~11^Q~2 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n172 C=tm3_clk_v0 O=$dffe~11^Q~3 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n177 C=tm3_clk_v0 O=$dffe~11^Q~4 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n182 C=tm3_clk_v0 O=$dffe~11^Q~5 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n187 C=tm3_clk_v0 O=$dffe~11^Q~6 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n192 C=tm3_clk_v0 O=$dffe~11^Q~7 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n197 C=tm3_clk_v0 O=$dffe~11^Q~8 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n202 C=tm3_clk_v0 O=$dffe~11^Q~9 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n207 C=tm3_clk_v0 O=$dffe~11^Q~10 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n212 C=tm3_clk_v0 O=$dffe~11^Q~11 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n217 C=tm3_clk_v0 O=$dffe~11^Q~12 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n222 C=tm3_clk_v0 O=$dffe~11^Q~13 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n227 C=tm3_clk_v0 O=$dffe~11^Q~14 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n232 C=tm3_clk_v0 O=$dffe~11^Q~15 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n237 C=tm3_clk_v0 O=$dffe~11^Q~16 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n242 C=tm3_clk_v0 O=$dffe~11^Q~17 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n247 C=tm3_clk_v0 O=$dffe~11^Q~18 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n252 C=tm3_clk_v0 O=vidin_rgb_reg~0 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n256 C=tm3_clk_v0 O=vidin_rgb_reg~1 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n260 C=tm3_clk_v0 O=vidin_rgb_reg~2 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n264 C=tm3_clk_v0 O=vidin_rgb_reg~3 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n268 C=tm3_clk_v0 O=vidin_rgb_reg~4 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n272 C=tm3_clk_v0 O=vidin_rgb_reg~5 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n276 C=tm3_clk_v0 O=vidin_rgb_reg~6 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n280 C=tm3_clk_v0 O=vidin_rgb_reg~7 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n284 C=tm3_clk_v0 O=vidin_addr_reg~0 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n288 C=tm3_clk_v0 O=vidin_addr_reg~1 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n292 C=tm3_clk_v0 O=vidin_addr_reg~2 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n296 C=tm3_clk_v0 O=vidin_addr_reg~3 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n300 C=tm3_clk_v0 O=vidin_addr_reg~4 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n304 C=tm3_clk_v0 O=vidin_addr_reg~5 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n308 C=tm3_clk_v0 O=vidin_addr_reg~6 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n312 C=tm3_clk_v0 O=vidin_addr_reg~7 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n316 C=tm3_clk_v0 O=vidin_addr_reg~8 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n320 C=tm3_clk_v0 O=vidin_addr_reg~9 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n324 C=tm3_clk_v0 O=vidin_addr_reg~10 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n328 C=tm3_clk_v0 O=vidin_addr_reg~11 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n332 C=tm3_clk_v0 O=vidin_addr_reg~12 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n336 C=tm3_clk_v0 O=vidin_addr_reg~13 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n340 C=tm3_clk_v0 O=vidin_addr_reg~14 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n344 C=tm3_clk_v0 O=vidin_addr_reg~15 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n348 C=tm3_clk_v0 O=vidin_addr_reg~16 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n352 C=tm3_clk_v0 O=vidin_new_data 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n356 C=tm3_clk_v0 O=$add~2^lAND~17 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n361 C=tm3_clk_v0 O=$sdffe~13^Q~1 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n366 C=tm3_clk_v0 O=$sdffe~13^Q~2 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n371 C=tm3_clk_v0 O=$sdffe~13^Q~3 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n376 C=tm3_clk_v0 O=$sdffe~13^Q~4 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n381 C=tm3_clk_v0 O=$sdffe~13^Q~5 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n386 C=tm3_clk_v0 O=$sdffe~13^Q~6 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n391 C=tm3_clk_v0 O=$sdffe~13^Q~7 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n396 C=tm3_clk_v0 O=$sdffe~13^Q~8 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n401 C=tm3_clk_v0 O=$sdffe~13^Q~9 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n406 C=tm3_clk_v0 O=$dffe~8^Q~0 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n411 C=tm3_clk_v0 O=$dffe~8^Q~1 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n416 C=tm3_clk_v0 O=$dffe~8^Q~2 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n421 C=tm3_clk_v0 O=$dffe~8^Q~3 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n426 C=tm3_clk_v0 O=$dffe~8^Q~4 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n431 C=tm3_clk_v0 O=$dffe~8^Q~5 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n436 C=tm3_clk_v0 O=$dffe~8^Q~6 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n441 C=tm3_clk_v0 O=$dffe~8^Q~7 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n446 C=tm3_clk_v0 O=$dffe~9^Q~0 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n451 C=tm3_clk_v0 O=$dffe~9^Q~1 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n456 C=tm3_clk_v0 O=$dffe~9^Q~2 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n461 C=tm3_clk_v0 O=$dffe~9^Q~3 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n466 C=tm3_clk_v0 O=$dffe~9^Q~4 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n471 C=tm3_clk_v0 O=$dffe~10^Q~0 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n476 C=tm3_clk_v0 O=$dffe~10^Q~1 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n481 C=tm3_clk_v0 O=$dffe~10^Q~2 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n485 C=tm3_clk_v0 O=$dff~107^Q~0 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n489 C=tm3_clk_v0 O=$dff~108^Q~0 
+
+
+.subckt latch_^_re_^_tm3_clk_v0_^_0 I=_n493 C=tm3_clk_v0 O=$dff~109^Q~0 
+
+
+
+
+.latch $auto$hard_block.cc:122:cell_hard_block$1441.Y tm3_vidin_sda re tm3_clk_v2 0 
+
+
+.latch $not~192^Y~0 $dff~112^Q~0 re tm3_clk_v2 0 
+
+
+.latch $auto$rtlil.cc:2608:MuxGate$5360 $add~1^lAND~37 re tm3_clk_v2 0 
+
+
+.latch $auto$rtlil.cc:2608:MuxGate$5364 $auto$simplemap.cc:240:simplemap_eqne$1755[1] re tm3_clk_v2 0 
+
+
+.latch $auto$rtlil.cc:2608:MuxGate$5368 $auto$simplemap.cc:240:simplemap_eqne$1755[2] re tm3_clk_v2 0 
+
+
+.latch $auto$rtlil.cc:2608:MuxGate$5372 $auto$simplemap.cc:240:simplemap_eqne$1829[3] re tm3_clk_v2 0 
+
+
+.latch $auto$rtlil.cc:2608:MuxGate$5376 $auto$simplemap.cc:240:simplemap_eqne$1755[4] re tm3_clk_v2 0 
+
+
+.latch $auto$rtlil.cc:2608:MuxGate$5380 $auto$simplemap.cc:240:simplemap_eqne$1755[5] re tm3_clk_v2 0 
+
+
+.latch $auto$rtlil.cc:2608:MuxGate$5384 $auto$simplemap.cc:240:simplemap_eqne$1940[6] re tm3_clk_v2 0 
+
+
+.latch $not~113^Y~0 tm3_vidin_scl re tm3_clk_v2 0 
+
+
+.latch tm3_vidin_rts0 $dff~104^Q~0 re tm3_clk_v2 0 
+
+
+.latch $dff~104^Q~0 $dff~105^Q~0 re tm3_clk_v2 0 
+
+
+.latch $reduce_or~70^Y~0 $dff~72^Q~0 re tm3_clk_v2 0 
+
+
+.latch $and~42^Y~0 $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[46] re tm3_clk_v2 0 
+
+
+.latch $and~43^Y~0 $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[63] re tm3_clk_v2 0 
+
+
+.latch $and~44^Y~0 $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[20] re tm3_clk_v2 0 
+
+
+.latch $and~45^Y~0 $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[77] re tm3_clk_v2 0 
+
+
+.latch $and~46^Y~0 $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[23] re tm3_clk_v2 0 
+
+
+.latch $and~47^Y~0 $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[43] re tm3_clk_v2 0 
+
+
+.latch $and~48^Y~0 $dff~72^Q~7 re tm3_clk_v2 0 
+
+
+.latch $and~49^Y~0 $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[38] re tm3_clk_v2 0 
+
+
+.latch $and~50^Y~0 $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[48] re tm3_clk_v2 0 
+
+
+.latch $and~51^Y~0 $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[11] re tm3_clk_v2 0 
+
+
+.latch $and~52^Y~0 $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[71] re tm3_clk_v2 0 
+
+
+.latch $and~53^Y~0 $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[19] re tm3_clk_v2 0 
+
+
+.latch $and~54^Y~0 $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[38] re tm3_clk_v2 0 
+
+
+.latch $and~56^Y~0 $dff~72^Q~14 re tm3_clk_v2 0 
+
+
+.latch $and~57^Y~0 $dff~72^Q~15 re tm3_clk_v2 0 
+
+
+.latch $and~58^Y~0 $dff~72^Q~16 re tm3_clk_v2 0 
+
+
+.latch $and~59^Y~0 $dff~72^Q~17 re tm3_clk_v2 0 
+
+
+.latch $and~60^Y~0 $dff~72^Q~18 re tm3_clk_v2 0 
+
+
+.latch $and~61^Y~0 $dff~72^Q~19 re tm3_clk_v2 0 
+
+
+.latch $and~62^Y~0 $dff~72^Q~20 re tm3_clk_v2 0 
+
+
+.latch $and~63^Y~0 $dff~72^Q~21 re tm3_clk_v2 0 
+
+
+.latch $and~64^Y~0 $dff~72^Q~22 re tm3_clk_v2 0 
+
+
+.latch $reduce_or~71^Y~0 $dff~72^Q~23 re tm3_clk_v2 0 
+
+
+.latch $and~67^Y~0 $dff~72^Q~24 re tm3_clk_v2 0 
+
+
+.latch $and~68^Y~0 $dff~72^Q~25 re tm3_clk_v2 0 
+
+
+.latch $and~69^Y~0 $dff~72^Q~26 re tm3_clk_v2 0 
+
+
+
+
+.names new_n382_1 new_n439 new_n440 new_n426_1 new_n417_1 new_n421_1 $auto$hard_block.cc:122:cell_hard_block$1441.Y 
+000111 0 
+
+
+.names new_n383 new_n391_1 new_n399 new_n416_1 new_n406_1 new_n382_1 
+11111 1 
+
+
+.names new_n389 new_n387_1 new_n384 new_n383 
+011 1 
+
+
+.names new_n385 new_n386_1 $auto$simplemap.cc:240:simplemap_eqne$1755[2] $auto$simplemap.cc:240:simplemap_eqne$1829[3] \
+ $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1755[1] new_n384 
+-1-000 0 
+-10-01 0 
+1-0011 0 
+
+
+.names $auto$simplemap.cc:240:simplemap_eqne$1940[6] $auto$simplemap.cc:240:simplemap_eqne$1755[5] \
+ $auto$simplemap.cc:240:simplemap_eqne$1755[4] new_n385 
+011 1 
+
+
+.names $auto$simplemap.cc:240:simplemap_eqne$1755[4] $auto$simplemap.cc:240:simplemap_eqne$1755[5] \
+ $auto$simplemap.cc:240:simplemap_eqne$1940[6] new_n386_1 
+000 1 
+
+
+.names new_n386_1 new_n388 $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1755[1] \
+ $auto$simplemap.cc:240:simplemap_eqne$1755[2] $auto$simplemap.cc:240:simplemap_eqne$1829[3] new_n387_1 
+-10100 0 
+1-0011 0 
+
+
+.names $auto$simplemap.cc:240:simplemap_eqne$1755[5] $auto$simplemap.cc:240:simplemap_eqne$1940[6] \
+ $auto$simplemap.cc:240:simplemap_eqne$1755[4] new_n388 
+001 1 
+
+
+.names $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1829[3] $auto$simplemap.cc:240:simplemap_eqne$1755[2] \
+ $auto$simplemap.cc:240:simplemap_eqne$1755[1] new_n390 new_n389 
+-0101 1 
+10011 1 
+
+
+.names $auto$simplemap.cc:240:simplemap_eqne$1755[4] $auto$simplemap.cc:240:simplemap_eqne$1940[6] \
+ $auto$simplemap.cc:240:simplemap_eqne$1755[5] new_n390 
+001 1 
+
+
+.names new_n395 new_n392_1 new_n398 new_n391_1 
+111 1 
+
+
+.names new_n393 new_n388 $auto$simplemap.cc:240:simplemap_eqne$1755[1] $auto$simplemap.cc:240:simplemap_eqne$1755[2] \
+ $auto$simplemap.cc:240:simplemap_eqne$1829[3] $add~1^lAND~37 new_n392_1 
+-1-101 0 
+-11-01 0 
+1-0111 0 
+
+
+.names $auto$simplemap.cc:240:simplemap_eqne$1755[4] $auto$simplemap.cc:240:simplemap_eqne$1755[5] \
+ $auto$simplemap.cc:240:simplemap_eqne$1940[6] new_n393 
+001 1 
+
+
+.names $auto$simplemap.cc:240:simplemap_eqne$1755[2] $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1755[1] new_n388 \
+ $auto$simplemap.cc:240:simplemap_eqne$1829[3] new_n394 
+01011 1 
+00111 1 
+
+
+.names new_n396_1 new_n393 $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1755[1] \
+ $auto$simplemap.cc:240:simplemap_eqne$1755[2] $auto$simplemap.cc:240:simplemap_eqne$1829[3] new_n395 
+1-0000 0 
+-10111 0 
+
+
+.names $auto$simplemap.cc:240:simplemap_eqne$1755[5] $auto$simplemap.cc:240:simplemap_eqne$1755[4] \
+ $auto$simplemap.cc:240:simplemap_eqne$1940[6] new_n396_1 
+011 1 
+
+
+.names new_n385 new_n388 $auto$simplemap.cc:240:simplemap_eqne$1829[3] new_n398 
+-11 0 
+1-- 0 
+
+
+.names new_n393 new_n402_1 new_n400 new_n399 
+011 1 
+
+
+.names new_n386_1 new_n388 $auto$simplemap.cc:240:simplemap_eqne$1755[2] $auto$simplemap.cc:240:simplemap_eqne$1829[3] \
+ $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1755[1] new_n400 
+-11100 0 
+1-0011 0 
+
+
+.names new_n390 new_n388 $auto$simplemap.cc:240:simplemap_eqne$1755[1] new_n402_1 
+-11 0 
+1-- 0 
+
+
+.names $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1755[1] $auto$simplemap.cc:240:simplemap_eqne$1755[2] \
+ $auto$simplemap.cc:240:simplemap_eqne$1829[3] new_n404 
+1111 1 
+
+
+.names new_n390 new_n386_1 $auto$simplemap.cc:240:simplemap_eqne$1829[3] $auto$simplemap.cc:240:simplemap_eqne$1755[2] \
+ $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1755[1] new_n406_1 
+-10110 0 
+1-0001 0 
+
+
+.names $auto$simplemap.cc:240:simplemap_eqne$1755[1] $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1829[3] \
+ $auto$simplemap.cc:240:simplemap_eqne$1755[2] new_n393 new_n407_1 
+-0011 1 
+0-011 1 
+
+
+.names $auto$simplemap.cc:240:simplemap_eqne$1755[1] $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1755[2] \
+ $auto$simplemap.cc:240:simplemap_eqne$1829[3] new_n393 new_n408 
+-1001 1 
+1-001 1 
+
+
+.names $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1755[2] $auto$simplemap.cc:240:simplemap_eqne$1755[1] new_n385 \
+ $auto$simplemap.cc:240:simplemap_eqne$1829[3] new_n410 
+-1011 0 
+10111 0 
+
+
+.names $auto$simplemap.cc:240:simplemap_eqne$1755[2] $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1755[1] \
+ $auto$simplemap.cc:240:simplemap_eqne$1829[3] new_n393 new_n411_1 
+11101 1 
+-0011 1 
+0--11 1 
+
+
+.names $auto$simplemap.cc:240:simplemap_eqne$1755[1] $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1829[3] \
+ $auto$simplemap.cc:240:simplemap_eqne$1755[2] new_n385 new_n412_1 
+-1011 0 
+1-011 0 
+
+
+.names new_n390 $add~1^lAND~37 new_n385 $auto$simplemap.cc:240:simplemap_eqne$1755[1] \
+ $auto$simplemap.cc:240:simplemap_eqne$1755[2] $auto$simplemap.cc:240:simplemap_eqne$1829[3] new_n413 
+--1000 0 
+11-111 0 
+
+
+.names $add~1^lAND~37 new_n393 new_n385 $auto$simplemap.cc:240:simplemap_eqne$1755[1] \
+ $auto$simplemap.cc:240:simplemap_eqne$1755[2] $auto$simplemap.cc:240:simplemap_eqne$1829[3] new_n414 
+01-000 0 
+--1111 0 
+
+
+.names $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1755[1] $auto$simplemap.cc:240:simplemap_eqne$1755[2] \
+ $auto$simplemap.cc:240:simplemap_eqne$1829[3] new_n390 new_n415 
+-1101 1 
+00011 1 
+
+
+.names new_n386_1 new_n388 $auto$simplemap.cc:240:simplemap_eqne$1755[2] $auto$simplemap.cc:240:simplemap_eqne$1755[1] \
+ $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1829[3] new_n416_1 
+-10010 0 
+-11101 0 
+1--011 0 
+-10111 0 
+1-0-11 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[11] new_n420 new_n419 new_n418 new_n417_1 
+--00 1 
+01-0 1 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[63] $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[77] \
+ $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[71] new_n410 new_n418 
+---1 0 
+000- 0 
+
+
+.names $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1755[1] $auto$simplemap.cc:240:simplemap_eqne$1755[2] new_n393 \
+ $auto$simplemap.cc:240:simplemap_eqne$1829[3] new_n419 
+-1011 1 
+00111 1 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[23] $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[43] \
+ new_n420 
+00 1 
+
+
+.names new_n422_1 new_n423 new_n425 new_n421_1 
+001 1 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[46] $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[63] \
+ $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[20] $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[77] \
+ $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[43] new_n413 new_n422_1 
+-----1 0 
+00000- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[63] $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[23] \
+ $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[38] $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[71] new_n424 \
+ new_n423 
+----0 0 
+0000- 0 
+
+
+.names $auto$simplemap.cc:240:simplemap_eqne$1755[1] $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1755[2] new_n390 \
+ $auto$simplemap.cc:240:simplemap_eqne$1829[3] new_n424 
+-1011 1 
+1-011 1 
+
+
+.names new_n389 new_n407_1 $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[46] \
+ $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[11] $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[19] \
+ $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[20] new_n425 
+--0000 1 
+-0-000 1 
+0-0--0 1 
+00---- 1 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[20] new_n414 new_n429 new_n430 new_n427_1 new_n428 new_n426_1 
+-10000 1 
+0-0000 1 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[46] $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[38] \
+ $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[48] $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[38] new_n420 \
+ new_n415 new_n427_1 
+-----0 0 
+00001- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[46] $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[77] \
+ $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[71] new_n411_1 new_n428 
+---0 0 
+000- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[20] $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[11] \
+ $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[71] new_n408 new_n429 
+---0 0 
+000- 0 
+
+
+.names new_n432_1 $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[23] \
+ $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[11] new_n438 new_n431_1 new_n430 
+----0 0 
+0001- 0 
+
+
+.names $auto$simplemap.cc:240:simplemap_eqne$1755[1] $add~1^lAND~37 new_n390 $auto$simplemap.cc:240:simplemap_eqne$1755[2] \
+ $auto$simplemap.cc:240:simplemap_eqne$1829[3] new_n431_1 
+-0111 1 
+0-111 1 
+
+
+.names new_n433 new_n434 new_n435 new_n436_1 new_n437_1 new_n432_1 
+11111 1 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[23] $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[43] \
+ $dff~72^Q~16 $dff~72^Q~17 new_n433 
+0000 1 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[48] $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[38] \
+ $dff~72^Q~20 $dff~72^Q~21 $dff~72^Q~26 new_n434 
+00000 1 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[46] $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[38] \
+ $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[19] $dff~72^Q~23 $dff~72^Q~24 $dff~72^Q~25 new_n435 
+000000 1 
+
+
+.names $dff~72^Q~0 $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[77] $dff~72^Q~14 $dff~72^Q~18 $dff~72^Q~19 \
+ $dff~72^Q~22 new_n436_1 
+000000 1 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[20] $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[11] \
+ $dff~72^Q~15 new_n437_1 
+000 1 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[46] $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[63] \
+ $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[77] $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[71] \
+ $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[38] new_n438 
+00000 1 
+
+
+.names new_n432_1 $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[63] \
+ $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[48] $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[71] \
+ $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[38] new_n412_1 new_n439 
+-----1 0 
+00000- 0 
+
+
+.names new_n432_1 $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[46] \
+ $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[63] $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[38] \
+ $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[71] new_n448 new_n440 
+-----1 0 
+00000- 0 
+
+
+.names new_n442_1 new_n449 new_n391_1 $not~192^Y~0 
+111 1 
+
+
+.names new_n399 new_n398 new_n386_1 new_n442_1 
+110 1 
+
+
+.names new_n390 new_n388 $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1829[3] \
+ $auto$simplemap.cc:240:simplemap_eqne$1755[1] $auto$simplemap.cc:240:simplemap_eqne$1755[2] new_n447_1 
+-11101 0 
+1-0011 0 
+
+
+.names new_n385 new_n386_1 $auto$simplemap.cc:240:simplemap_eqne$1829[3] $auto$simplemap.cc:240:simplemap_eqne$1755[1] \
+ $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1755[2] new_n448 
+1-1-00 0 
+-10010 0 
+1-10-0 0 
+-1-111 0 
+
+
+.names new_n450 new_n452_1 new_n453 new_n449 
+111 1 
+
+
+.names new_n451_1 $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1755[2] new_n390 \
+ $auto$simplemap.cc:240:simplemap_eqne$1829[3] new_n450 
+-1011 0 
+-0111 0 
+0---- 0 
+
+
+.names new_n386_1 new_n393 $auto$simplemap.cc:240:simplemap_eqne$1755[1] $auto$simplemap.cc:240:simplemap_eqne$1755[2] \
+ $auto$simplemap.cc:240:simplemap_eqne$1829[3] $add~1^lAND~37 new_n451_1 
+-10100 0 
+1-0010 0 
+1-11-0 0 
+-1-001 0 
+-11-01 0 
+
+
+.names new_n388 new_n386_1 $auto$simplemap.cc:240:simplemap_eqne$1755[1] $auto$simplemap.cc:240:simplemap_eqne$1755[2] \
+ $auto$simplemap.cc:240:simplemap_eqne$1829[3] $add~1^lAND~37 new_n452_1 
+1-0001 0 
+-1-011 0 
+-10-11 0 
+
+
+.names new_n388 new_n385 $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1755[1] \
+ $auto$simplemap.cc:240:simplemap_eqne$1829[3] $auto$simplemap.cc:240:simplemap_eqne$1755[2] new_n453 
+1-0000 0 
+-11110 0 
+-1-001 0 
+-11-01 0 
+1-1111 0 
+-110-1 0 
+
+
+.names new_n400 $auto$simplemap.cc:240:simplemap_eqne$1755[1] $auto$simplemap.cc:240:simplemap_eqne$1755[2] \
+ $auto$simplemap.cc:240:simplemap_eqne$1829[3] $add~1^lAND~37 new_n390 new_n456_1 
+-01011 0 
+-00111 0 
+0----- 0 
+
+
+.names new_n458 $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1755[2] $auto$simplemap.cc:240:simplemap_eqne$1755[1] \
+ new_n390 new_n457_1 
+-0001 0 
+-1011 0 
+0---- 0 
+
+
+.names new_n385 new_n393 $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1829[3] \
+ $auto$simplemap.cc:240:simplemap_eqne$1755[2] $auto$simplemap.cc:240:simplemap_eqne$1755[1] new_n458 
+-11100 0 
+1-0001 0 
+-10011 0 
+-11111 0 
+
+
+.names new_n460 $add~1^lAND~37 $dff~112^Q~0 $auto$rtlil.cc:2608:MuxGate$5360 
+-10 0 
+001 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[46] $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[38] \
+ new_n462_1 new_n420 new_n461_1 new_n460 
+00111 1 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[63] $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[77] \
+ $dff~72^Q~7 $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[48] new_n461_1 
+0000 1 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[20] $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[11] \
+ $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[71] $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[19] \
+ $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[38] $dff~72^Q~23 new_n462_1 
+000000 1 
+
+
+.names new_n460 $add~1^lAND~37 $dff~112^Q~0 $auto$simplemap.cc:240:simplemap_eqne$1755[1] $auto$rtlil.cc:2608:MuxGate$5364 
+-100 1 
+-001 1 
+0-11 1 
+
+
+.names new_n460 $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1755[1] $dff~112^Q~0 \
+ $auto$simplemap.cc:240:simplemap_eqne$1755[2] $auto$rtlil.cc:2608:MuxGate$5368 
+-1100 1 
+--001 1 
+-0-01 1 
+0--11 1 
+
+
+.names new_n460 $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1755[1] $auto$simplemap.cc:240:simplemap_eqne$1755[2] \
+ $dff~112^Q~0 $auto$simplemap.cc:240:simplemap_eqne$1829[3] $auto$rtlil.cc:2608:MuxGate$5372 
+-11100 1 
+---001 1 
+--0-01 1 
+-0--01 1 
+0---11 1 
+
+
+.names new_n460 new_n404 $dff~112^Q~0 $auto$simplemap.cc:240:simplemap_eqne$1755[4] $auto$rtlil.cc:2608:MuxGate$5376 
+-100 1 
+-001 1 
+0-11 1 
+
+
+.names new_n460 new_n404 $auto$simplemap.cc:240:simplemap_eqne$1755[4] $dff~112^Q~0 \
+ $auto$simplemap.cc:240:simplemap_eqne$1755[5] $auto$rtlil.cc:2608:MuxGate$5380 
+-1100 1 
+--001 1 
+-0-01 1 
+0--11 1 
+
+
+.names new_n460 new_n404 $auto$simplemap.cc:240:simplemap_eqne$1755[4] $auto$simplemap.cc:240:simplemap_eqne$1755[5] \
+ $dff~112^Q~0 $auto$simplemap.cc:240:simplemap_eqne$1940[6] $auto$rtlil.cc:2608:MuxGate$5384 
+-11100 1 
+---001 1 
+--0-01 1 
+-0--01 1 
+0---11 1 
+
+
+.names new_n449 new_n470 new_n457_1 new_n456_1 $not~113^Y~0 
+1111 1 
+
+
+.names new_n394 new_n392_1 new_n471_1 new_n406_1 new_n472_1 new_n473 new_n470 
+011111 1 
+
+
+.names new_n447_1 $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1755[1] $auto$simplemap.cc:240:simplemap_eqne$1755[2] \
+ new_n393 $auto$simplemap.cc:240:simplemap_eqne$1829[3] new_n471_1 
+-01011 0 
+-00111 0 
+0----- 0 
+
+
+.names new_n390 new_n385 $auto$simplemap.cc:240:simplemap_eqne$1755[1] $auto$simplemap.cc:240:simplemap_eqne$1755[2] \
+ $auto$simplemap.cc:240:simplemap_eqne$1829[3] $add~1^lAND~37 new_n472_1 
+-10001 0 
+1-1111 0 
+
+
+.names new_n393 new_n385 $auto$simplemap.cc:240:simplemap_eqne$1755[1] $auto$simplemap.cc:240:simplemap_eqne$1755[2] \
+ $add~1^lAND~37 $auto$simplemap.cc:240:simplemap_eqne$1829[3] new_n473 
+1-0000 0 
+-1-001 0 
+-11-01 0 
+
+
+.names $dff~104^Q~0 $dff~105^Q~0 $dff~112^Q~0 $dff~72^Q~0 $reduce_or~70^Y~0 
+--11 1 
+01-- 1 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[46] $dff~72^Q~26 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~42^Y~0 
+----1 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[63] $dff~72^Q~24 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~43^Y~0 
+----1 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[20] $dff~72^Q~25 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~44^Y~0 
+----1 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[77] $dff~72^Q~20 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~45^Y~0 
+----1 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[23] $dff~72^Q~21 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~46^Y~0 
+----1 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[43] $dff~72^Q~22 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~47^Y~0 
+----1 0 
+--10- 0 
+00--- 0 
+
+
+.names $dff~72^Q~0 $dff~72^Q~7 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 $and~48^Y~0 
+----1 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[38] $dff~72^Q~14 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~49^Y~0 
+----1 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[48] $dff~72^Q~15 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~50^Y~0 
+----1 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[11] $dff~72^Q~16 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~51^Y~0 
+----1 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[71] $dff~72^Q~17 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~52^Y~0 
+----1 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[19] $dff~72^Q~18 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~53^Y~0 
+----1 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[38] $dff~72^Q~19 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~54^Y~0 
+----1 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[46] $dff~72^Q~14 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~56^Y~0 
+----0 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[63] $dff~72^Q~15 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~57^Y~0 
+----0 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[20] $dff~72^Q~16 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~58^Y~0 
+----0 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[77] $dff~72^Q~17 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~59^Y~0 
+----0 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[23] $dff~72^Q~18 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~60^Y~0 
+----0 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[43] $dff~72^Q~19 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~61^Y~0 
+----0 0 
+--10- 0 
+00--- 0 
+
+
+.names $dff~72^Q~7 $dff~72^Q~20 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 $and~62^Y~0 
+----0 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[38] $dff~72^Q~21 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~63^Y~0 
+----0 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[48] $dff~72^Q~22 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~64^Y~0 
+----0 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[11] $dff~104^Q~0 $dff~105^Q~0 $dff~112^Q~0 $dff~72^Q~23 \
+ $reduce_or~71^Y~0 
+---00 0 
+0---0 0 
+-01-- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1554.B_AND_S[71] $dff~72^Q~24 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~67^Y~0 
+----0 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[19] $dff~72^Q~25 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~68^Y~0 
+----0 0 
+--10- 0 
+00--- 0 
+
+
+.names $auto$hard_block.cc:122:cell_hard_block$1556.B_AND_S[38] $dff~72^Q~26 $dff~105^Q~0 $dff~104^Q~0 $dff~112^Q~0 \
+ $and~69^Y~0 
+----0 0 
+--10- 0 
+00--- 0 
+
+
+.names tm3_vidin_vs new_n502 $add~0^lAND~1 _n117 
+010 1 
+001 1 
+
+
+.names $sdffe~13^Q~6 $sdffe~13^Q~7 $sdffe~13^Q~8 $sdffe~13^Q~9 new_n503 tm3_vidin_href new_n502 
+-----1 0 
+00001- 0 
+
+
+.names $add~2^lAND~17 $sdffe~13^Q~1 $sdffe~13^Q~2 $sdffe~13^Q~3 $sdffe~13^Q~4 $sdffe~13^Q~5 new_n503 
+000000 1 
+
+
+.names tm3_vidin_vs new_n505 $sdffe~12^Q~1 _n122 
+010 1 
+001 1 
+
+
+.names new_n502 $add~0^lAND~1 new_n505 
+11 1 
+
+
+.names new_n502 $add~0^lAND~1 $sdffe~12^Q~1 tm3_vidin_vs $sdffe~12^Q~2 _n127 
+11100 1 
+--001 1 
+-0-01 1 
+0--01 1 
+
+
+.names tm3_vidin_vs new_n508 $sdffe~12^Q~3 _n132 
+010 1 
+001 1 
+
+
+.names new_n502 $add~0^lAND~1 $sdffe~12^Q~1 $sdffe~12^Q~2 new_n508 
+1111 1 
+
+
+.names new_n508 $sdffe~12^Q~3 tm3_vidin_vs $sdffe~12^Q~4 _n137 
+1100 1 
+-001 1 
+0-01 1 
+
+
+.names new_n508 $sdffe~12^Q~3 $sdffe~12^Q~4 tm3_vidin_vs $sdffe~12^Q~5 _n142 
+11100 1 
+--001 1 
+-0-01 1 
+0--01 1 
+
+
+.names new_n508 $sdffe~12^Q~3 $sdffe~12^Q~4 $sdffe~12^Q~5 tm3_vidin_vs $sdffe~12^Q~6 _n147 
+111100 1 
+---001 1 
+--0-01 1 
+-0--01 1 
+0---01 1 
+
+
+.names tm3_vidin_vs new_n513 $sdffe~12^Q~7 _n152 
+010 1 
+001 1 
+
+
+.names new_n508 $sdffe~12^Q~3 $sdffe~12^Q~4 $sdffe~12^Q~5 $sdffe~12^Q~6 new_n513 
+11111 1 
+
+
+.names $add~2^lAND~17 $dffe~11^Q~0 tm3_vidin_cref _n157 
+1-0 1 
+-11 1 
+
+
+.names $sdffe~13^Q~1 $dffe~11^Q~1 tm3_vidin_cref _n162 
+1-0 1 
+-11 1 
+
+
+.names $sdffe~13^Q~2 $dffe~11^Q~2 tm3_vidin_cref _n167 
+1-0 1 
+-11 1 
+
+
+.names $sdffe~13^Q~3 $dffe~11^Q~3 tm3_vidin_cref _n172 
+1-0 1 
+-11 1 
+
+
+.names $sdffe~13^Q~4 $dffe~11^Q~4 tm3_vidin_cref _n177 
+1-0 1 
+-11 1 
+
+
+.names $sdffe~13^Q~5 $dffe~11^Q~5 tm3_vidin_cref _n182 
+1-0 1 
+-11 1 
+
+
+.names $sdffe~13^Q~6 $dffe~11^Q~6 tm3_vidin_cref _n187 
+1-0 1 
+-11 1 
+
+
+.names $sdffe~13^Q~7 $dffe~11^Q~7 tm3_vidin_cref _n192 
+1-0 1 
+-11 1 
+
+
+.names $sdffe~13^Q~8 $dffe~11^Q~8 tm3_vidin_cref _n197 
+1-0 1 
+-11 1 
+
+
+.names $sdffe~13^Q~9 $dffe~11^Q~9 tm3_vidin_cref _n202 
+1-0 1 
+-11 1 
+
+
+.names tm3_vidin_rts0 $dffe~11^Q~10 tm3_vidin_cref _n207 
+1-0 1 
+-11 1 
+
+
+.names $add~0^lAND~1 $dffe~11^Q~11 tm3_vidin_cref _n212 
+1-0 1 
+-11 1 
+
+
+.names $sdffe~12^Q~1 $dffe~11^Q~12 tm3_vidin_cref _n217 
+1-0 1 
+-11 1 
+
+
+.names $sdffe~12^Q~2 $dffe~11^Q~13 tm3_vidin_cref _n222 
+1-0 1 
+-11 1 
+
+
+.names $sdffe~12^Q~3 $dffe~11^Q~14 tm3_vidin_cref _n227 
+1-0 1 
+-11 1 
+
+
+.names $sdffe~12^Q~4 $dffe~11^Q~15 tm3_vidin_cref _n232 
+1-0 1 
+-11 1 
+
+
+.names $sdffe~12^Q~5 $dffe~11^Q~16 tm3_vidin_cref _n237 
+1-0 1 
+-11 1 
+
+
+.names $sdffe~12^Q~6 $dffe~11^Q~17 tm3_vidin_cref _n242 
+1-0 1 
+-11 1 
+
+
+.names $sdffe~12^Q~7 $dffe~11^Q~18 tm3_vidin_cref _n247 
+1-0 1 
+-11 1 
+
+
+.names vidin_rgb_reg~0 $dffe~8^Q~0 _n352 _n252 
+1-0 1 
+-11 1 
+
+
+.names $dffe~11^Q~0 $dffe~11^Q~10 $dff~108^Q~0 $dff~109^Q~0 _n352 
+0001 1 
+
+
+.names vidin_rgb_reg~1 $dffe~8^Q~1 _n352 _n256 
+1-0 1 
+-11 1 
+
+
+.names vidin_rgb_reg~2 $dffe~8^Q~2 _n352 _n260 
+1-0 1 
+-11 1 
+
+
+.names vidin_rgb_reg~3 $dffe~8^Q~3 _n352 _n264 
+1-0 1 
+-11 1 
+
+
+.names vidin_rgb_reg~4 $dffe~8^Q~4 _n352 _n268 
+1-0 1 
+-11 1 
+
+
+.names vidin_rgb_reg~5 $dffe~8^Q~5 _n352 _n272 
+1-0 1 
+-11 1 
+
+
+.names vidin_rgb_reg~6 $dffe~8^Q~6 _n352 _n276 
+1-0 1 
+-11 1 
+
+
+.names vidin_rgb_reg~7 $dffe~8^Q~7 _n352 _n280 
+1-0 1 
+-11 1 
+
+
+.names vidin_addr_reg~0 $dffe~11^Q~1 _n352 _n284 
+1-0 1 
+-11 1 
+
+
+.names vidin_addr_reg~1 $dffe~11^Q~2 _n352 _n288 
+1-0 1 
+-11 1 
+
+
+.names vidin_addr_reg~2 $dffe~11^Q~3 _n352 _n292 
+1-0 1 
+-11 1 
+
+
+.names vidin_addr_reg~3 $dffe~11^Q~4 _n352 _n296 
+1-0 1 
+-11 1 
+
+
+.names vidin_addr_reg~4 $dffe~11^Q~5 _n352 _n300 
+1-0 1 
+-11 1 
+
+
+.names vidin_addr_reg~5 $dffe~11^Q~6 _n352 _n304 
+1-0 1 
+-11 1 
+
+
+.names vidin_addr_reg~6 $dffe~11^Q~7 _n352 _n308 
+1-0 1 
+-11 1 
+
+
+.names vidin_addr_reg~7 $dffe~11^Q~8 _n352 _n312 
+1-0 1 
+-11 1 
+
+
+.names vidin_addr_reg~8 $dffe~11^Q~9 _n352 _n316 
+1-0 1 
+-11 1 
+
+
+.names vidin_addr_reg~9 $dffe~11^Q~11 _n352 _n320 
+1-0 1 
+-11 1 
+
+
+.names vidin_addr_reg~10 $dffe~11^Q~12 _n352 _n324 
+1-0 1 
+-11 1 
+
+
+.names vidin_addr_reg~11 $dffe~11^Q~13 _n352 _n328 
+1-0 1 
+-11 1 
+
+
+.names vidin_addr_reg~12 $dffe~11^Q~14 _n352 _n332 
+1-0 1 
+-11 1 
+
+
+.names vidin_addr_reg~13 $dffe~11^Q~15 _n352 _n336 
+1-0 1 
+-11 1 
+
+
+.names vidin_addr_reg~14 $dffe~11^Q~16 _n352 _n340 
+1-0 1 
+-11 1 
+
+
+.names vidin_addr_reg~15 $dffe~11^Q~17 _n352 _n344 
+1-0 1 
+-11 1 
+
+
+.names vidin_addr_reg~16 $dffe~11^Q~18 _n352 _n348 
+1-0 1 
+-11 1 
+
+
+.names tm3_vidin_cref $add~2^lAND~17 tm3_vidin_href _n356 
+001 1 
+111 1 
+
+
+.names tm3_vidin_cref $add~2^lAND~17 $sdffe~13^Q~1 tm3_vidin_href _n361 
+0101 1 
+-011 1 
+1-11 1 
+
+
+.names tm3_vidin_cref $add~2^lAND~17 $sdffe~13^Q~1 $sdffe~13^Q~2 tm3_vidin_href _n366 
+01101 1 
+--011 1 
+-0-11 1 
+1--11 1 
+
+
+.names tm3_vidin_cref $add~2^lAND~17 $sdffe~13^Q~1 $sdffe~13^Q~2 $sdffe~13^Q~3 tm3_vidin_href _n371 
+011101 1 
+---011 1 
+--0-11 1 
+-0--11 1 
+1---11 1 
+
+
+.names new_n564 $sdffe~13^Q~4 tm3_vidin_href _n376 
+101 1 
+011 1 
+
+
+.names tm3_vidin_cref $add~2^lAND~17 $sdffe~13^Q~1 $sdffe~13^Q~2 $sdffe~13^Q~3 new_n564 
+01111 1 
+
+
+.names new_n566 $sdffe~13^Q~5 tm3_vidin_href _n381 
+101 1 
+011 1 
+
+
+.names new_n564 $sdffe~13^Q~4 new_n566 
+11 1 
+
+
+.names new_n566 $sdffe~13^Q~5 $sdffe~13^Q~6 tm3_vidin_href _n386 
+1101 1 
+-011 1 
+0-11 1 
+
+
+.names new_n566 $sdffe~13^Q~5 $sdffe~13^Q~6 $sdffe~13^Q~7 tm3_vidin_href _n391 
+11101 1 
+--011 1 
+-0-11 1 
+0--11 1 
+
+
+.names new_n566 $sdffe~13^Q~5 $sdffe~13^Q~6 $sdffe~13^Q~7 $sdffe~13^Q~8 tm3_vidin_href _n396 
+111101 1 
+---011 1 
+--0-11 1 
+-0--11 1 
+0---11 1 
+
+
+.names new_n571 $sdffe~13^Q~9 tm3_vidin_href _n401 
+101 1 
+011 1 
+
+
+.names new_n566 $sdffe~13^Q~5 $sdffe~13^Q~6 $sdffe~13^Q~7 $sdffe~13^Q~8 new_n571 
+11111 1 
+
+
+.names $dffe~8^Q~0 $dffe~10^Q~0 tm3_vidin_cref _n406 
+1-0 1 
+-11 1 
+
+
+.names $dffe~8^Q~1 $dffe~10^Q~1 tm3_vidin_cref _n411 
+1-0 1 
+-11 1 
+
+
+.names $dffe~8^Q~2 $dffe~10^Q~2 tm3_vidin_cref _n416 
+1-0 1 
+-11 1 
+
+
+.names $dffe~8^Q~3 $dffe~9^Q~0 tm3_vidin_cref _n421 
+1-0 1 
+-11 1 
+
+
+.names $dffe~8^Q~4 $dffe~9^Q~1 tm3_vidin_cref _n426 
+1-0 1 
+-11 1 
+
+
+.names $dffe~8^Q~5 $dffe~9^Q~2 tm3_vidin_cref _n431 
+1-0 1 
+-11 1 
+
+
+.names $dffe~8^Q~6 $dffe~9^Q~3 tm3_vidin_cref _n436 
+1-0 1 
+-11 1 
+
+
+.names $dffe~8^Q~7 $dffe~9^Q~4 tm3_vidin_cref _n441 
+1-0 1 
+-11 1 
+
+
+.names tm3_vidin_vpo~0 $dffe~9^Q~0 tm3_vidin_cref _n446 
+1-0 1 
+-11 1 
+
+
+.names tm3_vidin_vpo~1 $dffe~9^Q~1 tm3_vidin_cref _n451 
+1-0 1 
+-11 1 
+
+
+.names tm3_vidin_vpo~2 $dffe~9^Q~2 tm3_vidin_cref _n456 
+1-0 1 
+-11 1 
+
+
+.names tm3_vidin_vpo~3 $dffe~9^Q~3 tm3_vidin_cref _n461 
+1-0 1 
+-11 1 
+
+
+.names tm3_vidin_vpo~4 $dffe~9^Q~4 tm3_vidin_cref _n466 
+1-0 1 
+-11 1 
+
+
+.names $dffe~10^Q~0 tm3_vidin_vpo~0 tm3_vidin_cref _n471 
+1-0 1 
+-11 1 
+
+
+.names $dffe~10^Q~1 tm3_vidin_vpo~1 tm3_vidin_cref _n476 
+1-0 1 
+-11 1 
+
+
+.names $dffe~10^Q~2 tm3_vidin_vpo~2 tm3_vidin_cref _n481 
+1-0 1 
+-11 1 
+
+
+.names vidin_addr_reg~18 
+0 
+
+
+.names vidin_addr_reg~17 
+0 
+
+
+.names tm3_vidin_cref _n485 
+1 1 
+
+
+.names $dff~107^Q~0 _n489 
+1 1 
+
+
+.names $dff~108^Q~0 _n493 
+1 1 
+
+
+
+.subckt CLOCK_GATING I=tm3_clk_v2
+.subckt CLOCK_GATING I=tm3_clk_v0
+
+.end 
+
+
+
+
+
+
+
+.model latch_^_re_^_tm3_clk_v0_^_0
+.inputs I C
+.outputs O
+.blackbox
+.end
+
+
+.model CLOCK_GATING
+.inputs I
+.blackbox
+.end
+

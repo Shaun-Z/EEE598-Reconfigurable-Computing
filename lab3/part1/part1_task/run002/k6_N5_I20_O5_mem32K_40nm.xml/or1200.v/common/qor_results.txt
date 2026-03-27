@@ -1,0 +1,2 @@
+ arch	  circuit	  script_params	  vpr_status	  total_wirelength	  total_runtime	  num_clb	  min_chan_width	  crit_path_delay	 
+ k6_N5_I20_O5_mem32K_40nm.xml	  or1200.v	  common	  success	  50249	  12.28	  578	  -1	  -1	 
