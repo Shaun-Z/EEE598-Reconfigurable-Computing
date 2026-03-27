@@ -1,0 +1,9 @@
+type,benchmark,n_seeds,mean_cost,std_cost
+normal,alu4,3,45.39,1.00
+normal,ex4p,3,7.77,0.10
+normal,diffeq1,3,52.20,1.19
+normal,sha,3,92.51,4.15
+greedy,alu4,3,45.51,0.56
+greedy,ex4p,3,7.86,0.27
+greedy,diffeq1,3,52.40,1.25
+greedy,sha,3,96.33,3.27

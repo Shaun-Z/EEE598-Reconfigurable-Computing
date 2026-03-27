@@ -1,0 +1,5 @@
+benchmark,n_seeds,avg_delay_ns,avg_wirelength,avg_routing_area,avg_iterations
+alu4,3,5.3401,6253,488146,13.3
+ex4p,3,3.0494,1232,160885,9.7
+diffeq1,3,23.6474,9768,934704,13.0
+sha,3,15.2776,14276,1068310,12.7

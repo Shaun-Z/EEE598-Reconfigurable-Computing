@@ -1,0 +1,25 @@
+# VPR intermediate outputs (recursive)
+**/*.net
+**/*.place
+**/*.route
+**/*.rpt
+**/vpr_stdout.log
+**/vpr_stderr.log
+**/meta.json
+
+# SLURM job outputs and scripts
+**/slurm_jobs/
+
+# Synthesis temp files
+**/synth_*/
+
+# Part 2: generated architecture XMLs (regenerate via gen_archs.py)
+part2/k6_N10_40nm_*.xml
+
+# Part 3: benchmark BLIFs (copies/synthesized, see README for instructions)
+part3/*.blif
+
+# VPR run directories (contain intermediate files per seed)
+**/seed*/
+
+# Keep summary CSVs — they are the final parsed results
