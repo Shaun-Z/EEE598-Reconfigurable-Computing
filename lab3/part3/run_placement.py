@@ -25,7 +25,7 @@ RESULTS_DIR = os.path.join(PART3_DIR, "results", "placement")
 BENCHMARKS = ["alu4", "ex4p", "diffeq1", "sha"]
 
 # Study #2: 5 different starting temperatures
-INIT_TEMPS = [1e-3, 1e-2, 1e-1, 1.0, 10.0]
+INIT_TEMPS = [1e-2, 1e-1, 1.0, 10.0, 100.0]
 SEEDS_STUDY2 = [1, 2, 3, 4, 5]
 
 # Study #1 and #3: seeds
