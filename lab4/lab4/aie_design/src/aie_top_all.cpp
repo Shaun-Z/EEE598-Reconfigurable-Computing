@@ -13,9 +13,9 @@ int main(int argc, char **argv) {
 
     // File paths for input image, key image, and output image
     // Please set it to absolute path on your system    
-    const char *filename_ip = "/home/xzhou185/EEE598-Reconfigurable-Computing/Lab4/lab4/aie_design/src/stego_image.png";
-    const char *filename_key = "/home/xzhou185/EEE598-Reconfigurable-Computing/Lab4/lab4/aie_design/src/key_image.png";
-    const char *filename_out = "/home/xzhou185/EEE598-Reconfigurable-Computing/Lab4/lab4/aie_design/src/decrypted_image_out.png";
+    const char *filename_ip = "/home/xiangyu/EEE598-Reconfigurable-Computing/lab4/lab4/aie_design/src/stego_image.png";
+    const char *filename_key = "/home/xiangyu/EEE598-Reconfigurable-Computing/lab4/lab4/aie_design/src/key_image.png";
+    const char *filename_out = "/home/xiangyu/EEE598-Reconfigurable-Computing/lab4/lab4/aie_design/src/decrypted_image_out.png";
 
     std::vector<unsigned char> image;    // GREY pixels (1 byte per pixel)
     std::vector<unsigned char> imageKey; // GREY pixels (1 byte per pixel)
