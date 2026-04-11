@@ -36,5 +36,12 @@ public:
 
         connect<>(thresholding_k[0].out[0], out.in[0]);
         dimensions(thresholding_k[0].out[0]) = {KERNEL_IP_IMG_H * KERNEL_IP_IMG_W};
+
+        // Force single buffering on all ports
+        single_buffer(decrypt_k[0].in[0]);
+        single_buffer(decrypt_k[0].in[1]);
+        single_buffer(decrypt_k[0].out[0]);
+        single_buffer(thresholding_k[0].in[0]);
+        single_buffer(thresholding_k[0].out[0]);
     }
 };
