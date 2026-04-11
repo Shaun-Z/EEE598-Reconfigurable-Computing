@@ -9,78 +9,87 @@ aie_adf_graph accel;
 
 #if defined(__AIESIM__) || defined(__X86SIM__)
 int main(int argc, char **argv) {
-    std::cout << "Simulation started!!";
+    std::cout << "Simulation started!!" << std::endl;
 
-    // File paths for input image, key image, and output image
-    // Please set it to absolute path on your system    
     const char *filename_ip = "/home/xiangyu/EEE598-Reconfigurable-Computing/lab4/lab4/aie_design/src/stego_image.png";
     const char *filename_key = "/home/xiangyu/EEE598-Reconfigurable-Computing/lab4/lab4/aie_design/src/key_image.png";
     const char *filename_out = "/home/xiangyu/EEE598-Reconfigurable-Computing/lab4/lab4/aie_design/src/decrypted_image_out.png";
 
-    std::vector<unsigned char> image;    // GREY pixels (1 byte per pixel)
-    std::vector<unsigned char> imageKey; // GREY pixels (1 byte per pixel)
-    
+    std::vector<unsigned char> image;
+    std::vector<unsigned char> imageKey;
+
     unsigned width = 0, height = 0;
 
-    // Load input image and key image
     if (!load_decode_and_print_png(filename_ip, image, width, height)) {
         return -1;
     }
-
     if (!load_decode_and_print_png(filename_key, imageKey, width, height)) {
         return -1;
     }
 
+    // Each chunk is one kernel block: 128 * 128 = 16384 bytes
+    int CHUNK_SIZE = KERNEL_IP_IMG_H * KERNEL_IP_IMG_W;
+    int TOTAL_SIZE = INPUT_IMG_H * INPUT_IMG_W;
 
-    // Set the size of input image and output image
-    // Key image size = input image size
-    int BLOCK_SIZE_in_BytesIP = INPUT_IMG_H * INPUT_IMG_W;
-    int BLOCK_SIZE_in_BytesOUT = INPUT_IMG_H * INPUT_IMG_W;
+    // Allocate per-chunk input and output buffers
+    uint8_t *dinArrayIP[NUM_PARALLEL];
+    uint8_t *dinArrayKey[NUM_PARALLEL];
+    uint8_t *doutArrayOUT[NUM_PARALLEL];
 
-    uint8_t *dinArrayIP = (uint8_t *)GMIO::malloc(BLOCK_SIZE_in_BytesIP);
-    for (int i = 0; i < BLOCK_SIZE_in_BytesIP; i++) {
-        dinArrayIP[i] = image[i];
+    for (int i = 0; i < NUM_PARALLEL; i++) {
+        dinArrayIP[i] = (uint8_t *)GMIO::malloc(CHUNK_SIZE);
+        dinArrayKey[i] = (uint8_t *)GMIO::malloc(CHUNK_SIZE);
+        doutArrayOUT[i] = (uint8_t *)GMIO::malloc(CHUNK_SIZE);
+
+        for (int j = 0; j < CHUNK_SIZE; j++) {
+            dinArrayIP[i][j] = image[i * CHUNK_SIZE + j];
+            dinArrayKey[i][j] = imageKey[i * CHUNK_SIZE + j];
+        }
     }
 
-    uint8_t *dinArrayKey = (uint8_t *)GMIO::malloc(BLOCK_SIZE_in_BytesIP);
-    for (int i = 0; i < BLOCK_SIZE_in_BytesIP; i++) {
-        dinArrayKey[i] = imageKey[i];
-    }
-
-    uint8_t *doutArrayOUT = (uint8_t *)GMIO::malloc(BLOCK_SIZE_in_BytesOUT);
-    
     std::cout << "Graph initialized!!" << std::endl;
     accel.init();
 
+    // Send all chunks to AIEs in parallel (non-blocking)
     std::cout << "Start data transfer to AIEs!!" << std::endl;
-    accel.image.gm2aie_nb(dinArrayIP, BLOCK_SIZE_in_BytesIP);
-    accel.key.gm2aie_nb(dinArrayKey, BLOCK_SIZE_in_BytesIP);
+    for (int i = 0; i < NUM_PARALLEL; i++) {
+        accel.image[i].gm2aie_nb(dinArrayIP[i], CHUNK_SIZE);
+        accel.key[i].gm2aie_nb(dinArrayKey[i], CHUNK_SIZE);
+    }
 
-    int iteration = (INPUT_IMG_H * INPUT_IMG_W) / (KERNEL_IP_IMG_H * KERNEL_IP_IMG_W);
+    // Run 1 iteration since each chunk is processed by its own pipeline
+    int iteration = 1;
     std::cout << "Graph execution started for " << iteration << " iterations!!" << std::endl;
     accel.run(iteration);
 
+    // Receive all output chunks
     std::cout << "Start data transfer from AIEs!!" << std::endl;
-    accel.out.aie2gm(doutArrayOUT, BLOCK_SIZE_in_BytesOUT);
+    for (int i = 0; i < NUM_PARALLEL; i++) {
+        accel.out[i].aie2gm(doutArrayOUT[i], CHUNK_SIZE);
+    }
 
     std::cout << "Waiting for AIE graph to complete and transfer output data back!!" << std::endl;
-    accel.out.wait();
+    for (int i = 0; i < NUM_PARALLEL; i++) {
+        accel.out[i].wait();
+    }
 
-    // Enable this for debugging output
-    // for (int i = 0; i < BLOCK_SIZE_in_BytesOUT; i++) {
-    //     std::cout << "doutOUT[" << i << "]=" << static_cast<unsigned>(doutArrayOUT[i])
-    //               << std::endl;
-    // }
-    savePNG(
-        filename_out,
-        std::vector<unsigned char>(doutArrayOUT, doutArrayOUT + BLOCK_SIZE_in_BytesOUT),
-        width, height);
+    // Reassemble the full output image
+    std::vector<unsigned char> fullOutput(TOTAL_SIZE);
+    for (int i = 0; i < NUM_PARALLEL; i++) {
+        for (int j = 0; j < CHUNK_SIZE; j++) {
+            fullOutput[i * CHUNK_SIZE + j] = doutArrayOUT[i][j];
+        }
+    }
+
+    savePNG(filename_out, fullOutput, width, height);
 
     accel.end();
 
-    GMIO::free(dinArrayIP);
-    GMIO::free(dinArrayKey);
-    GMIO::free(doutArrayOUT);
+    for (int i = 0; i < NUM_PARALLEL; i++) {
+        GMIO::free(dinArrayIP[i]);
+        GMIO::free(dinArrayKey[i]);
+        GMIO::free(doutArrayOUT[i]);
+    }
 
     return 0;
 }
